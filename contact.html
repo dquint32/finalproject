@@ -1,0 +1,391 @@
+<!--
+Author: David Quintana
+MSU Denver login name: dquint32@msudenver.edu
+Date Created: 11/02/2025
+Date Due: 12/01/2024
+Modified: 11/30/2025
+Filename: contact.html
+Purpose: Contact and location page with store hours, address, map, and parking information.
+Editor: Notepad
+Generative AI Used: Yes
+Specific Tools Used: Copilot, Gemini, and Claude
+Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge and Delia, the flags, etc.)
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="site.title">Tienda Salvadoreña — Contacto</title>
+  <meta name="description" data-i18n="meta.description" content="Auténticos productos salvadoreños y centroamericanos en Denver — tradición, sabor y comunidad.">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --cobalt:#0b5ed7;
+      --cobalt-dark:#0a58ca;
+      --muted:#6b7280;
+      --card-bg:#ffffff;
+      --border:#e6e6e6;
+      --shadow: 0 6px 18px rgba(0,0,0,0.06);
+      --nav-link-color:#0b5ed7;
+      --nav-link-hover:#083e9a;
+    }
+
+    html,body{height:100%}
+    body {
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#111827;
+      margin:0;
+      background:#fafafa;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    a { color:var(--nav-link-color); }
+    .container { max-width:1100px; margin:0 auto; padding:1rem; box-sizing:border-box; }
+
+    /* Compact top toolbar with brand, nav and language toggle */
+    .top-toolbar {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:0.5rem 1rem;
+      background:transparent;
+      border-bottom:1px solid rgba(0,0,0,0.03);
+    }
+
+    .top-left {
+      display:flex;
+      align-items:center;
+      gap:1rem;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:0.75rem;
+    }
+    .brand img { height:44px; display:block; }
+
+    /* Primary nav (compact, blue links) */
+    .primary-nav {
+      display:flex;
+      gap:0.75rem;
+      align-items:center;
+      font-weight:600;
+      font-size:0.95rem;
+      white-space:nowrap;
+    }
+    .primary-nav a {
+      color:var(--nav-link-color);
+      text-decoration:none;
+      padding:0.35rem 0.5rem;
+      border-radius:6px;
+    }
+    .primary-nav a:hover { color:var(--nav-link-hover); background:rgba(11,94,215,0.06); }
+    .primary-nav a.active {
+      background:var(--cobalt);
+      color:#fff;
+      box-shadow:0 4px 12px rgba(11,94,215,0.12);
+    }
+
+    /* Language toggle (compact) */
+    .lang-toggle {
+      display:inline-flex;
+      gap:0.4rem;
+      align-items:center;
+    }
+    .lang-toggle button {
+      background:transparent;
+      border:1px solid var(--border);
+      padding:0.28rem 0.5rem;
+      border-radius:6px;
+      font-weight:700;
+      cursor:pointer;
+      color:#111827;
+      min-width:44px;
+      text-align:center;
+      font-size:0.9rem;
+    }
+    .lang-toggle button.active {
+      background:var(--cobalt);
+      color:#fff;
+      border-color:var(--cobalt);
+    }
+
+    /* Hero with background image */
+    .hero {
+      background-image: url('images/elsalvador-usa-flags_background.png');
+      background-size: cover;
+      background-position: center;
+      padding: 1.5rem 1rem;
+    }
+    .hero-content {
+      background: rgba(255,255,255,0.95);
+      max-width:1100px;
+      margin:0 auto;
+      padding:1rem;
+      border-radius:10px;
+      display:flex;
+      gap:1rem;
+      align-items:center;
+      justify-content:space-between;
+      box-shadow: var(--shadow);
+      flex-wrap:wrap;
+    }
+    .hero-text { flex:1 1 60%; min-width:220px; }
+    .hero-text h1 { margin:0 0 0.4rem 0; font-size:1.4rem; }
+    .hero-text p { margin:0 0 0.4rem 0; color:var(--muted); line-height:1.4; font-size:0.98rem; }
+
+    .hero-cta { margin-top:0.4rem; display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; }
+    .btn-call {
+      display:inline-block;
+      background:var(--cobalt);
+      color:#fff;
+      padding:0.5rem 0.8rem;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:0.95rem;
+    }
+    .btn-call:hover { background:var(--cobalt-dark); }
+
+    /* Replace single hero-image with a small two-photo group (clickable Delia image) */
+    .hero-photos {
+      display:flex;
+      gap:0.6rem;
+      align-items:center;
+      flex:0 0 auto;
+    }
+    .hero-photos figure {
+      margin:0;
+      width:120px;
+      text-align:center;
+    }
+    .hero-photos img {
+      width:100%;
+      height:auto;
+      border-radius:8px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+      display:block;
+    }
+
+    /* Grid layout for contact details and map */
+    .contact-grid { display:grid; grid-template-columns: 1fr 360px; gap:1rem; margin-top:1rem; align-items:start; }
+    @media (max-width:900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    .card { background:var(--card-bg); padding:0.9rem; border-radius:10px; border:1px solid var(--border); box-shadow:var(--shadow); box-sizing:border-box; }
+    .contact-list { list-style:none; padding:0; margin:0; display:block; }
+
+    /* Use CSS grid for each list row to avoid overlap and ensure wrapping */
+    .contact-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 0.6rem;
+      align-items:start;
+      padding:0.5rem 0;
+      border-bottom:1px dashed rgba(0,0,0,0.04);
+      box-sizing:border-box;
+      word-wrap:break-word;
+      overflow-wrap:break-word;
+      hyphens:auto;
+    }
+    .contact-row:last-child { border-bottom:none; }
+
+    .label {
+      font-weight:700;
+      color:#111827;
+      padding-right:0.25rem;
+      box-sizing:border-box;
+      font-size:0.95rem;
+    }
+
+    .value {
+      color:#374151;
+      box-sizing:border-box;
+      min-width:0; /* allow wrapping inside grid */
+      word-break:break-word;
+      font-size:0.95rem;
+    }
+
+    .value a { color:var(--nav-link-color); text-decoration:none; font-weight:600; }
+    .value a:hover { text-decoration:underline; color:var(--nav-link-hover); }
+
+    .hours-table { width:100%; border-collapse:collapse; margin-top:0.25rem; }
+    .hours-table td { padding:0.25rem 0; color:#374151; font-size:0.95rem; }
+
+    .parking { margin-top:0.25rem; color:#374151; font-size:0.95rem; }
+
+    .social-row { display:flex; gap:0.5rem; align-items:center; margin-top:0.5rem; }
+    .social-link {
+      display:inline-flex; align-items:center; justify-content:center;
+      width:36px; height:36px; border-radius:8px; background:#fff; border:1px solid var(--border);
+      text-decoration:none;
+      box-shadow:0 4px 12px rgba(0,0,0,0.04);
+    }
+    .social-link svg { width:18px; height:18px; display:block; }
+
+    .map-frame { width:100%; height:240px; border:0; border-radius:8px; box-shadow:var(--shadow); }
+
+    footer.site-footer { margin-top:1.5rem; padding:0.75rem 0; color:var(--muted); font-size:0.95rem; }
+    footer .legal { margin:0 0 0.4rem 0; }
+    footer .contact-line a { color:var(--nav-link-color); text-decoration:none; font-weight:600; }
+
+    /* Small adjustments for very small screens */
+    @media (max-width:420px) {
+      .hero-photos figure { width:100px; }
+      .hero-photos img { width:100px; }
+      .social-link { width:34px; height:34px; }
+      .contact-row { grid-template-columns: 1fr; }
+      .label { padding-bottom:0.25rem; }
+      .primary-nav { display:none; } /* hide full nav on very small screens to keep toolbar compact */
+    }
+  </style>
+</head>
+<body>
+  <!-- Top toolbar: brand, primary nav, language toggle -->
+  <div class="top-toolbar" role="toolbar" aria-label="Top toolbar">
+    <div class="top-left">
+      <div class="brand">
+        <a href="index.html" aria-label="Tienda Salvadoreña home">
+          <img src="images/tienda-salvadorena-sign.png" alt="Tienda Salvadoreña">
+        </a>
+      </div>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html" data-i18n="nav.home">Inicio</a>
+        <a href="items.html" data-i18n="nav.items">Artículos</a>
+        <a href="history.html" data-i18n="nav.history">Historia</a>
+        <a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a>
+        <a href="press.html" data-i18n="nav.press">Prensa</a>
+        <a href="contact.html" class="active" aria-current="page" data-i18n="nav.contact">Contacto</a>
+      </nav>
+    </div>
+
+    <div class="lang-toggle" role="group" aria-label="Language toggle">
+      <button id="btnSpanish" class="active" aria-pressed="true" type="button">ES</button>
+      <button id="btnEnglish" aria-pressed="false" type="button">EN</button>
+    </div>
+  </div>
+
+  <!-- Hero (uses elsalvador-usa-flags_background.png) -->
+  <section class="hero" role="region" aria-label="Contacto hero">
+    <div class="hero-content" role="group" aria-label="Contacto y Ubicación">
+      <div class="hero-text">
+        <h1 data-i18n="contact.hero.title">Contacto y Ubicación</h1>
+        <p data-i18n="contact.hero.lead">Estamos aquí para ayudar. Llámanos, escríbenos o visítanos en la dirección indicada. Responderemos lo antes posible.</p>
+
+        <div class="hero-cta" role="group" aria-label="Acciones de contacto">
+          <a class="btn-call" href="tel:+13033944185" aria-label="Llamar Tienda Salvadoreña">(303) 394-4185</a>
+
+          <div class="social-row" aria-label="Redes sociales">
+            <a class="social-link" href="https://www.facebook.com/TiendaSalvadorena.Denver/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook de Tienda Salvadoreña">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img">
+                <path fill="#1877F2" d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.09 5.66 21.22 10.44 22v-7.02H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.88h2.74l-.44 2.9h-2.3V22C18.34 21.22 22 17.09 22 12.07z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-photos" aria-hidden="true">
+        <figure>
+          <a href="tel:+13033944185" aria-label="Llamar Tienda Salvadoreña">
+            <img src="images/delia-cellphone.jpg" alt="Delia con celular">
+          </a>
+        </figure>
+        <figure>
+          <img src="images/jorge-computer-email.png" alt="Jorge en computadora">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="container" role="main" aria-label="Detalles de contacto">
+    <div class="contact-grid">
+      <div class="card" aria-labelledby="info-title">
+        <h2 id="info-title" style="margin:0 0 0.5rem 0; font-size:1.05rem;" data-i18n="contact.info.title">Información de contacto</h2>
+
+        <ul class="contact-list" aria-label="Detalles de contacto">
+          <li class="contact-row">
+            <div class="label" data-i18n="contact.label.address">Dirección</div>
+            <div class="value">5128 E Colfax Ave, Denver, CO 80220</div>
+          </li>
+          <li class="contact-row">
+            <div class="label" data-i18n="contact.label.phone">Teléfono</div>
+            <div class="value"><a href="tel:+13033944185">(303) 394-4185</a></div>
+          </li>
+          <li class="contact-row">
+            <div class="label" data-i18n="contact.label.email">Correo</div>
+            <div class="value"><a href="mailto:info@tiendasalvadorena.com">info@tiendasalvadorena.com</a></div>
+          </li>
+          <li class="contact-row">
+            <div class="label">Facebook</div>
+            <div class="value"><a href="https://www.facebook.com/TiendaSalvadorena.Denver/" target="_blank" rel="noopener noreferrer" data-i18n="contact.facebook.link">Visitar nuestra página de Facebook</a></div>
+          </li>
+          <li class="contact-row">
+            <div class="label" data-i18n="contact.label.hours">Horario</div>
+            <div class="value">
+              <table class="hours-table" aria-label="Horario de atención">
+                <tbody>
+                  <tr><td data-i18n="contact.hours.sunday">Domingo</td><td>10 AM – 6 PM</td></tr>
+                  <tr><td data-i18n="contact.hours.monday">Lunes</td><td>10 AM – 7 PM</td></tr>
+                  <tr><td data-i18n="contact.hours.tuesday">Martes</td><td>10 AM – 7 PM</td></tr>
+                  <tr><td data-i18n="contact.hours.wednesday">Miércoles</td><td>10 AM – 7 PM</td></tr>
+                  <tr><td data-i18n="contact.hours.thursday">Jueves</td><td>10 AM – 7 PM</td></tr>
+                  <tr><td data-i18n="contact.hours.friday">Viernes</td><td>10 AM – 7 PM</td></tr>
+                  <tr><td data-i18n="contact.hours.saturday">Sábado</td><td>10 AM – 7 PM</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li class="contact-row">
+            <div class="label" data-i18n="contact.label.parking">Estacionamiento</div>
+            <div class="value parking" data-i18n="contact.parking.details">
+              Estacionamiento en la calle y detrás de la tienda (compartimos un lote con otros comercios; aproximadamente 4 espacios). También puede estacionar en Forrest Street y caminar hasta la tienda.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <aside>
+        <div class="card" aria-labelledby="map-title">
+          <h2 id="map-title" style="margin:0 0 0.5rem 0; font-size:1.05rem;" data-i18n="contact.map.title">Cómo llegar</h2>
+          <iframe
+            class="map-frame"
+            title="Mapa: Tienda Salvadoreña"
+            src="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p style="margin-top:0.6rem; color:var(--muted); font-size:0.95rem;" data-i18n="contact.map.note">
+            Recomendamos llamar antes de venir para confirmar disponibilidad de productos especiales (por ejemplo Pollo Campero).
+          </p>
+        </div>
+
+        <div class="card" style="margin-top:0.9rem;" aria-labelledby="notes-title">
+          <h3 id="notes-title" style="margin:0 0 0.5rem 0; font-size:1rem;" data-i18n="contact.notes.title">Información adicional</h3>
+          <p style="color:var(--muted); margin:0; font-size:0.95rem;" data-i18n="contact.notes.text">
+            Para pedidos grandes o consultas de prensa, utilice el teléfono o el correo electrónico indicados arriba.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container" style="max-width:1100px; margin:0 auto; padding:0.5rem 0;">
+      <p class="legal" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. — Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
+      <p class="contact-line" data-i18n="footer.contactline">Contacto: 5128 E Colfax Ave, Denver, CO 80220 | Teléfono: (303) 394-4185 | Correo: info@tiendasalvadorena.com</p>
+    </div>
+  </footer>
+
+  <script src="js/lang-toggle.js" defer></script>
+</body>
+</html>
