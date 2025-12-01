@@ -1,0 +1,323 @@
+<!--
+Author: David Quintana
+MSU Denver login name: dquint32
+Date Created: 11/02/2025
+Date Due: 12/01/2024
+Modified: 11/30/2025
+Filename: index.html
+Purpose: Home page for Tienda Salvadoreña - showcases mission, product categories, and community recognition.
+Editor: Notepad
+Generative AI Used: Yes
+Specific Tools Used: Copilot, Gemini, and Claude
+Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge and Delia, the flags, etc.)
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="site.title">Tienda Salvadoreña — Inicio</title>
+  <meta name="description" data-i18n="meta.description" content="Auténticos productos salvadoreños y centroamericanos en Denver — tradición, sabor y comunidad.">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --cobalt:#0b5ed7;
+      --cobalt-dark:#0a58ca;
+      --muted:#6b7280;
+      --card-bg:#ffffff;
+      --border:#e6e6e6;
+      --shadow: 0 6px 18px rgba(0,0,0,0.06);
+      --soft-cream:#fff8f0;
+      --brick-red:#b91c1c;
+      --warm-beige:#fff4e6;
+      --terracotta:#d97706;
+      --header-green:#0f766e;
+      --light-gray:#e9e9e9;
+      --radius:10px;
+    }
+
+    html,body{height:100%}
+    body {
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#111827;
+      margin:0;
+      background:#fafafa;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    a { color:var(--cobalt); }
+    .container { max-width:1100px; margin:0 auto; padding:1rem; box-sizing:border-box; }
+
+    /* Top toolbar: brand, primary nav, language toggle */
+    .top-toolbar {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:0.5rem 1rem;
+      background:transparent;
+      border-bottom:1px solid rgba(0,0,0,0.03);
+    }
+
+    .top-left {
+      display:flex;
+      align-items:center;
+      gap:1rem;
+    }
+
+    .brand { display:flex; align-items:center; gap:0.75rem; }
+    .brand img { height:44px; display:block; }
+
+    .primary-nav {
+      display:flex;
+      gap:0.75rem;
+      align-items:center;
+      font-weight:600;
+      font-size:0.95rem;
+      white-space:nowrap;
+    }
+    .primary-nav a {
+      color:var(--cobalt);
+      text-decoration:none;
+      padding:0.35rem 0.5rem;
+      border-radius:6px;
+    }
+    .primary-nav a:hover { color:var(--cobalt-dark); background:rgba(11,94,215,0.06); }
+    .primary-nav a.active {
+      background:var(--cobalt);
+      color:#fff;
+      box-shadow:0 4px 12px rgba(11,94,215,0.12);
+    }
+
+    .lang-toggle { display:inline-flex; gap:0.4rem; align-items:center; }
+    .lang-toggle button {
+      background:transparent;
+      border:1px solid var(--border);
+      padding:0.28rem 0.5rem;
+      border-radius:6px;
+      font-weight:700;
+      cursor:pointer;
+      color:#111827;
+      min-width:44px;
+      text-align:center;
+      font-size:0.9rem;
+    }
+    .lang-toggle button.active { background:var(--cobalt); color:#fff; border-color:var(--cobalt); }
+
+    /* Hero */
+    .hero {
+      background-image: url('images/elsalvador-usa-flags_background.png');
+      background-size: cover;
+      background-position: center;
+      padding: 1.5rem 1rem;
+    }
+    .hero-content {
+      background: rgba(255,255,255,0.95);
+      max-width:1100px;
+      margin:0 auto;
+      padding:1rem;
+      border-radius:10px;
+      display:flex;
+      gap:1.25rem;
+      align-items:center;
+      justify-content:space-between;
+      box-shadow: var(--shadow);
+      flex-wrap:wrap;
+    }
+
+    /* Increased Jorge & Delia badge size */
+    .hero-badge img {
+      width:140px;
+      height:140px;
+      object-fit:cover;
+      border-radius:10px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+      display:block;
+    }
+
+    .hero-text h1 { margin:0 0 0.4rem 0; font-size:1.5rem; }
+    .hero-text p { margin:0 0 0.6rem 0; color:var(--muted); }
+
+    .btn { display:inline-block; background:var(--cobalt); color:#fff; padding:0.5rem 0.8rem; border-radius:8px; text-decoration:none; font-weight:700; }
+    .btn:hover { background:var(--cobalt-dark); }
+
+    /* Mission, categories, press teaser */
+    .mission-statement {
+      max-width: 800px;
+      margin: 1.75rem auto;
+      text-align: center;
+      background-color: var(--soft-cream);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 5px solid var(--cobalt);
+      box-shadow: var(--shadow);
+    }
+
+    .featured-categories { padding: 1.5rem 0; max-width:1100px; margin:0 auto; }
+    .category-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .category-preview {
+      background-color: var(--card-bg);
+      padding:1rem;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      text-align:center;
+      transition: transform 0.15s;
+      border:1px solid var(--light-gray);
+      text-decoration:none;
+      color:inherit;
+      display:block;
+    }
+    .category-preview:hover { transform: translateY(-3px); box-shadow:0 10px 30px rgba(0,0,0,0.08); }
+    .category-preview h3 { color:var(--brick-red); margin-top:0.5rem; }
+    .category-preview img { max-width:100%; height:auto; border-radius:6px; margin:0 auto 0.5rem; }
+
+    .press-teaser {
+      background-color: var(--warm-beige);
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 1.5rem;
+      border-left: 5px solid var(--terracotta);
+      box-shadow: var(--shadow);
+    }
+    .press-quote {
+      font-size: 1.1rem;
+      font-style: italic;
+      font-family: 'Merriweather', serif;
+      color: var(--header-green);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Footer */
+    footer { padding:1rem 0; text-align:center; color:var(--muted); }
+    footer .footer-line, footer .footer-note { margin:0.25rem 0; font-size:0.95rem; }
+
+    @media (max-width:900px) {
+      .hero-content { gap:0.75rem; }
+      .hero-badge img { width:120px; height:120px; }
+      .hero-text h1 { font-size:1.35rem; }
+    }
+
+    @media (max-width:420px) {
+      .primary-nav { display:none; }
+      .hero-badge img { width:100px; height:100px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top toolbar -->
+  <div class="top-toolbar" role="toolbar" aria-label="Top toolbar">
+    <div class="top-left">
+      <div class="brand">
+        <a href="index.html" aria-label="Tienda Salvadoreña home">
+          <img src="images/tienda-salvadorena-sign.png" alt="Tienda Salvadoreña">
+        </a>
+      </div>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html" class="active" aria-current="page" data-i18n="nav.home">Inicio</a>
+        <a href="items.html" data-i18n="nav.items">Artículos</a>
+        <a href="history.html" data-i18n="nav.history">Historia</a>
+        <a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a>
+        <a href="press.html" data-i18n="nav.press">Prensa</a>
+        <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+      </nav>
+    </div>
+
+    <div class="lang-toggle" role="group" aria-label="Language toggle">
+      <button id="btnSpanish" class="active" aria-pressed="true" type="button">ES</button>
+      <button id="btnEnglish" aria-pressed="false" type="button">EN</button>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero" role="region" aria-label="Hero">
+    <div class="hero-content">
+      <figure class="hero-badge" aria-hidden="true">
+        <img src="images/comprando-jugo-deliayjorge_enhanced.png" data-i18n-alt="hero.imgAlt" alt="Jorge y Delia comprando">
+      </figure>
+
+      <div class="hero-text">
+        <h1 data-i18n="hero.title">Tienda Salvadoreña</h1>
+        <p data-i18n="hero.lead">Auténticos productos salvadoreños y centroamericanos en Denver — tradición, sabor y comunidad.</p>
+        <div style="margin-top:0.5rem;">
+          <a class="btn" href="items.html" data-i18n="hero.explore">Explora nuestros productos</a>
+          <a class="btn" href="press.html" style="background:#1877F2; margin-left:0.5rem;" data-i18n="hero.press">Prensa</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section class="mission-statement" aria-labelledby="mission-title">
+      <h2 id="mission-title" data-i18n="mission.title">La tienda salvadoreña más antigua de Colorado</h2>
+      <p data-i18n="mission.lead">Tienda Salvadoreña es un negocio familiar arraigado en la comunidad. Durante más de 30 años hemos servido a la comunidad hispana de Denver con productos auténticos, comida y cultura, manteniendo vivas nuestras tradiciones.</p>
+    </section>
+
+    <section class="featured-categories" aria-labelledby="categories-title">
+      <h2 id="categories-title" style="text-align:center;" data-i18n="categories.title">Explora Nuestros Productos</h2>
+
+      <div class="category-showcase" role="list">
+        <a href="items.html#product-gallery" class="category-preview" role="listitem" onclick="filterSelection('food')">
+          <img src="images/organized-shelft-beans-sauce-seasonings.jpg" data-i18n-alt="cat.food.imgAlt" alt="Comida y Bebidas" loading="lazy">
+          <h3 data-i18n="cat.food.title">Comida y Bebidas</h3>
+          <p data-i18n="cat.food.lead">Gaseosas, jugos, chocolate y frutas congeladas.</p>
+        </a>
+
+        <a href="items.html#product-gallery" class="category-preview" role="listitem" onclick="filterSelection('clothing')">
+          <img src="images/guayabera-traditional-shirts.jpg" data-i18n-alt="cat.clothing.imgAlt" alt="Ropa y Accesorios" loading="lazy">
+          <h3 data-i18n="cat.clothing.title">Ropa y Accesorios</h3>
+          <p data-i18n="cat.clothing.lead">Guayaberas, gorros y calzado tradicional.</p>
+        </a>
+
+        <a href="items.html#product-gallery" class="category-preview" role="listitem" onclick="filterSelection('nostalgia')">
+          <img src="images/knick-nack-bracelet_hairclips.jpg" data-i18n-alt="cat.nostalgia.imgAlt" alt="Chucherías y regalos" loading="lazy">
+          <h3 data-i18n="cat.nostalgia.title">Chucherías y recuerdos</h3>
+          <p data-i18n="cat.nostalgia.lead">Llaveros, pulseras y regalos con identidad.</p>
+        </a>
+
+        <a href="items.html#product-gallery" class="category-preview" role="listitem" onclick="filterSelection('wellness')">
+          <img src="images/herbal-supplements-soap-central-america.jpg" data-i18n-alt="cat.wellness.imgAlt" alt="Hierbas y Cuidado" loading="lazy">
+          <h3 data-i18n="cat.wellness.title">Hierbas y Cuidado</h3>
+          <p data-i18n="cat.wellness.lead">Medicinas, jabones naturales y artículos de higiene.</p>
+        </a>
+      </div>
+
+      <div style="text-align:center; margin-top:1rem;">
+        <a class="btn" href="items.html" data-i18n="categories.viewall">Ver todos los artículos</a>
+      </div>
+    </section>
+
+    <section class="press-teaser" aria-labelledby="press-title">
+      <h2 id="press-title" data-i18n="press.title">Reconocimiento Comunitario</h2>
+      <blockquote class="press-quote" data-i18n="press.quote">"Un pilar de la comunidad hispana de Denver."</blockquote>
+      <a class="btn" href="press.html" data-i18n="press.readmore">Leer más en Prensa</a>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div style="margin-bottom:0.5rem;">
+        <strong data-i18n="footer.hours_label">Horario:</strong>
+        <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
+      </div>
+      <p class="footer-note" data-i18n="footer.contactline">Contacto: 5128 E Colfax Ave, Denver, CO 80220 | Teléfono: (303) 394-4185 | Correo: info@tiendasalvadorena.com</p>
+      <p class="footer-line" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. — Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
+    </div>
+  </footer>
+
+  <!-- load the translator (defer ensures DOM is ready) -->
+  <script src="js/lang-toggle.js" defer></script>
+  <script src="js/site.js" defer></script>
+</body>
+</html>
