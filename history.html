@@ -16,231 +16,74 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="site.title">Tienda Salvadoreña — Historia</title>
-  <meta name="description" data-i18n="meta.description" content="Auténticos productos salvadoreños y centroamericanos en Denver — tradición, sabor y comunidad.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="site.title">Tienda Salvadoreña – Historia</title>
+  <meta name="description" data-i18n="meta.description" content="Auténticos productos salvadoreños y centroamericanos en Denver – tradición, sabor y comunidad.">
 
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --cobalt:#0b5ed7;
-      --cobalt-dark:#0a58ca;
-      --muted:#6b7280;
-      --card-bg:#ffffff;
-      --border:#e6e6e6;
-      --shadow: 0 6px 18px rgba(0,0,0,0.06);
-    }
-
-    html,body{height:100%}
-    body {
-      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color:#111827;
-      margin:0;
-      background:#fafafa;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-
-    a { color:var(--cobalt); }
-    .container { max-width:1100px; margin:0 auto; padding:1rem; box-sizing:border-box; }
-
-    /* Top toolbar: brand, primary nav, language toggle */
-    .top-toolbar {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-      padding:0.5rem 1rem;
-      background:transparent;
-      border-bottom:1px solid rgba(0,0,0,0.03);
-    }
-
-    .top-left {
-      display:flex;
-      align-items:center;
-      gap:1rem;
-    }
-
-    .brand { display:flex; align-items:center; gap:0.75rem; }
-    .brand img { height:44px; display:block; }
-
-    .primary-nav {
-      display:flex;
-      gap:0.75rem;
-      align-items:center;
-      font-weight:600;
-      font-size:0.95rem;
-      white-space:nowrap;
-    }
-    .primary-nav a {
-      color:var(--cobalt);
-      text-decoration:none;
-      padding:0.35rem 0.5rem;
-      border-radius:6px;
-    }
-    .primary-nav a:hover { color:var(--cobalt-dark); background:rgba(11,94,215,0.06); }
-    .primary-nav a.active {
-      background:var(--cobalt);
-      color:#fff;
-      box-shadow:0 4px 12px rgba(11,94,215,0.12);
-    }
-
-    .lang-toggle {
-      display:inline-flex;
-      gap:0.4rem;
-      align-items:center;
-    }
-    .lang-toggle button {
-      background:transparent;
-      border:1px solid var(--border);
-      padding:0.28rem 0.5rem;
-      border-radius:6px;
-      font-weight:700;
-      cursor:pointer;
-      color:#111827;
-      min-width:44px;
-      text-align:center;
-      font-size:0.9rem;
-    }
-    .lang-toggle button.active {
-      background:var(--cobalt);
-      color:#fff;
-      border-color:var(--cobalt);
-    }
-
-    /* Hero */
-    .hero {
-      background-image: url('images/elsalvador-usa-flags_background.png');
-      background-size: cover;
-      background-position: center;
-      padding: 1.5rem 1rem;
-    }
-    .hero-content {
-      background: rgba(255,255,255,0.95);
-      max-width:1100px;
-      margin:0 auto;
-      padding:1rem;
-      border-radius:10px;
-      display:flex;
-      gap:1rem;
-      align-items:center;
-      justify-content:space-between;
-      box-shadow: var(--shadow);
-      flex-wrap:wrap;
-    }
-    .hero-text { flex:1 1 60%; min-width:220px; }
-    .hero-text h1 { margin:0 0 0.5rem 0; font-size:1.5rem; }
-    .hero-text p { margin:0 0 0.5rem 0; color:var(--muted); line-height:1.4; }
-
-    .hero-image { flex:0 0 160px; text-align:center; }
-    .hero-image img { width:140px; height:auto; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.12); display:block; margin:0 auto; }
-
-    /* Content sections */
-    .content { max-width:1100px; margin:1rem auto; padding:0 1rem; box-sizing:border-box; }
-    .section { background:var(--card-bg); padding:1rem; border-radius:10px; border:1px solid var(--border); box-shadow:var(--shadow); margin-bottom:1rem; }
-    .story { line-height:1.6; color:#111827; }
-    .story p { margin:0 0 1rem 0; }
-    .story-highlights ul { margin:0; padding-left:1.1rem; color:var(--muted); }
-    .heritage-grid { display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.75rem; }
-    .heritage-item img { width:100%; max-width:260px; height:auto; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.08); display:block; }
-    .heritage-item figcaption { margin-top:0.5rem; color:var(--muted); font-size:0.95rem; }
-
-    .btn { display:inline-block; background:var(--cobalt); color:#fff; padding:0.5rem 0.8rem; border-radius:8px; text-decoration:none; font-weight:700; }
-    .btn:hover { background:var(--cobalt-dark); }
-
-    footer { margin-top:1rem; padding:0.75rem 0; color:var(--muted); text-align:center; }
-    footer .legal { margin:0 0 0.4rem 0; }
-    footer .contact-line a { color:var(--cobalt); text-decoration:none; font-weight:600; }
-
-    @media (max-width:420px) {
-      .hero-image img { width:120px; }
-      .primary-nav { display:none; } /* keep toolbar compact on very small screens */
-    }
-  </style>
 </head>
 <body>
-  <!-- Top toolbar -->
-  <div class="top-toolbar" role="toolbar" aria-label="Top toolbar">
-    <div class="top-left">
-      <div class="brand">
-        <a href="index.html" aria-label="Tienda Salvadoreña home">
-          <img src="images/tienda-salvadorena-sign.png" alt="Tienda Salvadoreña">
-        </a>
+  <header class="site-header" role="banner">
+    <div class="header-toolbar">
+      <div class="header-left">
+        <img src="images/tienda-salvadorena-sign.png" alt="Tienda Salvadoreña" class="brand-logo">
+        <h1 class="brand-name">Tienda Salvadoreña</h1>
       </div>
 
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="index.html" data-i18n="nav.home">Inicio</a>
-        <a href="items.html" data-i18n="nav.items">Artículos</a>
-        <a href="history.html" class="active" aria-current="page" data-i18n="nav.history">Historia</a>
-        <a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a>
-        <a href="press.html" data-i18n="nav.press">Prensa</a>
-        <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+      <nav class="header-center" aria-label="Primary navigation">
+        <div class="main-nav">
+          <a href="index.html" data-i18n="nav.home">Inicio</a>
+          <a href="items.html" data-i18n="nav.items">Artículos</a>
+          <a href="history.html" class="active" aria-current="page" data-i18n="nav.history">Historia</a>
+          <a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a>
+          <a href="press.html" data-i18n="nav.press">Prensa</a>
+          <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+        </div>
       </nav>
-    </div>
 
-    <div class="lang-toggle" role="group" aria-label="Language toggle">
-      <button id="btnSpanish" class="active" aria-pressed="true" type="button">ES</button>
-      <button id="btnEnglish" aria-pressed="false" type="button">EN</button>
-    </div>
-  </div>
-
-  <!-- Hero -->
-  <section class="hero" role="region" aria-label="Historia hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1 data-i18n="history.hero.title">Historia Familiar</h1>
-        <p data-i18n="history.hero.lead">De un aula en El Salvador a una tiendita en Denver: así construyeron Jorge y Delia un hogar para la cultura, la comida y la comunidad.</p>
+      <div class="header-right" role="group" aria-label="Language toggle">
+        <button id="btnSpanish" class="lang-button active" aria-pressed="true" type="button">ES</button>
+        <button id="btnEnglish" class="lang-button" aria-pressed="false" type="button">EN</button>
       </div>
+    </div>
+  </header>
 
-      <div class="hero-image" aria-hidden="true">
-        <img src="images/comiendo-pupusas-jorgeydelia_enhanced.png" alt="Jorge y Delia" loading="lazy">
+  <section class="hero hero--cobalt" role="region" aria-labelledby="history-hero-title">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <h1 id="history-hero-title" class="hero__title" data-i18n="history.hero.title">Historia Familiar</h1>
+        <p class="hero__subtitle" data-i18n="history.hero.lead">De un aula en El Salvador a una tiendita en Denver: así construyeron Jorge y Delia un hogar para la cultura, la comida y la comunidad.</p>
       </div>
+      <figure class="hero__image" aria-label="Jorge y Delia">
+        <img src="images/comiendo-pupusas-jorgeydelia_enhanced.png" 
+             alt="Jorge y Delia disfrutando pupusas" 
+             loading="eager">
+      </figure>
     </div>
   </section>
 
-  <!-- Main content -->
-  <main class="content" role="main">
-    <!-- Mission -->
-    <section class="section story" aria-labelledby="mission-title">
+  <main class="container" role="main">
+    <section class="story" aria-labelledby="mission-title">
       <h2 id="mission-title" data-i18n="history.mission.title">Nuestra Misión</h2>
       <p data-i18n="history.mission.text">
-        Our mission is to keep Salvadoran traditions alive by offering authentic products that nourish both body and spirit. Inspired by Jorge and Delia’s dedication, we serve Colorado’s community with warmth, integrity, and a commitment to cultural pride.
+        Our mission is to keep Salvadoran traditions alive by offering authentic products that nourish both body and spirit. Inspired by Jorge and Delia's dedication, we serve Colorado's community with warmth, integrity, and a commitment to cultural pride.
       </p>
     </section>
 
-    <!-- Story -->
-    <section class="section story" aria-labelledby="story-title">
-      <h2 id="story-title" data-i18n="history.story.title">La historia de los abuelos</h2>
+    <section class="real-story" aria-labelledby="story-title">
+      <div class="story">
+        <h2 id="story-title" data-i18n="history.story.title">La historia de los abuelos</h2>
 
-      <article>
-        <p data-i18n="history.story.p1">
-          Delia aprendió temprano que una buena vida comienza con una buena lección. En El Salvador, fue la maestra que sus estudiantes recordaban no solo por las tareas, sino por la forma respetuosa en que decía sus nombres. Jorge la notó por primera vez cruzando un patio donde la luz de la tarde convertía el polvo de tiza en oro. Admiraba su curiosidad, su fe y la manera tranquila en que organizaba el caos con cuidado.
-        </p>
+        <article>
+          <p data-i18n="history.story.p1">
+            Tienda Salvadoreña nació de la historia de amor entre Delia, una dedicada maestra de El Salvador, y Jorge, un trabajador incansable de la industria aérea en Ecuador. Al llegar a Denver, Delia soñaba con crear un lugar donde los centroamericanos pudieran sentirse en casa, y Jorge estuvo siempre a su lado para hacerlo realidad. Su primera tienda en Colorado Boulevard era tan pequeña como un clóset, pero ofrecía los sabores y tradiciones que recordaban a la gente su tierra natal. Con esfuerzo y corazón, crecieron hasta abrir la tienda más grande en East Colfax, donde hoy ofrecen una amplia variedad de productos que celebran la cultura centroamericana. Para Delia y Jorge, la tienda es mucho más que un negocio: es un pilar de la comunidad, una manera de mantener vivas las tradiciones en las familias de Denver, y un legado de amor, resiliencia y orgullo que sigue inspirando a sus hijos, nietos y vecinos.
+          </p>
+        </article>
+      </div>
 
-        <p data-i18n="history.story.p2">
-          Unieron sus talentos antes de casarse: la constancia y el amor por el aprendizaje de Delia, la valentía y el ingenio de Jorge. Al llegar a Denver, encontraron un pequeño local en Colorado Boulevard — "del tamaño de un clóset", bromeaba él. Los estantes eran bajos, las horas largas y el sueño más alto que ambos. Abastecieron lo que se sentía como casa: maseca, café, pan dulce y conversaciones que convierten a un desconocido en vecino.
-        </p>
-
-        <p data-i18n="history.story.p3">
-          El crecimiento llegó como la mañana — lento y confiable. Un cliente trajo a un amigo, un amigo trajo a una familia, y pronto la tienda se convirtió en un lugar de encuentro para la memoria. Las pupusas unieron generaciones; el aroma de loroco y quesillo sacaba historias como canciones. Delia llevaba un cuaderno junto a la caja para nombres y necesidades. Jorge cuidaba la puerta, saludando a todos con el mismo calor del primer día.
-        </p>
-
-        <p data-i18n="history.story.p4">
-          Durante más de treinta años, la tienda fue más que un negocio. Se convirtió en una promesa: que los inmigrantes pueden plantar raíces en cualquier lugar y dar sombra a otros. Hubo temporadas difíciles — congeladores descompuestos, presupuestos ajustados, noches largas — pero la fe cosió los días duros en un tejido mayor. Cada decisión seguía una pregunta sencilla: ¿Ayudará esto a que nuestra comunidad se sienta en casa?
-        </p>
-
-        <p data-i18n="history.story.p5">
-          Hoy, Tienda Salvadoreña es un álbum vivo. En los estantes, ves el sabor de un país. En las sonrisas, sientes el calor de un aula. En la risa alrededor del comal caliente, escuchas el pulso de la familia. Jorge y Delia construyeron más que una tienda: hicieron un lugar donde la cultura no solo se recuerda; se comparte. Ese es su legado: amor visible, una pupusa a la vez.
-        </p>
-      </article>
-    </section>
-
-    <!-- Highlights -->
-    <section class="section" aria-labelledby="highlights-title">
-      <h2 id="highlights-title" data-i18n="history.highlights.title">Puntos clave</h2>
       <div class="story-highlights">
+        <h3 data-i18n="history.highlights.title">Puntos clave</h3>
         <ul>
           <li data-i18n="history.highlights.meeting" data-i18n-html="true"><strong>El encuentro:</strong> Una maestra respetada en El Salvador conoce a Jorge, un hombre emprendedor y amable.</li>
           <li data-i18n="history.highlights.partnership" data-i18n-html="true"><strong>La sociedad:</strong> Valores compartidos de educación, fe y servicio guían su camino.</li>
@@ -250,64 +93,73 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
       </div>
     </section>
 
-    <!-- Heritage -->
-    <section class="section" aria-labelledby="heritage-title">
+    <section class="cultural-context" aria-labelledby="heritage-title">
       <h2 id="heritage-title" data-i18n="history.heritage.title">Herencia y nostalgia</h2>
 
       <div class="heritage-grid" role="list">
         <figure class="heritage-item" role="listitem">
-          <img src="images/tienda-salvadorena-sign.png" alt="Letrero de la tienda" loading="lazy">
-          <figcaption data-i18n="history.heritage.caption1">Nuestro letrero — un punto de referencia y una bienvenida.</figcaption>
+          <img src="images/tienda-salvadorena-sign.png" 
+               alt="Letrero de la tienda" 
+               loading="lazy">
+          <figcaption data-i18n="history.heritage.caption1">Nuestro letrero – un punto de referencia y una bienvenida.</figcaption>
         </figure>
 
         <figure class="heritage-item" role="listitem">
-          <img src="images/silabario-hispanoamericano-pronounciationbook.png" alt="Silabario Hispanoamericano" loading="lazy">
-          <figcaption data-i18n="history.heritage.caption2">Un pilar del aula — alfabetización, dignidad y raíces compartidas.</figcaption>
+          <img src="images/silabario-hispanoamericano-pronounciationbook.png" 
+               alt="Silabario Hispanoamericano" 
+               loading="lazy">
+          <figcaption data-i18n="history.heritage.caption2">Un pilar del aula – alfabetización, dignidad y raíces compartidas.</figcaption>
         </figure>
 
         <figure class="heritage-item" role="listitem">
-          <img src="images/bandera-elsalvador.png" alt="Bandera de El Salvador" loading="lazy">
-          <figcaption data-i18n="history.heritage.caption3">Azul y blanco — el origen que llevamos a nuestro trabajo diario.</figcaption>
+          <img src="images/bandera-elsalvador.png" 
+               alt="Bandera de El Salvador" 
+               loading="lazy">
+          <figcaption data-i18n="history.heritage.caption3">Azul y blanco – el origen que llevamos a nuestro trabajo diario.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- Purpose -->
-    <section class="section" aria-labelledby="purpose-title">
+    <section class="purpose" aria-labelledby="purpose-title">
       <h2 id="purpose-title" data-i18n="history.purpose.title">Propósito de esta página</h2>
       <p data-i18n="history.purpose.text">
         Compartir el legado personal de Jorge y Delia y establecer las raíces auténticas y nostálgicas del negocio. Esta página cumple el requisito visual principal con la escena de pupusas en caricatura y apoya la historia real mediante imágenes de herencia y contexto comunitario.
       </p>
     </section>
 
-    <!-- Values -->
-    <section class="section" aria-labelledby="values-title">
+    <section class="card" style="border-left: 5px solid var(--cobalt-blue);" aria-labelledby="values-title">
       <h2 id="values-title" data-i18n="history.values.title">Nuestros Valores</h2>
-      <ul>
-        <li data-i18n="history.values.authenticity">Autenticidad — productos genuinos que representan nuestra cultura.</li>
-        <li data-i18n="history.values.family">Familia — un negocio fundado en amor y legado.</li>
-        <li data-i18n="history.values.community">Comunidad — servir con calidez y respeto.</li>
-        <li data-i18n="history.values.pride">Orgullo cultural — compartir nuestras raíces con Colorado.</li>
+      <ul style="list-style: none; padding-left: 0;">
+        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="history.values.authenticity">✓ Autenticidad – productos genuinos que representan nuestra cultura.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="history.values.family">✓ Familia – un negocio fundado en amor y legado.</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="history.values.community">✓ Comunidad – servir con calidez y respeto.</li>
+        <li style="padding: 0.5rem 0;" data-i18n="history.values.pride">✓ Orgullo cultural – compartir nuestras raíces con Colorado.</li>
       </ul>
     </section>
 
-    <!-- Call to action -->
-    <section class="section" aria-labelledby="cta-title">
+    <section class="card" style="text-align: center; border-left: 5px solid var(--golden-accent); background-color: var(--soft-cream);" aria-labelledby="cta-title">
       <h2 id="cta-title" data-i18n="history.cta.title">Visítanos</h2>
       <p data-i18n="history.cta.text">
         Te invitamos a visitar Tienda Salvadoreña en Denver y ser parte de nuestra historia. Cada compra apoya un legado familiar y mantiene vivas las tradiciones de El Salvador.
       </p>
-      <a class="btn" href="contact.html" data-i18n="history.cta.button">Ir a Contacto</a>
+      <a class="btn-primary" href="contact.html" data-i18n="history.cta.button">Ir a Contacto</a>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer role="contentinfo">
+  <footer class="site-footer" role="contentinfo">
+<footer class="site-footer" role="contentinfo">
     <div class="container">
-      <p class="legal" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. — Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
-      <p class="contact-line" data-i18n="footer.contactline">Contacto: 5128 E Colfax Ave, Denver, CO 80220 | Teléfono: (303) 394-4185 | Correo: info@tiendasalvadorena.com</p>
+      <p style="margin-bottom: 0.75rem;">
+        <strong data-i18n="footer.hours_label">Horario:</strong>
+        <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
+      </p>
+      <p class="footer-note">
+        Contacto: <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave +Denver,+CO+80220" style="color: inherit;">5128 E Colfax Ave, Denver, CO 80220</a> |  Teléfono: <a href="tel:+13033944185" style="color: inherit;">(303) 394-4185</a> | Correo: <a href="mailto:info@tiendasalvadorena.com" style="color: inherit;">info@tiendasalvadorena.com</a>
+      </p>
+      <p class="footer-line" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. – Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
     </div>
   </footer>
+
 
   <script src="js/lang-toggle.js" defer></script>
 </body>
