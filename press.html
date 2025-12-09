@@ -3,7 +3,7 @@ Author: David Quintana
 MSU Denver login name: dquint32@msudenver.edu
 Date Created: 11/02/2025
 Date Due: 12/01/2024
-Modified: 11/30/2025
+Modified: 12/08/2025 (Single-Line Horizontal Header with Logo)
 Filename: press.html
 Purpose: Press and recognition page showcasing media coverage and community impact.
 Editor: Notepad
@@ -16,312 +16,217 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="site.title">Tienda Salvadoreña — Prensa</title>
-  <meta name="description" data-i18n="meta.description" content="Auténticos productos salvadoreños y centroamericanos en Denver — tradición, sabor y comunidad.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="site.title">Tienda Salvadoreña – Prensa</title>
+  <meta name="description" data-i18n="meta.description" content="Auténticos productos salvadoreños y centroamericanos en Denver – tradición, sabor y comunidad.">
 
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --cobalt:#0b5ed7;
-      --cobalt-dark:#0a58ca;
-      --muted:#6b7280;
-      --card-bg:#ffffff;
-      --border:#e6e6e6;
-      --shadow: 0 6px 18px rgba(0,0,0,0.06);
-      --golden-accent:#f6c84c;
-      --light-gray:#e9e9e9;
-      --muted-gray:#6b7280;
-    }
-
-    html,body{height:100%}
-    body {
-      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color:#111827;
-      margin:0;
-      background:#fafafa;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-
-    a { color:var(--cobalt); }
-    .container { max-width:1100px; margin:0 auto; padding:1rem; box-sizing:border-box; }
-
-    /* Top toolbar: brand, primary nav, language toggle */
-    .top-toolbar {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-      padding:0.5rem 1rem;
-      background:transparent;
-      border-bottom:1px solid rgba(0,0,0,0.03);
-    }
-
-    .top-left {
-      display:flex;
-      align-items:center;
-      gap:1rem;
-    }
-
-    .brand {
-      display:flex;
-      align-items:center;
-      gap:0.75rem;
-    }
-    .brand img { height:44px; display:block; }
-
-    .primary-nav {
-      display:flex;
-      gap:0.75rem;
-      align-items:center;
-      font-weight:600;
-      font-size:0.95rem;
-      white-space:nowrap;
-    }
-    .primary-nav a {
-      color:var(--cobalt);
-      text-decoration:none;
-      padding:0.35rem 0.5rem;
-      border-radius:6px;
-    }
-    .primary-nav a:hover { color:var(--cobalt-dark); background:rgba(11,94,215,0.06); }
-    .primary-nav a.active {
-      background:var(--cobalt);
-      color:#fff;
-      box-shadow:0 4px 12px rgba(11,94,215,0.12);
-    }
-
-    .lang-toggle {
-      display:inline-flex;
-      gap:0.4rem;
-      align-items:center;
-    }
-    .lang-toggle button {
-      background:transparent;
-      border:1px solid var(--border);
-      padding:0.28rem 0.5rem;
-      border-radius:6px;
-      font-weight:700;
-      cursor:pointer;
-      color:#111827;
-      min-width:44px;
-      text-align:center;
-      font-size:0.9rem;
-    }
-    .lang-toggle button.active {
-      background:var(--cobalt);
-      color:#fff;
-      border-color:var(--cobalt);
-    }
-
-    /* Hero */
-    .hero {
-      background-image: url('images/elsalvador-usa-flags_background.png');
-      background-size: cover;
-      background-position: center;
-      padding: 1.5rem 1rem;
-    }
-    .hero-content {
-      background: rgba(255,255,255,0.95);
-      max-width:1100px;
-      margin:0 auto;
-      padding:1rem;
-      border-radius:10px;
-      display:flex;
-      gap:1rem;
-      align-items:center;
-      justify-content:space-between;
-      box-shadow: var(--shadow);
-      flex-wrap:wrap;
-    }
-    .hero-gif { flex:0 0 220px; text-align:center; }
-    .hero-gif img { max-width:100%; height:auto; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.12); border:4px solid var(--golden-accent); display:block; margin:0 auto; }
-    .hero-text { flex:1 1 60%; min-width:220px; }
-    .hero-text h1 { margin:0 0 0.5rem 0; font-size:1.5rem; }
-    .hero-text p { margin:0; color:var(--muted); line-height:1.4; }
-
-    /* Press content */
-    .press-container { max-width:1100px; margin:1rem auto; padding:0 1rem; box-sizing:border-box; }
-    .quote { margin-bottom:1rem; background:var(--card-bg); padding:0.9rem; border-radius:8px; border:1px solid var(--light-gray); box-shadow:var(--shadow); }
-    .quote p { margin:0 0 0.5rem 0; color:#111827; }
-    .quote cite { color:var(--muted); font-size:0.95rem; display:block; }
-
-    /* Clippings: single-line equal-size images */
-    .clippings {
-      display:flex;
-      flex-direction:row;
-      gap:1rem;
-      align-items:flex-start;
-      justify-content:center;
-      overflow-x:auto;
-      padding:0.5rem 0;
-      -webkit-overflow-scrolling:touch;
-    }
-    .clipping-card {
-      flex:0 0 auto;
-      width:220px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-      background:var(--card-bg);
-      padding:0.5rem;
-      border-radius:8px;
-      border:1px solid var(--light-gray);
-      box-shadow:var(--shadow);
-    }
-    .clipping-card img {
-      width:100%;
-      height:140px;
-      object-fit:cover;
-      border-radius:6px;
-      display:block;
-    }
-    .clipping-card figcaption { margin-top:0.5rem; font-size:0.9rem; color:var(--muted-gray); }
-
-    .media-list { margin:0.75rem 0 0 0; padding-left:1.1rem; }
-    .media-list li { margin:0.45rem 0; }
-    .media-list a { color:var(--cobalt); text-decoration:none; font-weight:600; }
-    .media-list a:hover { text-decoration:underline; color:var(--cobalt-dark); }
-
-    .purpose { margin-top:1rem; background:var(--card-bg); padding:0.9rem; border-radius:8px; border:1px solid var(--light-gray); box-shadow:var(--shadow); }
-    .purpose p { margin:0; color:var(--muted); }
-
-    footer { margin-top:1.25rem; padding:1rem 0; color:var(--muted); text-align:center; }
-    footer .footer-line, footer .footer-note { margin:0.25rem 0; font-size:0.95rem; }
-
-    @media (max-width:420px) {
-      .clipping-card { width:180px; }
-      .clipping-card img { height:120px; }
-      .primary-nav { display:none; } /* keep toolbar compact on very small screens */
-    }
-  </style>
 </head>
 <body>
-  <!-- Top toolbar -->
-  <div class="top-toolbar" role="toolbar" aria-label="Top toolbar">
-    <div class="top-left">
-      <div class="brand">
-        <a href="index.html" aria-label="Tienda Salvadoreña home">
-          <img src="images/tienda-salvadorena-sign.png" alt="Tienda Salvadoreña">
-        </a>
+  <!-- Single-Line Horizontal Header Toolbar -->
+  <header class="site-header" role="banner">
+    <div class="header-toolbar">
+      <!-- Left Section: Logo + Store Name -->
+      <div class="header-left">
+        <img src="images/tienda-salvadorena-sign.png" 
+             alt="Tienda Salvadoreña Logo" 
+             class="brand-logo">
+        <h1 class="brand-name">Tienda Salvadoreña</h1>
       </div>
 
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="index.html" data-i18n="nav.home">Inicio</a>
-        <a href="items.html" data-i18n="nav.items">Artículos</a>
-        <a href="history.html" data-i18n="nav.history">Historia</a>
-        <a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a>
-        <a href="press.html" class="active" aria-current="page" data-i18n="nav.press">Prensa</a>
-        <a href="contact.html" data-i18n="nav.contact">Contacto</a>
-      </nav>
-    </div>
+      <!-- Center Section: Navigation Links -->
+      <div class="header-center">
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="index.html" data-i18n="nav.home">Inicio</a>
+          <a href="items.html" data-i18n="nav.items">Artículos</a>
+          <a href="history.html" data-i18n="nav.history">Historia</a>
+          <a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a>
+          <a href="press.html" class="active" aria-current="page" data-i18n="nav.press">Prensa</a>
+          <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+        </nav>
+      </div>
 
-    <div class="lang-toggle" role="group" aria-label="Language toggle">
-      <button id="btnSpanish" class="active" aria-pressed="true" type="button">ES</button>
-      <button id="btnEnglish" aria-pressed="false" type="button">EN</button>
+      <!-- Right Section: Language Buttons -->
+      <div class="header-right">
+        <button id="btnSpanish" class="lang-button active" aria-pressed="true" type="button">ES</button>
+        <button id="btnEnglish" class="lang-button" aria-pressed="false" type="button">EN</button>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <!-- Hero -->
-  <section class="hero" role="region" aria-label="Hero">
-    <div class="hero-content">
-      <figure class="hero-gif" aria-hidden="true">
-        <img src="images/elsalvador-bandera-gif.gif" alt="Bandera animada" loading="lazy">
+  <!-- Hero Section with Animated Flag -->
+  <section class="hero hero--cobalt" role="region" aria-labelledby="press-hero-title">
+    <div class="hero__inner">
+      <figure class="hero__image" aria-label="Bandera de El Salvador">
+        <img src="images/elsalvador-bandera-gif.gif" 
+             alt="Bandera animada de El Salvador" 
+             loading="eager"
+             style="border-color: var(--golden-accent); border-width: 4px;">
       </figure>
-
-      <div class="hero-text">
-        <h1 data-i18n="press.hero.title">Prensa y Reconocimientos</h1>
-        <p data-i18n="press.hero.lead">Documentamos el impacto de Tienda Salvadoreña en la comunidad: artículos, menciones y reconocimientos que cuentan nuestra historia.</p>
+      <div class="hero__content">
+        <h1 id="press-hero-title" class="hero__title" data-i18n="press.hero.title">Prensa y Reconocimientos</h1>
+        <p class="hero__subtitle" data-i18n="press.hero.lead">Documentamos el impacto de Tienda Salvadoreña en la comunidad: artículos, menciones y reconocimientos que cuentan nuestra historia.</p>
       </div>
     </div>
   </section>
 
-  <!-- Main content -->
-  <main class="press-container" role="main">
-    <!-- Featured coverage -->
-    <section aria-labelledby="coverage-title">
+  <main class="container" role="main">
+    <!-- Lead Introduction -->
+    <p class="lead" style="margin-top: 2rem;">
+      <span data-i18n="press.lead">Más de 30 años de servicio comunitario documentado por medios locales e internacionales.</span>
+    </p>
+
+    <!-- Featured Coverage Section -->
+    <section aria-labelledby="coverage-title" style="margin-top: 2rem;">
       <h2 id="coverage-title" data-i18n="press.coverage.title">Cobertura destacada</h2>
 
-      <div class="quote" aria-labelledby="quote1">
-        <p id="quote1">"Tienda Salvadoreña es un negocio situado en Denver, Colorado, y fue el primer comercio con productos de El Salvador fundado en esa ciudad."</p>
-        <cite>— Diario El Salvador, 2023
-          <a href="https://diarioelsalvador.com/una-tienda-en-denver-cumple-32-anos-de-compartir-la-cultura-salvadorena/406487/" target="_blank" rel="noopener" data-i18n="press.quote.readarticle">Leer artículo</a>
+      <!-- Quote 1 -->
+      <div class="quote">
+        <p>"Tienda Salvadoreña es un negocio situado en Denver, Colorado, y fue el primer comercio con productos de El Salvador fundado en esa ciudad."</p>
+        <cite>
+          – Diario El Salvador, 2023 · 
+          <a href="https://diarioelsalvador.com/una-tienda-en-denver-cumple-32-anos-de-compartir-la-cultura-salvadorena/406487/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             data-i18n="press.quote.readarticle">Leer artículo</a>
         </cite>
       </div>
 
-      <div class="quote" aria-labelledby="quote2">
-        <p id="quote2">"La mayoría de las personas que visitan el negocio se llenan de nostalgia al ver las comidas tradicionales que encuentran."</p>
-        <cite>— Diario El Salvador, 2023</cite>
+      <!-- Quote 2 -->
+      <div class="quote">
+        <p>"La mayoría de las personas que visitan el negocio se llenan de nostalgia al ver las comidas tradicionales que encuentran."</p>
+        <cite>– Diario El Salvador, 2023</cite>
       </div>
 
-      <div class="quote" aria-labelledby="quote3">
-        <p id="quote3">"People come here from all over Colorado, Wyoming and Nebraska to buy cheeses and souvenirs that he imports from home."</p>
-        <cite>— Denverite, 2018
-          <a href="https://denverite.com/2018/02/15/daca-tps-overshadowed/" target="_blank" rel="noopener" data-i18n="press.quote.readarticle">Leer artículo</a>
+      <!-- Quote 3 -->
+      <div class="quote">
+        <p>"People come here from all over Colorado, Wyoming and Nebraska to buy cheeses and souvenirs that he imports from home."</p>
+        <cite>
+          – Denverite, 2018 · 
+          <a href="https://denverite.com/2018/02/15/daca-tps-overshadowed/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             data-i18n="press.quote.readarticle">Leer artículo</a>
         </cite>
       </div>
 
-      <div class="quote" aria-labelledby="quote4">
-        <p id="quote4">"On East Colfax, next to the trendy Bellwether coffeeshop, Jorge Romero and his wife, Delia, have run a Salvadoran grocery for more than 25 years."</p>
-        <cite>— Denverite, 2018</cite>
+      <!-- Quote 4 -->
+      <div class="quote">
+        <p>"On East Colfax, next to the trendy Bellwether coffeeshop, Jorge Romero and his wife, Delia, have run a Salvadoran grocery for more than 25 years."</p>
+        <cite>– Denverite, 2018</cite>
       </div>
     </section>
 
-    <!-- Images & credits -->
-    <section aria-labelledby="images-title" style="margin-top:1rem;">
-      <h2 id="images-title" data-i18n="press.images.title">Imágenes y créditos</h2>
+    <!-- Images & Credits Section -->
+    <section aria-labelledby="images-title" style="margin-top: 3rem;">
+      <h2 id="images-title" style="text-align: center; margin-bottom: 1.5rem;" data-i18n="press.images.title">Imágenes y créditos</h2>
 
-      <div class="clippings" role="list" aria-label="Imágenes y créditos">
+      <!-- Responsive Clippings Grid -->
+      <div class="clippings" role="list" aria-label="Imágenes de prensa">
         <figure class="clipping-card" role="listitem">
-          <img src="images/delia-flag.jpg" alt="Delia Romero sosteniendo la bandera" loading="lazy">
-          <figcaption data-i18n="press.images.caption1">Delia Romero sosteniendo la bandera dentro de Tienda Salvadoreña. Foto © Kevin Beaty / Denverite, 2018</figcaption>
+          <img src="images/delia-flag.jpg" 
+               alt="Delia Romero sosteniendo la bandera de El Salvador" 
+               loading="lazy">
+          <figcaption data-i18n="press.images.caption1">
+            Delia Romero sosteniendo la bandera dentro de Tienda Salvadoreña. Foto © Kevin Beaty / Denverite, 2018
+          </figcaption>
+          <p class="credits">Foto © Kevin Beaty / Denverite</p>
         </figure>
 
         <figure class="clipping-card" role="listitem">
-          <img src="images/jorge-counter.jpg" alt="Jorge Romero detrás del mostrador" loading="lazy">
-          <figcaption data-i18n="press.images.caption2">Jorge Romero detrás del mostrador. Foto © Kevin Beaty / Denverite, 2018</figcaption>
+          <img src="images/jorge-counter.jpg" 
+               alt="Jorge Romero detrás del mostrador" 
+               loading="lazy">
+          <figcaption data-i18n="press.images.caption2">
+            Jorge Romero detrás del mostrador.
+          </figcaption>
+          <p class="credits">Foto © Kevin Beaty / Denverite, 2018</p>
         </figure>
 
         <figure class="clipping-card" role="listitem">
-          <img src="images/grandparents-el-salvador-flag.jpg" alt="Jorge y Delia con la bandera de El Salvador" loading="lazy">
-          <figcaption data-i18n="press.images.caption3">Jorge y Delia con la bandera de El Salvador. Foto: Nicolle Menéndez / Diario El Salvador</figcaption>
+          <img src="images/grandparents-el-salvador-flag.jpg" 
+               alt="Jorge y Delia con la bandera de El Salvador" 
+               loading="lazy">
+          <figcaption data-i18n="press.images.caption3">
+            Jorge y Delia con la bandera de El Salvador.
+          </figcaption>
+          <p class="credits">Foto: Nicolle Menéndez / Diario El Salvador</p>
         </figure>
       </div>
+    </section>
 
-      <h3 style="margin-top:1rem;" data-i18n="press.featured.title">Artículos destacados</h3>
+    <!-- Featured Articles Section -->
+    <section aria-labelledby="featured-title" style="margin-top: 3rem;">
+      <h3 id="featured-title" style="margin-bottom: 1rem;" data-i18n="press.featured.title">Artículos destacados</h3>
+      
       <ul class="media-list" aria-label="Artículos destacados">
         <li>
-          <a href="https://diarioelsalvador.com/una-tienda-en-denver-cumple-32-anos-de-compartir-la-cultura-salvadorena/406487/" target="_blank" rel="noopener" data-i18n="press.featured.article1">
-            Una tienda en Denver cumple 32 años de compartir la cultura salvadoreña — Diario El Salvador
+          <a href="https://diarioelsalvador.com/una-tienda-en-denver-cumple-32-anos-de-compartir-la-cultura-salvadorena/406487/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             data-i18n="press.featured.article1">
+            Una tienda en Denver cumple 32 años de compartir la cultura salvadoreña – Diario El Salvador
           </a>
         </li>
         <li>
-          <a href="https://denverite.com/2018/02/15/daca-tps-overshadowed/" target="_blank" rel="noopener" data-i18n="press.featured.article2">
-            DACA fight overshadows status battle for Denver's Salvadorans — Denverite
+          <a href="https://denverite.com/2018/02/15/daca-tps-overshadowed/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             data-i18n="press.featured.article2">
+            DACA fight overshadows status battle for Denver's Salvadorans – Denverite
           </a>
         </li>
       </ul>
     </section>
 
-    <!-- Community impact -->
-    <section class="purpose" aria-labelledby="impact-title" style="margin-top:1rem;">
+    <!-- Community Impact Section -->
+    <section class="card" 
+             style="margin-top: 3rem; border-left: 5px solid var(--golden-accent); background-color: var(--soft-cream);" 
+             aria-labelledby="impact-title">
       <h2 id="impact-title" data-i18n="press.impact.title">Impacto comunitario</h2>
       <p data-i18n="press.impact.text">
         Delia y Jorge han sido reconocidos por su servicio a la comunidad, especialmente durante emergencias como los terremotos en El Salvador. La tienda ha servido como punto de encuentro cultural y apoyo para generaciones de familias.
       </p>
     </section>
+
+    <!-- Additional Recognition -->
+    <section class="card" style="margin-top: 2rem; text-align: center;">
+      <h3 data-i18n="press.recognition.title">Reconocimientos</h3>
+      <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);">
+          🏆 Primer negocio salvadoreño en Denver (1991)
+        </li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);">
+          📰 Destacado en medios locales e internacionales
+        </li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);">
+          🤝 Apoyo comunitario durante crisis humanitarias
+        </li>
+        <li style="padding: 0.5rem 0;">
+          ❤️ Más de 30 años sirviendo a la comunidad hispana
+        </li>
+      </ul>
+    </section>
   </main>
 
   <!-- Footer -->
-  <footer role="contentinfo">
-    <p class="footer-line" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. — Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
-    <p class="footer-note" data-i18n="footer.contactline">Contacto: 5128 E Colfax Ave, Denver, CO 80220 | Teléfono: (303) 394-4185 | Correo: info@tiendasalvadorena.com</p>
+  <footer class="site-footer" role="contentinfo">
+<footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p style="margin-bottom: 0.75rem;">
+        <strong data-i18n="footer.hours_label">Horario:</strong>
+        <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
+      </p>
+      <p class="footer-note">
+        Contacto: <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave +Denver,+CO+80220" style="color: inherit;">5128 E Colfax Ave, Denver, CO 80220</a> |  Teléfono: <a href="tel:+13033944185" style="color: inherit;">(303) 394-4185</a> | Correo: <a href="mailto:info@tiendasalvadorena.com" style="color: inherit;">info@tiendasalvadorena.com</a>
+      </p>
+      <p class="footer-line" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. – Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
+    </div>
   </footer>
 
+
+  <!-- JavaScript -->
   <script src="js/lang-toggle.js" defer></script>
 </body>
 </html>
