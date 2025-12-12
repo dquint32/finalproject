@@ -1,4 +1,42 @@
-...
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" data-i18n="pollo.meta.description" content="Pollo Campero – Tradición familiar y recomendaciones para recalentar para disfrutar el auténtico Sabor Campero.">
+  <title data-i18n="site.title">Tienda Salvadoreña – Pollo Campero</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-toolbar">
+      <div class="header-left">
+        <img src="images/tienda-salvadorena-sign.png" 
+             alt="Tienda Salvadoreña Logo" 
+             class="brand-logo">
+        <h1 class="brand-name">Tienda Salvadoreña</h1>
+      </div>
+
+      <div class="header-center">
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="index.html" data-i18n="nav.home">Inicio</a>
+          <a href="items.html" data-i18n="nav.items">Artículos</a>
+          <a href="history.html" data-i18n="nav.history">Historia</a>
+          <a href="pollo.html" class="active" aria-current="page" data-i18n="nav.pollo">Pollo Campero</a>
+          <a href="press.html" data-i18n="nav.press">Prensa</a>
+          <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <button id="btnSpanish" class="lang-button active" aria-pressed="true" type="button">ES</button>
+        <button id="btnEnglish" class="lang-button" aria-pressed="false" type="button">EN</button>
+      </div>
+    </div>
+  </header>
+
   <section class="hero hero--tangerine" role="region" aria-labelledby="pollo-hero-title">
     <div class="hero__inner">
       <figure class="hero__image" aria-label="Jorge y Delia con Pollo Campero">
@@ -14,13 +52,13 @@
         <p class="hero__note" data-i18n="pollo.hero.note">
           Aquí compartimos recomendaciones para recalentar y disfrutarlo con el mejor sabor, tal como lo hacemos en familia.
         </p>
-        </div>
+      </div>
     </div>
   </section>
 
   <main class="container" role="main">
     <section class="real-story" aria-labelledby="story-title">
-      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--light-gray);">
+      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #ccc;">
       <div class="story-with-feature">
         <div class="story">
           <h2 id="story-title" data-i18n="pollo.story.title">Historia cultural del alimento</h2>
@@ -32,7 +70,7 @@
           <p data-i18n="pollo.story.p2" data-i18n-html="true">
             Para nuestra familia, disfrutar Pollo Campero significa revivir herencia, recuerdos preciados y el auténtico <em>Sabor Campero</em>.
           </p>
-          </div>
+        </div>
 
         <div class="feature-image">
           <figure>
@@ -47,13 +85,114 @@
       </div>
     </section>
 
-    <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--light-gray);">
+    <hr style="margin: 3rem 0; border: 0; border-top: 1px solid #ccc;">
 
     <section class="card" 
-             style="margin-top: 3rem; border-left: 5px solid var(--brick-red);" 
+             style="margin-top: 3rem; border-left: 5px solid #a52a2a;" 
              aria-labelledby="reheat-title">
       <h2 id="reheat-title" data-i18n="pollo.reheat.title">Recomendaciones para recalentar</h2>
       <p data-i18n="pollo.reheat.intro" style="margin-bottom: 1.5rem;">
         El pollo suele entregarse frío en caja. Para recuperar textura crujiente y sabor, use uno de estos métodos:
       </p>
-...
+
+      <article style="margin-bottom: 2rem; padding: 1.5rem; background-color: #f9f9f9; border-radius: 8px;">
+        <h3 style="margin-top: 0; color: #a52a2a;" data-i18n="pollo.reheat.airfryer.title">
+          🍗 Método Air Fryer (Rápido y crujiente)
+        </h3>
+        <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8; list-style-type: disc;">
+          <li data-i18n="pollo.reheat.airfryer.step1">
+            Precaliente la freidora a <strong>190°C (375°F)</strong>.
+          </li>
+          <li data-i18n="pollo.reheat.airfryer.step2">
+            Coloque el pollo en una sola capa en la canasta (no sobrecargue).
+          </li>
+          <li data-i18n="pollo.reheat.airfryer.step3">
+            Recaliente <strong>4–6 minutos</strong>, volteando a la mitad si las piezas son grandes.
+          </li>
+          <li data-i18n="pollo.reheat.airfryer.step4">
+            Verifique la temperatura interna: debe alcanzar <strong>74°C (165°F)</strong>.
+          </li>
+          <li data-i18n="pollo.reheat.airfryer.step5">
+            Deje reposar 1–2 minutos antes de servir.
+          </li>
+        </ul>
+      </article>
+
+      <article style="padding: 1.5rem; background-color: #fff8e1; border-radius: 8px;">
+        <h3 style="margin-top: 0; color: #a52a2a;" data-i18n="pollo.reheat.oven.title">
+          🔥 Método Horno (Más lento pero confiable)
+        </h3>
+        <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8; list-style-type: disc;">
+          <li data-i18n="pollo.reheat.oven.step1">
+            Precaliente el horno a <strong>200°C (400°F)</strong>.
+          </li>
+          <li data-i18n="pollo.reheat.oven.step2">
+            Coloque el pollo sobre una rejilla encima de una bandeja para hornear para mantener la corteza crujiente.
+          </li>
+          <li data-i18n="pollo.reheat.oven.step3">
+            Opcional: cubra flojamente con papel aluminio la primera mitad para evitar que se reseque; luego retire para dorar.
+          </li>
+          <li data-i18n="pollo.reheat.oven.step4">
+            Hornee <strong>12–15 minutos</strong>, volteando a la mitad si no usa rejilla.
+          </li>
+          <li data-i18n="pollo.reheat.oven.step5">
+            Verifique que la temperatura interna alcance <strong>74°C (165°F)</strong>.
+          </li>
+          <li data-i18n="pollo.reheat.oven.step6">
+            Deje reposar 2 minutos antes de servir.
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <hr style="margin: 3rem 0 2rem 0; border: 0; border-top: 1px solid #ccc;">
+
+    <section class="card" style="margin-top: 2rem;">
+      <h3 data-i18n="pollo.why.title">¿Por qué Pollo Campero?</h3>
+      <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+        <li style="padding: 0.75rem 0; border-bottom: 1px dashed #ccc; display: flex; align-items: start; gap: 0.75rem;">
+          <span style="font-size: 1.5rem;">🇬🇹</span>
+          <div>
+            <strong>Auténtico:</strong> Receta original guatemalteca desde 1971
+          </div>
+        </li>
+        <li style="padding: 0.75rem 0; border-bottom: 1px dashed #ccc; display: flex; align-items: start; gap: 0.75rem;">
+          <span style="font-size: 1.5rem;">❤️</span>
+          <div>
+            <strong>Nostálgico:</strong> Sabor que conecta con el hogar y la infancia
+          </div>
+        </li>
+        <li style="padding: 0.75rem 0; border-bottom: 1px dashed #ccc; display: flex; align-items: start; gap: 0.75rem;">
+          <span style="font-size: 1.5rem;">👨‍👩‍👧‍👦</span>
+          <div>
+            <strong>Familiar:</strong> Perfecto para reuniones y celebraciones
+          </div>
+        </li>
+        <li style="padding: 0.75rem 0; display: flex; align-items: start; gap: 0.75rem;">
+          <span style="font-size: 1.5rem;">⭐</span>
+          <div>
+            <strong>Exclusivo:</strong> Difícil de encontrar fuera de Centroamérica
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p style="margin-bottom: 0.75rem;">
+        <strong data-i18n="footer.hours_label">Horario:</strong>
+        <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
+      </p>
+      <p class="footer-note">
+        Contacto: <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220" style="color: inherit;">5128 E Colfax Ave, Denver, CO 80220</a> | 
+        Teléfono: <a href="tel:+13033944185" style="color: inherit;">(303) 394-4185</a> | 
+        Correo: <a href="mailto:info@tiendasalvadorenadenver.com" style="color: inherit;">info@tiendasalvadorenadenver.com</a>
+      </p>
+      <p class="footer-line" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. – Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
+    </div>
+  </footer>
+
+  <script src="js/lang-toggle.js" defer></script>
+</body>
+</html>
