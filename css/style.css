@@ -818,7 +818,8 @@ main {
 
 .feature-image figure { 
   max-width: 100%; 
-  width: 100%;
+  width: 100%; /* FIX: Ensure 100% width on mobile inside the grid */
+  margin: 0 auto; /* Center the figure if it doesn't take full width on desktop */
 }
 
 .feature-image img { 
