@@ -7,6 +7,7 @@ Modified: 12/08/2025 (Single-Line Horizontal Header Toolbar)
 Modified: 12/09/2025 (Hero Image Object Position adjustment)
 Modified: 12/12/2025 (Fix for Pollo Campero Feature Image overflow on mobile)
 Modified: 12/12/2025 (Fix for Press Clipping Images overflow on mobile and centering)
+Modified: 12/12/2025 (Final fix: Ensuring single-column clipping cards are centered on mobile)
 Filename: style.css
 Purpose: Global stylesheet for all Tienda Salvadoreña pages - nostalgic, cultural theme with unified header and navigation.
 Editor: Notepad
@@ -546,9 +547,9 @@ main {
   margin-bottom: var(--spacing-lg);
   border: 1px solid var(--light-gray);
   width: 100%;
-  max-width: 100%; /* Ensure they don't grow past the container width */
-  margin-left: auto; /* Centering fix */
-  margin-right: auto; /* Centering fix */
+  max-width: 100%; 
+  margin-left: auto; /* Centering fix for all cards */
+  margin-right: auto; /* Centering fix for all cards */
 }
 
 .card:hover,
@@ -916,21 +917,28 @@ main {
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
   width: 100%;
+  max-width: 900px; /* Limit max width of this section */
+  margin-left: auto; /* Center the grid container itself on mobile */
+  margin-right: auto; /* Center the grid container itself on mobile */
 }
 
 @media (min-width: 800px) {
-  .clippings { grid-template-columns: 2fr 1fr; }
+  .clippings { 
+    grid-template-columns: 2fr 1fr; 
+    margin: var(--spacing-xl) auto; /* Reset margins for desktop grid */
+  }
 }
 
 .clipping-card img { 
   width: 100%; 
-  max-width: 100%; /* FIX: Ensures the image respects its container width */
+  max-width: 100%; 
   height: auto; 
   border-radius: 6px; 
   display: block; 
   margin-bottom: 1rem; 
-  margin-left: auto; /* Centering fix for image */
-  margin-right: auto; /* Centering fix for image */
+  /* The clipping-card is centered by the .card rule, but we ensure the image centers if it's smaller */
+  margin-left: auto; 
+  margin-right: auto; 
 }
 
 .quote {
