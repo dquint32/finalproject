@@ -1,23 +1,9 @@
-<!--
-Author: David Quintana
-MSU Denver login name: dquint32@msudenver.edu
-Date Created: 11/02/2025
-Date Due: 12/01/2024
-Modified: 11/30/2025
-Filename: pollo.html
-Purpose: Pollo Campero specialty page with cultural history and reheating instructions.
-Editor: Notepad
-Generative AI Used: Yes
-Specific Tools Used: Copilot, Gemini, and Claude
-Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge and Delia, the flags, etc.)
--->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" data-i18n="pollo.meta.description" content="Pollo Campero – llama para confirmar disponibilidad y encuentra recomendaciones para recalentar." />
+  <meta name="description" data-i18n="pollo.meta.description" content="Pollo Campero – Tradición familiar y recomendaciones para recalentar para disfrutar el auténtico Sabor Campero." />
   <title data-i18n="site.title">Tienda Salvadoreña – Pollo Campero</title>
 
   <link rel="stylesheet" href="css/style.css">
@@ -59,29 +45,20 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
              loading="eager">
       </figure>
       <div class="hero__content">
-        <h1 id="pollo-hero-title" class="hero__title" data-i18n="pollo.hero.title">Pollo Campero</h1>
-        <p class="hero__subtitle" data-i18n="pollo.hero.lead">Llame para confirmar si tenemos Pollo Campero; la disponibilidad es variable y a menudo se agota rápido.</p>
-        <p class="hero__note" data-i18n="pollo.hero.note">Nota: el pollo se entrega frío en caja; consulte las instrucciones de recalentado más abajo.</p>
-        
-        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
-          <a class="btn-primary" href="tel:+13033944185" aria-label="Llamar Tienda Salvadoreña">
-            📞 (303) 394-4185
-          </a>
-          <a class="btn-primary" 
-             href="https://www.facebook.com/TiendaSalvadorena.Denver/" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             aria-label="Visitar Facebook de Tienda Salvadoreña"
-             style="background-color: #1877F2;">
-            Facebook
-          </a>
+        <h1 id="pollo-hero-title" class="hero__title" data-i18n="pollo.hero.title">Pollo Campero – Tradición Familiar</h1>
+        <p class="hero__subtitle" data-i18n="pollo.hero.lead">
+          Pollo Campero es un alimento muy querido en Centroamérica. Nuestra familia lo disfruta como parte de nuestras tradiciones, y sabemos que muchos viajeros lo traen en cajas frías desde Guatemala o El Salvador para compartir en casa.
+        </p>
+        <p class="hero__note" data-i18n="pollo.hero.note">
+          Aquí compartimos recomendaciones para recalentar y disfrutarlo con el mejor sabor, tal como lo hacemos en familia.
+        </p>
         </div>
-      </div>
     </div>
   </section>
 
   <main class="container" role="main">
     <section class="real-story" aria-labelledby="story-title">
+      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--light-gray);">
       <div class="story-with-feature">
         <div class="story">
           <h2 id="story-title" data-i18n="pollo.story.title">Historia cultural del alimento</h2>
@@ -91,14 +68,9 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
           </p>
 
           <p data-i18n="pollo.story.p2" data-i18n-html="true">
-            Ofrecer Pollo Campero significa entregar herencia, recuerdos preciados y el auténtico <em>Sabor Campero</em>.
+            Para nuestra familia, disfrutar Pollo Campero significa revivir herencia, recuerdos preciados y el auténtico <em>Sabor Campero</em>.
           </p>
-
-          <p style="margin-top: 1rem; padding: 1rem; background-color: var(--warm-beige); border-left: 4px solid var(--terracotta); border-radius: 6px;">
-            <strong data-i18n="pollo.story.availability">Para confirmar disponibilidad:</strong> llame al 
-            <a href="tel:+13033944185" style="font-weight: 700; text-decoration: none;">(303) 394-4185</a>
-          </p>
-        </div>
+          </div>
 
         <div class="feature-image">
           <figure>
@@ -113,19 +85,21 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
       </div>
     </section>
 
+    <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--light-gray);">
+
     <section class="card" 
              style="margin-top: 3rem; border-left: 5px solid var(--brick-red);" 
              aria-labelledby="reheat-title">
       <h2 id="reheat-title" data-i18n="pollo.reheat.title">Recomendaciones para recalentar</h2>
       <p data-i18n="pollo.reheat.intro" style="margin-bottom: 1.5rem;">
-        El pollo se entrega frío en caja. Para recuperar textura crujiente y sabor, use uno de estos métodos:
+        El pollo suele entregarse frío en caja. Para recuperar textura crujiente y sabor, use uno de estos métodos:
       </p>
 
       <article style="margin-bottom: 2rem; padding: 1.5rem; background-color: var(--soft-cream); border-radius: 8px;">
         <h3 style="margin-top: 0; color: var(--brick-red);" data-i18n="pollo.reheat.airfryer.title">
           🍗 Método Air Fryer (Rápido y crujiente)
         </h3>
-        <ol style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8;">
+        <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8; list-style-type: disc;">
           <li data-i18n="pollo.reheat.airfryer.step1">
             Precaliente la freidora a <strong>190°C (375°F)</strong>.
           </li>
@@ -141,14 +115,14 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
           <li data-i18n="pollo.reheat.airfryer.step5">
             Deje reposar 1–2 minutos antes de servir.
           </li>
-        </ol>
+        </ul>
       </article>
 
       <article style="padding: 1.5rem; background-color: var(--warm-beige); border-radius: 8px;">
         <h3 style="margin-top: 0; color: var(--brick-red);" data-i18n="pollo.reheat.oven.title">
           🔥 Método Horno (Más lento pero confiable)
         </h3>
-        <ol style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8;">
+        <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8; list-style-type: disc;">
           <li data-i18n="pollo.reheat.oven.step1">
             Precaliente el horno a <strong>200°C (400°F)</strong>.
           </li>
@@ -167,29 +141,11 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
           <li data-i18n="pollo.reheat.oven.step6">
             Deje reposar 2 minutos antes de servir.
           </li>
-        </ol>
+        </ul>
       </article>
     </section>
 
-    <section class="card" 
-             style="margin-top: 2rem; text-align: center; border-left: 5px solid var(--golden-accent); background-color: var(--soft-cream);" 
-             aria-labelledby="notes-title">
-      <h3 id="notes-title" data-i18n="pollo.notes.title">Notas Importantes</h3>
-      <p data-i18n="pollo.notes.text" style="margin-bottom: 1.5rem;">
-        Pollo Campero es muy popular y la disponibilidad varía. Recomendamos llamar antes de venir para confirmar existencia o reservar. Para pedidos grandes, por favor consulte con antelación.
-      </p>
-      
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a class="btn-primary" href="tel:+13033944185" style="min-width: 200px;">
-          📞 Llamar ahora
-        </a>
-        <a class="btn-primary" 
-           href="contact.html" 
-           style="background-color: var(--muted-green); min-width: 200px;">
-          📍 Ver ubicación
-        </a>
-      </div>
-    </section>
+    <hr style="margin: 3rem 0 2rem 0; border: 0; border-top: 1px solid var(--light-gray);">
 
     <section class="card" style="margin-top: 2rem;">
       <h3 data-i18n="pollo.why.title">¿Por qué Pollo Campero?</h3>
