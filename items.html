@@ -1,11 +1,11 @@
 <!--
 Author: David Quintana
-MSU Denver login name: dquint32@msudenver.edu
+MSU Denver login name: dquint32
 Date Created: 11/02/2025
 Date Due: 12/01/2024
-Modified: 11/30/2025
+Modified: 12/12/2025
 Filename: items.html
-Purpose: Product catalog page displaying authentic Salvadoran and Central American products with category filters.
+Purpose: improving the visual browsing experience of your product gallery by implementing a standard image-zoom pattern.
 Editor: Notepad
 Generative AI Used: Yes
 Specific Tools Used: Copilot, Gemini, and Claude
@@ -22,6 +22,123 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
 
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Image Zoom Modal Styles */
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .image-modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .image-modal-content {
+      max-width: 90%;
+      max-height: 90vh;
+      object-fit: contain;
+      animation: zoomIn 0.3s ease;
+      border-radius: 8px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .image-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10000;
+      background: rgba(0, 0, 0, 0.5);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .image-modal-close:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(90deg);
+    }
+
+    .image-modal-caption {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      text-align: center;
+      max-width: 80%;
+    }
+
+    /* Clickable cursor hint */
+    .gallery-grid .product-card {
+      cursor: zoom-in;
+    }
+
+    .gallery-grid .product-card img {
+      cursor: zoom-in;
+    }
+
+    /* Better image quality */
+    .product-image {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { 
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to { 
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Mobile optimization */
+    @media (max-width: 768px) {
+      .image-modal-close {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+      }
+
+      .image-modal-caption {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        bottom: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" role="banner">
@@ -117,181 +234,188 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
   <main class="container" role="main">
     <div id="product-gallery" class="gallery-grid" aria-label="Galería de productos">
       
-      <article class="product-card" data-category="wellness">
+      <article class="product-card" data-category="wellness" onclick="openImageModal(this)">
         <img class="product-image" src="images/otc-medicine.jpg" alt="Medicinas OTC" loading="lazy">
         <h3 data-i18n="items.medicine-cabinet">Botiquín</h3>
         <p data-i18n="items.medicine-cabinet.desc">Medicinas de venta libre importadas para su salud.</p>
       </article>
 
-      <article class="product-card" data-category="wellness">
+      <article class="product-card" data-category="wellness" onclick="openImageModal(this)">
         <img class="product-image" src="images/vitamins-oral.jpg" alt="Vitaminas y suplementos" loading="lazy">
         <h3 data-i18n="items.vitamins">Vitaminas</h3>
         <p data-i18n="items.vitamins.desc">Vitaminas esenciales y suplementos orales.</p>
       </article>
 
-      <article class="product-card" data-category="wellness">
+      <article class="product-card" data-category="wellness" onclick="openImageModal(this)">
         <img class="product-image" src="images/herbal-supplements-soap-central-america.jpg" alt="Jabones y hierbas naturales" loading="lazy">
         <h3 data-i18n="items.natural-soaps">Jabones y hierbas naturales</h3>
         <p data-i18n="items.natural-soaps.desc">Productos de higiene natural y remedios herbales.</p>
       </article>
 
-      <article class="product-card" data-category="wellness">
+      <article class="product-card" data-category="wellness" onclick="openImageModal(this)">
         <img class="product-image" src="images/supplements-2-nopalina-rebano-enebro.jpg" alt="Suplementos nopalina y linaza" loading="lazy">
         <h3 data-i18n="items.supplements">Suplementos</h3>
         <p data-i18n="items.supplements.desc">Nopalina, linaza y otros complementos alimenticios.</p>
       </article>
 
-      <article class="product-card" data-category="wellness">
+      <article class="product-card" data-category="wellness" onclick="openImageModal(this)">
         <img class="product-image" src="images/personal-hygiene-toiletries.jpg" alt="Artículos de cuidado personal" loading="lazy">
         <h3 data-i18n="items.personal-care">Cuidado personal</h3>
         <p data-i18n="items.personal-care.desc">Jabones importados, aceites y artículos de higiene.</p>
       </article>
 
-      <article class="product-card" data-category="food">
+      <article class="product-card" data-category="food" onclick="openImageModal(this)">
         <img class="product-image" src="images/organized-shelft-beans-sauce-seasonings.jpg" alt="Frijoles, salsas y condimentos" loading="lazy">
         <h3 data-i18n="items.pantry-staples">Básicos de despensa</h3>
         <p data-i18n="items.pantry-staples.desc">Frijoles, salsas y condimentos auténticos.</p>
       </article>
 
-      <article class="product-card" data-category="food">
+      <article class="product-card" data-category="food" onclick="openImageModal(this)">
         <img class="product-image" src="images/crema-queso.png" alt="Crema y quesos centroamericanos" loading="lazy">
         <h3 data-i18n="items.dairy-essentials">Lácteos esenciales</h3>
         <p data-i18n="items.dairy-essentials.desc">Crema Salvadoreña fresca y quesos.</p>
       </article>
 
-      <article class="product-card" data-category="food">
+      <article class="product-card" data-category="food" onclick="openImageModal(this)">
         <img class="product-image" src="images/queso-duro-viejo.png" alt="Queso Duro Viejo" loading="lazy">
         <h3 data-i18n="items.queso-duro">Queso Duro Viejo</h3>
         <p data-i18n="items.queso-duro.desc">Famoso queso duro de El Salvador.</p>
       </article>
 
-      <article class="product-card" data-category="food">
+      <article class="product-card" data-category="food" onclick="openImageModal(this)">
         <img class="product-image" src="images/chiles-spices-herbs.png" alt="Hierbas secas y especias" loading="lazy">
         <h3 data-i18n="items.spices-herbs">Especias y hierbas</h3>
         <p data-i18n="items.spices-herbs.desc">Hierbas secas, bolsas de té y especias para cocinar.</p>
       </article>
 
-      <article class="product-card" data-category="food">
+      <article class="product-card" data-category="food" onclick="openImageModal(this)">
         <img class="product-image" src="images/pandulce-quesadilla-bread.jpg" alt="Pan dulce y quesadillas" loading="lazy">
         <h3 data-i18n="items.pan-dulce">Pan Dulce</h3>
         <p data-i18n="items.pan-dulce.desc">Pan dulce fresco, quesadillas y galletas.</p>
       </article>
 
-      <article class="product-card" data-category="food">
+      <article class="product-card" data-category="food" onclick="openImageModal(this)">
         <img class="product-image" src="images/dulce-candy.jpg" alt="Dulces tradicionales" loading="lazy">
         <h3 data-i18n="items.traditional-candy">Dulces tradicionales</h3>
         <p data-i18n="items.traditional-candy.desc">Golosinas típicas de la tierra.</p>
       </article>
 
-      <article class="product-card" data-category="food">
+      <article class="product-card" data-category="food" onclick="openImageModal(this)">
         <img class="product-image" src="images/snacks-cheespuff-plantain-chips.png" alt="Chips de plátano y bocadillos" loading="lazy">
         <h3 data-i18n="items.chips-snacks">Chips y bocadillos</h3>
         <p data-i18n="items.chips-snacks.desc">Chips de plátano, bocadillos y snacks salados.</p>
       </article>
 
-      <article class="product-card" data-category="food">
+      <article class="product-card" data-category="food" onclick="openImageModal(this)">
         <img class="product-image" src="images/frozen-nances.png" alt="Nances congelados" loading="lazy">
         <h3 data-i18n="items.frozen-nances">Nances congelados</h3>
         <p data-i18n="items.frozen-nances.desc">Nanches amarillos ácidos, conservados congelados.</p>
       </article>
 
-      <article class="product-card" data-category="food">
+      <article class="product-card" data-category="food" onclick="openImageModal(this)">
         <img class="product-image" src="images/frozen-tamale-elote.png" alt="Tamales de elote" loading="lazy">
         <h3 data-i18n="items.tamales-elote">Tamales de elote</h3>
         <p data-i18n="items.tamales-elote.desc">Tamales de maíz dulce, listos para calentar.</p>
       </article>
 
-      <article class="product-card" data-category="food">
+      <article class="product-card" data-category="food" onclick="openImageModal(this)">
         <img class="product-image" src="images/fried-anchovvies.png" alt="Charrales fritos" loading="lazy">
         <h3 data-i18n="items.charrales">Charrales fritos</h3>
         <p data-i18n="items.charrales.desc">Charrales crujientes con chile y limón.</p>
       </article>
 
-      <article class="product-card" data-category="drinks">
+      <article class="product-card" data-category="drinks" onclick="openImageModal(this)">
         <img class="product-image" src="images/kolashampan.png" alt="Kolashampan" loading="lazy">
         <h3 data-i18n="items.kolashampan">Kolashampan</h3>
         <p data-i18n="items.kolashampan.desc">La famosa gaseosa naranja de El Salvador.</p>
       </article>
 
-      <article class="product-card" data-category="drinks">
+      <article class="product-card" data-category="drinks" onclick="openImageModal(this)">
         <img class="product-image" src="images/glass-bottles-mirinda-cocacola-tropical.png" alt="Gaseosas en botella de vidrio" loading="lazy">
         <h3 data-i18n="items.glass-sodas">Gaseosas en botella de vidrio</h3>
         <p data-i18n="items.glass-sodas.desc">Mirinda, Coca-Cola y Tropical Banana.</p>
       </article>
 
-      <article class="product-card" data-category="drinks">
+      <article class="product-card" data-category="drinks" onclick="openImageModal(this)">
         <img class="product-image" src="images/natural-juices.png" alt="Jugos naturales" loading="lazy">
         <h3 data-i18n="items.natural-juices">Jugos naturales</h3>
         <p data-i18n="items.natural-juices.desc">Tamarindo, Maracuyá, Coco y Horchata.</p>
       </article>
 
-      <article class="product-card" data-category="drinks">
+      <article class="product-card" data-category="drinks" onclick="openImageModal(this)">
         <img class="product-image" src="images/jugo-de-coco-foco.png" alt="Jugo de coco FOCO" loading="lazy">
         <h3 data-i18n="items.coconut-juice">Jugo de coco</h3>
         <p data-i18n="items.coconut-juice.desc">Refrescante jugo FOCO con trozos de coco.</p>
       </article>
 
-      <article class="product-card" data-category="clothing">
+      <article class="product-card" data-category="clothing" onclick="openImageModal(this)">
         <img class="product-image" src="images/guayabera-traditional-shirts.jpg" alt="Guayaberas tradicionales" loading="lazy">
         <h3 data-i18n="items.guayaberas">Guayaberas</h3>
         <p data-i18n="items.guayaberas.desc">Camisas tradicionales para niños y hombres.</p>
       </article>
 
-      <article class="product-card" data-category="clothing">
+      <article class="product-card" data-category="clothing" onclick="openImageModal(this)">
         <img class="product-image" src="images/dress-bags-blankets.jpg" alt="Vestidos y bolsos" loading="lazy">
         <h3 data-i18n="items.dresses-bags">Vestidos y bolsos</h3>
         <p data-i18n="items.dresses-bags.desc">Vestidos tradicionales, bolsos y mantas.</p>
       </article>
 
-      <article class="product-card" data-category="clothing">
+      <article class="product-card" data-category="clothing" onclick="openImageModal(this)">
         <img class="product-image" src="images/elsalvador-president-jersey-bukele.jpg" alt="Jerseys especiales" loading="lazy">
         <h3 data-i18n="items.jerseys">Jerseys especiales</h3>
         <p data-i18n="items.jerseys.desc">Camisetas de fútbol y conmemorativas.</p>
       </article>
 
-      <article class="product-card" data-category="clothing">
+      <article class="product-card" data-category="clothing" onclick="openImageModal(this)">
         <img class="product-image" src="images/carteras-traditional-sparkley.jpg" alt="Carteras" loading="lazy">
         <h3 data-i18n="items.handbags">Carteras</h3>
         <p data-i18n="items.handbags.desc">Mezcla de bolsos tradicionales y modernos.</p>
       </article>
 
-      <article class="product-card" data-category="clothing">
+      <article class="product-card" data-category="clothing" onclick="openImageModal(this)">
         <img class="product-image" src="images/chanclas-zapatos-salvador.jpg" alt="Chanclas" loading="lazy">
         <h3 data-i18n="items.chanclas">Chanclas</h3>
         <p data-i18n="items.chanclas.desc">Calzado cómodo para la casa o la piscina.</p>
       </article>
 
-      <article class="product-card" data-category="clothing">
+      <article class="product-card" data-category="clothing" onclick="openImageModal(this)">
         <img class="product-image" src="images/gorras-hats-central-america.jpg" alt="Gorras de país" loading="lazy">
         <h3 data-i18n="items.country-hats">Gorras de país</h3>
         <p data-i18n="items.country-hats.desc">Gorras representando países de Centroamérica.</p>
       </article>
 
-      <article class="product-card" data-category="clothing">
+      <article class="product-card" data-category="clothing" onclick="openImageModal(this)">
         <img class="product-image" src="images/beanie-guatemala-elsalvador.png" alt="Gorros de invierno" loading="lazy">
         <h3 data-i18n="items.beanies">Gorros de invierno</h3>
         <p data-i18n="items.beanies.desc">Gorros cálidos para el invierno de Colorado.</p>
       </article>
 
-      <article class="product-card" data-category="nostalgia">
+      <article class="product-card" data-category="nostalgia" onclick="openImageModal(this)">
         <img class="product-image" src="images/silabario-hispanoamericano-pronounciationbook.png" alt="Silabario Hispanoamericano" loading="lazy">
         <h3 data-i18n="items.silabario">Silabario Hispanoamericano</h3>
         <p data-i18n="items.silabario.desc">El clásico libro de fonética que enseñó a leer a generaciones.</p>
       </article>
 
-      <article class="product-card" data-category="nostalgia">
+      <article class="product-card" data-category="nostalgia" onclick="openImageModal(this)">
         <img class="product-image" src="images/knick-nack-bracelet_hairclips.jpg" alt="Chucherías y regalos" loading="lazy">
         <h3 data-i18n="items.trinkets">Chucherías y regalos</h3>
         <p data-i18n="items.trinkets.desc">Llaveros, pulseras y accesorios para el cabello.</p>
       </article>
 
-      <article class="product-card" data-category="nostalgia">
+      <article class="product-card" data-category="nostalgia" onclick="openImageModal(this)">
         <img class="product-image" src="images/traditional-wallet-elsalvador.png" alt="Souvenirs" loading="lazy">
         <h3 data-i18n="items.souvenirs">Souvenirs</h3>
         <p data-i18n="items.souvenirs.desc">Billeteras y regalos con hermosos patrones.</p>
       </article>
     </div>
   </main>
+
+  <!-- Image Zoom Modal -->
+  <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+    <span class="image-modal-close" onclick="closeImageModal()" aria-label="Close">&times;</span>
+    <img class="image-modal-content" id="modalImage" alt="">
+    <div class="image-modal-caption" id="modalCaption"></div>
+  </div>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
@@ -311,6 +435,7 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
   <script src="js/lang-toggle.js" defer></script>
 
   <script>
+    // Filter functionality
     function filterSelection(category) {
       const cards = document.querySelectorAll('#product-gallery .product-card');
       const buttons = document.querySelectorAll('.filter-btn');
@@ -349,6 +474,44 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
         });
       }
     }
+
+    // Image zoom modal functionality
+    function openImageModal(card) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      const modalCaption = document.getElementById('modalCaption');
+      
+      const img = card.querySelector('.product-image');
+      const title = card.querySelector('h3').textContent;
+      
+      modal.classList.add('active');
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      modalCaption.textContent = title;
+      
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeImageModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('active');
+      
+      // Re-enable body scroll
+      document.body.style.overflow = '';
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeImageModal();
+      }
+    });
+
+    // Prevent modal from closing when clicking on image
+    document.getElementById('modalImage').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
   </script>
 
   <script>
