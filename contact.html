@@ -3,14 +3,15 @@ Author: David Quintana
 MSU Denver login name: dquint32@msudenver.edu
 Date Created: 11/02/2025
 Date Due: 12/01/2024
-Modified: 12/09/2025
+Modified: 12/12/2025
 Filename: contact.html
-Purpose: Contact and location page with store hours, address, map, and parking information.
+Purpose: Contact and location page with store hours, address, map, and parking information. Also link to my other website/business I created.
 Editor: Notepad
 Generative AI Used: Yes
 Specific Tools Used: Copilot, Gemini, and Claude
 Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge and Delia, the flags, etc.)
 -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -54,23 +55,22 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
         <h1 id="contact-hero-title" class="hero__title" data-i18n="contact.hero.title">Contacto y Ubicación</h1>
         <p class="hero__subtitle" data-i18n="contact.hero.lead">Estamos aquí para ayudar. Llámanos, escríbenos o visítanos en la dirección indicada. Responderemos lo antes posible.</p>
         
-        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; margin-top: 1rem;">
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: stretch; margin-top: 1rem;">
           <a class="call-btn" href="tel:+13033944185" aria-label="Llamar Tienda Salvadoreña">
             📞 (303) 394-4185
           </a>
           
-          <div class="social" role="group" aria-label="Redes sociales">
-            <a href="https://www.facebook.com/TiendaSalvadorena.Denver/" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="social-link"
-               aria-label="Visitar Facebook de Tienda Salvadoreña">
-              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" role="img">
-                <path fill="#1877F2" d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.09 5.66 21.22 10.44 22v-7.02H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.88h2.74l-.44 2.9h-2.3V22C18.34 21.22 22 17.09 22 12.07z"/>
-              </svg>
-              <span style="margin-left: 0.5rem;">Facebook</span>
-            </a>
-          </div>
+          <a href="https://www.facebook.com/TiendaSalvadorena.Denver/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="call-btn"
+             aria-label="Visitar Facebook de Tienda Salvadoreña"
+             style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" role="img">
+              <path fill="currentColor" d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.09 5.66 21.22 10.44 22v-7.02H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.88h2.74l-.44 2.9h-2.3V22C18.34 21.22 22 17.09 22 12.07z"/>
+            </svg>
+            <span>Facebook</span>
+          </a>
         </div>
       </div>
       
@@ -96,108 +96,142 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
   </section>
 
   <main class="container" role="main">
-    <div class="grid" style="margin-top: 2rem;">
-      <section class="card" aria-labelledby="info-title">
-        <h2 id="info-title" data-i18n="contact.info.title">Información de contacto</h2>
+    
+    <section class="contact-layout">
+      
+      <div class="contact-info">
+        
+        <div class="card" aria-labelledby="info-title">
+          <h2 id="info-title" data-i18n="contact.info.title">Información de contacto</h2>
 
-        <div class="address">
-          <p><strong data-i18n="contact.label.address">Dirección:</strong></p>
-          <p>5128 E Colfax Ave<br>Denver, CO 80220</p>
-          <p>
-            <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               data-i18n="contact.directions">Ver en Google Maps →</a>
-          </p>
+          <div class="address">
+            <p><strong data-i18n="contact.label.address">Dirección:</strong></p>
+            <p>5128 E Colfax Ave<br>Denver, CO 80220</p>
+            <p>
+              <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 data-i18n="contact.directions">Ver en Google Maps →</a>
+            </p>
+          </div>
+
+          <div class="address" style="margin-top: 1.5rem;">
+            <p><strong data-i18n="contact.label.phone">Teléfono:</strong></p>
+            <p><a href="tel:+13033944185">(303) 394-4185</a></p>
+          </div>
+
+          <div class="address" style="margin-top: 1.5rem;">
+            <p><strong data-i18n="contact.label.email">Correo electrónico:</strong></p>
+            <p><a href="mailto:info@tiendasalvadorenadenver.com">info@tiendasalvadorenadenver.com</a></p>
+          </div>
+
+          <div class="address" style="margin-top: 1.5rem;">
+            <p><strong>Facebook:</strong></p>
+            <p>
+              <a href="https://www.facebook.com/TiendaSalvadorena.Denver/" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 data-i18n="contact.facebook.link">Visitar nuestra página de Facebook →</a>
+            </p>
+          </div>
+
+          <div class="hours" style="margin-top: 1.5rem;">
+            <p><strong data-i18n="contact.label.hours">Horario de atención:</strong></p>
+            <table>
+              <tbody>
+                <tr>
+                  <th data-i18n="contact.hours.sunday">Domingo</th>
+                  <td>10 AM – 6 PM</td>
+                </tr>
+                <tr>
+                  <th data-i18n="contact.hours.monday">Lunes</th>
+                  <td>10 AM – 7 PM</td>
+                </tr>
+                <tr>
+                  <th data-i18n="contact.hours.tuesday">Martes</th>
+                  <td>10 AM – 7 PM</td>
+                </tr>
+                <tr>
+                  <th data-i18n="contact.hours.wednesday">Miércoles</th>
+                  <td>10 AM – 7 PM</td>
+                </tr>
+                <tr>
+                  <th data-i18n="contact.hours.thursday">Jueves</th>
+                  <td>10 AM – 7 PM</td>
+                </tr>
+                <tr>
+                  <th data-i18n="contact.hours.friday">Viernes</th>
+                  <td>10 AM – 7 PM</td>
+                </tr>
+                <tr>
+                  <th data-i18n="contact.hours.saturday">Sábado</th>
+                  <td>10 AM – 7 PM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="address" style="margin-top: 1.5rem;">
+            <p><strong data-i18n="contact.label.parking">Estacionamiento:</strong></p>
+            <p data-i18n="contact.parking.details" style="margin-bottom: 0;">
+              Estacionamiento en la calle y detrás de la tienda (compartimos un lote con otros comercios; aproximadamente 4 espacios). También puede estacionar en Forrest Street y caminar hasta la tienda.
+            </p>
+          </div>
         </div>
 
-        <div class="address" style="margin-top: 1.5rem;">
-          <p><strong data-i18n="contact.label.phone">Teléfono:</strong></p>
-          <p><a href="tel:+13033944185">(303) 394-4185</a></p>
+        <div class="card quintana-partner-compact" style="background: linear-gradient(135deg, #F5F1E8 0%, #E8DCC4 100%); border-left: 4px solid var(--golden-accent);" aria-labelledby="quintana-title-compact">
+          <div style="text-align: center; margin-bottom: 1rem;">
+            <a href="https://quintananotarysigning.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Quintana Notary & Signing website">
+              <img src="images/quintana-logo.png" 
+                   alt="Quintana Notary & Signing Logo" 
+                   style="width: 140px; height: 140px; object-fit: contain; margin: 0 auto; display: block; border-radius: 50%;"
+                   onerror="this.onerror=null; this.src='images/quintana-notary-logo.jpg'; this.style.display='block';">
+            </a>
+          </div>
+          
+          <h3 id="quintana-title-compact" data-i18n="quintana.title.compact" style="font-size: 1.1rem; color: var(--cobalt-blue); text-align: center; margin-bottom: 0.75rem;">Servicios de Socio Disponibles Aquí</h3>
+          
+          <div style="background-color: var(--card-white); padding: 1rem; border-radius: 6px; margin-bottom: 0.75rem; font-size: 0.9rem;">
+            <p style="margin: 0 0 0.5rem 0; font-weight: 600; color: var(--brick-red);" data-i18n="quintana.notary.title.compact">📝 Notary Services</p>
+            <p style="margin: 0 0 0.5rem 0; font-size: 0.85rem;" data-i18n="quintana.notary.desc.compact">$10/signature at this location (regular $15) • No travel fee</p>
+            <a href="tel:+13035004122" style="font-size: 0.85rem; font-weight: 600;">📞 303-500-4122</a>
+          </div>
+          
+          <div style="background-color: var(--card-white); padding: 1rem; border-radius: 6px; margin-bottom: 0.75rem; font-size: 0.9rem;">
+            <p style="margin: 0 0 0.5rem 0; font-weight: 600; color: var(--brick-red);" data-i18n="quintana.translation.title.compact">🌐 Certified Translations</p>
+            <p style="margin: 0 0 0.5rem 0; font-size: 0.85rem;" data-i18n="quintana.translation.desc.compact">English ↔ Spanish • USCIS/DMV accepted • $5 OFF with store receipt</p>
+            <a href="https://quintananotarysigning.com/translate.html" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 600;" data-i18n="quintana.translation.link">Learn More →</a>
+          </div>
+          
+          <div style="text-align: center;">
+            <a href="https://quintananotarysigning.com" target="_blank" rel="noopener noreferrer" class="call-btn" style="font-size: 0.85rem; padding: 0.5rem 1rem; display: inline-block; background-color: var(--cobalt-blue);" data-i18n="quintana.website">Visit Website</a>
+          </div>
         </div>
-
-        <div class="address" style="margin-top: 1.5rem;">
-          <p><strong data-i18n="contact.label.email">Correo electrónico:</strong></p>
-          <p><a href="mailto:info@tiendasalvadorenadenver.com">info@tiendasalvadorenadenver.com</a></p>
-        </div>
-
-        <div class="address" style="margin-top: 1.5rem;">
-          <p><strong>Facebook:</strong></p>
-          <p>
-            <a href="https://www.facebook.com/TiendaSalvadorena.Denver/" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               data-i18n="contact.facebook.link">Visitar nuestra página de Facebook →</a>
-          </p>
-        </div>
-
-        <div class="hours" style="margin-top: 1.5rem;">
-          <p><strong data-i18n="contact.label.hours">Horario de atención:</strong></p>
-          <table>
-            <tbody>
-              <tr>
-                <th data-i18n="contact.hours.sunday">Domingo</th>
-                <td>10 AM – 6 PM</td>
-              </tr>
-              <tr>
-                <th data-i18n="contact.hours.monday">Lunes</th>
-                <td>10 AM – 7 PM</td>
-              </tr>
-              <tr>
-                <th data-i18n="contact.hours.tuesday">Martes</th>
-                <td>10 AM – 7 PM</td>
-              </tr>
-              <tr>
-                <th data-i18n="contact.hours.wednesday">Miércoles</th>
-                <td>10 AM – 7 PM</td>
-              </tr>
-              <tr>
-                <th data-i18n="contact.hours.thursday">Jueves</th>
-                <td>10 AM – 7 PM</td>
-              </tr>
-              <tr>
-                <th data-i18n="contact.hours.friday">Viernes</th>
-                <td>10 AM – 7 PM</td>
-              </tr>
-              <tr>
-                <th data-i18n="contact.hours.saturday">Sábado</th>
-                <td>10 AM – 7 PM</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="address" style="margin-top: 1.5rem;">
-          <p><strong data-i18n="contact.label.parking">Estacionamiento:</strong></p>
-          <p data-i18n="contact.parking.details">
-            Estacionamiento en la calle y detrás de la tienda (compartimos un lote con otros comercios; aproximadamente 4 espacios). También puede estacionar en Forrest Street y caminar hasta la tienda.
-          </p>
-        </div>
-      </section>
-
-      <aside>
+      </div>
+      
+      <div class="contact-map">
         <div class="card" aria-labelledby="map-title">
           <h2 id="map-title" data-i18n="contact.map.title">Cómo llegar</h2>
           <iframe
             class="map"
             title="Mapa: Tienda Salvadoreña"
-            src="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.2284791583447!2d-104.93641892346438!3d39.74023059533033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7d1e6e3a3b4d%3A0x7d8c8c8c8c8c8c8c!2s5128%20E%20Colfax%20Ave%2C%20Denver%2C%20CO%2080220!5e0!3m2!1sen!2sus!4v1702340000000!5m2!1sen!2sus"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             aria-label="Mapa de ubicación de Tienda Salvadoreña"></iframe>
           <p style="margin-top: 1rem; color: var(--muted-gray); font-size: 0.95rem;" data-i18n="contact.map.note">
-            Recomendamos llamar antes de venir para confirmar disponibilidad de productos especiales.
+            Recomendamos llamar antes de venir para confirmar disponibilidad de productos especiales (por ejemplo Pollo Campero).
           </p>
         </div>
 
-        <div class="card" style="margin-top: 1.5rem; border-left: 5px solid var(--golden-accent); background-color: var(--soft-cream);" aria-labelledby="notes-title">
+        <div class="card" style="border-left: 5px solid var(--golden-accent); background-color: var(--soft-cream);" aria-labelledby="notes-title">
           <h3 id="notes-title" data-i18n="contact.notes.title">Información adicional</h3>
           <p style="margin: 0;" data-i18n="contact.notes.text">
             Para pedidos grandes o consultas de prensa, utilice el teléfono o el correo electrónico indicados arriba.
           </p>
         </div>
 
-        <div class="card" style="margin-top: 1.5rem; text-align: center;">
+        <div class="card" style="text-align: center;">
           <h3>Acciones rápidas</h3>
           <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
             <a class="call-btn" 
@@ -219,14 +253,15 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
             </a>
           </div>
         </div>
-      </aside>
-    </div>
+      </div>
+      
+    </section>
 
     <section class="card" style="margin-top: 3rem;">
       <h2 style="text-align: center; margin-bottom: 1.5rem;">¿Por qué visitarnos?</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 1.5rem;">
         <div style="text-align: center; padding: 1rem;">
-          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🏪</div>
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🪙</div>
           <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem; color: var(--cobalt-blue);">30+ Años de Historia</h3>
           <p style="color: var(--muted-gray); margin: 0;">La tienda salvadoreña más antigua de Colorado</p>
         </div>
@@ -251,7 +286,7 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
         <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
       </p>
       <p class="footer-note">
-        Contacto: <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave +Denver,+CO+80220" style="color: inherit;">5128 E Colfax Ave, Denver, CO 80220</a> |  Teléfono: <a href="tel:+13033944185" style="color: inherit;">(303) 394-4185</a> | Correo: <a href="mailto:info@tiendasalvadorenadenver.com" style="color: inherit;">info@tiendasalvadorenadenver.com</a>
+        Contacto: <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave+Denver,+CO+80220" style="color: inherit;">5128 E Colfax Ave, Denver, CO 80220</a> | Teléfono: <a href="tel:+13033944185" style="color: inherit;">(303) 394-4185</a> | Correo: <a href="mailto:info@tiendasalvadorenadenver.com" style="color: inherit;">info@tiendasalvadorenadenver.com</a>
       </p>
       <p class="footer-line" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. – Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
     </div>
@@ -260,4 +295,3 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
   <script src="js/lang-toggle.js" defer></script>
 </body>
 </html>
-
