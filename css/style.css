@@ -3,11 +3,7 @@ Author: David Quintana
 MSU Denver login name: dquint32@msudenver.edu
 Date Created: 11/02/2025
 Date Due: 12/01/2024
-Modified: 12/08/2025 (Single-Line Horizontal Header Toolbar)
-Modified: 12/09/2025 (Hero Image Object Position adjustment)
-Modified: 12/12/2025 (Fix for Pollo Campero Feature Image overflow on mobile)
-Modified: 12/12/2025 (Fix for Press Clipping Images overflow on mobile and centering)
-Modified: 12/12/2025 (Final fix: Ensuring single-column clipping cards are centered on mobile)
+Modified: 12/12/2025
 Filename: style.css
 Purpose: Global stylesheet for all Tienda Salvadoreña pages - nostalgic, cultural theme with unified header and navigation.
 Editor: Notepad
@@ -456,26 +452,12 @@ main {
 
 /* Hero Themes */
 .hero--cobalt .hero__title { color: var(--cobalt-blue); }
-.hero--cobalt .btn-primary {
-  background-color: var(--cobalt-blue);
-  box-shadow: 0 4px 8px rgba(15, 71, 175, 0.4);
-}
-.hero--cobalt .btn-primary:hover {
-  background-color: var(--brick-red);
-  box-shadow: var(--shadow-lg);
-}
+/* NOTE: The .cta-link definition below handles the button colors */
 .hero--cobalt .hero__image img { border-color: var(--cobalt-blue); }
 
 .hero--tangerine { background: var(--soft-cream); } /* FIXED: Background is now soft-cream (white/cream) */
 .hero--tangerine .hero__title { color: var(--cobalt-blue); } /* FIXED: Title is now cobalt-blue */
-.hero--tangerine .btn-primary {
-  background-color: var(--terracotta);
-  box-shadow: 0 4px 8px rgba(193, 85, 45, 0.4);
-}
-.hero--tangerine .btn-primary:hover {
-  background-color: var(--brick-red);
-  box-shadow: var(--shadow-lg);
-}
+/* NOTE: The .cta-link definition below handles the button colors */
 .hero--tangerine .hero__image img { border-color: var(--terracotta); }
 
 /* Responsive adjustments for Dynamic Hero */
@@ -502,36 +484,61 @@ main {
 }
 
 /* ========================================
-   BUTTONS - Enhanced Touch Targets
+   BUTTONS - UNIFIED PRIMARY ACTION STYLES 
+   (btn, btn-primary, cta-link, call-btn, social-link)
    ======================================== */
 .btn,
 .btn-primary,
-#btnToItems {
+#btnToItems,
+.cta-link,
+.call-btn,
+.social-link { /* UNIFIED BUTTON SELECTORS */
+  /* Button Shape and Size */
   padding: clamp(0.625rem, 1.5vw, 0.75rem) clamp(1rem, 2.5vw, 1.5rem);
   font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 600;
-  color: var(--card-white);
-  background-color: var(--cobalt-blue);
+  border-radius: 999px; /* Pill Shape */
   border: none;
-  border-radius: 6px;
   cursor: pointer;
+
+  /* Button Color and Effects */
+  color: var(--card-white) !important; /* Force white text */
+  background-color: var(--cobalt-blue);
+  box-shadow: 0 4px 8px rgba(15, 71, 175, 0.4); /* Stronger shadow */
   transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(15, 71, 175, 0.3);
   text-decoration: none;
+
+  /* Layout and Accessibility */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   min-height: 44px;
   min-width: 100px;
+  gap: 0.5rem; /* Space for social icon or phone icon */
 }
 
+/* Hover/Focus State */
 .btn:hover,
 .btn-primary:hover,
-#btnToItems:hover {
+#btnToItems:hover,
+.cta-link:hover,
+.call-btn:hover,
+.social-link:hover {
   background-color: var(--brick-red);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+  color: var(--card-white) !important; /* Ensure text remains white */
+}
+
+/* Specific adjustments for theme color buttons (optional but good practice) */
+.hero--cobalt .cta-link { 
+  background-color: var(--cobalt-blue); 
+  box-shadow: 0 4px 8px rgba(15, 71, 175, 0.4);
+}
+.hero--tangerine .cta-link { 
+  background-color: var(--terracotta); 
+  box-shadow: 0 4px 8px rgba(193, 85, 45, 0.4);
 }
 
 /* ========================================
@@ -559,6 +566,50 @@ main {
 }
 
 /* ========================================
+   QUINTANA NOTARY PARTNERSHIP - COMPACT SIDEBAR
+   ======================================== */
+.quintana-partner-compact {
+  position: relative;
+  overflow: hidden;
+}
+
+.quintana-partner-compact::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 204, 0, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.quintana-partner-compact h3 {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.3;
+}
+
+.quintana-partner-compact p {
+  line-height: 1.5;
+}
+
+.quintana-partner-compact a {
+  transition: all 0.3s ease;
+}
+
+.quintana-partner-compact a:hover {
+  color: var(--brick-red);
+}
+
+/* Responsive adjustments for compact Quintana section */
+@media (max-width: 768px) {
+  .quintana-partner-compact img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* ========================================
    HOME PAGE - HIGHLIGHTS
    ======================================== */
 .highlights { padding: var(--spacing-xl) 0; }
@@ -580,7 +631,8 @@ main {
 .highlight-card ul { list-style: none; padding: 0; margin-top: 1rem; }
 .highlight-card li { margin-bottom: 0.5rem; }
 
-.highlight-card a {
+/* Secondary Links/Buttons inside a highlight card */
+.highlight-card a:not(.cta-link, .btn, .btn-primary) { 
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -594,7 +646,7 @@ main {
   min-height: 44px;
 }
 
-.highlight-card a:hover {
+.highlight-card a:not(.cta-link, .btn, .btn-primary):hover {
   background-color: var(--cobalt-blue);
   color: var(--card-white);
 }
@@ -718,6 +770,7 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none; /* Ensure these look like buttons, not links */
 }
 
 .filter-btn:hover,
@@ -1057,28 +1110,7 @@ main {
   margin-bottom: var(--spacing-md);
 }
 
-.call-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: var(--spacing-md);
-  padding: var(--spacing-md) clamp(1rem, 2vw, 1.25rem);
-  background-color: var(--cobalt-blue);
-  color: var(--card-white);
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(15, 71, 175, 0.3);
-  min-height: 44px;
-  min-width: 150px;
-}
-
-.call-btn:hover {
-  background-color: var(--brick-red);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
+/* NOTE: .call-btn and .social-link are now unified with .cta-link in the BUTTONS section above. */
 
 .social { 
   display: flex; 
@@ -1088,27 +1120,9 @@ main {
   flex-wrap: wrap; 
 }
 
-.social a, .social-link {
-  display: inline-flex; 
-  align-items: center; 
-  gap: var(--spacing-xs);
-  padding: var(--spacing-sm) var(--spacing-md); 
-  border-radius: 6px; 
-  text-decoration: none;
-  background-color: var(--card-white); 
-  border: 2px solid var(--light-gray);
-  color: var(--cobalt-blue); 
-  font-weight: 500; 
-  transition: all 0.3s ease;
-  min-height: 44px;
-  font-size: clamp(0.85rem, 2vw, 0.95rem);
-}
-
+/* Social links use the unified style, but we might need to adjust the text color for the hover state */
 .social a:hover, .social-link:hover {
-  background-color: var(--cobalt-blue); 
-  color: var(--card-white); 
-  border-color: var(--cobalt-blue);
-  transform: translateY(-2px);
+  /* Reusing the unified hover state from above: background-color: var(--brick-red); color: var(--card-white) !important; */
 }
 
 .social img { 
@@ -1245,6 +1259,9 @@ footer a:hover,
 @media (prefers-contrast: high) {
   .btn,
   .btn-primary,
+  .cta-link,
+  .call-btn,
+  .social-link,
   .filter-btn,
   .category-btn {
     border: 2px solid currentColor;
@@ -1257,5 +1274,5 @@ footer a:hover,
 }
 
 /* ========================================
-   END OF SINGLE-LINE HEADER TOOLBAR CSS
+   END OF STYLESHEET
    ======================================== */
