@@ -3,7 +3,7 @@ Author: David Quintana
 MSU Denver login name: dquint32@msudenver.edu
 Date Created: 11/02/2025
 Date Due: 12/01/2024
-Modified: 11/30/2025
+Modified: 12/12/2025
 Filename: history.html
 Purpose: Family history page telling the story of Jorge and Delia Romero and their legacy.
 Editor: Notepad
@@ -17,8 +17,8 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="site.title">Tienda Salvadoreña – Historia</title>
-  <meta name="description" data-i18n="meta.description" content="Auténticos productos salvadoreños y centroamericanos en Denver – tradición, sabor y comunidad.">
+  <title id="site-title" data-i18n="site.title">Tienda Salvadoreña – Historia</title> 
+  <meta name="description" id="meta-description" data-i18n="meta.description" content="Auténticos productos salvadoreños y centroamericanos en Denver – tradición, sabor y comunidad.">
 
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -33,12 +33,12 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
 
       <nav class="header-center" aria-label="Primary navigation">
         <div class="main-nav">
-          <a href="index.html" data-i18n="nav.home">Inicio</a>
-          <a href="items.html" data-i18n="nav.items">Artículos</a>
-          <a href="history.html" class="active" aria-current="page" data-i18n="nav.history">Historia</a>
-          <a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a>
-          <a href="press.html" data-i18n="nav.press">Prensa</a>
-          <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+          <a href="index.html" id="nav-home" data-i18n="nav.home">Inicio</a>
+          <a href="items.html" id="nav-items" data-i18n="nav.items">Artículos</a>
+          <a href="history.html" id="nav-history" class="active" aria-current="page" data-i18n="nav.history">Historia</a>
+          <a href="pollo.html" id="nav-pollo" data-i18n="nav.pollo">Pollo Campero</a>
+          <a href="press.html" id="nav-press" data-i18n="nav.press">Prensa</a>
+          <a href="contact.html" id="nav-contact" data-i18n="nav.contact">Contacto</a>
         </div>
       </nav>
 
@@ -53,7 +53,7 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
     <div class="hero__inner">
       <div class="hero__content">
         <h1 id="history-hero-title" class="hero__title" data-i18n="history.hero.title">Historia Familiar</h1>
-        <p class="hero__subtitle" data-i18n="history.hero.lead">De un aula en El Salvador a una tiendita en Denver: así construyeron Jorge y Delia un hogar para la cultura, la comida y la comunidad.</p>
+        <p id="history-hero-lead" class="hero__subtitle" data-i18n="history.hero.lead">De un aula en El Salvador a una tiendita en Denver: así construyeron Jorge y Delia un hogar para la cultura, la comida y la comunidad.</p>
       </div>
       <figure class="hero__image" aria-label="Jorge y Delia">
         <img src="images/comiendo-pupusas-jorgeydelia_enhanced.png" 
@@ -66,7 +66,7 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
   <main class="container" role="main">
     <section class="story" aria-labelledby="mission-title">
       <h2 id="mission-title" data-i18n="history.mission.title">Nuestra Misión</h2>
-      <p data-i18n="history.mission.text">
+      <p id="mission-text" data-i18n="history.mission.text">
         Our mission is to keep Salvadoran traditions alive by offering authentic products that nourish both body and spirit. Inspired by Jorge and Delia's dedication, we serve Colorado's community with warmth, integrity, and a commitment to cultural pride.
       </p>
     </section>
@@ -74,21 +74,20 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
     <section class="real-story" aria-labelledby="story-title">
       <div class="story">
         <h2 id="story-title" data-i18n="history.story.title">La historia de los abuelos</h2>
-
         <article>
-          <p data-i18n="history.story.p1">
+          <p id="story-p1" data-i18n="history.story.p1">
             Tienda Salvadoreña nació de la historia de amor entre Delia, una dedicada maestra de El Salvador, y Jorge, un trabajador incansable de la industria aérea en Ecuador. Al llegar a Denver, Delia soñaba con crear un lugar donde los centroamericanos pudieran sentirse en casa, y Jorge estuvo siempre a su lado para hacerlo realidad. Su primera tienda en Colorado Boulevard era tan pequeña como un clóset, pero ofrecía los sabores y tradiciones que recordaban a la gente su tierra natal. Con esfuerzo y corazón, crecieron hasta abrir la tienda más grande en East Colfax, donde hoy ofrecen una amplia variedad de productos que celebran la cultura centroamericana. Para Delia y Jorge, la tienda es mucho más que un negocio: es un pilar de la comunidad, una manera de mantener vivas las tradiciones en las familias de Denver, y un legado de amor, resiliencia y orgullo que sigue inspirando a sus hijos, nietos y vecinos.
           </p>
         </article>
       </div>
 
       <div class="story-highlights">
-        <h3 data-i18n="history.highlights.title">Puntos clave</h3>
+        <h3 id="highlights-title" data-i18n="history.highlights.title">Puntos clave</h3>
         <ul>
-          <li data-i18n="history.highlights.meeting" data-i18n-html="true"><strong>El encuentro:</strong> Una maestra respetada en El Salvador conoce a Jorge, un hombre emprendedor y amable.</li>
-          <li data-i18n="history.highlights.partnership" data-i18n-html="true"><strong>La sociedad:</strong> Valores compartidos de educación, fe y servicio guían su camino.</li>
-          <li data-i18n="history.highlights.beginnings" data-i18n-html="true"><strong>Los comienzos:</strong> Una tiendita en Colorado Boulevard crece con dedicación.</li>
-          <li data-i18n="history.highlights.legacy" data-i18n-html="true"><strong>El legado:</strong> Un pilar comunitario que sirve a Denver por más de tres décadas.</li>
+          <li id="highlight-meeting" data-i18n="history.highlights.meeting" data-i18n-html="true"><strong>El encuentro:</strong> Una maestra respetada en El Salvador conoce a Jorge, un hombre emprendedor y amable.</li>
+          <li id="highlight-partnership" data-i18n="history.highlights.partnership" data-i18n-html="true"><strong>La sociedad:</strong> Valores compartidos de educación, fe y servicio guían su camino.</li>
+          <li id="highlight-beginnings" data-i18n="history.highlights.beginnings" data-i18n-html="true"><strong>Los comienzos:</strong> Una tiendita en Colorado Boulevard crece con dedicación.</li>
+          <li id="highlight-legacy" data-i18n="history.highlights.legacy" data-i18n-html="true"><strong>El legado:</strong> Un pilar comunitario que sirve a Denver por más de tres décadas.</li>
         </ul>
       </div>
     </section>
@@ -101,28 +100,28 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
           <img src="images/tienda-salvadorena-sign.png" 
                alt="Letrero de la tienda" 
                loading="lazy">
-          <figcaption data-i18n="history.heritage.caption1">Nuestro letrero – un punto de referencia y una bienvenida.</figcaption>
+          <figcaption id="heritage-caption1" data-i18n="history.heritage.caption1">Nuestro letrero – un punto de referencia y una bienvenida.</figcaption>
         </figure>
 
         <figure class="heritage-item" role="listitem">
           <img src="images/silabario-hispanoamericano-pronounciationbook.png" 
                alt="Silabario Hispanoamericano" 
                loading="lazy">
-          <figcaption data-i18n="history.heritage.caption2">Un pilar del aula – alfabetización, dignidad y raíces compartidas.</figcaption>
+          <figcaption id="heritage-caption2" data-i18n="history.heritage.caption2">Un pilar del aula – alfabetización, dignidad y raíces compartidas.</figcaption>
         </figure>
 
         <figure class="heritage-item" role="listitem">
           <img src="images/bandera-elsalvador.png" 
                alt="Bandera de El Salvador" 
                loading="lazy">
-          <figcaption data-i18n="history.heritage.caption3">Azul y blanco – el origen que llevamos a nuestro trabajo diario.</figcaption>
+          <figcaption id="heritage-caption3" data-i18n="history.heritage.caption3">Azul y blanco – el origen que llevamos a nuestro trabajo diario.</figcaption>
         </figure>
       </div>
     </section>
 
     <section class="purpose" aria-labelledby="purpose-title">
       <h2 id="purpose-title" data-i18n="history.purpose.title">Propósito de esta página</h2>
-      <p data-i18n="history.purpose.text">
+      <p id="purpose-text" data-i18n="history.purpose.text">
         Compartir el legado personal de Jorge y Delia y establecer las raíces auténticas y nostálgicas del negocio. Esta página cumple el requisito visual principal con la escena de pupusas en caricatura y apoya la historia real mediante imágenes de herencia y contexto comunitario.
       </p>
     </section>
@@ -130,33 +129,32 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
     <section class="card" style="border-left: 5px solid var(--cobalt-blue);" aria-labelledby="values-title">
       <h2 id="values-title" data-i18n="history.values.title">Nuestros Valores</h2>
       <ul style="list-style: none; padding-left: 0;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="history.values.authenticity">✓ Autenticidad – productos genuinos que representan nuestra cultura.</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="history.values.family">✓ Familia – un negocio fundado en amor y legado.</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="history.values.community">✓ Comunidad – servir con calidez y respeto.</li>
-        <li style="padding: 0.5rem 0;" data-i18n="history.values.pride">✓ Orgullo cultural – compartir nuestras raíces con Colorado.</li>
+        <li id="value-authenticity" style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="history.values.authenticity">✓ Autenticidad – productos genuinos que representan nuestra cultura.</li>
+        <li id="value-family" style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="history.values.family">✓ Familia – un negocio fundado en amor y legado.</li>
+        <li id="value-community" style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="history.values.community">✓ Comunidad – servir con calidez y respeto.</li>
+        <li id="value-pride" style="padding: 0.5rem 0;" data-i18n="history.values.pride">✓ Orgullo cultural – compartir nuestras raíces con Colorado.</li>
       </ul>
     </section>
 
     <section class="card" style="text-align: center; border-left: 5px solid var(--golden-accent); background-color: var(--soft-cream);" aria-labelledby="cta-title">
       <h2 id="cta-title" data-i18n="history.cta.title">Visítanos</h2>
-      <p data-i18n="history.cta.text">
+      <p id="cta-text" data-i18n="history.cta.text">
         Te invitamos a visitar Tienda Salvadoreña en Denver y ser parte de nuestra historia. Cada compra apoya un legado familiar y mantiene vivas las tradiciones de El Salvador.
       </p>
-      <a class="btn-primary" href="contact.html" data-i18n="history.cta.button">Ir a Contacto</a>
+      <a class="btn-primary" id="cta-button" href="contact.html" data-i18n="history.cta.button">Ir a Contacto</a>
     </section>
   </main>
 
   <footer class="site-footer" role="contentinfo">
-<footer class="site-footer" role="contentinfo">
     <div class="container">
       <p style="margin-bottom: 0.75rem;">
-        <strong data-i18n="footer.hours_label">Horario:</strong>
-        <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
+        <strong id="footer-hours-label" data-i18n="footer.hours_label">Horario:</strong>
+        <span id="footer-hours" data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
       </p>
       <p class="footer-note">
         Contacto: <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave +Denver,+CO+80220" style="color: inherit;">5128 E Colfax Ave, Denver, CO 80220</a> |  Teléfono: <a href="tel:+13033944185" style="color: inherit;">(303) 394-4185</a> | Correo: <a href="mailto:info@tiendasalvadorena.com" style="color: inherit;">info@tiendasalvadorena.com</a>
       </p>
-      <p class="footer-line" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. – Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
+      <p class="footer-line" id="footer-copy" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. – Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
     </div>
   </footer>
 
