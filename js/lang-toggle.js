@@ -298,7 +298,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "contact.parking.details": "Street parking and behind the store (we share a lot with other businesses; approximately 4 spaces). You can also park on Forrest Street and walk to the store.",
       
       "contact.map.title": "How to get there",
-      "contact.map.note": "We recommend calling ahead to confirm availability of special products (e.g. Pollo Campero).",
+      "contact.map.note": "We recommend calling ahead to confirm availability of special products.",
       
       "contact.notes.title": "Additional information",
       "contact.notes.text": "For large orders or press inquiries, use the phone or email listed above.",
@@ -596,7 +596,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "contact.parking.details": "Estacionamiento en la calle y detrás de la tienda (compartimos un lote con otros comercios; aproximadamente 4 espacios). También puede estacionar en Forrest Street y caminar hasta la tienda.",
       
       "contact.map.title": "Cómo llegar",
-      "contact.map.note": "Recomendamos llamar antes de venir para confirmar disponibilidad de productos especiales (por ejemplo Pollo Campero).",
+      "contact.map.note": "Recomendamos llamar antes de venir para confirmar disponibilidad de productos especiales.",
       
       "contact.notes.title": "Información adicional",
       "contact.notes.text": "Para pedidos grandes o consultas de prensa, utilice el teléfono o el correo electrónico indicados arriba.",
