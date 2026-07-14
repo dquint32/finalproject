@@ -1276,3 +1276,134 @@ footer a:hover,
 /* ========================================
    END OF STYLESHEET
    ======================================== */
+/* ========================================
+   MODERN POLISH (2026 refresh)
+   Appended enhancements — layered on top of the
+   existing styles above without changing structure.
+   ======================================== */
+
+/* Brand is now a link (single H1 per page for SEO) */
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+  text-decoration: none;
+  min-height: 0;
+  border-radius: 8px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.brand-link:hover { transform: translateY(-1px); opacity: 0.95; }
+.brand-link:hover .brand-name { color: var(--golden-accent); }
+.brand-link .brand-name { transition: color 0.25s ease; }
+
+/* Slightly richer, sticky header with soft depth */
+.site-header {
+  background: linear-gradient(180deg, #1150c4 0%, var(--cobalt-blue) 100%);
+  backdrop-filter: saturate(1.1);
+  box-shadow: 0 4px 18px rgba(15, 71, 175, 0.28);
+}
+
+/* Animated underline for nav links */
+.main-nav a { position: relative; }
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 0;
+  height: 2px;
+  background: var(--golden-accent);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+.main-nav a:hover::after { width: 60%; }
+.main-nav a[aria-current="page"]::after,
+.main-nav a.active::after { width: 0; }
+
+/* Cards: smoother lift on hover */
+.card,
+.product-card,
+.heritage-item,
+.clipping-card {
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  will-change: transform;
+}
+.card:hover,
+.heritage-item:hover,
+.clipping-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Product cards: lift + subtle image zoom */
+.product-card { overflow: hidden; }
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(15, 71, 175, 0.18);
+}
+.product-card img,
+.product-image {
+  transition: transform 0.4s ease;
+}
+.product-card:hover img,
+.product-card:hover .product-image {
+  transform: scale(1.06);
+}
+
+/* Buttons: refined depth + press feedback */
+.btn,
+.btn-primary,
+.cta-link,
+.call-btn,
+.social-link {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.btn:hover,
+.btn-primary:hover,
+.cta-link:hover,
+.call-btn:hover,
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(15, 71, 175, 0.35);
+}
+.btn:active,
+.btn-primary:active,
+.cta-link:active,
+.call-btn:active,
+.social-link:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(15, 71, 175, 0.3);
+}
+
+/* Filter buttons: gentle hover */
+.filter-btn { transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease; }
+.filter-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+
+/* Hero: soft gradient wash + entrance */
+.hero {
+  background: linear-gradient(160deg, #ffffff 0%, var(--soft-cream) 100%);
+  animation: heroFade 0.6s ease both;
+}
+.hero__image img { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+.hero__image img:hover { transform: scale(1.02); box-shadow: var(--shadow-lg); }
+
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer: subtle top accent */
+.site-footer { border-top: 3px solid var(--golden-accent); }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
