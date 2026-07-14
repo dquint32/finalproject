@@ -5,7 +5,7 @@ This repository contains the source code and assets for **Tienda Salvadoreña**,
 
 ---
 
-## 📘 About the Project
+## About the Project
 - **Course:** CIS 3030 – Web Development  
 - **Professor:** Janos Fustos  
 - **Institution:** Metropolitan State University of Denver  
@@ -19,13 +19,13 @@ This project demonstrates:
 
 ---
 
-## 🌐 Live Site
+## Live Site
 The project is hosted on GitHub Pages:  
-👉 [View Tienda Salvadoreña](https://dquint32.github.io/finalproject/)
+[View Tienda Salvadoreña](https://dquint32.github.io/finalproject/)
 
 ---
 
-## 📂 Repository Contents
+## Repository Contents
 - `index.html` – Home page  
 - `items.html` – Products we sell  
 - `history.html` – Family and cultural background  
@@ -37,7 +37,7 @@ The project is hosted on GitHub Pages:
 
 ---
 
-## 👨‍🎓 About Me
+## About Me
 I’m a senior at **MSU Denver** studying **Human-Centered Information Systems (HCIS)**.  
 My focus is on:
 - Building accessible, bilingual web experiences  
@@ -48,7 +48,7 @@ I also work on other web and business projects outside of class, but this reposi
 
 ---
 
-## ⚖️ Purpose
+## Purpose
 This repository exists to:
 - Fulfill the CIS 3030 Final Project requirements  
 - Provide a live, accessible demo site for grading and review  
