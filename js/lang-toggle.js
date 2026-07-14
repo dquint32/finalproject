@@ -21,6 +21,20 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       "site.title": "Tienda Salvadoreña – Home",
       "meta.description": "Authentic Salvadoran and Central American products in Denver – tradition, flavor and community.",
+
+      // Per-page SEO titles & descriptions
+      "title.home": "Tienda Salvadoreña Denver | #1 Salvadoran Store",
+      "desc.home": "Denver's oldest Salvadoran store (30+ years). Authentic Salvadoran & Central American food, cheeses, drinks and more on E Colfax Ave.",
+      "title.items": "Salvadoran Products in Denver | Items – Tienda Salvadoreña",
+      "desc.items": "Browse Salvadoran & Central American food, drinks, cheeses, clothing and nostalgic goods in Denver. Kolashampan, queso duro, pan dulce and more.",
+      "title.history": "Our Story | Tienda Salvadoreña Denver",
+      "desc.history": "The story of Jorge and Delia Romero: 30+ years serving Denver's Salvadoran and Central American community with authentic products.",
+      "title.pollo": "Pollo Campero: Tradition & Reheating Tips | Tienda Salvadoreña Denver",
+      "desc.pollo": "Pollo Campero history and a step-by-step reheating guide (air fryer & oven) for the best flavor. Central American tradition in Denver, Colorado.",
+      "title.press": "Press & Recognition | Tienda Salvadoreña Denver",
+      "desc.press": "Media coverage of Tienda Salvadoreña, Denver's first Salvadoran store. Featured in Diario El Salvador and Denverite.",
+      "title.contact": "Contact & Location on E Colfax | Tienda Salvadoreña Denver",
+      "desc.contact": "Visit us at 5128 E Colfax Ave, Denver, CO 80220. Hours, phone (303) 394-4185, map and parking. Salvadoran store in Denver.",
       
       // Navigation
       "nav.home": "Home",
@@ -319,6 +333,20 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       "site.title": "Tienda Salvadoreña – Inicio",
       "meta.description": "Productos auténticos salvadoreños y centroamericanos en Denver – tradición, sabor y comunidad.",
+
+      // Títulos y descripciones SEO por página
+      "title.home": "Tienda Salvadoreña Denver | Productos Salvadoreños #1",
+      "desc.home": "La tienda salvadoreña más antigua de Denver (30+ años). Productos salvadoreños y centroamericanos auténticos: comida, quesos, bebidas y más en E Colfax Ave.",
+      "title.items": "Artículos Salvadoreños en Denver | Tienda Salvadoreña",
+      "desc.items": "Explora comida, bebidas, quesos, ropa y artículos nostálgicos salvadoreños y centroamericanos en Denver. Kolashampan, queso duro, pan dulce y más.",
+      "title.history": "Nuestra Historia | Tienda Salvadoreña Denver",
+      "desc.history": "La historia de Jorge y Delia Romero: 30+ años sirviendo a la comunidad salvadoreña y centroamericana de Denver con productos auténticos.",
+      "title.pollo": "Pollo Campero: Tradición y Cómo Recalentar | Tienda Salvadoreña Denver",
+      "desc.pollo": "Historia del Pollo Campero y guía para recalentarlo (air fryer y horno) con el mejor sabor. Tradición centroamericana en Denver, Colorado.",
+      "title.press": "Prensa y Reconocimientos | Tienda Salvadoreña Denver",
+      "desc.press": "Cobertura de medios sobre Tienda Salvadoreña, la primera tienda salvadoreña de Denver. Artículos de Diario El Salvador y Denverite.",
+      "title.contact": "Contacto y Ubicación en E Colfax | Tienda Salvadoreña Denver",
+      "desc.contact": "Visítanos en 5128 E Colfax Ave, Denver, CO 80220. Horario, teléfono (303) 394-4185, mapa y estacionamiento. Tienda salvadoreña en Denver.",
       
       // Navigation
       "nav.home": "Inicio",
