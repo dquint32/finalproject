@@ -1,0 +1,334 @@
+/*
+  Tienda Salvadoreña — home page sections
+  File: css/home.css  (loaded after css/style.css, index.html only)
+
+  Modules
+    1. Section scaffolding
+    2. Home hero + media grid
+    3. Story strip
+    4. Category cards
+    5. Store information & location
+    6. Press band
+*/
+
+/* ==========================================================================
+   1. SECTION SCAFFOLDING
+   ========================================================================== */
+main.home {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.section { padding-block: var(--section-y); }
+.section--warm {
+  background: var(--color-surface-warm);
+  border-block: 1px solid var(--color-border);
+}
+.section__inner {
+  max-width: var(--max-page);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.section__header { max-width: 44rem; margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+.section__header p:last-child { margin-bottom: 0; font-size: var(--text-lg); color: var(--color-ink-muted); }
+.section__footer { margin-top: clamp(1.75rem, 4vw, 2.5rem); text-align: center; }
+
+/* ==========================================================================
+   2. HOME HERO + MEDIA GRID
+   ========================================================================== */
+.hero--home { padding-block: clamp(3rem, 8vw, 6rem); }
+.hero--home .hero__title { font-size: clamp(2.25rem, 5.6vw, 3.9rem); line-height: 1.06; }
+.hero__accent { color: #FFC2B3; }
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 36px;
+  margin: 0 0 1.25rem;
+  padding: 0.3rem 1rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: 1.75rem;
+}
+.hero__address {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: var(--tap);
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+.hero__address:hover { color: #FFC2B3; }
+
+/* Three real photos from the store: one tall tile, two stacked */
+.hero-media {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.6rem, 1.5vw, 1rem);
+  height: clamp(340px, 46vw, 520px);
+}
+.hero-media .photo-frame { height: 100%; }
+.hero-media__main { grid-row: 1 / -1; }
+.hero-media .photo-frame:nth-child(2) { transform: translateY(-0.75rem); }
+.hero-media .photo-frame:nth-child(3) { transform: translateY(0.75rem); }
+.hero-media .photo-frame { transition: transform 0.35s var(--ease), box-shadow 0.35s ease; }
+.hero-media .photo-frame:hover { box-shadow: 0 30px 56px rgba(4, 20, 52, 0.6); }
+.hero-media .hero-media__main:hover { transform: translateY(-3px); }
+.hero-media .photo-frame:nth-child(2):hover { transform: translateY(calc(-0.75rem - 3px)); }
+.hero-media .photo-frame:nth-child(3):hover { transform: translateY(calc(0.75rem - 3px)); }
+
+@media (max-width: 879px) {
+  .hero-media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    height: auto;
+  }
+  .hero-media__main { grid-row: auto; grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+  .hero-media .photo-frame:nth-child(n+2) { aspect-ratio: 1 / 1; transform: none; }
+  .hero-media .photo-frame:nth-child(n+2):hover { transform: translateY(-3px); }
+}
+
+/* ==========================================================================
+   3. STORY STRIP
+   ========================================================================== */
+.story-strip {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+@media (min-width: 880px) {
+  .story-strip { grid-template-columns: 1.1fr 1fr; }
+}
+.story-strip__text p:not(.eyebrow) { font-size: var(--text-lg); color: var(--color-ink-muted); }
+
+.fact-list { display: grid; gap: 0.9rem; margin: 0; padding: 0; list-style: none; }
+.fact {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+  align-items: center;
+  padding: 1.1rem 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s ease;
+}
+.fact:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.fact__mark {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+.fact:nth-child(2) .fact__mark { background: var(--color-accent-tint); color: var(--color-accent-text); }
+.fact__title { margin: 0; font-size: 1.125rem; font-weight: 800; line-height: 1.25; }
+.fact__text { margin: 0; color: var(--color-ink-muted); }
+
+/* ==========================================================================
+   4. CATEGORY CARDS
+   ========================================================================== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.category-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.category-card:hover,
+.category-card:focus-visible {
+  transform: translateY(-6px);
+  border-color: rgba(15, 71, 175, 0.35);
+  box-shadow: var(--shadow-lg);
+  color: var(--color-ink);
+}
+.category-card:focus-visible { border-radius: var(--radius-lg); }
+
+.category-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-primary-tint);
+}
+.category-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+.category-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 38, 95, 0) 50%, rgba(8, 38, 95, 0.5) 100%);
+  transition: opacity 0.3s ease;
+}
+.category-card:hover .category-card__media img { transform: scale(1.07); }
+
+.category-card__badge {
+  position: absolute;
+  left: 0.9rem;
+  bottom: 0.9rem;
+  z-index: 1;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+
+.category-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.25rem 1.35rem 1.1rem;
+}
+.category-card__title { margin: 0 0 0.35rem; font-size: 1.3rem; font-weight: 800; }
+.category-card__text { margin: 0 0 1rem; color: var(--color-ink-muted); }
+.category-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: var(--tap);
+  margin-top: auto;
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-primary);
+  font-weight: 800;
+}
+.category-card__cta::after {
+  content: "→";
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  border-radius: 50%;
+  background: var(--color-primary-tint);
+  transition: transform 0.25s var(--ease), background-color 0.25s ease, color 0.25s ease;
+}
+.category-card:hover .category-card__cta::after {
+  transform: translateX(4px);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+/* ==========================================================================
+   5. STORE INFORMATION & LOCATION
+   ========================================================================== */
+.visit__grid {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: stretch;
+}
+@media (min-width: 900px) {
+  .visit__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+}
+.visit .map-card { margin: 0; }
+
+.store-info__title { margin-bottom: 1rem; }
+
+.info-list { display: grid; gap: 0.75rem; margin: 1.5rem 0; }
+.info-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.1rem 1rem;
+  align-items: start;
+  padding: 1rem 1.15rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.info-item__icon {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+}
+.info-item dt {
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+.info-item dd { margin: 0; font-size: 1.0625rem; font-weight: 700; line-height: 1.45; }
+.info-item dd span { display: block; }
+.info-item dd a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  margin-block: -0.6rem;
+}
+.store-info__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem; }
+
+/* ==========================================================================
+   6. PRESS BAND
+   ========================================================================== */
+.press-band { text-align: center; }
+.press-band blockquote {
+  position: relative;
+  max-width: 46rem;
+  margin: 0 auto 1.5rem;
+  padding-top: 3.5rem;
+}
+.press-band blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-accent);
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.press-band blockquote p {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.6vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* The last home section is a full-width band, so the footer sits flush against it */
+main.home + .site-footer { margin-top: 0; }

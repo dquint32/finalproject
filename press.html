@@ -48,13 +48,13 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
   <meta name="twitter:description" content="Cobertura de medios sobre la primera tienda salvadoreña de Denver.">
   <meta name="twitter:image" content="https://tiendasalvadorenadenver.com/images/delia-flag.jpg">
 
-  <link rel="icon" href="images/tienda-salvadorena-sign.png" type="image/png">
-  <link rel="apple-touch-icon" href="images/tienda-salvadorena-sign.png">
+  <link rel="icon" href="images/web/favicon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/web/favicon-192.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -66,58 +66,57 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
     ]
   }
   </script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <!-- Single-Line Horizontal Header Toolbar -->
-  <header class="site-header" role="banner">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
+
+  <header class="site-header">
     <div class="header-toolbar">
-      <!-- Left Section: Logo + Store Name -->
-      <div class="header-left">
-        <a href="index.html" class="brand-link" aria-label="Tienda Salvadoreña - Inicio">
-          <img src="images/tienda-salvadorena-sign.png"
-               alt="Logo de Tienda Salvadoreña en Denver"
-               class="brand-logo">
-          <span class="brand-name">Tienda Salvadoreña</span>
-        </a>
-      </div>
+      <a href="index.html" class="brand-link">
+        <img src="images/web/tienda-salvadorena-sign.webp" alt="" width="1200" height="706" class="brand-logo">
+        <span class="brand-name">Tienda Salvadoreña</span>
+      </a>
 
-      <!-- Center Section: Navigation Links -->
-      <div class="header-center">
-        <nav class="main-nav" aria-label="Primary navigation">
-          <a href="index.html" data-i18n="nav.home">Inicio</a>
-          <a href="items.html" data-i18n="nav.items">Artículos</a>
-          <a href="history.html" data-i18n="nav.history">Historia</a>
-          <a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a>
-          <a href="press.html" class="active" aria-current="page" data-i18n="nav.press">Prensa</a>
-          <a href="contact.html" data-i18n="nav.contact">Contacto</a>
-        </nav>
-      </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menú" data-i18n-aria-label="nav.menu">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
 
-      <!-- Right Section: Language Buttons -->
-      <div class="header-right">
-        <button id="btnSpanish" class="lang-button active" aria-pressed="true" type="button">ES</button>
-        <button id="btnEnglish" class="lang-button" aria-pressed="false" type="button">EN</button>
+      <nav id="primary-nav" class="main-nav" aria-label="Navegación principal" data-i18n-aria-label="nav.label">
+        <a href="index.html" data-i18n="nav.home">Inicio</a>
+        <a href="items.html" data-i18n="nav.items">Artículos</a>
+        <a href="history.html" data-i18n="nav.history">Historia</a>
+        <a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a>
+        <a href="press.html" aria-current="page" data-i18n="nav.press">Prensa</a>
+        <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-aria-label="a11y.language">
+        <button id="btnSpanish" class="lang-button active" aria-pressed="true" type="button" lang="es">ES<span class="sr-only"> – Español</span></button>
+        <button id="btnEnglish" class="lang-button" aria-pressed="false" type="button" lang="en">EN<span class="sr-only"> – English</span></button>
       </div>
     </div>
   </header>
 
   <!-- Hero Section with Animated Flag -->
-  <section class="hero hero--cobalt" role="region" aria-labelledby="press-hero-title">
+  <section class="hero hero--cobalt" aria-labelledby="press-hero-title">
     <div class="hero__inner">
-      <figure class="hero__image" aria-label="Bandera de El Salvador">
-        <img src="images/elsalvador-bandera-gif.gif" 
-             alt="Bandera animada de El Salvador" 
-             loading="eager"
-             style="border-color: var(--golden-accent); border-width: 4px;">
-      </figure>
       <div class="hero__content">
         <h1 id="press-hero-title" class="hero__title" data-i18n="press.hero.title">Prensa y Reconocimientos</h1>
         <p class="hero__subtitle" data-i18n="press.hero.lead">Documentamos el impacto de Tienda Salvadoreña en la comunidad: artículos, menciones y reconocimientos que cuentan nuestra historia.</p>
       </div>
+      <figure class="hero__image">
+        <img src="images/web/banderas-de-venta.webp"
+             width="1200" height="900"
+             alt="Banderas de países centroamericanos a la venta dentro de la tienda"
+             data-i18n-alt="press.hero.imgAlt"
+             fetchpriority="high">
+      </figure>
     </div>
   </section>
 
-  <main class="container" role="main">
+  <main id="main" class="container">
     <!-- Lead Introduction -->
     <p class="lead" style="margin-top: 2rem;">
       <span data-i18n="press.lead">Más de 30 años de servicio comunitario documentado por medios locales e internacionales.</span>
@@ -129,7 +128,7 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
 
       <!-- Quote 1 -->
       <div class="quote">
-        <p>"Tienda Salvadoreña es un negocio situado en Denver, Colorado, y fue el primer comercio con productos de El Salvador fundado en esa ciudad."</p>
+        <p data-i18n="press.quote1.text">"Tienda Salvadoreña es un negocio situado en Denver, Colorado, y fue el primer comercio con productos de El Salvador fundado en esa ciudad."</p>
         <cite>
           – Diario El Salvador, 2023 · 
           <a href="https://diarioelsalvador.com/una-tienda-en-denver-cumple-32-anos-de-compartir-la-cultura-salvadorena/406487/" 
@@ -141,13 +140,13 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
 
       <!-- Quote 2 -->
       <div class="quote">
-        <p>"La mayoría de las personas que visitan el negocio se llenan de nostalgia al ver las comidas tradicionales que encuentran."</p>
+        <p data-i18n="press.quote2.text">"La mayoría de las personas que visitan el negocio se llenan de nostalgia al ver las comidas tradicionales que encuentran."</p>
         <cite>– Diario El Salvador, 2023</cite>
       </div>
 
       <!-- Quote 3 -->
       <div class="quote">
-        <p>"People come here from all over Colorado, Wyoming and Nebraska to buy cheeses and souvenirs that he imports from home."</p>
+        <p data-i18n="press.quote3.text">"People come here from all over Colorado, Wyoming and Nebraska to buy cheeses and souvenirs that he imports from home."</p>
         <cite>
           – Denverite, 2018 · 
           <a href="https://denverite.com/2018/02/15/daca-tps-overshadowed/" 
@@ -159,7 +158,7 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
 
       <!-- Quote 4 -->
       <div class="quote">
-        <p>"On East Colfax, next to the trendy Bellwether coffeeshop, Jorge Romero and his wife, Delia, have run a Salvadoran grocery for more than 25 years."</p>
+        <p data-i18n="press.quote4.text">"On East Colfax, next to the trendy Bellwether coffeeshop, Jorge Romero and his wife, Delia, have run a Salvadoran grocery for more than 25 years."</p>
         <cite>– Denverite, 2018</cite>
       </div>
     </section>
@@ -169,35 +168,35 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
       <h2 id="images-title" style="text-align: center; margin-bottom: 1.5rem;" data-i18n="press.images.title">Imágenes y créditos</h2>
 
       <!-- Responsive Clippings Grid -->
-      <div class="clippings" role="list" aria-label="Imágenes de prensa">
+      <div class="clippings" role="list" aria-label="Imágenes de prensa" data-i18n-aria-label="aria.imagenes-de-prensa">
         <figure class="clipping-card" role="listitem">
-          <img src="images/delia-flag.jpg" 
-               alt="Delia Romero sosteniendo la bandera de El Salvador" 
+          <img src="images/web/delia-flag.webp" 
+               alt="Delia Romero sosteniendo la bandera de El Salvador" data-i18n-alt="alt.delia-romero-sosteniendo-la-bandera-de-e" 
                loading="lazy">
           <figcaption data-i18n="press.images.caption1">
             Delia Romero sosteniendo la bandera dentro de Tienda Salvadoreña. Foto © Kevin Beaty / Denverite, 2018
           </figcaption>
-          <p class="credits">Foto © Kevin Beaty / Denverite</p>
+          <p class="credits" data-i18n="press.credit1">Foto © Kevin Beaty / Denverite</p>
         </figure>
 
         <figure class="clipping-card" role="listitem">
-          <img src="images/jorge-counter.jpg" 
-               alt="Jorge Romero detrás del mostrador" 
+          <img src="images/web/jorge-counter.webp" 
+               alt="Jorge Romero detrás del mostrador" data-i18n-alt="alt.jorge-romero-detras-del-mostrador" 
                loading="lazy">
           <figcaption data-i18n="press.images.caption2">
             Jorge Romero detrás del mostrador.
           </figcaption>
-          <p class="credits">Foto © Kevin Beaty / Denverite, 2018</p>
+          <p class="credits" data-i18n="press.credit2">Foto © Kevin Beaty / Denverite, 2018</p>
         </figure>
 
         <figure class="clipping-card" role="listitem">
-          <img src="images/grandparents-el-salvador-flag.jpg" 
-               alt="Jorge y Delia con la bandera de El Salvador" 
+          <img src="images/web/grandparents-el-salvador-flag.webp" 
+               alt="Jorge y Delia con la bandera de El Salvador" data-i18n-alt="alt.jorge-y-delia-con-la-bandera-de-el-salva" 
                loading="lazy">
           <figcaption data-i18n="press.images.caption3">
             Jorge y Delia con la bandera de El Salvador.
           </figcaption>
-          <p class="credits">Foto: Nicolle Menéndez / Diario El Salvador</p>
+          <p class="credits" data-i18n="press.credit3">Foto: Nicolle Menéndez / Diario El Salvador</p>
         </figure>
       </div>
     </section>
@@ -206,7 +205,7 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
     <section aria-labelledby="featured-title" style="margin-top: 3rem;">
       <h3 id="featured-title" style="margin-bottom: 1rem;" data-i18n="press.featured.title">Artículos destacados</h3>
       
-      <ul class="media-list" aria-label="Artículos destacados">
+      <ul class="media-list" aria-label="Artículos destacados" data-i18n-aria-label="aria.articulos-destacados">
         <li>
           <a href="https://diarioelsalvador.com/una-tienda-en-denver-cumple-32-anos-de-compartir-la-cultura-salvadorena/406487/" 
              target="_blank" 
@@ -240,16 +239,16 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
     <section class="card" style="margin-top: 2rem; text-align: center;">
       <h3 data-i18n="press.recognition.title">Reconocimientos</h3>
       <ul style="list-style: none; padding: 0; margin-top: 1rem;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);">
+        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="press.recog1">
           Primer negocio salvadoreño en Denver (1991)
         </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);">
+        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="press.recog2">
           Destacado en medios locales e internacionales
         </li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);">
+        <li style="padding: 0.5rem 0; border-bottom: 1px dashed var(--light-gray);" data-i18n="press.recog3">
           Apoyo comunitario durante crisis humanitarias
         </li>
-        <li style="padding: 0.5rem 0;">
+        <li style="padding: 0.5rem 0;" data-i18n="press.recog4">
           Más de 30 años sirviendo a la comunidad hispana
         </li>
       </ul>
@@ -257,22 +256,48 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p style="margin-bottom: 0.75rem;">
-        <strong data-i18n="footer.hours_label">Horario:</strong>
-        <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
-      </p>
-      <p class="footer-note">
-        Contacto: <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220" style="color: inherit;">5128 E Colfax Ave, Denver, CO 80220</a> |  Teléfono: <a href="tel:+13033944185" style="color: inherit;">(303) 394-4185</a> | Correo: <a href="mailto:info@tiendasalvadorenadenver.com" style="color: inherit;">info@tiendasalvadorenadenver.com</a>
-      </p>
-      <p class="footer-line" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. – Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-title">Tienda Salvadoreña</p>
+        <p data-i18n="footer.tagline">La tienda salvadoreña más antigua de Colorado. Tradición, sabor y comunidad desde hace más de 30 años.</p>
+      </div>
+
+      <nav aria-label="Enlaces rápidos" data-i18n-aria-label="footer.links">
+        <h2 class="footer-heading" data-i18n="footer.links">Enlaces rápidos</h2>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="items.html" data-i18n="nav.items">Artículos</a></li>
+          <li><a href="history.html" data-i18n="nav.history">Historia</a></li>
+          <li><a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a></li>
+          <li><a href="press.html" data-i18n="nav.press">Prensa</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-heading" data-i18n="footer.visit">Visítanos</h2>
+        <address class="footer-contact">
+          <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220" target="_blank" rel="noopener noreferrer">5128 E Colfax Ave, Denver, CO 80220</a><br>
+          <a href="tel:+13033944185">(303) 394-4185</a><br>
+          <a href="mailto:info@tiendasalvadorenadenver.com">info@tiendasalvadorenadenver.com</a>
+        </address>
+        <p class="footer-hours">
+          <strong data-i18n="footer.hours_label">Horario:</strong>
+          <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p data-i18n="footer.copy">© 2026 Tienda Salvadoreña. Todos los derechos reservados.</p>
     </div>
   </footer>
 
 
   <!-- JavaScript -->
   <script src="js/lang-toggle.js" defer></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>
 

@@ -49,13 +49,13 @@
   <meta name="twitter:description" content="Historia del Pollo Campero y guía para recalentarlo con el mejor sabor.">
   <meta name="twitter:image" content="https://tiendasalvadorenadenver.com/images/jorgeydelia-pollocampero.png">
 
-  <link rel="icon" href="images/tienda-salvadorena-sign.png" type="image/png">
-  <link rel="apple-touch-icon" href="images/tienda-salvadorena-sign.png">
+  <link rel="icon" href="images/web/favicon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/web/favicon-192.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -67,44 +67,40 @@
     ]
   }
   </script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-  <header class="site-header" role="banner">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
+
+  <header class="site-header">
     <div class="header-toolbar">
-      <div class="header-left">
-        <a href="index.html" class="brand-link" aria-label="Tienda Salvadoreña - Inicio">
-          <img src="images/tienda-salvadorena-sign.png"
-               alt="Logo de Tienda Salvadoreña en Denver"
-               class="brand-logo">
-          <span class="brand-name">Tienda Salvadoreña</span>
-        </a>
-      </div>
+      <a href="index.html" class="brand-link">
+        <img src="images/web/tienda-salvadorena-sign.webp" alt="" width="1200" height="706" class="brand-logo">
+        <span class="brand-name">Tienda Salvadoreña</span>
+      </a>
 
-      <div class="header-center">
-        <nav class="main-nav" aria-label="Primary navigation">
-          <a href="index.html" data-i18n="nav.home">Inicio</a>
-          <a href="items.html" data-i18n="nav.items">Artículos</a>
-          <a href="history.html" data-i18n="nav.history">Historia</a>
-          <a href="pollo.html" class="active" aria-current="page" data-i18n="nav.pollo">Pollo Campero</a>
-          <a href="press.html" data-i18n="nav.press">Prensa</a>
-          <a href="contact.html" data-i18n="nav.contact">Contacto</a>
-        </nav>
-      </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menú" data-i18n-aria-label="nav.menu">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
 
-      <div class="header-right">
-        <button id="btnSpanish" class="lang-button active" aria-pressed="true" type="button">ES</button>
-        <button id="btnEnglish" class="lang-button" aria-pressed="false" type="button">EN</button>
+      <nav id="primary-nav" class="main-nav" aria-label="Navegación principal" data-i18n-aria-label="nav.label">
+        <a href="index.html" data-i18n="nav.home">Inicio</a>
+        <a href="items.html" data-i18n="nav.items">Artículos</a>
+        <a href="history.html" data-i18n="nav.history">Historia</a>
+        <a href="pollo.html" aria-current="page" data-i18n="nav.pollo">Pollo Campero</a>
+        <a href="press.html" data-i18n="nav.press">Prensa</a>
+        <a href="contact.html" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-aria-label="a11y.language">
+        <button id="btnSpanish" class="lang-button active" aria-pressed="true" type="button" lang="es">ES<span class="sr-only"> – Español</span></button>
+        <button id="btnEnglish" class="lang-button" aria-pressed="false" type="button" lang="en">EN<span class="sr-only"> – English</span></button>
       </div>
     </div>
   </header>
 
-  <section class="hero hero--tangerine" role="region" aria-labelledby="pollo-hero-title">
+  <section class="hero hero--text" aria-labelledby="pollo-hero-title">
     <div class="hero__inner">
-      <figure class="hero__image" aria-label="Jorge y Delia con Pollo Campero">
-        <img src="images/jorgeydelia-pollocampero.png" 
-             alt="Jorge y Delia disfrutando Pollo Campero" 
-             loading="eager">
-      </figure>
       <div class="hero__content">
         <h1 id="pollo-hero-title" class="hero__title" data-i18n="pollo.hero.title">Pollo Campero – Tradición Familiar</h1>
         
@@ -119,7 +115,7 @@
     </div>
   </section>
 
-  <main class="container" role="main">
+  <main id="main" class="container">
     <section class="real-story" aria-labelledby="story-title">
       <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--light-gray);">
       <div class="story-with-feature">
@@ -137,8 +133,8 @@
 
         <div class="feature-image">
           <figure>
-            <img src="images/pollocampero_familia.png" 
-                 alt="Jorge y Delia comiendo Pollo Campero en familia" 
+            <img src="images/web/pollocampero_familia.webp" 
+                 alt="Jorge y Delia comiendo Pollo Campero en familia" data-i18n-alt="alt.jorge-y-delia-comiendo-pollo-campero-en-" 
                  loading="lazy">
             <figcaption data-i18n="pollo.image.caption">
               Pollo Campero – tradición familiar celebrada por generaciones.
@@ -250,17 +246,45 @@
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p style="margin-bottom: 0.75rem;">
-        <strong data-i18n="footer.hours_label">Horario:</strong>
-        <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
-      </p>
-      <p class="footer-note" data-i18n="footer.contactline">Contacto: 5128 E Colfax Ave, Denver, CO 80220 | Teléfono: (303) 394-4185 | Correo: info@tiendasalvadorenadenver.com</p>
-      <p class="footer-line" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. – Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-title">Tienda Salvadoreña</p>
+        <p data-i18n="footer.tagline">La tienda salvadoreña más antigua de Colorado. Tradición, sabor y comunidad desde hace más de 30 años.</p>
+      </div>
+
+      <nav aria-label="Enlaces rápidos" data-i18n-aria-label="footer.links">
+        <h2 class="footer-heading" data-i18n="footer.links">Enlaces rápidos</h2>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="items.html" data-i18n="nav.items">Artículos</a></li>
+          <li><a href="history.html" data-i18n="nav.history">Historia</a></li>
+          <li><a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a></li>
+          <li><a href="press.html" data-i18n="nav.press">Prensa</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-heading" data-i18n="footer.visit">Visítanos</h2>
+        <address class="footer-contact">
+          <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220" target="_blank" rel="noopener noreferrer">5128 E Colfax Ave, Denver, CO 80220</a><br>
+          <a href="tel:+13033944185">(303) 394-4185</a><br>
+          <a href="mailto:info@tiendasalvadorenadenver.com">info@tiendasalvadorenadenver.com</a>
+        </address>
+        <p class="footer-hours">
+          <strong data-i18n="footer.hours_label">Horario:</strong>
+          <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p data-i18n="footer.copy">© 2026 Tienda Salvadoreña. Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <script src="js/lang-toggle.js" defer></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

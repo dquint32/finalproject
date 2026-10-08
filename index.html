@@ -52,13 +52,15 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
   <meta name="twitter:description" content="La tienda salvadoreña más antigua de Denver. Productos auténticos de El Salvador y Centroamérica.">
   <meta name="twitter:image" content="https://tiendasalvadorenadenver.com/images/holding-sign.png">
 
-  <link rel="icon" href="images/tienda-salvadorena-sign.png" type="image/png">
-  <link rel="apple-touch-icon" href="images/tienda-salvadorena-sign.png">
+  <link rel="preload" as="image" href="images/web/grandparents-el-salvador-flag.webp" fetchpriority="high">
+  <link rel="icon" href="images/web/favicon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/web/favicon-192.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Structured data: Local Business -->
   <script type="application/ld+json">
@@ -105,135 +107,331 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
     ]
   }
   </script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="header-toolbar">
-      <div class="header-left">
-        <a href="index.html" class="brand-link" aria-label="Tienda Salvadoreña - Inicio">
-          <img src="images/tienda-salvadorena-sign.png" alt="Logo de Tienda Salvadoreña en Denver" class="brand-logo">
-          <span class="brand-name">Tienda Salvadoreña</span>
-        </a>
-      </div>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
 
-      <nav class="header-center" aria-label="Primary navigation">
-        <div class="main-nav">
-          <a href="index.html" class="active" aria-current="page" data-i18n="nav.home">Inicio</a>
-          <a href="items.html" data-i18n="nav.items">Artículos</a>
-          <a href="history.html" data-i18n="nav.history">Historia</a>
-          <a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a>
-          <a href="press.html" data-i18n="nav.press">Prensa</a>
-          <a href="contact.html" data-i18n="nav.contact">Contacto</a>
-        </div>
+  <header class="site-header">
+    <div class="header-toolbar">
+      <a href="index.html" class="brand-link">
+        <img src="images/web/tienda-salvadorena-sign.webp" alt="" width="1200" height="706" class="brand-logo">
+        <span class="brand-name">Tienda Salvadoreña</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menú" data-i18n-aria-label="nav.menu">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="main-nav" aria-label="Navegación principal" data-i18n-aria-label="nav.label">
+        <a href="index.html" aria-current="page" data-i18n="nav.home">Inicio</a>
+        <a href="items.html" data-i18n="nav.items">Artículos</a>
+        <a href="history.html" data-i18n="nav.history">Historia</a>
+        <a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a>
+        <a href="press.html" data-i18n="nav.press">Prensa</a>
+        <a href="contact.html" data-i18n="nav.contact">Contacto</a>
       </nav>
 
-      <div class="header-right" role="group" aria-label="Language toggle">
-        <button id="btnSpanish" class="lang-button active" aria-pressed="true" type="button">ES</button>
-        <button id="btnEnglish" class="lang-button" aria-pressed="false" type="button">EN</button>
+      <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-aria-label="a11y.language">
+        <button id="btnSpanish" class="lang-button active" aria-pressed="true" type="button" lang="es">ES<span class="sr-only"> – Español</span></button>
+        <button id="btnEnglish" class="lang-button" aria-pressed="false" type="button" lang="en">EN<span class="sr-only"> – English</span></button>
       </div>
     </div>
   </header>
 
-  <section class="hero hero--cobalt" role="region" aria-labelledby="hero-title">
+  <!-- ============ HERO ============ -->
+  <section class="hero hero--home" aria-labelledby="hero-title">
     <div class="hero__inner">
       <div class="hero__content">
-        <h1 id="hero-title" class="hero__title" data-i18n="hero.title">Tienda Salvadoreña</h1>
-        <p class="hero__subtitle" data-i18n="hero.lead">Auténticos productos salvadoreños y centroamericanos en Denver – tradición, sabor y comunidad.</p>
-        <p class="hero__note" data-i18n="hero.note">La tienda salvadoreña más antigua de Colorado (30+ años)</p>
-        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
-          <a class="cta-link" href="items.html" data-i18n="hero.explore">Explora nuestros productos</a>
-          <a class="cta-link" href="press.html" data-i18n="hero.press">Prensa</a>
+        <p class="hero__badge" data-i18n="hero.badge">Más de 30 años en East Colfax</p>
+        <h1 id="hero-title" class="hero__title" data-i18n="hero.title" data-i18n-html="true">El sabor de El Salvador, <span class="hero__accent">en el corazón de Denver</span></h1>
+        <p class="hero__subtitle" data-i18n="hero.lead">Productos auténticos salvadoreños y centroamericanos en Denver – tradición, sabor y comunidad.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="items.html" data-i18n="hero.explore">Explorar Productos</a>
+          <a class="btn btn--outline btn--on-dark" href="#visitanos" data-i18n="hero.visit">Ver Ubicación y Horario</a>
+        </div>
+
+        <div class="hero__meta">
+          <p class="status-badge" data-store-status hidden></p>
+          <a class="hero__address" href="#visitanos">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            5128 E Colfax Ave, Denver
+          </a>
         </div>
       </div>
-      <figure class="hero__image" aria-label="Jorge y Delia sosteniendo el cartel de la tienda">
-        <img src="images/holding-sign.png" 
-             data-i18n-alt="hero.imgAltSign" 
-             alt="Jorge y Delia sosteniendo el cartel de Tienda Salvadoreña con banderas de Centroamérica"
-             loading="eager">
-      </figure>
+
+      <div class="hero-media">
+        <figure class="photo-frame hero-media__main">
+          <img src="images/web/grandparents-el-salvador-flag.webp"
+               width="1200" height="903"
+               alt="Jorge y Delia Romero, fundadores de Tienda Salvadoreña, de pie frente a una bandera de El Salvador dentro de la tienda"
+               data-i18n-alt="hero.img.owners"
+               fetchpriority="high">
+          <figcaption><span data-i18n="hero.img.owners.caption">Jorge y Delia Romero, fundadores</span> <small data-i18n="hero.img.owners.credit">Foto: Nicolle Menéndez / Diario El Salvador</small></figcaption>
+        </figure>
+        <figure class="photo-frame">
+          <img src="images/web/pandulce-quesadilla-bread.webp"
+               width="900" height="1200"
+               alt="Pan dulce, quesadillas salvadoreñas y galletas empacadas en el estante de panadería"
+               data-i18n-alt="hero.img.bread">
+        </figure>
+        <figure class="photo-frame">
+          <img src="images/web/kolashampan.webp"
+               width="900" height="1200"
+               alt="Botellas de Kolashampan, la gaseosa salvadoreña color naranja, alineadas en el estante"
+               data-i18n-alt="hero.img.kola">
+        </figure>
+      </div>
     </div>
   </section>
 
-  <main class="container" role="main">
-    <section class="card" style="max-width: 800px; margin: 2rem auto; text-align: center; border-left: 5px solid var(--cobalt-blue);" aria-labelledby="mission-title">
-      <h2 id="mission-title" data-i18n="mission.title">La tienda salvadoreña más antigua de Colorado</h2>
-      <p data-i18n="mission.lead">Tienda Salvadoreña es un negocio familiar arraigado en la comunidad. Durante más de 30 años hemos servido a la comunidad hispana de Denver con productos auténticos, comida y cultura, manteniendo vivas nuestras tradiciones.</p>
-    </section>
+  <main id="main" class="home">
 
-    <section class="featured-categories" aria-labelledby="categories-title">
-      <h2 id="categories-title" style="text-align:center; margin-bottom: 1.5rem;" data-i18n="categories.title">Explora Nuestros Productos</h2>
+    <!-- ============ STORY STRIP ============ -->
+    <section class="section" aria-labelledby="mission-title">
+      <div class="section__inner story-strip">
+        <div class="story-strip__text">
+          <p class="eyebrow" data-i18n="mission.eyebrow">Nuestra historia</p>
+          <h2 id="mission-title" data-i18n="mission.title">La tienda salvadoreña más antigua de Colorado</h2>
+          <p data-i18n="mission.lead">Tienda Salvadoreña es un negocio familiar arraigado en la comunidad. Durante más de 30 años hemos servido a la comunidad hispana de Denver con productos, comida y cultura auténticos, manteniendo vivas nuestras tradiciones.</p>
+          <a class="arrow-link" href="history.html" data-i18n="mission.link">Conoce nuestra historia</a>
+        </div>
 
-      <div class="product-grid" role="list">
-        <a href="items.html#product-gallery" class="product-card" role="listitem" aria-label="Comida y Bebidas">
-          <img class="product-image" 
-               src="images/organized-shelft-beans-sauce-seasonings.jpg" 
-               data-i18n-alt="cat.food.imgAlt" 
-               alt="Comida y Bebidas" 
-               loading="lazy">
-          <h3 class="product-title" data-i18n="cat.food.title">Comida y Bebidas</h3>
-          <p class="product-text" data-i18n="cat.food.lead">Gaseosas, jugos, chocolate y frutas congeladas.</p>
-        </a>
-
-        <a href="items.html#product-gallery" class="product-card" role="listitem" aria-label="Ropa y Accesorios">
-          <img class="product-image" 
-               src="images/guayabera-traditional-shirts.jpg" 
-               data-i18n-alt="cat.clothing.imgAlt" 
-               alt="Ropa y Accesorios" 
-               loading="lazy">
-          <h3 class="product-title" data-i18n="cat.clothing.title">Ropa y Accesorios</h3>
-          <p class="product-text" data-i18n="cat.clothing.lead">Guayaberas, gorros y calzado tradicional.</p>
-        </a>
-
-        <a href="items.html#product-gallery" class="product-card" role="listitem" aria-label="Chucherías y recuerdos">
-          <img class="product-image" 
-               src="images/knick-nack-bracelet_hairclips.jpg" 
-               data-i18n-alt="cat.nostalgia.imgAlt" 
-               alt="Chucherías y regalos" 
-               loading="lazy">
-          <h3 class="product-title" data-i18n="cat.nostalgia.title">Chucherías y recuerdos</h3>
-          <p class="product-text" data-i18n="cat.nostalgia.lead">Llaveros, pulseras y regalos con identidad.</p>
-        </a>
-
-        <a href="items.html#product-gallery" class="product-card" role="listitem" aria-label="Hierbas y Cuidado">
-          <img class="product-image" 
-               src="images/herbal-supplements-soap-central-america.jpg" 
-               data-i18n-alt="cat.wellness.imgAlt" 
-               alt="Hierbas y Cuidado" 
-               loading="lazy">
-          <h3 class="product-title" data-i18n="cat.wellness.title">Hierbas y Cuidado</h3>
-          <p class="product-text" data-i18n="cat.wellness.lead">Medicinas, jabones naturales y artículos de higiene.</p>
-        </a>
-      </div>
-
-      <div style="text-align:center; margin-top:2rem;">
-        <a class="cta-link" href="items.html" data-i18n="categories.viewall">Ver todos los artículos</a>
+        <ul class="fact-list">
+          <li class="fact">
+            <span class="fact__mark" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <h3 class="fact__title" data-i18n="fact.years.title">Más de 30 años</h3>
+            <p class="fact__text" data-i18n="fact.years.text">La tienda salvadoreña más antigua de Colorado.</p>
+          </li>
+          <li class="fact">
+            <span class="fact__mark" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-9.5-9.3C1 8 3.4 4.5 7 4.5c2 0 3.6 1 5 2.8 1.4-1.8 3-2.8 5-2.8 3.6 0 6 3.5 4.5 7.2C19.5 16.4 12 21 12 21Z"/></svg>
+            </span>
+            <h3 class="fact__title" data-i18n="fact.family.title">Negocio familiar</h3>
+            <p class="fact__text" data-i18n="fact.family.text">Fundada y atendida por Jorge y Delia Romero.</p>
+          </li>
+          <li class="fact">
+            <span class="fact__mark" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5v8l-9 5-9-5V8Z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
+            </span>
+            <h3 class="fact__title" data-i18n="fact.import.title">Productos auténticos</h3>
+            <p class="fact__text" data-i18n="fact.import.text">Importados de El Salvador y Centroamérica.</p>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="card" style="border-left: 5px solid var(--terracotta); background-color: var(--warm-beige); text-align: center; margin-top: 2rem;" aria-labelledby="press-title">
-      <h2 id="press-title" data-i18n="press.title">Reconocimiento Comunitario</h2>
-      <blockquote style="font-size: clamp(1rem, 2.5vw, 1.1rem); font-style: italic; font-family: 'Merriweather', serif; color: var(--muted-green); margin: 1rem 0;">
-        <p data-i18n="press.quote">"Un pilar de la comunidad hispana de Denver."</p>
-      </blockquote>
-      <a class="cta-link" href="press.html" data-i18n="press.readmore">Leer más en Prensa</a>
+    <!-- ============ PRODUCT CATEGORIES ============ -->
+    <section class="section section--warm" aria-labelledby="categories-title">
+      <div class="section__inner">
+        <header class="section__header">
+          <p class="eyebrow" data-i18n="categories.eyebrow">Lo que encontrarás</p>
+          <h2 id="categories-title" data-i18n="categories.title">Explora Nuestros Productos</h2>
+          <p data-i18n="categories.lead">De la despensa a los recuerdos: cuatro pasillos con sabor a casa.</p>
+        </header>
+
+        <ul class="category-grid">
+          <li>
+            <a class="category-card" href="items.html?cat=food#product-gallery">
+              <div class="category-card__media">
+                <img src="images/web/organized-shelft-beans-sauce-seasonings.webp"
+                     width="1200" height="900" loading="lazy"
+                     alt="Estantes de la tienda con frijoles, salsas, condimentos y otros básicos de despensa centroamericanos"
+                     data-i18n-alt="cat.food.imgAlt">
+                <span class="category-card__badge" data-i18n="cat.food.badge">Kolashampan · Queso duro</span>
+              </div>
+              <div class="category-card__body">
+                <h3 class="category-card__title" data-i18n="cat.food.title">Comida y Bebidas</h3>
+                <p class="category-card__text" data-i18n="cat.food.lead">Refrescos, jugos, chocolate y fruta congelada.</p>
+                <span class="category-card__cta"><span data-i18n="cat.cta">Ver productos</span></span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="category-card" href="items.html?cat=clothing#product-gallery">
+              <div class="category-card__media">
+                <img src="images/web/guayabera-traditional-shirts.webp"
+                     width="1200" height="900" loading="lazy"
+                     alt="Guayaberas blancas tradicionales con bordados, colgadas en un perchero de la tienda"
+                     data-i18n-alt="cat.clothing.imgAlt">
+                <span class="category-card__badge" data-i18n="cat.clothing.badge">Guayaberas</span>
+              </div>
+              <div class="category-card__body">
+                <h3 class="category-card__title" data-i18n="cat.clothing.title">Ropa y Accesorios</h3>
+                <p class="category-card__text" data-i18n="cat.clothing.lead">Guayaberas, sombreros y calzado tradicional.</p>
+                <span class="category-card__cta"><span data-i18n="cat.cta">Ver productos</span></span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="category-card" href="items.html?cat=nostalgia#product-gallery">
+              <div class="category-card__media">
+                <img src="images/web/knick-nack-bracelet_hairclips.webp"
+                     width="1200" height="900" loading="lazy"
+                     alt="Exhibidor con pulseras, llaveros, collares y accesorios para el cabello"
+                     data-i18n-alt="cat.nostalgia.imgAlt">
+                <span class="category-card__badge" data-i18n="cat.nostalgia.badge">Regalos</span>
+              </div>
+              <div class="category-card__body">
+                <h3 class="category-card__title" data-i18n="cat.nostalgia.title">Chucherías y recuerdos</h3>
+                <p class="category-card__text" data-i18n="cat.nostalgia.lead">Llaveros, pulseras y regalos con identidad.</p>
+                <span class="category-card__cta"><span data-i18n="cat.cta">Ver productos</span></span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="category-card" href="items.html?cat=wellness#product-gallery">
+              <div class="category-card__media">
+                <img src="images/web/herbal-supplements-soap-central-america.webp"
+                     width="1200" height="900" loading="lazy"
+                     alt="Estantes con jabones naturales, suplementos herbales y artículos de cuidado personal"
+                     data-i18n-alt="cat.wellness.imgAlt">
+                <span class="category-card__badge" data-i18n="cat.wellness.badge">Remedios naturales</span>
+              </div>
+              <div class="category-card__body">
+                <h3 class="category-card__title" data-i18n="cat.wellness.title">Hierbas y Cuidado</h3>
+                <p class="category-card__text" data-i18n="cat.wellness.lead">Medicinas, jabones naturales y artículos de higiene.</p>
+                <span class="category-card__cta"><span data-i18n="cat.cta">Ver productos</span></span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="section__footer">
+          <a class="btn btn--outline" href="items.html" data-i18n="categories.viewall">Ver todos los artículos</a>
+        </div>
+      </div>
     </section>
+
+    <!-- ============ STORE INFORMATION & LOCATION ============ -->
+    <section id="visitanos" class="section visit" aria-labelledby="visit-title">
+      <div class="section__inner visit__grid">
+        <div class="store-info">
+          <p class="eyebrow" data-i18n="visit.eyebrow">Visítanos</p>
+          <h2 id="visit-title" class="store-info__title" data-i18n="visit.title">Ubicación y horario</h2>
+          <p class="status-badge" data-store-status hidden></p>
+
+          <dl class="info-list">
+            <div class="info-item">
+              <span class="info-item__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <dt data-i18n="visit.hours">Horario</dt>
+              <dd>
+                <span data-i18n="visit.hours.sun">Domingo 10 AM–6 PM</span>
+                <span data-i18n="visit.hours.week">Lunes–Sábado 10 AM–7 PM</span>
+              </dd>
+            </div>
+            <div class="info-item">
+              <span class="info-item__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <dt data-i18n="visit.location">Ubicación</dt>
+              <dd>5128 E Colfax Ave, Denver, CO 80220</dd>
+            </div>
+            <div class="info-item">
+              <span class="info-item__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.900.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.900.3 1.800.6 2.800.7A2 2 0 0 1 22 16.9Z"/></svg>
+              </span>
+              <dt data-i18n="visit.phone">Teléfono</dt>
+              <dd><a href="tel:+13033944185">(303) 394-4185</a></dd>
+            </div>
+          </dl>
+
+          <div class="store-info__actions">
+            <a class="btn" href="tel:+13033944185" data-i18n="visit.call">Llamar ahora</a>
+            <a class="arrow-link" href="contact.html" data-i18n="visit.more">Estacionamiento y más detalles</a>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <div class="map-card__frame">
+            <div class="map-card__placeholder" aria-hidden="true">
+              <span class="map-card__pin"></span>
+              <span data-i18n="map.placeholder">Mapa de Tienda Salvadoreña</span>
+            </div>
+            <iframe
+              title="Mapa de Google: Tienda Salvadoreña, 5128 E Colfax Ave, Denver" data-i18n-title="map.frameTitle"
+              src="https://www.google.com/maps?q=Tienda+Salvadore%C3%B1a,+5128+E+Colfax+Ave,+Denver,+CO+80220&z=15&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+          <div class="map-card__body">
+            <address class="map-card__address">
+              Tienda Salvadoreña
+              <span>5128 E Colfax Ave, Denver, CO 80220</span>
+            </address>
+            <div class="map-card__actions">
+              <a class="btn btn--primary"
+                 href="https://www.google.com/maps/dir/?api=1&amp;destination=5128+E+Colfax+Ave,+Denver,+CO+80220"
+                 target="_blank" rel="noopener noreferrer"
+                 data-i18n="map.directions">Cómo llegar</a>
+              <a class="btn btn--outline"
+                 href="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220"
+                 target="_blank" rel="noopener noreferrer"
+                 data-i18n="map.view">Ver en Google Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRESS BAND ============ -->
+    <section class="section section--warm press-band" aria-labelledby="press-title">
+      <div class="section__inner">
+        <h2 id="press-title" class="eyebrow" data-i18n="press.title">Reconocimiento Comunitario</h2>
+        <blockquote>
+          <p data-i18n="press.quote">Un pilar de la comunidad hispana de Denver.</p>
+        </blockquote>
+        <a class="btn" href="press.html" data-i18n="press.readmore">Leer más en Prensa</a>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p style="margin-bottom: 0.75rem;">
-        <strong data-i18n="footer.hours_label">Horario:</strong>
-        <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
-      </p>
-      <p class="footer-note">
-        Contacto: <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220" style="color: inherit;">5128 E Colfax Ave, Denver, CO 80220</a> | 
-        Teléfono: <a href="tel:+13033944185" style="color: inherit;">(303) 394-4185</a> | 
-        Correo: <a href="mailto:info@tiendasalvadorenadenver.com" style="color: inherit;">info@tiendasalvadorenadenver.com</a>
-      </p>
-      <p class="footer-line" data-i18n="footer.copy">© 2025 Tienda Salvadoreña. Todos los derechos reservados. – Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.</p>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-title">Tienda Salvadoreña</p>
+        <p data-i18n="footer.tagline">La tienda salvadoreña más antigua de Colorado. Tradición, sabor y comunidad desde hace más de 30 años.</p>
+      </div>
+
+      <nav aria-label="Enlaces rápidos" data-i18n-aria-label="footer.links">
+        <h2 class="footer-heading" data-i18n="footer.links">Enlaces rápidos</h2>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="items.html" data-i18n="nav.items">Artículos</a></li>
+          <li><a href="history.html" data-i18n="nav.history">Historia</a></li>
+          <li><a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a></li>
+          <li><a href="press.html" data-i18n="nav.press">Prensa</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-heading" data-i18n="footer.visit">Visítanos</h2>
+        <address class="footer-contact">
+          <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220" target="_blank" rel="noopener noreferrer">5128 E Colfax Ave, Denver, CO 80220</a><br>
+          <a href="tel:+13033944185">(303) 394-4185</a><br>
+          <a href="mailto:info@tiendasalvadorenadenver.com">info@tiendasalvadorenadenver.com</a>
+        </address>
+        <p class="footer-hours">
+          <strong data-i18n="footer.hours_label">Horario:</strong>
+          <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p data-i18n="footer.copy">© 2026 Tienda Salvadoreña. Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <script src="js/lang-toggle.js" defer></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

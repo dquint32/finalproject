@@ -12,7 +12,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
 
 // js/lang-toggle.js
 (function () {
-  console.log('lang-toggle.js initializing');
 
   const translations = {
     en: {
@@ -46,17 +45,128 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       
       // Footer
       "footer.hours_label": "Hours:",
-      "footer.hours": "Sunday 10 AM–6 PM · Mon–Sat 10 AM–7 PM",
+      "footer.hours": "Sunday 10 AM–6 PM · Monday–Saturday 10 AM–7 PM",
       "footer.contactline": "Contact: 5128 E Colfax Ave, Denver, CO 80220 | Phone: (303) 394-4185 | Email: info@tiendasalvadorenadenver.com",
-      "footer.copy": "© 2025 Tienda Salvadoreña. All rights reserved. – This website was created in partial fulfillment of the requirements for course CIS 3030.",
+      "footer.copy": "© 2026 Tienda Salvadoreña. All rights reserved.",
+
+      // Full bilingual coverage: alt text, ARIA labels, press and contact strings
+      "alt.medicinas-otc": "Shelves of imported over-the-counter medicines",
+      "alt.vitaminas-y-suplementos": "Vitamins and supplements on a display rack",
+      "alt.jabones-y-hierbas-naturales": "Natural soaps and herbal products on store shelves",
+      "alt.suplementos-nopalina-y-linaza": "Nopalina, flaxseed and other dietary supplements on a shelf",
+      "alt.articulos-de-cuidado-personal": "Personal care items, soaps and oils on a rack",
+      "alt.frijoles-salsas-y-condimentos": "Beans, sauces and seasonings on store shelves",
+      "alt.crema-y-quesos-centroamericanos": "Salvadoran cream and Central American cheeses in the cooler",
+      "alt.queso-duro-viejo": "Package of aged queso duro viejo from El Salvador",
+      "alt.hierbas-secas-y-especias": "Bags of dried herbs and spices hanging on a display",
+      "alt.pan-dulce-y-quesadillas": "Packaged pan dulce, quesadillas and cookies",
+      "alt.dulces-tradicionales": "Shelves of traditional Central American candy",
+      "alt.chips-de-platano-y-bocadillos": "Racks of plantain chips and snacks",
+      "alt.nances-congelados": "Bags of frozen yellow nances",
+      "alt.tamales-de-elote": "Packages of Cuzcatlecos sweet corn tamales",
+      "alt.charrales-fritos": "Bags of fried charrales with chile and lime",
+      "alt.kolashampan": "Bottles of Kolashampan, the orange Salvadoran soda",
+      "alt.gaseosas-en-botella-de-vidrio": "Glass-bottle sodas: Mirinda, Coca-Cola and Tropical",
+      "alt.jugos-naturales": "Cans of tamarind, passion fruit, coconut and horchata drinks",
+      "alt.jugo-de-coco-foco": "Cans of FOCO coconut juice",
+      "alt.guayaberas-tradicionales": "Traditional guayabera shirts on a rack",
+      "alt.vestidos-y-bolsos": "Traditional dresses, handbags and blankets on display",
+      "alt.jerseys-especiales": "Commemorative El Salvador soccer jersey",
+      "alt.carteras": "Traditional and modern handbags in a glass case",
+      "alt.chanclas": "Sandals and house shoes on a shelf",
+      "alt.gorras-de-pais": "Caps representing Central American countries",
+      "alt.gorros-de-invierno": "Blue and white winter beanies for Guatemala and El Salvador",
+      "alt.silabario-hispanoamericano": "Cover of the Silabario Hispanoamericano reading primer",
+      "alt.chucherias-y-regalos": "Bracelets, keychains and hair accessories on display",
+      "alt.souvenirs": "Woven wallets with colorful traditional patterns",
+      "aria.filtros-de-categoria": "Category filters",
+      "aria.galeria-de-productos": "Product gallery",
+      "a11y.close": "Close",
+      "items.filter.title": "Filter by category",
+      "alt.letrero-de-la-tienda": "The Tienda Salvadoreña store sign with Central American flags",
+      "alt.bandera-de-el-salvador": "Flag of El Salvador",
+      "alt.jorge-y-delia-comiendo-pollo-campero-en-": "A family sharing Pollo Campero around the table",
+      "alt.delia-romero-sosteniendo-la-bandera-de-e": "Delia Romero holding the flag of El Salvador",
+      "alt.jorge-romero-detras-del-mostrador": "Jorge Romero behind the counter",
+      "alt.jorge-y-delia-con-la-bandera-de-el-salva": "Jorge and Delia with the flag of El Salvador",
+      "aria.imagenes-de-prensa": "Press images",
+      "aria.articulos-destacados": "Featured articles",
+      "press.credit1": "Photo © Kevin Beaty / Denverite",
+      "press.credit2": "Photo © Kevin Beaty / Denverite, 2018",
+      "press.credit3": "Photo: Nicolle Menéndez / Diario El Salvador",
+      "press.recog1": "First Salvadoran business in Denver (1991)",
+      "press.recog2": "Featured in local and international media",
+      "press.recog3": "Community support during humanitarian crises",
+      "press.recog4": "More than 30 years serving the Hispanic community",
+      "aria.llamar-tienda-salvadorena": "Call Tienda Salvadoreña",
+      "aria.visitar-facebook-de-tienda-salvadorena": "Visit Tienda Salvadoreña on Facebook",
+      "contact.why.title": "Why visit us?",
+      "contact.why.years": "30+ Years of History",
+      "contact.why.years.text": "Colorado's oldest Salvadoran store",
+      "contact.why.products": "Authentic Products",
+      "contact.why.products.text": "Imported directly from El Salvador and Central America",
+      "contact.why.family": "Family Business",
+      "contact.why.family.text": "Founded and run by Jorge and Delia Romero",
+      "map.frameTitle": "Google Map: Tienda Salvadoreña, 5128 E Colfax Ave, Denver",
+      "a11y.language": "Language",
+
+      // 2026 refresh: shared UI, home sections, map and service cards
+      "a11y.skip": "Skip to content",
+      "nav.menu": "Menu",
+      "nav.label": "Main navigation",
+      "footer.tagline": "Colorado's oldest Salvadoran store. Tradition, flavor and community for more than 30 years.",
+      "footer.links": "Quick links",
+      "footer.visit": "Visit us",
+      "hero.badge": "30+ years on East Colfax",
+      "hero.visit": "See Location & Hours",
+      "hero.img.owners": "Jorge and Delia Romero, founders of Tienda Salvadoreña, standing in front of an El Salvador flag inside the store",
+      "hero.img.owners.caption": "Jorge and Delia Romero, founders",
+      "hero.img.owners.credit": "Photo: Nicolle Menéndez / Diario El Salvador",
+      "hero.img.bread": "Packaged pan dulce, Salvadoran quesadillas and cookies on the bakery rack",
+      "hero.img.kola": "Bottles of Kolashampan, the orange Salvadoran soda, lined up on the shelf",
+      "mission.eyebrow": "Our story",
+      "mission.link": "Read our story",
+      "fact.years.title": "30+ years",
+      "fact.years.text": "Colorado's oldest Salvadoran store.",
+      "fact.family.title": "Family owned",
+      "fact.family.text": "Founded and run by Jorge and Delia Romero.",
+      "fact.import.title": "Authentic products",
+      "fact.import.text": "Imported from El Salvador and Central America.",
+      "categories.eyebrow": "What you'll find",
+      "categories.lead": "From pantry staples to keepsakes: four aisles that taste like home.",
+      "cat.cta": "See products",
+      "cat.food.badge": "Kolashampan · Queso duro",
+      "cat.clothing.badge": "Guayaberas",
+      "cat.nostalgia.badge": "Gifts",
+      "cat.wellness.badge": "Natural remedies",
+      "visit.eyebrow": "Visit us",
+      "visit.title": "Location & hours",
+      "visit.hours": "Hours",
+      "visit.hours.sun": "Sunday 10 AM–6 PM",
+      "visit.hours.week": "Monday–Saturday 10 AM–7 PM",
+      "visit.location": "Location",
+      "visit.phone": "Phone",
+      "visit.call": "Call now",
+      "visit.more": "Parking and more details",
+      "map.placeholder": "Map of Tienda Salvadoreña",
+      "map.directions": "Get directions",
+      "map.view": "View on Google Maps",
+      "items.hero.imgAlt": "Racks full of plantain chips and Central American snacks inside the store",
+      "press.hero.imgAlt": "Central American country flags for sale inside the store",
+      "contact.hero.imgAlt": "Store interior with glass display cases, caps and El Salvador souvenirs",
+      "contact.quick.title": "Quick actions",
+      "contact.quick.email": "Send an email",
+      "quintana.badge": "Partner service",
+      "quintana.logoAlt": "Quintana Notary & Signing logo: a navy seal with an orange fountain pen",
+      "quintana.call": "Call 303-500-4122",
 
       // ========================================
       // HOME PAGE (index.html)
       // ========================================
-      "hero.title": "Tienda Salvadoreña",
+      "hero.title": "The taste of El Salvador, <span class=\"hero__accent\">in the heart of Denver</span>",
       "hero.lead": "Authentic Salvadoran and Central American products in Denver – tradition, flavor and community.",
       "hero.note": "Colorado's oldest Salvadoran store (30+ years)",
-      "hero.explore": "Explore our products",
+      "hero.explore": "Explore Products",
       "hero.press": "Press",
       "hero.imgAltNavidad": "Jorge and Delia praying at the Christmas nativity with a Merry Christmas sign",
       
@@ -69,23 +179,23 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // Category Cards
       "cat.food.title": "Food & Drinks",
       "cat.food.lead": "Sodas, juices, chocolate and frozen fruit.",
-      "cat.food.imgAlt": "Food and Drinks",
+      "cat.food.imgAlt": "Store shelves stocked with beans, sauces, seasonings and other Central American pantry staples",
       
       "cat.clothing.title": "Clothing & Accessories",
       "cat.clothing.lead": "Guayaberas, hats and traditional footwear.",
-      "cat.clothing.imgAlt": "Clothing and Accessories",
+      "cat.clothing.imgAlt": "Traditional white embroidered guayabera shirts hanging on a rack in the store",
       
       "cat.nostalgia.title": "Trinkets and souvenirs",
       "cat.nostalgia.lead": "Keychains, bracelets and gifts with identity.",
-      "cat.nostalgia.imgAlt": "Trinkets and gifts",
+      "cat.nostalgia.imgAlt": "Display of bracelets, keychains, necklaces and hair accessories",
       
       "cat.wellness.title": "Herbs and Care",
       "cat.wellness.lead": "Medicines, natural soaps and hygiene items.",
-      "cat.wellness.imgAlt": "Herbs and Care",
+      "cat.wellness.imgAlt": "Shelves of natural soaps, herbal supplements and personal care items",
       
       // Press Section
       "press.title": "Community Recognition",
-      "press.quote": "\"A pillar of Denver's Hispanic community.\"",
+      "press.quote": "A pillar of Denver's Hispanic community.",
       "press.readmore": "Read more in Press",
 
       // ========================================
@@ -319,11 +429,11 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       
       // Quintana Notary Partnership
       "quintana.title.compact": "Notary & Translation Here",
-      "quintana.notary.title.compact": "📝 Notary Services",
+      "quintana.notary.title.compact": "Notary Services",
       "quintana.notary.desc.compact": "$10/signature at this location (regular $15) • No travel fee",
-      "quintana.translation.title.compact": "🌐 Certified Translations",
+      "quintana.translation.title.compact": "Certified Translations",
       "quintana.translation.desc.compact": "English ↔ Spanish • USCIS/DMV accepted • $5 OFF with store receipt",
-      "quintana.translation.link": "Learn More →",
+      "quintana.translation.link": "Learn more",
       "quintana.website": "Visit Website"
     },
     
@@ -360,15 +470,126 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "footer.hours_label": "Horario:",
       "footer.hours": "Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM",
       "footer.contactline": "Contacto: 5128 E Colfax Ave, Denver, CO 80220 | Teléfono: (303) 394-4185 | Correo: info@tiendasalvadorenadenver.com",
-      "footer.copy": "© 2025 Tienda Salvadoreña. Todos los derechos reservados. – Este sitio web fue creado en cumplimiento parcial de los requisitos del curso CIS 3030.",
+      "footer.copy": "© 2026 Tienda Salvadoreña. Todos los derechos reservados.",
+
+      // Full bilingual coverage: alt text, ARIA labels, press and contact strings
+      "alt.medicinas-otc": "Medicinas OTC",
+      "alt.vitaminas-y-suplementos": "Vitaminas y suplementos",
+      "alt.jabones-y-hierbas-naturales": "Jabones y hierbas naturales",
+      "alt.suplementos-nopalina-y-linaza": "Suplementos nopalina y linaza",
+      "alt.articulos-de-cuidado-personal": "Artículos de cuidado personal",
+      "alt.frijoles-salsas-y-condimentos": "Frijoles, salsas y condimentos",
+      "alt.crema-y-quesos-centroamericanos": "Crema y quesos centroamericanos",
+      "alt.queso-duro-viejo": "Queso Duro Viejo",
+      "alt.hierbas-secas-y-especias": "Hierbas secas y especias",
+      "alt.pan-dulce-y-quesadillas": "Pan dulce y quesadillas",
+      "alt.dulces-tradicionales": "Dulces tradicionales",
+      "alt.chips-de-platano-y-bocadillos": "Chips de plátano y bocadillos",
+      "alt.nances-congelados": "Nances congelados",
+      "alt.tamales-de-elote": "Tamales de elote",
+      "alt.charrales-fritos": "Charrales fritos",
+      "alt.kolashampan": "Kolashampan",
+      "alt.gaseosas-en-botella-de-vidrio": "Gaseosas en botella de vidrio",
+      "alt.jugos-naturales": "Jugos naturales",
+      "alt.jugo-de-coco-foco": "Jugo de coco FOCO",
+      "alt.guayaberas-tradicionales": "Guayaberas tradicionales",
+      "alt.vestidos-y-bolsos": "Vestidos y bolsos",
+      "alt.jerseys-especiales": "Jerseys especiales",
+      "alt.carteras": "Carteras",
+      "alt.chanclas": "Chanclas",
+      "alt.gorras-de-pais": "Gorras de país",
+      "alt.gorros-de-invierno": "Gorros de invierno",
+      "alt.silabario-hispanoamericano": "Silabario Hispanoamericano",
+      "alt.chucherias-y-regalos": "Chucherías y regalos",
+      "alt.souvenirs": "Souvenirs",
+      "aria.filtros-de-categoria": "Filtros de categoría",
+      "aria.galeria-de-productos": "Galería de productos",
+      "a11y.close": "Cerrar",
+      "items.filter.title": "Filtrar por categoría",
+      "alt.letrero-de-la-tienda": "Letrero de la tienda",
+      "alt.bandera-de-el-salvador": "Bandera de El Salvador",
+      "alt.jorge-y-delia-comiendo-pollo-campero-en-": "Jorge y Delia comiendo Pollo Campero en familia",
+      "alt.delia-romero-sosteniendo-la-bandera-de-e": "Delia Romero sosteniendo la bandera de El Salvador",
+      "alt.jorge-romero-detras-del-mostrador": "Jorge Romero detrás del mostrador",
+      "alt.jorge-y-delia-con-la-bandera-de-el-salva": "Jorge y Delia con la bandera de El Salvador",
+      "aria.imagenes-de-prensa": "Imágenes de prensa",
+      "aria.articulos-destacados": "Artículos destacados",
+      "press.credit1": "Foto © Kevin Beaty / Denverite",
+      "press.credit2": "Foto © Kevin Beaty / Denverite, 2018",
+      "press.credit3": "Foto: Nicolle Menéndez / Diario El Salvador",
+      "press.recog1": "Primer negocio salvadoreño en Denver (1991)",
+      "press.recog2": "Destacado en medios locales e internacionales",
+      "press.recog3": "Apoyo comunitario durante crisis humanitarias",
+      "press.recog4": "Más de 30 años sirviendo a la comunidad hispana",
+      "aria.llamar-tienda-salvadorena": "Llamar Tienda Salvadoreña",
+      "aria.visitar-facebook-de-tienda-salvadorena": "Visitar Facebook de Tienda Salvadoreña",
+      "contact.why.title": "¿Por qué visitarnos?",
+      "contact.why.years": "30+ Años de Historia",
+      "contact.why.years.text": "La tienda salvadoreña más antigua de Colorado",
+      "contact.why.products": "Productos Auténticos",
+      "contact.why.products.text": "Importados directamente de El Salvador y Centroamérica",
+      "contact.why.family": "Negocio Familiar",
+      "contact.why.family.text": "Fundado y operado por Jorge y Delia Romero",
+      "map.frameTitle": "Mapa de Google: Tienda Salvadoreña, 5128 E Colfax Ave, Denver",
+      "a11y.language": "Idioma",
+
+      // 2026 refresh: shared UI, home sections, map and service cards
+      "a11y.skip": "Saltar al contenido",
+      "nav.menu": "Menú",
+      "nav.label": "Navegación principal",
+      "footer.tagline": "La tienda salvadoreña más antigua de Colorado. Tradición, sabor y comunidad desde hace más de 30 años.",
+      "footer.links": "Enlaces rápidos",
+      "footer.visit": "Visítanos",
+      "hero.badge": "Más de 30 años en East Colfax",
+      "hero.visit": "Ver Ubicación y Horario",
+      "hero.img.owners": "Jorge y Delia Romero, fundadores de Tienda Salvadoreña, de pie frente a una bandera de El Salvador dentro de la tienda",
+      "hero.img.owners.caption": "Jorge y Delia Romero, fundadores",
+      "hero.img.owners.credit": "Foto: Nicolle Menéndez / Diario El Salvador",
+      "hero.img.bread": "Pan dulce, quesadillas salvadoreñas y galletas empacadas en el estante de panadería",
+      "hero.img.kola": "Botellas de Kolashampan, la gaseosa salvadoreña color naranja, alineadas en el estante",
+      "mission.eyebrow": "Nuestra historia",
+      "mission.link": "Conoce nuestra historia",
+      "fact.years.title": "Más de 30 años",
+      "fact.years.text": "La tienda salvadoreña más antigua de Colorado.",
+      "fact.family.title": "Negocio familiar",
+      "fact.family.text": "Fundada y atendida por Jorge y Delia Romero.",
+      "fact.import.title": "Productos auténticos",
+      "fact.import.text": "Importados de El Salvador y Centroamérica.",
+      "categories.eyebrow": "Lo que encontrarás",
+      "categories.lead": "De la despensa a los recuerdos: cuatro pasillos con sabor a casa.",
+      "cat.cta": "Ver productos",
+      "cat.food.badge": "Kolashampan · Queso duro",
+      "cat.clothing.badge": "Guayaberas",
+      "cat.nostalgia.badge": "Regalos",
+      "cat.wellness.badge": "Remedios naturales",
+      "visit.eyebrow": "Visítanos",
+      "visit.title": "Ubicación y horario",
+      "visit.hours": "Horario",
+      "visit.hours.sun": "Domingo 10 AM–6 PM",
+      "visit.hours.week": "Lunes–Sábado 10 AM–7 PM",
+      "visit.location": "Ubicación",
+      "visit.phone": "Teléfono",
+      "visit.call": "Llamar ahora",
+      "visit.more": "Estacionamiento y más detalles",
+      "map.placeholder": "Mapa de Tienda Salvadoreña",
+      "map.directions": "Cómo llegar",
+      "map.view": "Ver en Google Maps",
+      "items.hero.imgAlt": "Exhibidores llenos de chips de plátano y bocadillos centroamericanos dentro de la tienda",
+      "press.hero.imgAlt": "Banderas de países centroamericanos a la venta dentro de la tienda",
+      "contact.hero.imgAlt": "Interior de la tienda con vitrinas de vidrio, gorras y recuerdos de El Salvador",
+      "contact.quick.title": "Acciones rápidas",
+      "contact.quick.email": "Enviar correo",
+      "quintana.badge": "Servicio asociado",
+      "quintana.logoAlt": "Logotipo de Quintana Notary & Signing: sello azul marino con una pluma anaranjada",
+      "quintana.call": "Llamar al 303-500-4122",
 
       // ========================================
       // HOME PAGE (index.html) - SPANISH
       // ========================================
-      "hero.title": "Tienda Salvadoreña",
+      "hero.title": "El sabor de El Salvador, <span class=\"hero__accent\">en el corazón de Denver</span>",
       "hero.lead": "Productos auténticos salvadoreños y centroamericanos en Denver – tradición, sabor y comunidad.",
       "hero.note": "La tienda salvadoreña más antigua de Colorado (30+ años)",
-      "hero.explore": "Explorar productos",
+      "hero.explore": "Explorar Productos",
       "hero.press": "Prensa",
       "hero.imgAltNavidad": "Jorge y Delia rezando en el pesebre navideño con un cartel de Feliz Navidad",
       
@@ -381,23 +602,23 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // Category Cards
       "cat.food.title": "Comida y Bebidas",
       "cat.food.lead": "Refrescos, jugos, chocolate y fruta congelada.",
-      "cat.food.imgAlt": "Comida y Bebidas",
+      "cat.food.imgAlt": "Estantes de la tienda con frijoles, salsas, condimentos y otros básicos de despensa centroamericanos",
       
       "cat.clothing.title": "Ropa y Accesorios",
       "cat.clothing.lead": "Guayaberas, sombreros y calzado tradicional.",
-      "cat.clothing.imgAlt": "Ropa y Accesorios",
+      "cat.clothing.imgAlt": "Guayaberas blancas tradicionales con bordados, colgadas en un perchero de la tienda",
       
       "cat.nostalgia.title": "Chucherías y recuerdos",
       "cat.nostalgia.lead": "Llaveros, pulseras y regalos con identidad.",
-      "cat.nostalgia.imgAlt": "Chucherías y regalos",
+      "cat.nostalgia.imgAlt": "Exhibidor con pulseras, llaveros, collares y accesorios para el cabello",
       
       "cat.wellness.title": "Hierbas y Cuidado",
       "cat.wellness.lead": "Medicinas, jabones naturales y artículos de higiene.",
-      "cat.wellness.imgAlt": "Hierbas y Cuidado",
+      "cat.wellness.imgAlt": "Estantes con jabones naturales, suplementos herbales y artículos de cuidado personal",
       
       // Press Section
       "press.title": "Reconocimiento Comunitario",
-      "press.quote": "\"Un pilar de la comunidad hispana de Denver.\"",
+      "press.quote": "Un pilar de la comunidad hispana de Denver.",
       "press.readmore": "Leer más en Prensa",
 
       // ========================================
@@ -573,8 +794,8 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "press.coverage.title": "Cobertura destacada",
       "press.quote1.text": "\"Tienda Salvadoreña es un negocio situado en Denver, Colorado, y fue el primer comercio con productos de El Salvador fundado en esa ciudad.\"",
       "press.quote2.text": "\"La mayoría de las personas que visitan el negocio se llenan de nostalgia al ver las comidas tradicionales que encuentran.\"",
-      "press.quote3.text": "\"People come here from all over Colorado, Wyoming and Nebraska to buy cheeses and souvenirs that he imports from home.\"",
-      "press.quote4.text": "\"On East Colfax, next to the trendy Bellwether coffeeshop, Jorge Romero and his wife, Delia, have run a Salvadoran grocery for more than 25 years.\"",
+      "press.quote3.text": "\"La gente viene de todo Colorado, Wyoming y Nebraska a comprar quesos y recuerdos que él importa de su tierra.\"",
+      "press.quote4.text": "\"En East Colfax, junto a la cafetería de moda Bellwether, Jorge Romero y su esposa, Delia, han dirigido una tienda salvadoreña por más de 25 años.\"",
       "press.quote.readarticle": "Leer artículo",
       
       "press.images.title": "Imágenes y créditos",
@@ -631,11 +852,11 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       
       // Quintana Notary Partnership
       "quintana.title.compact": "Notaría y Traducciones Aquí",
-      "quintana.notary.title.compact": "📝 Servicios Notariales",
+      "quintana.notary.title.compact": "Servicios Notariales",
       "quintana.notary.desc.compact": "$10/firma en esta ubicación (regular $15) • Sin cargo de viaje",
-      "quintana.translation.title.compact": "🌐 Traducciones Certificadas",
+      "quintana.translation.title.compact": "Traducciones Certificadas",
       "quintana.translation.desc.compact": "Inglés ↔ Español • Aceptadas por USCIS/DMV • $5 OFF con recibo de la tienda",
-      "quintana.translation.link": "Más Información →",
+      "quintana.translation.link": "Más información",
       "quintana.website": "Visitar Sitio Web"
     }
   };
@@ -645,14 +866,43 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
   // ========================================
   
   // Get current language from localStorage or default to Spanish
-  let currentLang = localStorage.getItem('language') || 'es';
+  const SUPPORTED_LANGS = ['es', 'en'];
+
+  /**
+   * Language for a first-time visitor, taken from the device/browser language
+   * list in order of preference. Spanish devices get Spanish, English devices
+   * get English, and any other language falls back to English.
+   */
+  function detectDeviceLanguage() {
+    const preferred = (navigator.languages && navigator.languages.length)
+      ? navigator.languages
+      : [navigator.language || ''];
+    for (const tag of preferred) {
+      const base = String(tag).toLowerCase().split('-')[0];
+      if (SUPPORTED_LANGS.includes(base)) return base;
+    }
+    return 'en';
+  }
+
+  /** A language the visitor picked with the ES/EN buttons, if any. */
+  function getSavedLanguage() {
+    try {
+      const saved = localStorage.getItem('language');
+      return SUPPORTED_LANGS.includes(saved) ? saved : null;
+    } catch (error) {
+      return null; // Storage can be blocked (private mode, strict settings)
+    }
+  }
+
+  // A saved choice wins; otherwise follow the device language
+  let currentLang = getSavedLanguage() || detectDeviceLanguage();
 
   /**
    * Apply translations to all elements with data-i18n attribute
    * @param {string} lang - Language code ('en' or 'es')
+   * @param {boolean} [remember] - Save the choice (only when the visitor clicks ES/EN)
    */
-  function applyTranslations(lang) {
-    console.log('Applying translations for:', lang);
+  function applyTranslations(lang, remember) {
     const elements = document.querySelectorAll('[data-i18n]');
     
     elements.forEach(el => {
@@ -685,6 +935,14 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       }
     });
     
+    // Translate attributes: data-i18n-alt (image alt text), data-i18n-aria-label, data-i18n-title
+    [['data-i18n-alt', 'alt'], ['data-i18n-aria-label', 'aria-label'], ['data-i18n-title', 'title']].forEach(([dataAttr, targetAttr]) => {
+      document.querySelectorAll('[' + dataAttr + ']').forEach(el => {
+        const translation = translations[lang][el.getAttribute(dataAttr)];
+        if (translation) el.setAttribute(targetAttr, translation);
+      });
+    });
+
     // Update page title if exists
     const titleKey = document.querySelector('title[data-i18n]')?.getAttribute('data-i18n');
     if (titleKey && translations[lang][titleKey]) {
@@ -695,7 +953,13 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
     document.documentElement.lang = lang === 'es' ? 'es' : 'en';
     
     // Save preference
-    localStorage.setItem('language', lang);
+    if (remember) {
+      try {
+        localStorage.setItem('language', lang);
+      } catch (error) {
+        // Preference just won't persist
+      }
+    }
     currentLang = lang;
     
     // Update button states
@@ -731,7 +995,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
   
   // Initialize on page load
   document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded, initializing language:', currentLang);
     
     // Apply initial translations
     applyTranslations(currentLang);
@@ -739,9 +1002,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
     const btnSpanish = document.getElementById('btnSpanish');
     const btnEnglish = document.getElementById('btnEnglish');
     
-    if (btnSpanish) btnSpanish.addEventListener('click', () => applyTranslations('es'));
-    if (btnEnglish) btnEnglish.addEventListener('click', () => applyTranslations('en'));
+    if (btnSpanish) btnSpanish.addEventListener('click', () => applyTranslations('es', true));
+    if (btnEnglish) btnEnglish.addEventListener('click', () => applyTranslations('en', true));
   });
-  
-  console.log('lang-toggle.js loaded successfully');
 })();
