@@ -4,6 +4,7 @@
 
   1. Mobile navigation toggle
   2. Live store-hours badge ("Abierto ahora" / "Cerrado")
+  3. Back-to-top button
 
   Language switching stays in js/lang-toggle.js. This file only watches the
   <html lang> attribute so the badge re-renders when the language changes.
@@ -149,13 +150,56 @@
     });
   }
 
+  /* ------------------------------------------------------------------
+     3. BACK-TO-TOP BUTTON
+     Added to every page from here, so no HTML changes are needed.
+     Appears after the visitor scrolls down about one screen.
+     ------------------------------------------------------------------ */
+  var TOP_LABEL = { es: 'Volver arriba', en: 'Back to top' };
+  var topButton = null;
+
+  function labelTopButton() {
+    if (!topButton) return;
+    var lang = document.documentElement.lang === 'en' ? 'en' : 'es';
+    topButton.setAttribute('aria-label', TOP_LABEL[lang]);
+    topButton.title = TOP_LABEL[lang];
+  }
+
+  function initBackToTop() {
+    topButton = document.createElement('button');
+    topButton.type = 'button';
+    topButton.className = 'back-to-top';
+    topButton.hidden = true;
+    topButton.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>';
+    labelTopButton();
+    document.body.appendChild(topButton);
+
+    topButton.addEventListener('click', function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      var skip = document.querySelector('.skip-link');
+      if (skip) skip.focus({ preventScroll: true });   // keyboard users restart at the top
+    });
+
+    var ticking = false;
+    function update() {
+      topButton.hidden = window.scrollY < Math.max(500, window.innerHeight * 0.8);
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  }
+
   function init() {
     initNav();
+    initBackToTop();
     renderStatus();
     setInterval(renderStatus, 60 * 1000);
 
     // Re-render when lang-toggle.js switches language
-    new MutationObserver(renderStatus).observe(document.documentElement, {
+    new MutationObserver(function () { renderStatus(); labelTopButton(); }).observe(document.documentElement, {
       attributes: true,
       attributeFilter: ['lang']
     });
