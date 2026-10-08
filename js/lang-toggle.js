@@ -310,10 +310,10 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       
       
       "history.values.title": "Our Values",
-      "history.values.authenticity": "✓ Authenticity – genuine products that represent our culture.",
-      "history.values.family": "✓ Family – a business founded on love and legacy.",
-      "history.values.community": "✓ Community – serving with warmth and respect.",
-      "history.values.pride": "✓ Cultural Pride – sharing our roots with Colorado.",
+      "history.values.authenticity": "Authenticity – genuine products that represent our culture.",
+      "history.values.family": "Family – a business founded on love and legacy.",
+      "history.values.community": "Community – serving with warmth and respect.",
+      "history.values.pride": "Cultural Pride – sharing our roots with Colorado.",
       
       "history.cta.title": "Visit Us",
       "history.cta.text": "We invite you to visit Tienda Salvadoreña in Denver and be part of our story. Every purchase supports a family legacy and keeps the traditions of El Salvador alive.",
@@ -390,10 +390,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "press.impact.text": "Delia and Jorge have been recognized for their service to the community, especially during emergencies such as earthquakes in El Salvador. The store has served as a cultural meeting point and support for generations of families.",
       
       "press.recognition.title": "Recognition",
-      "press.recog.item1": "🏆 First Salvadoran business in Denver (1991)",
-      "press.recog.item2": "📰 Featured in local and international media",
-      "press.recog.item3": "🤝 Community support during humanitarian crises",
-      "press.recog.item4": "❤️ Over 30 years serving the Hispanic community",
 
       // ========================================
       // CONTACT PAGE (contact.html)
@@ -732,10 +728,10 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       
       
       "history.values.title": "Nuestros Valores",
-      "history.values.authenticity": "✓ Autenticidad – productos genuinos que representan nuestra cultura.",
-      "history.values.family": "✓ Familia – un negocio fundado en amor y legado.",
-      "history.values.community": "✓ Comunidad – servir con calidez y respeto.",
-      "history.values.pride": "✓ Orgullo cultural – compartir nuestras raíces con Colorado.",
+      "history.values.authenticity": "Autenticidad – productos genuinos que representan nuestra cultura.",
+      "history.values.family": "Familia – un negocio fundado en amor y legado.",
+      "history.values.community": "Comunidad – servir con calidez y respeto.",
+      "history.values.pride": "Orgullo cultural – compartir nuestras raíces con Colorado.",
       
       "history.cta.title": "Visítanos",
       "history.cta.text": "Te invitamos a visitar Tienda Salvadoreña en Denver y ser parte de nuestra historia. Cada compra apoya un legado familiar y mantiene vivas las tradiciones de El Salvador.",
@@ -812,10 +808,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "press.impact.text": "Delia y Jorge han sido reconocidos por su servicio a la comunidad, especialmente durante emergencias como los terremotos en El Salvador. La tienda ha servido como punto de encuentro cultural y apoyo para generaciones de familias.",
       
       "press.recognition.title": "Reconocimientos",
-      "press.recog.item1": "🏆 Primer negocio salvadoreño en Denver (1991)",
-      "press.recog.item2": "📰 Destacado en medios locales e internacionales",
-      "press.recog.item3": "🤝 Apoyo comunitario durante crisis humanitarias",
-      "press.recog.item4": "❤️ Más de 30 años sirviendo a la comunidad hispana",
 
       // ========================================
       // CONTACT PAGE (contact.html) - SPANISH

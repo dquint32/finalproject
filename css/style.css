@@ -886,6 +886,22 @@ main {
   color: #FFFFFF;
 }
 
+/* --- Check-mark icon for the "Nuestros Valores" list (replaces the typed check character) --- */
+li[id^="value-"] {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+li[id^="value-"]::before {
+  content: "";
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-primary);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='m8 12.5 2.7 2.7L16 9.5'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='m8 12.5 2.7 2.7L16 9.5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
 /* --- Product / gallery cards --- */
 .product-grid {
   display: grid;
