@@ -432,7 +432,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "quintana.notary.title.compact": "Notary Services",
       "quintana.notary.desc.compact": "$10/signature at this location (regular $15) • No travel fee",
       "quintana.translation.title.compact": "Certified Translations",
-      "quintana.translation.desc.compact": "English ↔ Spanish • USCIS/DMV accepted • $5 OFF with store receipt",
+      "quintana.translation.desc.compact": "English ↔ Spanish • Prepared to the receiving agency's requirements (e.g., USCIS or DMV) • $5 off with store receipt",
       "quintana.translation.link": "Learn more",
       "quintana.website": "Visit Website"
     },
@@ -855,7 +855,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "quintana.notary.title.compact": "Servicios Notariales",
       "quintana.notary.desc.compact": "$10/firma en esta ubicación (regular $15) • Sin cargo de viaje",
       "quintana.translation.title.compact": "Traducciones Certificadas",
-      "quintana.translation.desc.compact": "Inglés ↔ Español • Aceptadas por USCIS/DMV • $5 OFF con recibo de la tienda",
+      "quintana.translation.desc.compact": "Inglés ↔ Español • Preparadas según los requisitos de la agencia que las recibe (p. ej., USCIS o DMV) • $5 de descuento con recibo de la tienda",
       "quintana.translation.link": "Más información",
       "quintana.website": "Visitar Sitio Web"
     }
