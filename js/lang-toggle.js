@@ -23,7 +23,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
 
       // Per-page SEO titles & descriptions
       "title.home": "Tienda Salvadoreña Denver | #1 Salvadoran Store",
-      "desc.home": "Denver's oldest Salvadoran store (30+ years). Authentic Salvadoran & Central American food, cheeses, drinks and more on E Colfax Ave.",
+      "desc.home": "Denver's oldest Salvadoran store (30+ years). Authentic Salvadoran & Central American groceries, drinks, clothing, souvenirs and more on E Colfax Ave.",
       "title.items": "Salvadoran Products in Denver | Items – Tienda Salvadoreña",
       "desc.items": "Browse Salvadoran & Central American food, drinks, cheeses, clothing and nostalgic goods in Denver. Kolashampan, queso duro, pan dulce and more.",
       "title.history": "Our Story | Tienda Salvadoreña Denver",
@@ -114,7 +114,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "a11y.skip": "Skip to content",
       "nav.menu": "Menu",
       "nav.label": "Main navigation",
-      "footer.tagline": "Colorado's oldest Salvadoran store. Tradition, flavor and community for more than 30 years.",
+      "footer.tagline": "Colorado's oldest Salvadoran store. Products from El Salvador and Central America for more than 30 years.",
       "footer.links": "Quick links",
       "footer.visit": "Visit us",
       "hero.badge": "30+ years on East Colfax",
@@ -122,7 +122,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "hero.img.owners": "Jorge and Delia Romero, founders of Tienda Salvadoreña, standing in front of an El Salvador flag inside the store",
       "hero.img.owners.caption": "Jorge and Delia Romero, founders",
       "hero.img.owners.credit": "Photo: Nicolle Menéndez / Diario El Salvador",
-      "hero.img.bread": "Packaged pan dulce, Salvadoran quesadillas and cookies on the bakery rack",
+      "hero.img.bread": "Caps in the colors and crests of El Salvador and other Central American countries in a display case",
       "hero.img.kola": "Bottles of Kolashampan, the orange Salvadoran soda, lined up on the shelf",
       "mission.eyebrow": "Our story",
       "mission.link": "Read our story",
@@ -133,7 +133,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "fact.import.title": "Authentic products",
       "fact.import.text": "Imported from El Salvador and Central America.",
       "categories.eyebrow": "What you'll find",
-      "categories.lead": "From pantry staples to keepsakes: four aisles that taste like home.",
+      "categories.lead": "From pantry staples to clothing and keepsakes: everything you miss from home.",
       "cat.cta": "See products",
       "cat.food.badge": "Kolashampan · Queso duro",
       "cat.clothing.badge": "Guayaberas",
@@ -148,6 +148,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "visit.phone": "Phone",
       "visit.call": "Call now",
       "visit.more": "Parking and more details",
+      "visit.note": "We are a store, not a restaurant: we do not serve hot food.",
       "map.placeholder": "Map of Tienda Salvadoreña",
       "map.directions": "Get directions",
       "map.view": "View on Google Maps",
@@ -163,15 +164,15 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // HOME PAGE (index.html)
       // ========================================
-      "hero.title": "The taste of El Salvador, <span class=\"hero__accent\">in the heart of Denver</span>",
-      "hero.lead": "Authentic Salvadoran and Central American products in Denver – tradition, flavor and community.",
+      "hero.title": "A little piece of El Salvador <span class=\"hero__accent\">in the heart of Denver</span>",
+      "hero.lead": "Groceries, drinks, clothing, souvenirs, natural remedies and much more, brought from El Salvador and Central America.",
       "hero.note": "Colorado's oldest Salvadoran store (30+ years)",
       "hero.explore": "Explore Products",
       "hero.press": "Press",
       "hero.imgAltNavidad": "Jorge and Delia praying at the Christmas nativity with a Merry Christmas sign",
       
       "mission.title": "Colorado's oldest Salvadoran store",
-      "mission.lead": "Tienda Salvadoreña is a family business rooted in the community. For over 30 years we've served Denver's Hispanic community with authentic products, food and culture, keeping our traditions alive.",
+      "mission.lead": "Tienda Salvadoreña is a family business rooted in the community. For over 30 years we've served Denver's Hispanic community with authentic products from El Salvador and Central America: groceries, clothing, souvenirs and much more, keeping our traditions alive.",
       
       "categories.title": "Explore Our Products",
       "categories.viewall": "View all items",
@@ -446,7 +447,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
 
       // Títulos y descripciones SEO por página
       "title.home": "Tienda Salvadoreña Denver | Productos Salvadoreños #1",
-      "desc.home": "La tienda salvadoreña más antigua de Denver (30+ años). Productos salvadoreños y centroamericanos auténticos: comida, quesos, bebidas y más en E Colfax Ave.",
+      "desc.home": "La tienda salvadoreña más antigua de Denver (30+ años). Productos salvadoreños y centroamericanos auténticos: comestibles, bebidas, ropa, recuerdos y más en E Colfax Ave.",
       "title.items": "Artículos Salvadoreños en Denver | Tienda Salvadoreña",
       "desc.items": "Explora comida, bebidas, quesos, ropa y artículos nostálgicos salvadoreños y centroamericanos en Denver. Kolashampan, queso duro, pan dulce y más.",
       "title.history": "Nuestra Historia | Tienda Salvadoreña Denver",
@@ -537,7 +538,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "a11y.skip": "Saltar al contenido",
       "nav.menu": "Menú",
       "nav.label": "Navegación principal",
-      "footer.tagline": "La tienda salvadoreña más antigua de Colorado. Tradición, sabor y comunidad desde hace más de 30 años.",
+      "footer.tagline": "La tienda salvadoreña más antigua de Colorado. Productos de El Salvador y Centroamérica desde hace más de 30 años.",
       "footer.links": "Enlaces rápidos",
       "footer.visit": "Visítanos",
       "hero.badge": "Más de 30 años en East Colfax",
@@ -545,7 +546,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "hero.img.owners": "Jorge y Delia Romero, fundadores de Tienda Salvadoreña, de pie frente a una bandera de El Salvador dentro de la tienda",
       "hero.img.owners.caption": "Jorge y Delia Romero, fundadores",
       "hero.img.owners.credit": "Foto: Nicolle Menéndez / Diario El Salvador",
-      "hero.img.bread": "Pan dulce, quesadillas salvadoreñas y galletas empacadas en el estante de panadería",
+      "hero.img.bread": "Gorras con los colores y escudos de El Salvador y otros países centroamericanos en una vitrina",
       "hero.img.kola": "Botellas de Kolashampan, la gaseosa salvadoreña color naranja, alineadas en el estante",
       "mission.eyebrow": "Nuestra historia",
       "mission.link": "Conoce nuestra historia",
@@ -556,7 +557,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "fact.import.title": "Productos auténticos",
       "fact.import.text": "Importados de El Salvador y Centroamérica.",
       "categories.eyebrow": "Lo que encontrarás",
-      "categories.lead": "De la despensa a los recuerdos: cuatro pasillos con sabor a casa.",
+      "categories.lead": "De la despensa a la ropa y los recuerdos: todo lo que extrañas de casa.",
       "cat.cta": "Ver productos",
       "cat.food.badge": "Kolashampan · Queso duro",
       "cat.clothing.badge": "Guayaberas",
@@ -571,6 +572,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "visit.phone": "Teléfono",
       "visit.call": "Llamar ahora",
       "visit.more": "Estacionamiento y más detalles",
+      "visit.note": "Somos una tienda, no un restaurante: no servimos comida caliente.",
       "map.placeholder": "Mapa de Tienda Salvadoreña",
       "map.directions": "Cómo llegar",
       "map.view": "Ver en Google Maps",
@@ -586,15 +588,15 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // HOME PAGE (index.html) - SPANISH
       // ========================================
-      "hero.title": "El sabor de El Salvador, <span class=\"hero__accent\">en el corazón de Denver</span>",
-      "hero.lead": "Productos auténticos salvadoreños y centroamericanos en Denver – tradición, sabor y comunidad.",
+      "hero.title": "Un pedacito de El Salvador <span class=\"hero__accent\">en el corazón de Denver</span>",
+      "hero.lead": "Comestibles, bebidas, ropa, recuerdos, remedios naturales y mucho más, traídos de El Salvador y Centroamérica.",
       "hero.note": "La tienda salvadoreña más antigua de Colorado (30+ años)",
       "hero.explore": "Explorar Productos",
       "hero.press": "Prensa",
       "hero.imgAltNavidad": "Jorge y Delia rezando en el pesebre navideño con un cartel de Feliz Navidad",
       
       "mission.title": "La tienda salvadoreña más antigua de Colorado",
-      "mission.lead": "Tienda Salvadoreña es un negocio familiar arraigado en la comunidad. Durante más de 30 años hemos servido a la comunidad hispana de Denver con productos, comida y cultura auténticos, manteniendo vivas nuestras tradiciones.",
+      "mission.lead": "Tienda Salvadoreña es un negocio familiar arraigado en la comunidad. Durante más de 30 años hemos servido a la comunidad hispana de Denver con productos auténticos de El Salvador y Centroamérica: comestibles, ropa, recuerdos y mucho más, manteniendo vivas nuestras tradiciones.",
       
       "categories.title": "Explora Nuestros Productos",
       "categories.viewall": "Ver todos los artículos",
