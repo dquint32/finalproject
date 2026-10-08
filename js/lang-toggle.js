@@ -148,7 +148,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "visit.phone": "Phone",
       "visit.call": "Call now",
       "visit.more": "Parking and more details",
-      "visit.note": "We are a store, not a restaurant: we do not serve hot food.",
+      "visit.note": "We are a store, not a restaurant. We do not sell hot food: we carry frozen goods to reheat at home.",
       "map.placeholder": "Map of Tienda Salvadoreña",
       "map.directions": "Get directions",
       "map.view": "View on Google Maps",
@@ -165,7 +165,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // HOME PAGE (index.html)
       // ========================================
       "hero.title": "A little piece of El Salvador <span class=\"hero__accent\">in the heart of Denver</span>",
-      "hero.lead": "Groceries, drinks, clothing, souvenirs, natural remedies and much more, brought from El Salvador and Central America.",
+      "hero.lead": "Groceries, frozen goods, drinks, clothing, souvenirs, natural remedies and much more, brought from El Salvador and Central America.",
       "hero.note": "Colorado's oldest Salvadoran store (30+ years)",
       "hero.explore": "Explore Products",
       "hero.press": "Press",
@@ -308,8 +308,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "history.heritage.caption2": "A pillar of the classroom – literacy, dignity, and shared roots.",
       "history.heritage.caption3": "Blue and white – the origin we bring to our daily work.",
       
-      "history.purpose.title": "Purpose of this Page",
-      "history.purpose.text": "To share the personal legacy of Jorge and Delia and establish the authentic and nostalgic roots of the business. This page fulfills the main visual requirement with the pupusas cartoon scene and supports the real story through images of heritage and community context.",
       
       "history.values.title": "Our Values",
       "history.values.authenticity": "✓ Authenticity – genuine products that represent our culture.",
@@ -572,7 +570,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "visit.phone": "Teléfono",
       "visit.call": "Llamar ahora",
       "visit.more": "Estacionamiento y más detalles",
-      "visit.note": "Somos una tienda, no un restaurante: no servimos comida caliente.",
+      "visit.note": "Somos una tienda, no un restaurante. No vendemos comida caliente: tenemos productos congelados para recalentar en casa.",
       "map.placeholder": "Mapa de Tienda Salvadoreña",
       "map.directions": "Cómo llegar",
       "map.view": "Ver en Google Maps",
@@ -589,7 +587,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // HOME PAGE (index.html) - SPANISH
       // ========================================
       "hero.title": "Un pedacito de El Salvador <span class=\"hero__accent\">en el corazón de Denver</span>",
-      "hero.lead": "Comestibles, bebidas, ropa, recuerdos, remedios naturales y mucho más, traídos de El Salvador y Centroamérica.",
+      "hero.lead": "Comestibles, productos congelados, bebidas, ropa, recuerdos, remedios naturales y mucho más, traídos de El Salvador y Centroamérica.",
       "hero.note": "La tienda salvadoreña más antigua de Colorado (30+ años)",
       "hero.explore": "Explorar Productos",
       "hero.press": "Prensa",
@@ -732,8 +730,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "history.heritage.caption2": "Un pilar del aula – alfabetización, dignidad y raíces compartidas.",
       "history.heritage.caption3": "Azul y blanco – el origen que llevamos a nuestro trabajo diario.",
       
-      "history.purpose.title": "Propósito de esta página",
-      "history.purpose.text": "Compartir el legado personal de Jorge y Delia y establecer las raíces auténticas y nostálgicas del negocio. Esta página cumple el requisito visual principal con la escena de pupusas en caricatura y apoya la historia real mediante imágenes de herencia y contexto comunitario.",
       
       "history.values.title": "Nuestros Valores",
       "history.values.authenticity": "✓ Autenticidad – productos genuinos que representan nuestra cultura.",
