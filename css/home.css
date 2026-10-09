@@ -83,13 +83,21 @@ main.home {
 }
 .hero-media .photo-frame { height: 100%; }
 .hero-media__main { grid-row: 1 / -1; }
-.hero-media .photo-frame:nth-child(2) { transform: translateY(-0.75rem); }
-.hero-media .photo-frame:nth-child(3) { transform: translateY(0.75rem); }
-.hero-media .photo-frame { transition: transform 0.35s var(--ease), box-shadow 0.35s ease; }
-.hero-media .photo-frame:hover { box-shadow: 0 30px 56px rgba(4, 20, 52, 0.6); }
-.hero-media .hero-media__main:hover { transform: translateY(-3px); }
-.hero-media .photo-frame:nth-child(2):hover { transform: translateY(calc(-0.75rem - 3px)); }
-.hero-media .photo-frame:nth-child(3):hover { transform: translateY(calc(0.75rem - 3px)); }
+/* Asymmetric offsets + 3D lift on hover. --offset keeps each tile's resting
+   position, so the hover transform builds on it instead of replacing it. */
+.hero-media .photo-frame {
+  --offset: 0rem;
+  transform: translateY(var(--offset));
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.hero-media .photo-frame:nth-child(2) { --offset: -1.25rem; }
+.hero-media .photo-frame:nth-child(3) { --offset: 1.25rem; }
+.hero-media .photo-frame:hover {
+  z-index: 2;
+  transform: translateY(calc(var(--offset) - 12px)) scale(1.035);
+  box-shadow: 0 40px 72px rgba(4, 20, 52, 0.68), 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
 
 @media (max-width: 879px) {
   .hero-media {
@@ -98,8 +106,7 @@ main.home {
     height: auto;
   }
   .hero-media__main { grid-row: auto; grid-column: 1 / -1; aspect-ratio: 16 / 10; }
-  .hero-media .photo-frame:nth-child(n+2) { aspect-ratio: 1 / 1; transform: none; }
-  .hero-media .photo-frame:nth-child(n+2):hover { transform: translateY(-3px); }
+  .hero-media .photo-frame:nth-child(n+2) { aspect-ratio: 1 / 1; --offset: 0rem; }
 }
 
 /* ==========================================================================

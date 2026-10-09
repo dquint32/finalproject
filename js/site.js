@@ -5,6 +5,7 @@
   1. Mobile navigation toggle
   2. Live store-hours badge ("Abierto ahora" / "Cerrado")
   3. Back-to-top button
+  4. Scroll-triggered fade-ups (.fade-in -> .is-visible)
 
   Language switching stays in js/lang-toggle.js. This file only watches the
   <html lang> attribute so the badge re-renders when the language changes.
@@ -192,9 +193,39 @@
     update();
   }
 
+  /* ------------------------------------------------------------------
+     4. SCROLL-TRIGGERED FADE-UPS
+     Any element with class "fade-in" gets "is-visible" the first time it
+     enters the viewport. The matching CSS is in css/style.css (module 11.4).
+     ------------------------------------------------------------------ */
+  function initFadeIns() {
+    var items = document.querySelectorAll('.fade-in');
+    if (!items.length) return;
+
+    // Old browsers: just show everything
+    if (!('IntersectionObserver' in window)) {
+      Array.prototype.forEach.call(items, function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);          // animate once, then stop watching
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    Array.prototype.forEach.call(items, function (el) { observer.observe(el); });
+
+    // Only now may the CSS hide not-yet-seen elements
+    document.documentElement.classList.add('reveal-ready');
+  }
+
   function init() {
     initNav();
     initBackToTop();
+    initFadeIns();
     renderStatus();
     setInterval(renderStatus, 60 * 1000);
 

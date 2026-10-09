@@ -14,6 +14,7 @@
     8. Page sections: items, history, press, contact
     9. Footer
    10. Print, reduced motion, high contrast
+   11. UI enhancements: glass header, glow pulse, metallic headline, scroll fade-ups
 */
 
 /* ==========================================================================
@@ -1283,4 +1284,102 @@ textarea { min-height: 120px; resize: vertical; }
 @media (prefers-contrast: more) {
   .btn, .btn-primary, .cta-link, .call-btn, .social-link, .filter-btn, .category-btn,
   .card, .product-card, .map-card, .service-card { border: 2px solid currentColor; }
+}
+
+/* ==========================================================================
+   11. UI ENHANCEMENTS
+   ========================================================================== */
+
+/* --- 11.1 Frosted-glass header ---------------------------------------------
+   Sticky (set in module 4). Semi-transparent cobalt plus a background blur, so
+   page content shows softly through it while scrolling. Browsers without
+   backdrop-filter get a nearly solid cobalt bar instead. */
+.site-header {
+  background: rgba(15, 71, 175, 0.94);
+}
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .site-header {
+    background: linear-gradient(180deg, rgba(15, 71, 175, 0.86) 0%, rgba(15, 71, 175, 0.78) 100%);
+    -webkit-backdrop-filter: blur(16px) saturate(1.6);
+            backdrop-filter: blur(16px) saturate(1.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 8px 28px rgba(8, 38, 95, 0.22);
+  }
+}
+
+/* --- 11.2 Anaranjado glow pulse --------------------------------------------
+   Add .btn--glow to a primary button. A soft ring radiates outward and fades.
+   Pauses on hover/focus so the normal hover lift takes over. */
+.btn--glow {
+  animation: glowPulse 2.6s ease-out infinite;
+}
+.btn--glow:hover,
+.btn--glow:focus-visible {
+  animation-play-state: paused;
+}
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(226, 114, 91, 0.60), 0 6px 18px rgba(226, 114, 91, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(226, 114, 91, 0), 0 6px 26px rgba(226, 114, 91, 0.50);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(226, 114, 91, 0), 0 6px 18px rgba(226, 114, 91, 0.35);
+  }
+}
+
+/* --- 11.3 Metallic gradient headline ---------------------------------------
+   Applies to every page's main <h1 class="hero__title">. The gradient is
+   clipped to the letters; the solid white `color` stays as the fallback. */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .hero__title {
+    padding-bottom: 0.08em;            /* keeps descenders (g, y, p) from being clipped */
+    background: linear-gradient(105deg, #FFFFFF 0%, #DCE7FF 26%, #FFFFFF 48%, #C3D3F4 76%, #F4F7FF 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero__accent {
+    background: linear-gradient(105deg, #FFDCD3 0%, #FFB7A4 38%, #FFE7E0 58%, #F5A08A 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+@media (forced-colors: active) {
+  .hero__title,
+  .hero__accent { background: none; -webkit-text-fill-color: currentColor; }
+}
+
+/* --- 11.4 Scroll-triggered fade-ups ----------------------------------------
+   js/site.js adds .reveal-ready to <html> once its IntersectionObserver is
+   running, then adds .is-visible to each .fade-in element as it enters the
+   viewport. Without JavaScript nothing is ever hidden.
+   Optional stagger: style="--fade-delay: 0.1s" (or the nth-child rules below). */
+.reveal-ready .fade-in {
+  opacity: 0;
+}
+.reveal-ready .fade-in.is-visible {
+  opacity: 1;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: var(--fade-delay, 0s);
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fact-list > .fade-in:nth-child(2),
+.category-grid > .fade-in:nth-child(2) { --fade-delay: 0.08s; }
+.fact-list > .fade-in:nth-child(3),
+.category-grid > .fade-in:nth-child(3) { --fade-delay: 0.16s; }
+.category-grid > .fade-in:nth-child(4) { --fade-delay: 0.24s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready .fade-in { opacity: 1; }
+}
+@media print {
+  .fade-in { opacity: 1 !important; }
+  .hero__title,
+  .hero__accent { background: none; -webkit-text-fill-color: #000000; }
 }
