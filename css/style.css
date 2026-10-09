@@ -15,6 +15,7 @@
     9. Footer
    10. Print, reduced motion, high contrast
    11. UI enhancements: glass header, glow pulse, metallic headline, scroll fade-ups
+   12. Centering and logo visibility
 */
 
 /* ==========================================================================
@@ -1383,3 +1384,120 @@ textarea { min-height: 120px; resize: vertical; }
   .hero__title,
   .hero__accent { background: none; -webkit-text-fill-color: #000000; }
 }
+
+/* ==========================================================================
+   12. CENTERING AND LOGO VISIBILITY
+   ========================================================================== */
+
+/* --- 12.1 Logo ------------------------------------------------------------- */
+.brand-logo { height: 60px; border-radius: 8px; }
+.header-toolbar { min-height: 84px; }
+/* Phones: the sign already carries the store name, so the text label is kept
+   for screen readers only and the logo gets the room instead. */
+@media (max-width: 520px) {
+  .brand-logo { height: 54px; }
+  .header-toolbar { min-height: 76px; }
+  .brand-name {
+    position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+}
+
+/* Full store sign shown in the home hero and in the footer */
+.hero__logo,
+.footer-logo {
+  display: block;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 12px;
+}
+.hero__logo {
+  width: min(100%, 300px);
+  margin: 0 0 1.5rem;
+  padding: 6px;
+  box-shadow: 0 16px 36px rgba(4, 20, 52, 0.45);
+}
+.footer-logo {
+  width: 190px;
+  margin: 0 0 1rem;
+  padding: 4px;
+}
+
+/* --- 12.2 One centered content column on the inner pages --------------------
+   History, Pollo Campero, Press and the lower Contact section used several
+   different widths; every section now shares one centered 920px column. */
+main.container > section:not(.contact-layout),
+main.container > .story-with-feature {
+  max-width: 920px;
+  margin-inline: auto;
+}
+.real-story,
+.cultural-context,
+.clippings { max-width: 920px; }
+
+/* Section headings and intros are centered on every page */
+main.container h2,
+.items-intro,
+.section__header,
+.cultural-context,
+.heritage-grid { text-align: center; }
+.section__header { margin-inline: auto; }
+.intro-note { margin-inline: auto; }
+.heritage-grid,
+.clippings { justify-items: center; }
+.story h2,
+.story-highlights h3 { text-align: center; }
+
+/* Product gallery cards: centered captions */
+.gallery-grid .product-card h3,
+.gallery-grid .product-card p { text-align: center; }
+
+/* Text-only hero (Pollo Campero) is centered */
+.hero--text .hero__inner { justify-content: center; }
+.hero--text .hero__content { margin-inline: auto; text-align: center; }
+.hero--text .hero__note { border-left: 0; padding-left: 0; padding-top: 1rem; border-top: 3px solid var(--color-accent); }
+
+/* --- 12.3 Phones and small tablets: center everything that reads as a block - */
+@media (max-width: 879px) {
+  .hero__content {
+    max-width: 36rem;
+    margin-inline: auto;
+    text-align: center;
+  }
+  .hero__logo { margin-inline: auto; }
+  .hero__actions,
+  .hero__meta { justify-content: center; }
+  .hero__note { border-left: 0; padding-left: 0; padding-top: 1rem; border-top: 3px solid var(--color-accent); }
+  .hero__image { width: 100%; max-width: 36rem; margin-inline: auto; }
+
+  .section__footer,
+  .store-info__actions,
+  .map-card__actions,
+  .service-card__actions { justify-content: center; }
+  .map-card__body { justify-content: center; text-align: center; }
+
+  .card > h2,
+  .card > h3,
+  .service-card__name,
+  .story h2 { text-align: center; }
+}
+
+@media (max-width: 759px) {
+  /* Footer: one centered column */
+  .footer-grid { text-align: center; justify-items: center; }
+  .footer-logo { margin-inline: auto; }
+  .site-footer p { margin-inline: auto; }
+  .footer-links { justify-items: center; column-gap: 2rem; }
+  .footer-bottom p { text-align: center; }
+}
+
+/* --- 12.4 Small fixes found while centering -------------------------------- */
+.status-badge { flex-wrap: wrap; row-gap: 0; }
+
+/* Press: three equal photo cards instead of an uneven 2 + 1 layout */
+@media (min-width: 800px) {
+  .clippings { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; }
+}
+.clipping-card img { aspect-ratio: 4 / 3; object-fit: cover; }
+main.container > section > h3 { text-align: center; }
+.media-list { width: fit-content; max-width: 100%; margin-inline: auto; }

@@ -339,3 +339,15 @@ main.home {
 
 /* The last home section is a full-width band, so the footer sits flush against it */
 main.home + .site-footer { margin-top: 0; }
+
+/* Centering on phones and small tablets (see css/style.css module 12) */
+@media (max-width: 879px) {
+  .story-strip__text,
+  .store-info > .eyebrow,
+  .store-info__title { text-align: center; }
+  .store-info > .eyebrow { display: block; }
+  .store-info > .status-badge { display: flex; width: fit-content; margin-inline: auto; }
+  .story-strip__text .arrow-link { justify-content: center; }
+  .hero__badge { margin-inline: auto; }
+  .hero-media { width: 100%; max-width: 36rem; margin-inline: auto; }
+}
