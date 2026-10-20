@@ -2026,6 +2026,9 @@ p.kicker, h3.kicker, .kicker span { color: #FFFFFF; }
   background: repeating-linear-gradient(-45deg, #F4C21A 0 18px, var(--ink) 18px 36px);
 }
 .parking__title { margin: 0 0 0.75rem; font-family: var(--font-sign); font-size: clamp(2rem, 7vw, 3rem); font-weight: 900; line-height: 0.95; text-transform: uppercase; color: var(--maize); }
+.parking { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; align-items: center; }
+.parking .obras__map { max-width: 520px; }
+@media (min-width: 900px) { .parking { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; } }
 .parking p { color: #E9DFCC; }
 .parking p:last-child { margin-bottom: 0; }
 @media (min-width: 900px) { .parking { padding-inline: 2rem; } }
