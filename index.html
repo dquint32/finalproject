@@ -26,7 +26,7 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
   <meta name="keywords" content="tienda salvadoreña Denver, productos salvadoreños Denver, Salvadoran store Denver, Central American grocery Denver, productos centroamericanos, queso duro, Kolashampan, guayaberas, recuerdos de El Salvador, E Colfax">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Tienda Salvadoreña">
-  <meta name="theme-color" content="#E9DEC9">
+  <meta name="theme-color" content="#C01A24">
 
   <link rel="canonical" href="https://tiendasalvadorenadenver.com/">
   <link rel="alternate" hreflang="es" href="https://tiendasalvadorenadenver.com/">
@@ -56,14 +56,14 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
   <meta name="twitter:description" content="La tienda salvadoreña más antigua de Denver. Productos auténticos de El Salvador y Centroamérica.">
   <meta name="twitter:image" content="https://tiendasalvadorenadenver.com/images/grandparents-el-salvador-flag.jpg">
 
-  <link rel="preload" as="image" href="images/web/grandparents-el-salvador-flag.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="images/web/tienda-salvadorena-sign.webp" imagesrcset="images/web/tienda-salvadorena-sign.webp 1200w, images/web/tienda-salvadorena-sign-1600.webp 1600w" imagesizes="(min-width: 1240px) 1100px, 92vw" fetchpriority="high">
   <link rel="icon" href="images/web/favicon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="images/web/favicon-192.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/home.css?v=20261020b">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css?v=20261020c">
 
   <!-- Structured data: Local Business -->
   <script type="application/ld+json">
@@ -147,13 +147,32 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
     </div>
   </header>
 
+  <!-- Banderitas: the five flags from the store sign, strung across the storefront -->
+  <div class="banderitas" aria-hidden="true"></div>
+
   <main id="main">
 
     <!-- ============ HERO: editorial headline + taped snapshot + founders' note ============ -->
     <section class="hero" aria-labelledby="hero-title">
+      <!-- The store sign IS the headline: mounted on the wall like the storefront fascia -->
+      <h1 id="hero-title" class="storefront">
+        <span class="storefront__board">
+          <span class="bolt bolt--tl" aria-hidden="true"></span>
+          <span class="bolt bolt--tr" aria-hidden="true"></span>
+          <span class="bolt bolt--bl" aria-hidden="true"></span>
+          <span class="bolt bolt--br" aria-hidden="true"></span>
+          <img src="images/web/tienda-salvadorena-sign.webp"
+               srcset="images/web/tienda-salvadorena-sign.webp 1200w, images/web/tienda-salvadorena-sign-1600.webp 1600w"
+               sizes="(min-width: 1240px) 1100px, 92vw"
+               width="1600" height="936" fetchpriority="high"
+               alt="Tienda Salvadoreña — Venta de productos centroamericanos"
+               data-i18n-alt="home2.hero.signAlt">
+        </span>
+      </h1>
+
       <div class="hero__copy">
         <p class="kicker"><span data-i18n="home2.hero.kicker">5128 E Colfax Ave · Denver · desde 1991</span></p>
-        <h1 id="hero-title" class="hero__title" data-i18n="home2.hero.title" data-i18n-html="true"><span class="t-small">Un pedacito de</span> <span class="t-huge">El Salvador</span> <span class="t-mid">en <em>East Colfax.</em></span></h1>
+        <p class="hero__title" data-i18n="home2.hero.title" data-i18n-html="true"><span class="t-small">Un pedacito de</span> <span class="t-huge">El Salvador</span> <span class="t-mid">en <em>East Colfax.</em></span></p>
         <p class="hero__lead" data-i18n="home2.hero.lead">Queso duro, Kolashampan, pan dulce, guayaberas, el Silabario de la escuela y todo lo que extraña de casa. Hace más de 30 años que lo traemos de El Salvador y Centroamérica, y lo acomodamos a mano en cada estante.</p>
 
         <div class="hero__actions">
@@ -169,8 +188,7 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
           <img src="images/web/grandparents-el-salvador-flag.webp"
                width="1200" height="903"
                alt="Jorge y Delia Romero, fundadores de Tienda Salvadoreña, de pie frente a una bandera de El Salvador dentro de la tienda"
-               data-i18n-alt="hero.img.owners"
-               fetchpriority="high">
+               data-i18n-alt="hero.img.owners">
           <figcaption><span data-i18n="hero.img.owners.caption">Jorge y Delia Romero, fundadores</span> · <span data-i18n="hero.img.owners.credit">Foto: Nicolle Menéndez / Diario El Salvador</span></figcaption>
         </figure>
 
@@ -673,7 +691,7 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
     </div>
   </footer>
 
-  <script src="js/lang-toggle.js?v=20261020b" defer></script>
+  <script src="js/lang-toggle.js?v=20261020c" defer></script>
   <script src="js/site.js?v=20261020b" defer></script>
   <script src="js/radio.js?v=20261020b" defer></script>
 </body>
