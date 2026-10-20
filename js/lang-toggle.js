@@ -18,8 +18,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // GLOBAL SITE TRANSLATIONS
       // ========================================
-      "site.title": "Tienda Salvadoreña – Home",
-      "meta.description": "Authentic Salvadoran and Central American products in Denver – tradition, flavor and community.",
 
       // Per-page SEO titles & descriptions
       "title.home": "Tienda Salvadoreña Denver | #1 Salvadoran Store",
@@ -46,7 +44,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // Footer
       "footer.hours_label": "Hours:",
       "footer.hours": "Sunday 10 AM–6 PM · Monday–Saturday 10 AM–7 PM",
-      "footer.contactline": "Contact: 5128 E Colfax Ave, Denver, CO 80220 | Phone: (303) 394-4185 | Email: info@tiendasalvadorenadenver.com",
       "footer.copy": "© 2026 Tienda Salvadoreña. All rights reserved.",
 
       // Full bilingual coverage: alt text, ARIA labels, press and contact strings
@@ -95,18 +92,9 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "press.credit2": "Photo © Kevin Beaty / Denverite, 2018",
       "press.credit3": "Photo: Nicolle Menéndez / Diario El Salvador",
       "press.recog1": "First Salvadoran business in Denver (1991)",
-      "press.recog2": "Featured in local and international media",
       "press.recog3": "Community support during humanitarian crises",
-      "press.recog4": "More than 30 years serving the Hispanic community",
       "aria.llamar-tienda-salvadorena": "Call Tienda Salvadoreña",
       "aria.visitar-facebook-de-tienda-salvadorena": "Visit Tienda Salvadoreña on Facebook",
-      "contact.why.title": "Why visit us?",
-      "contact.why.years": "30+ Years of History",
-      "contact.why.years.text": "Colorado's oldest Salvadoran store",
-      "contact.why.products": "Authentic Products",
-      "contact.why.products.text": "Imported directly from El Salvador and Central America",
-      "contact.why.family": "Family Business",
-      "contact.why.family.text": "Founded and run by Jorge and Delia Romero",
       "map.frameTitle": "Google Map: Tienda Salvadoreña, 5128 E Colfax Ave, Denver",
       "a11y.language": "Language",
 
@@ -117,46 +105,23 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "footer.tagline": "Colorado's oldest Salvadoran store. Products from El Salvador and Central America for more than 30 years.",
       "footer.links": "Quick links",
       "footer.visit": "Visit us",
-      "hero.badge": "30+ years on East Colfax",
-      "hero.visit": "See Location & Hours",
       "hero.img.owners": "Jorge and Delia Romero, founders of Tienda Salvadoreña, standing in front of an El Salvador flag inside the store",
       "hero.img.owners.caption": "Jorge and Delia Romero, founders",
       "hero.img.owners.credit": "Photo: Nicolle Menéndez / Diario El Salvador",
-      "hero.img.bread": "Caps in the colors and crests of El Salvador and other Central American countries in a display case",
       "hero.img.kola": "Bottles of Kolashampan, the orange Salvadoran soda, lined up on the shelf",
-      "mission.eyebrow": "Our story",
       "mission.link": "Read our story",
-      "fact.years.title": "30+ years",
-      "fact.years.text": "Colorado's oldest Salvadoran store.",
-      "fact.family.title": "Family owned",
-      "fact.family.text": "Founded and run by Jorge and Delia Romero.",
-      "fact.import.title": "Authentic products",
-      "fact.import.text": "Imported from El Salvador and Central America.",
       "categories.eyebrow": "What you'll find",
-      "categories.lead": "From pantry staples to clothing and keepsakes: everything you miss from home.",
-      "cat.cta": "See products",
-      "cat.food.badge": "Kolashampan · Queso duro",
-      "cat.clothing.badge": "Guayaberas",
-      "cat.nostalgia.badge": "Gifts",
       "cat.wellness.badge": "Natural remedies",
       "visit.eyebrow": "Visit us",
-      "visit.title": "Location & hours",
       "visit.hours": "Hours",
-      "visit.hours.sun": "Sunday 10 AM–6 PM",
-      "visit.hours.week": "Monday–Saturday 10 AM–7 PM",
-      "visit.location": "Location",
       "visit.phone": "Phone",
       "visit.call": "Call now",
       "visit.more": "Parking and more details",
-      "notice.construction": "<strong>Construction notice:</strong> there is construction on East Colfax in front of the store. Please park behind the store and come around to the entrance, or park on the street.",
-      "map.placeholder": "Map of Tienda Salvadoreña",
       "map.directions": "Get directions",
       "map.view": "View on Google Maps",
       "items.hero.imgAlt": "Racks full of plantain chips and Central American snacks inside the store",
       "press.hero.imgAlt": "Central American country flags for sale inside the store",
       "contact.hero.imgAlt": "Store interior with glass display cases, caps and El Salvador souvenirs",
-      "contact.quick.title": "Quick actions",
-      "contact.quick.email": "Send an email",
       "quintana.badge": "Partner service",
       "quintana.logoAlt": "Quintana Notary & Signing logo: a navy seal with an orange fountain pen",
       "quintana.call": "Call 303-500-4122",
@@ -164,49 +129,24 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // HOME PAGE (index.html)
       // ========================================
-      "hero.title": "A little piece of El Salvador <span class=\"hero__accent\">in the heart of Denver</span>",
-      "hero.lead": "Groceries, frozen goods, drinks, clothing, souvenirs, natural remedies and much more, brought from El Salvador and Central America.",
-      "hero.note": "Colorado's oldest Salvadoran store (30+ years)",
-      "hero.explore": "Explore Products",
-      "hero.press": "Press",
-      "hero.imgAltNavidad": "Jorge and Delia praying at the Christmas nativity with a Merry Christmas sign",
-      
-      "mission.title": "Colorado's oldest Salvadoran store",
-      "mission.lead": "Tienda Salvadoreña is a family business rooted in the community. For over 30 years we've served Denver's Hispanic community with authentic products from El Salvador and Central America: groceries, clothing, souvenirs and much more, keeping our traditions alive.",
-      
-      "categories.title": "Explore Our Products",
+
       "categories.viewall": "View all items",
       
       // Category Cards
-      "cat.food.title": "Food & Drinks",
-      "cat.food.lead": "Sodas, juices, chocolate and frozen fruit.",
       "cat.food.imgAlt": "Store shelves stocked with beans, sauces, seasonings and other Central American pantry staples",
       
-      "cat.clothing.title": "Clothing & Accessories",
-      "cat.clothing.lead": "Guayaberas, hats and traditional footwear.",
       "cat.clothing.imgAlt": "Traditional white embroidered guayabera shirts hanging on a rack in the store",
-      
-      "cat.nostalgia.title": "Trinkets and souvenirs",
-      "cat.nostalgia.lead": "Keychains, bracelets and gifts with identity.",
-      "cat.nostalgia.imgAlt": "Display of bracelets, keychains, necklaces and hair accessories",
-      
-      "cat.wellness.title": "Herbs and Care",
-      "cat.wellness.lead": "Medicines, natural soaps and hygiene items.",
+
       "cat.wellness.imgAlt": "Shelves of natural soaps, herbal supplements and personal care items",
       
       // Press Section
-      "press.title": "Community Recognition",
-      "press.quote": "A pillar of Denver's Hispanic community.",
       "press.readmore": "Read more in Press",
 
       // ========================================
       // ITEMS PAGE (items.html)
       // ========================================
       "items.hero.title": "Discover our products",
-      "items.hero.lead": "Authentic Central American products in Colorado.",
-      "items.hero.button": "Explore our products",
       
-      "items.intro.title": "Authentic Products",
       "items.intro.note": "Over 30 years importing the best products of El Salvador and Central America. From traditional foods to clothing and nostalgic items.",
       
       // Filter Buttons
@@ -307,8 +247,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "history.heritage.caption1": "Our sign – a landmark and a welcome.",
       "history.heritage.caption2": "A pillar of the classroom – literacy, dignity, and shared roots.",
       "history.heritage.caption3": "Blue and white – the origin we bring to our daily work.",
-      
-      
+
       "history.values.title": "Our Values",
       "history.values.authenticity": "Authenticity – genuine products that represent our culture.",
       "history.values.family": "Family – a business founded on love and legacy.",
@@ -322,7 +261,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // POLLO CAMPERO PAGE (pollo.html)
       // ========================================
-      "pollo.meta.description": "Pollo Campero – Family tradition and reheating recommendations.",
       "pollo.hero.title": "Pollo Campero – Family Tradition",
       "pollo.hero.lead": "Note: Pollo Campero is a beloved food in Central America. Our family enjoys it as part of our traditions, and we know many travelers bring cold boxes from Guatemala or El Salvador to share at home.",
       "pollo.hero.note": "Here we share recommendations for reheating and enjoying it with the best flavor, just like we do as a family.",
@@ -350,10 +288,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "pollo.reheat.oven.step4": "Bake <strong>12–15 minutes</strong>, flipping halfway if not using a rack.",
       "pollo.reheat.oven.step5": "Check that the internal temperature reaches <strong>74°C (165°F)</strong>.",
       "pollo.reheat.oven.step6": "Let rest for 2 minutes before serving.",
-      
-      "pollo.notes.title": "Important Information",
-      "pollo.notes.text": "This page is dedicated to sharing the cultural tradition of Pollo Campero and its best reheating methods.",
-      
+
       "pollo.why.title": "Why Pollo Campero?",
       "pollo.why.authentic": "<strong>Authentic:</strong> Original Guatemalan recipe since 1971",
       "pollo.why.nostalgic": "<strong>Nostalgic:</strong> Flavor that connects with home and childhood",
@@ -365,22 +300,17 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       "press.hero.title": "Press and Recognition",
       "press.hero.lead": "We document the impact of Tienda Salvadoreña on the community: articles, mentions and recognitions that tell our story.",
-      "press.lead": "Over 30 years of community service documented by local and international media.",
       
       "press.coverage.title": "Featured Coverage",
       "press.quote1.text": "\"Tienda Salvadoreña is a business located in Denver, Colorado, and was the first store with products from El Salvador founded in that city.\"",
       "press.quote2.text": "\"Most of the people who visit the business are filled with nostalgia when they see the traditional foods they find.\"",
       "press.quote3.text": "\"People come here from all over Colorado, Wyoming and Nebraska to buy cheeses and souvenirs that he imports from home.\"",
       "press.quote4.text": "\"On East Colfax, next to the trendy Bellwether coffeeshop, Jorge Romero and his wife, Delia, have run a Salvadoran grocery for more than 25 years.\"",
-      "press.quote.readarticle": "Read article",
       
       "press.images.title": "Images and Credits",
       "press.images.caption1": "Delia Romero holding the flag inside Tienda Salvadoreña. Photo © Kevin Beaty / Denverite, 2018",
-      "press.images.credits1": "Photo © Kevin Beaty / Denverite",
       "press.images.caption2": "Jorge Romero behind the counter.",
-      "press.images.credits2": "Photo © Kevin Beaty / Denverite, 2018",
       "press.images.caption3": "Jorge and Delia with the flag of El Salvador.",
-      "press.images.credits3": "Photo: Nicolle Menéndez / Diario El Salvador",
       
       "press.featured.title": "Featured Articles",
       "press.featured.article1": "A store in Denver celebrates 32 years of sharing Salvadoran culture – Diario El Salvador",
@@ -398,11 +328,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "contact.hero.lead": "We're here to help. Call us, write to us or visit us at the address below. We'll respond as soon as possible.",
       
       "contact.info.title": "Contact information",
-      "contact.label.address": "Address:",
-      "contact.directions": "View on Google Maps →",
-      "contact.label.phone": "Phone:",
       "contact.label.email": "Email:",
-      "contact.facebook.link": "Visit our Facebook page →",
       
       "contact.label.hours": "Hours:",
       "contact.hours.sunday": "Sunday",
@@ -416,10 +342,8 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "contact.label.parking": "Parking:",
       "contact.parking.details": "Street parking and behind the store (we share a lot with other businesses; approximately 4 spaces). You can also park on Forrest Street and walk to the store.",
       
-      "contact.map.title": "How to get there",
       "contact.map.note": "We recommend calling ahead to confirm availability of special products.",
       
-      "contact.notes.title": "Additional information",
       "contact.notes.text": "For large orders or press inquiries, use the phone or email listed above.",
       
       // Quintana Notary Partnership
@@ -436,8 +360,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // GLOBAL SITE TRANSLATIONS (SPANISH)
       // ========================================
-      "site.title": "Tienda Salvadoreña – Inicio",
-      "meta.description": "Productos auténticos salvadoreños y centroamericanos en Denver – tradición, sabor y comunidad.",
 
       // Títulos y descripciones SEO por página
       "title.home": "Tienda Salvadoreña Denver | Productos Salvadoreños #1",
@@ -464,7 +386,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // Footer
       "footer.hours_label": "Horario:",
       "footer.hours": "Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM",
-      "footer.contactline": "Contacto: 5128 E Colfax Ave, Denver, CO 80220 | Teléfono: (303) 394-4185 | Correo: info@tiendasalvadorenadenver.com",
       "footer.copy": "© 2026 Tienda Salvadoreña. Todos los derechos reservados.",
 
       // Full bilingual coverage: alt text, ARIA labels, press and contact strings
@@ -513,18 +434,9 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "press.credit2": "Foto © Kevin Beaty / Denverite, 2018",
       "press.credit3": "Foto: Nicolle Menéndez / Diario El Salvador",
       "press.recog1": "Primer negocio salvadoreño en Denver (1991)",
-      "press.recog2": "Destacado en medios locales e internacionales",
       "press.recog3": "Apoyo comunitario durante crisis humanitarias",
-      "press.recog4": "Más de 30 años sirviendo a la comunidad hispana",
       "aria.llamar-tienda-salvadorena": "Llamar Tienda Salvadoreña",
       "aria.visitar-facebook-de-tienda-salvadorena": "Visitar Facebook de Tienda Salvadoreña",
-      "contact.why.title": "¿Por qué visitarnos?",
-      "contact.why.years": "30+ Años de Historia",
-      "contact.why.years.text": "La tienda salvadoreña más antigua de Colorado",
-      "contact.why.products": "Productos Auténticos",
-      "contact.why.products.text": "Importados directamente de El Salvador y Centroamérica",
-      "contact.why.family": "Negocio Familiar",
-      "contact.why.family.text": "Fundado y operado por Jorge y Delia Romero",
       "map.frameTitle": "Mapa de Google: Tienda Salvadoreña, 5128 E Colfax Ave, Denver",
       "a11y.language": "Idioma",
 
@@ -535,46 +447,23 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "footer.tagline": "La tienda salvadoreña más antigua de Colorado. Productos de El Salvador y Centroamérica desde hace más de 30 años.",
       "footer.links": "Enlaces rápidos",
       "footer.visit": "Visítanos",
-      "hero.badge": "Más de 30 años en East Colfax",
-      "hero.visit": "Ver Ubicación y Horario",
       "hero.img.owners": "Jorge y Delia Romero, fundadores de Tienda Salvadoreña, de pie frente a una bandera de El Salvador dentro de la tienda",
       "hero.img.owners.caption": "Jorge y Delia Romero, fundadores",
       "hero.img.owners.credit": "Foto: Nicolle Menéndez / Diario El Salvador",
-      "hero.img.bread": "Gorras con los colores y escudos de El Salvador y otros países centroamericanos en una vitrina",
       "hero.img.kola": "Botellas de Kolashampan, la gaseosa salvadoreña color naranja, alineadas en el estante",
-      "mission.eyebrow": "Nuestra historia",
       "mission.link": "Conoce nuestra historia",
-      "fact.years.title": "Más de 30 años",
-      "fact.years.text": "La tienda salvadoreña más antigua de Colorado.",
-      "fact.family.title": "Negocio familiar",
-      "fact.family.text": "Fundada y atendida por Jorge y Delia Romero.",
-      "fact.import.title": "Productos auténticos",
-      "fact.import.text": "Importados de El Salvador y Centroamérica.",
       "categories.eyebrow": "Lo que encontrarás",
-      "categories.lead": "De la despensa a la ropa y los recuerdos: todo lo que extrañas de casa.",
-      "cat.cta": "Ver productos",
-      "cat.food.badge": "Kolashampan · Queso duro",
-      "cat.clothing.badge": "Guayaberas",
-      "cat.nostalgia.badge": "Regalos",
       "cat.wellness.badge": "Remedios naturales",
       "visit.eyebrow": "Visítanos",
-      "visit.title": "Ubicación y horario",
       "visit.hours": "Horario",
-      "visit.hours.sun": "Domingo 10 AM–6 PM",
-      "visit.hours.week": "Lunes–Sábado 10 AM–7 PM",
-      "visit.location": "Ubicación",
       "visit.phone": "Teléfono",
       "visit.call": "Llamar ahora",
       "visit.more": "Estacionamiento y más detalles",
-      "notice.construction": "<strong>Aviso de construcción:</strong> hay obras en East Colfax frente a la tienda. Estacione detrás de la tienda y dé la vuelta hasta la entrada, o estacione en la calle.",
-      "map.placeholder": "Mapa de Tienda Salvadoreña",
       "map.directions": "Cómo llegar",
       "map.view": "Ver en Google Maps",
       "items.hero.imgAlt": "Exhibidores llenos de chips de plátano y bocadillos centroamericanos dentro de la tienda",
       "press.hero.imgAlt": "Banderas de países centroamericanos a la venta dentro de la tienda",
       "contact.hero.imgAlt": "Interior de la tienda con vitrinas de vidrio, gorras y recuerdos de El Salvador",
-      "contact.quick.title": "Acciones rápidas",
-      "contact.quick.email": "Enviar correo",
       "quintana.badge": "Servicio asociado",
       "quintana.logoAlt": "Logotipo de Quintana Notary & Signing: sello azul marino con una pluma anaranjada",
       "quintana.call": "Llamar al 303-500-4122",
@@ -582,49 +471,24 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // HOME PAGE (index.html) - SPANISH
       // ========================================
-      "hero.title": "Un pedacito de El Salvador <span class=\"hero__accent\">en el corazón de Denver</span>",
-      "hero.lead": "Comestibles, productos congelados, bebidas, ropa, recuerdos, remedios naturales y mucho más, traídos de El Salvador y Centroamérica.",
-      "hero.note": "La tienda salvadoreña más antigua de Colorado (30+ años)",
-      "hero.explore": "Explorar Productos",
-      "hero.press": "Prensa",
-      "hero.imgAltNavidad": "Jorge y Delia rezando en el pesebre navideño con un cartel de Feliz Navidad",
-      
-      "mission.title": "La tienda salvadoreña más antigua de Colorado",
-      "mission.lead": "Tienda Salvadoreña es un negocio familiar arraigado en la comunidad. Durante más de 30 años hemos servido a la comunidad hispana de Denver con productos auténticos de El Salvador y Centroamérica: comestibles, ropa, recuerdos y mucho más, manteniendo vivas nuestras tradiciones.",
-      
-      "categories.title": "Explora Nuestros Productos",
+
       "categories.viewall": "Ver todos los artículos",
       
       // Category Cards
-      "cat.food.title": "Comida y Bebidas",
-      "cat.food.lead": "Refrescos, jugos, chocolate y fruta congelada.",
       "cat.food.imgAlt": "Estantes de la tienda con frijoles, salsas, condimentos y otros básicos de despensa centroamericanos",
       
-      "cat.clothing.title": "Ropa y Accesorios",
-      "cat.clothing.lead": "Guayaberas, sombreros y calzado tradicional.",
       "cat.clothing.imgAlt": "Guayaberas blancas tradicionales con bordados, colgadas en un perchero de la tienda",
-      
-      "cat.nostalgia.title": "Chucherías y recuerdos",
-      "cat.nostalgia.lead": "Llaveros, pulseras y regalos con identidad.",
-      "cat.nostalgia.imgAlt": "Exhibidor con pulseras, llaveros, collares y accesorios para el cabello",
-      
-      "cat.wellness.title": "Hierbas y Cuidado",
-      "cat.wellness.lead": "Medicinas, jabones naturales y artículos de higiene.",
+
       "cat.wellness.imgAlt": "Estantes con jabones naturales, suplementos herbales y artículos de cuidado personal",
       
       // Press Section
-      "press.title": "Reconocimiento Comunitario",
-      "press.quote": "Un pilar de la comunidad hispana de Denver.",
       "press.readmore": "Leer más en Prensa",
 
       // ========================================
       // ITEMS PAGE (items.html) - SPANISH
       // ========================================
       "items.hero.title": "Descubre nuestros productos",
-      "items.hero.lead": "Productos centroamericanos auténticos en Colorado.",
-      "items.hero.button": "Explora nuestros productos",
       
-      "items.intro.title": "Productos Auténticos",
       "items.intro.note": "Más de 30 años importando los mejores productos de El Salvador y Centroamérica. Desde alimentos tradicionales hasta ropa y artículos nostálgicos.",
       
       // Filter Buttons
@@ -725,8 +589,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "history.heritage.caption1": "Nuestro letrero – un punto de referencia y una bienvenida.",
       "history.heritage.caption2": "Un pilar del aula – alfabetización, dignidad y raíces compartidas.",
       "history.heritage.caption3": "Azul y blanco – el origen que llevamos a nuestro trabajo diario.",
-      
-      
+
       "history.values.title": "Nuestros Valores",
       "history.values.authenticity": "Autenticidad – productos genuinos que representan nuestra cultura.",
       "history.values.family": "Familia – un negocio fundado en amor y legado.",
@@ -740,7 +603,6 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // POLLO CAMPERO PAGE (pollo.html) - SPANISH
       // ========================================
-      "pollo.meta.description": "Pollo Campero – Tradición familiar y recomendaciones para recalentar.",
       "pollo.hero.title": "Pollo Campero – Tradición Familiar",
       "pollo.hero.lead": "Nota: Pollo Campero es un alimento muy querido en Centroamérica. Nuestra familia lo disfruta como parte de nuestras tradiciones, y sabemos que muchos viajeros lo traen en cajas frías desde Guatemala o El Salvador para compartir en casa.",
       "pollo.hero.note": "Aquí compartimos recomendaciones para recalentar y disfrutarlo con el mejor sabor, tal como lo hacemos en familia.",
@@ -768,10 +630,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "pollo.reheat.oven.step4": "Hornee <strong>12–15 minutos</strong>, volteando a la mitad si no usa rejilla.",
       "pollo.reheat.oven.step5": "Verifique que la temperatura interna alcance <strong>74°C (165°F)</strong>.",
       "pollo.reheat.oven.step6": "Deje reposar 2 minutos antes de servir.",
-      
-      "pollo.notes.title": "Información Importante",
-      "pollo.notes.text": "Esta página está dedicada a compartir la tradición cultural de Pollo Campero y sus mejores métodos de recalentamiento.",
-      
+
       "pollo.why.title": "¿Por qué Pollo Campero?",
       "pollo.why.authentic": "<strong>Auténtico:</strong> Receta original guatemalteca desde 1971",
       "pollo.why.nostalgic": "<strong>Nostálgico:</strong> Sabor que conecta con el hogar y la infancia",
@@ -783,22 +642,17 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       "press.hero.title": "Prensa y Reconocimientos",
       "press.hero.lead": "Documentamos el impacto de Tienda Salvadoreña en la comunidad: artículos, menciones y reconocimientos que cuentan nuestra historia.",
-      "press.lead": "Más de 30 años de servicio comunitario documentado por medios locales e internacionales.",
       
       "press.coverage.title": "Cobertura destacada",
       "press.quote1.text": "\"Tienda Salvadoreña es un negocio situado en Denver, Colorado, y fue el primer comercio con productos de El Salvador fundado en esa ciudad.\"",
       "press.quote2.text": "\"La mayoría de las personas que visitan el negocio se llenan de nostalgia al ver las comidas tradicionales que encuentran.\"",
       "press.quote3.text": "\"La gente viene de todo Colorado, Wyoming y Nebraska a comprar quesos y recuerdos que él importa de su tierra.\"",
       "press.quote4.text": "\"En East Colfax, junto a la cafetería de moda Bellwether, Jorge Romero y su esposa, Delia, han dirigido una tienda salvadoreña por más de 25 años.\"",
-      "press.quote.readarticle": "Leer artículo",
       
       "press.images.title": "Imágenes y créditos",
       "press.images.caption1": "Delia Romero sosteniendo la bandera dentro de Tienda Salvadoreña. Foto © Kevin Beaty / Denverite, 2018",
-      "press.images.credits1": "Foto © Kevin Beaty / Denverite",
       "press.images.caption2": "Jorge Romero detrás del mostrador.",
-      "press.images.credits2": "Foto © Kevin Beaty / Denverite, 2018",
       "press.images.caption3": "Jorge y Delia con la bandera de El Salvador.",
-      "press.images.credits3": "Foto: Nicolle Menéndez / Diario El Salvador",
       
       "press.featured.title": "Artículos destacados",
       "press.featured.article1": "Una tienda en Denver cumple 32 años de compartir la cultura salvadoreña – Diario El Salvador",
@@ -816,11 +670,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "contact.hero.lead": "Estamos aquí para ayudar. Llámanos, escríbenos o visítanos en la dirección indicada. Responderemos lo antes posible.",
       
       "contact.info.title": "Información de contacto",
-      "contact.label.address": "Dirección:",
-      "contact.directions": "Ver en Google Maps →",
-      "contact.label.phone": "Teléfono:",
       "contact.label.email": "Correo electrónico:",
-      "contact.facebook.link": "Visitar nuestra página de Facebook →",
       
       "contact.label.hours": "Horario de atención:",
       "contact.hours.sunday": "Domingo",
@@ -834,10 +684,8 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "contact.label.parking": "Estacionamiento:",
       "contact.parking.details": "Estacionamiento en la calle y detrás de la tienda (compartimos un lote con otros comercios; aproximadamente 4 espacios). También puede estacionar en Forrest Street y caminar hasta la tienda.",
       
-      "contact.map.title": "Cómo llegar",
       "contact.map.note": "Recomendamos llamar antes de venir para confirmar disponibilidad de productos especiales.",
       
-      "contact.notes.title": "Información adicional",
       "contact.notes.text": "Para pedidos grandes o consultas de prensa, utilice el teléfono o el correo electrónico indicados arriba.",
       
       // Quintana Notary Partnership

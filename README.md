@@ -32,8 +32,12 @@ The project is hosted on GitHub Pages:
 - `pollo.html` – Pollo Campero page  
 - `press.html` – Press & recognition  
 - `contact.html` – Contact & location info  
-- `css/` – Stylesheets for layout and accessibility  
-- `images/` – Salvadoran-inspired visuals and assets  
+- `css/main.css` – One shared, mobile-first stylesheet (store-sign theme, stucco textures, Ilobasco borders)  
+- `js/lang-toggle.js` – Spanish/English toggle and all page translations  
+- `js/site.js` – Mobile menu, live open/closed status, back-to-top button  
+- `js/items.js` – Product filters and photo zoom (Artículos page)  
+- `js/radio.js` – Opt-in "Radio Tienda" marimba player (home page)  
+- `images/web/` – Optimized WebP photos used on the site; `images/` – original photos  
 
 ---
 
