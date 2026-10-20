@@ -62,7 +62,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css?v=20261020e">
+  <link rel="stylesheet" href="css/main.css?v=20261020f">
 
   <!-- Structured data: Local Business -->
   <script type="application/ld+json">
@@ -532,31 +532,35 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
 
         <figure class="obras__map">
           <svg viewBox="0 0 440 320" role="img" aria-labelledby="map-svg-title" data-i18n-aria-label="home2.obras.mapAlt">
-            <title id="map-svg-title">Mapa dibujado a mano: estacione en el lote detrás de la tienda y camine por el costado hasta la entrada en Colfax</title>
-            <!-- back lot -->
-            <rect class="m-lot" x="40" y="22" width="240" height="78" rx="4"/>
-            <text class="m-label" x="62" y="56" data-i18n="home2.map.lot">Parqueo atrás</text>
-            <text class="m-p" x="238" y="78">P</text>
-            <!-- store -->
-            <rect class="m-store" x="70" y="120" width="180" height="96"/>
-            <text class="m-store-label" x="160" y="174" text-anchor="middle">TIENDA</text>
-            <rect class="m-door" x="146" y="208" width="28" height="8"/>
+            <title id="map-svg-title">Mapa dibujado a mano: estacione en el lote detrás de la tienda, camine hacia la izquierda por detrás de dos negocios vecinos, dé la vuelta en la esquina y regrese por la acera de Colfax hasta la entrada</title>
+            <!-- back lot (behind the tienda) -->
+            <rect class="m-lot" x="236" y="14" width="186" height="70" rx="4"/>
+            <text class="m-label" x="252" y="44" data-i18n="home2.map.lot">Parqueo atrás</text>
+            <text class="m-p" x="384" y="70">P</text>
+            <!-- the block: two neighbors on the left, the tienda on the right -->
+            <rect class="m-neighbor" x="56" y="116" width="86" height="92"/>
+            <rect class="m-neighbor" x="142" y="116" width="86" height="92"/>
+            <text class="m-neighbor-label" x="99" y="168" text-anchor="middle" data-i18n="home2.map.neighbor">vecino</text>
+            <text class="m-neighbor-label" x="185" y="168" text-anchor="middle" data-i18n="home2.map.neighbor">vecino</text>
+            <rect class="m-store" x="228" y="116" width="176" height="92"/>
+            <text class="m-store-label" x="316" y="162" text-anchor="middle">TIENDA</text>
+            <rect class="m-door" x="302" y="200" width="28" height="8"/>
+            <text class="m-label m-label--door" x="316" y="192" text-anchor="middle" data-i18n="home2.map.door">entrada</text>
             <!-- sidewalk + street -->
-            <rect class="m-walk" x="0" y="216" width="440" height="20"/>
-            <rect class="m-street" x="0" y="236" width="440" height="84"/>
-            <line class="m-center" x1="0" y1="282" x2="440" y2="282"/>
+            <rect class="m-walk" x="0" y="208" width="440" height="22"/>
+            <rect class="m-street" x="0" y="230" width="440" height="90"/>
+            <line class="m-center" x1="0" y1="278" x2="440" y2="278"/>
             <text class="m-street-label" x="420" y="306" text-anchor="end">E COLFAX AVE</text>
             <!-- cones -->
-            <g class="m-cone" transform="translate(40 250)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
-            <g class="m-cone" transform="translate(100 254)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
-            <g class="m-cone" transform="translate(196 248)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
-            <g class="m-cone" transform="translate(262 252)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
-            <g class="m-cone" transform="translate(330 250)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
-            <!-- walking route -->
-            <path class="m-route" d="M232 92 C 300 104, 290 150, 286 196 C 284 214, 210 226, 172 220"/>
-            <path class="m-arrow" d="M182 212 L170 220 L183 227"/>
-            <text class="m-label m-label--route" x="298" y="150" data-i18n="home2.map.walk">¡son 30 pasos!</text>
-            <text class="m-label m-label--door" x="186" y="206" data-i18n="home2.map.door">entrada</text>
+            <g class="m-cone" transform="translate(40 244)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
+            <g class="m-cone" transform="translate(112 248)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
+            <g class="m-cone" transform="translate(196 242)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
+            <g class="m-cone" transform="translate(276 248)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
+            <g class="m-cone" transform="translate(356 244)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
+            <!-- walking route: out of the lot, left behind the two neighbors, around the corner, back along Colfax to the door -->
+            <path class="m-route" d="M300 84 C 300 96, 290 100, 276 100 L 46 100 C 30 100, 28 108, 28 124 L 28 198 C 28 214, 34 219, 50 219 L 288 219"/>
+            <path class="m-arrow" d="M282 211 L294 219 L282 227"/>
+            <text class="m-label m-label--route" x="22" y="76" data-i18n="home2.map.walk">← dé la vuelta</text>
           </svg>
           <figcaption data-i18n="home2.obras.caption">Mapa no a escala. Dibujado con cariño.</figcaption>
         </figure>
@@ -690,7 +694,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
     </div>
   </footer>
 
-  <script src="js/lang-toggle.js?v=20261020d" defer></script>
+  <script src="js/lang-toggle.js?v=20261020f" defer></script>
   <script src="js/site.js?v=20261020d" defer></script>
   <script src="js/radio.js?v=20261020b" defer></script>
 </body>

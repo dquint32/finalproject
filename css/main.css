@@ -1453,6 +1453,8 @@ p.kicker, h3.kicker, .kicker span { color: #FFFFFF; }
 .obras__map figcaption { padding: 0.35rem 0.25rem 0.5rem; font-family: var(--font-hand); font-size: 1.1rem; color: var(--ink-soft); }
 .m-lot { fill: rgba(36, 26, 19, 0.04); stroke: var(--ink); stroke-width: 2.5; stroke-dasharray: 7 6; }
 .m-store { fill: #EFDFC0; stroke: var(--ink); stroke-width: 3; }
+.m-neighbor { fill: rgba(36, 26, 19, 0.06); stroke: var(--ink); stroke-width: 2; stroke-dasharray: 5 4; }
+.m-neighbor-label { font-family: var(--font-hand); font-size: 20px; font-weight: 700; fill: var(--ink-soft); }
 .m-store-label { font-family: var(--font-sign); font-size: 26px; font-weight: 900; fill: var(--sign-red); letter-spacing: 1px; }
 .m-door { fill: var(--achiote); }
 .m-walk { fill: #D5C6AA; }
