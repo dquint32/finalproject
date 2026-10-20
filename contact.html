@@ -106,7 +106,7 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
   </script>
   <script>document.documentElement.classList.add('js');</script>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css?v=20261020f">
+  <link rel="stylesheet" href="css/main.css?v=20261020g">
 </head>
 <body class="page-contact">
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
@@ -233,9 +233,46 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
     <!-- Construction + parking, merged into one heads-up -->
     <section class="page-section page-section--flush" aria-labelledby="parking-title">
       <div class="parking">
+        <div class="parking__text">
         <h2 id="parking-title" class="parking__title" data-i18n="contact.label.parking">Estacionamiento:</h2>
         <p data-i18n="home2.obras.lead">Esos conos anaranjados frente a la tienda no son decoración nueva. Estacione detrás de la tienda y dé la vuelta hasta la entrada, o busque lugar en la calle. Las obras van despacio; nosotros seguimos abiertos.</p>
         <p data-i18n="contact.parking.details">Estacionamiento en la calle y detrás de la tienda (compartimos un lote con otros comercios; aproximadamente 4 espacios). También puede estacionar en Forrest Street y caminar hasta la tienda.</p>
+        </div>
+          <figure class="obras__map">
+            <svg viewBox="0 0 440 320" role="img" aria-labelledby="map-svg-title" data-i18n-aria-label="home2.obras.mapAlt">
+              <title id="map-svg-title">Mapa dibujado a mano: estacione en el lote compartido detrás de la tienda y los dos negocios vecinos, camine hacia la izquierda, dé la vuelta en la esquina y regrese por la acera de Colfax hasta la entrada</title>
+              <!-- shared back lot behind all three shops -->
+              <rect class="m-lot" x="56" y="14" width="348" height="70" rx="4"/>
+              <text class="m-label" x="72" y="44" data-i18n="home2.map.lot">Parqueo compartido</text>
+              <text class="m-p" x="372" y="64">P</text>
+              <text class="m-p" x="316" y="64">P</text>
+              <!-- the block: two neighbors on the left, the tienda on the right -->
+              <rect class="m-neighbor" x="56" y="116" width="86" height="92"/>
+              <rect class="m-neighbor" x="142" y="116" width="86" height="92"/>
+              <text class="m-neighbor-label" x="99" y="168" text-anchor="middle" data-i18n="home2.map.neighbor">vecino</text>
+              <text class="m-neighbor-label" x="185" y="168" text-anchor="middle" data-i18n="home2.map.neighbor">vecino</text>
+              <rect class="m-store" x="228" y="116" width="176" height="92"/>
+              <text class="m-store-label" x="316" y="162" text-anchor="middle">TIENDA</text>
+              <rect class="m-door" x="302" y="200" width="28" height="8"/>
+              <text class="m-label m-label--door" x="316" y="192" text-anchor="middle" data-i18n="home2.map.door">entrada</text>
+              <!-- sidewalk + street -->
+              <rect class="m-walk" x="0" y="208" width="440" height="22"/>
+              <rect class="m-street" x="0" y="230" width="440" height="90"/>
+              <line class="m-center" x1="0" y1="278" x2="440" y2="278"/>
+              <text class="m-street-label" x="420" y="306" text-anchor="end">E COLFAX AVE</text>
+              <!-- cones -->
+              <g class="m-cone" transform="translate(40 244)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
+              <g class="m-cone" transform="translate(112 248)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
+              <g class="m-cone" transform="translate(196 242)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
+              <g class="m-cone" transform="translate(276 248)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
+              <g class="m-cone" transform="translate(356 244)"><path d="M0 22 L9 0 L18 22 Z"/><path class="m-cone-band" d="M4 12 H14"/></g>
+              <!-- walking route: out of the lot, left behind the two neighbors, around the corner, back along Colfax to the door -->
+              <path class="m-route" d="M300 84 C 300 96, 290 100, 276 100 L 46 100 C 30 100, 28 108, 28 124 L 28 198 C 28 214, 34 219, 50 219 L 288 219"/>
+              <path class="m-arrow" d="M282 211 L294 219 L282 227"/>
+              <text class="m-label m-label--route" x="72" y="72" data-i18n="home2.map.walk">← dé la vuelta</text>
+            </svg>
+            <figcaption data-i18n="home2.obras.caption">Mapa no a escala. Dibujado con cariño.</figcaption>
+          </figure>
       </div>
     </section>
 

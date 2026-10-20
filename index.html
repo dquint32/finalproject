@@ -62,7 +62,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css?v=20261020f">
+  <link rel="stylesheet" href="css/main.css?v=20261020g">
 
   <!-- Structured data: Local Business -->
   <script type="application/ld+json">
@@ -532,11 +532,12 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
 
         <figure class="obras__map">
           <svg viewBox="0 0 440 320" role="img" aria-labelledby="map-svg-title" data-i18n-aria-label="home2.obras.mapAlt">
-            <title id="map-svg-title">Mapa dibujado a mano: estacione en el lote detrás de la tienda, camine hacia la izquierda por detrás de dos negocios vecinos, dé la vuelta en la esquina y regrese por la acera de Colfax hasta la entrada</title>
-            <!-- back lot (behind the tienda) -->
-            <rect class="m-lot" x="236" y="14" width="186" height="70" rx="4"/>
-            <text class="m-label" x="252" y="44" data-i18n="home2.map.lot">Parqueo atrás</text>
-            <text class="m-p" x="384" y="70">P</text>
+            <title id="map-svg-title">Mapa dibujado a mano: estacione en el lote compartido detrás de la tienda y los dos negocios vecinos, camine hacia la izquierda, dé la vuelta en la esquina y regrese por la acera de Colfax hasta la entrada</title>
+            <!-- shared back lot behind all three shops -->
+            <rect class="m-lot" x="56" y="14" width="348" height="70" rx="4"/>
+            <text class="m-label" x="72" y="44" data-i18n="home2.map.lot">Parqueo compartido</text>
+            <text class="m-p" x="372" y="64">P</text>
+            <text class="m-p" x="316" y="64">P</text>
             <!-- the block: two neighbors on the left, the tienda on the right -->
             <rect class="m-neighbor" x="56" y="116" width="86" height="92"/>
             <rect class="m-neighbor" x="142" y="116" width="86" height="92"/>
@@ -560,7 +561,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
             <!-- walking route: out of the lot, left behind the two neighbors, around the corner, back along Colfax to the door -->
             <path class="m-route" d="M300 84 C 300 96, 290 100, 276 100 L 46 100 C 30 100, 28 108, 28 124 L 28 198 C 28 214, 34 219, 50 219 L 288 219"/>
             <path class="m-arrow" d="M282 211 L294 219 L282 227"/>
-            <text class="m-label m-label--route" x="22" y="76" data-i18n="home2.map.walk">← dé la vuelta</text>
+            <text class="m-label m-label--route" x="72" y="72" data-i18n="home2.map.walk">← dé la vuelta</text>
           </svg>
           <figcaption data-i18n="home2.obras.caption">Mapa no a escala. Dibujado con cariño.</figcaption>
         </figure>
