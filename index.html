@@ -5,8 +5,9 @@ Date Created: 11/02/2025
 Date Due: 12/01/2024
 Modified: 10/20/2026
 Filename: index.html
-Purpose: Home page for Tienda Salvadoreña — editorial, tactile redesign (stucco texture, painted signage,
-         founders' note, Colfax construction heads-up, asymmetric product shelves).
+Purpose: Home page for Tienda Salvadoreña (a grocery store, not a restaurant) — editorial, tactile redesign:
+         stucco texture, Ilobasco borders, volcano outlines, painted signage, founders' note, Colfax heads-up,
+         product shelves with lore, artisan towns, cook-at-home pupusa guide, Radio Tienda marimba.
 Editor: Notepad
 Generative AI Used: Yes
 Specific Tools Used: Copilot, Gemini, and Claude
@@ -25,7 +26,7 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
   <meta name="keywords" content="tienda salvadoreña Denver, productos salvadoreños Denver, Salvadoran store Denver, Central American grocery Denver, productos centroamericanos, queso duro, Kolashampan, guayaberas, recuerdos de El Salvador, E Colfax">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Tienda Salvadoreña">
-  <meta name="theme-color" content="#E9DEC9">
+  <meta name="theme-color" content="#C01A24">
 
   <link rel="canonical" href="https://tiendasalvadorenadenver.com/">
   <link rel="alternate" hreflang="es" href="https://tiendasalvadorenadenver.com/">
@@ -55,14 +56,14 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
   <meta name="twitter:description" content="La tienda salvadoreña más antigua de Denver. Productos auténticos de El Salvador y Centroamérica.">
   <meta name="twitter:image" content="https://tiendasalvadorenadenver.com/images/grandparents-el-salvador-flag.jpg">
 
-  <link rel="preload" as="image" href="images/web/grandparents-el-salvador-flag.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="images/web/tienda-salvadorena-sign.webp" imagesrcset="images/web/tienda-salvadorena-sign.webp 1200w, images/web/tienda-salvadorena-sign-1600.webp 1600w" imagesizes="(min-width: 1240px) 1100px, 92vw" fetchpriority="high">
   <link rel="icon" href="images/web/favicon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="images/web/favicon-192.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/home.css?v=20261020a">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css?v=20261020c">
 
   <!-- Structured data: Local Business -->
   <script type="application/ld+json">
@@ -146,13 +147,32 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
     </div>
   </header>
 
+  <!-- Banderitas: the five flags from the store sign, strung across the storefront -->
+  <div class="banderitas" aria-hidden="true"></div>
+
   <main id="main">
 
     <!-- ============ HERO: editorial headline + taped snapshot + founders' note ============ -->
     <section class="hero" aria-labelledby="hero-title">
+      <!-- The store sign IS the headline: mounted on the wall like the storefront fascia -->
+      <h1 id="hero-title" class="storefront">
+        <span class="storefront__board">
+          <span class="bolt bolt--tl" aria-hidden="true"></span>
+          <span class="bolt bolt--tr" aria-hidden="true"></span>
+          <span class="bolt bolt--bl" aria-hidden="true"></span>
+          <span class="bolt bolt--br" aria-hidden="true"></span>
+          <img src="images/web/tienda-salvadorena-sign.webp"
+               srcset="images/web/tienda-salvadorena-sign.webp 1200w, images/web/tienda-salvadorena-sign-1600.webp 1600w"
+               sizes="(min-width: 1240px) 1100px, 92vw"
+               width="1600" height="936" fetchpriority="high"
+               alt="Tienda Salvadoreña — Venta de productos centroamericanos"
+               data-i18n-alt="home2.hero.signAlt">
+        </span>
+      </h1>
+
       <div class="hero__copy">
         <p class="kicker"><span data-i18n="home2.hero.kicker">5128 E Colfax Ave · Denver · desde 1991</span></p>
-        <h1 id="hero-title" class="hero__title" data-i18n="home2.hero.title" data-i18n-html="true"><span class="t-small">Un pedacito de</span> <span class="t-huge">El Salvador</span> <span class="t-mid">en <em>East Colfax.</em></span></h1>
+        <p class="hero__title" data-i18n="home2.hero.title" data-i18n-html="true"><span class="t-small">Un pedacito de</span> <span class="t-huge">El Salvador</span> <span class="t-mid">en <em>East Colfax.</em></span></p>
         <p class="hero__lead" data-i18n="home2.hero.lead">Queso duro, Kolashampan, pan dulce, guayaberas, el Silabario de la escuela y todo lo que extraña de casa. Hace más de 30 años que lo traemos de El Salvador y Centroamérica, y lo acomodamos a mano en cada estante.</p>
 
         <div class="hero__actions">
@@ -168,8 +188,7 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
           <img src="images/web/grandparents-el-salvador-flag.webp"
                width="1200" height="903"
                alt="Jorge y Delia Romero, fundadores de Tienda Salvadoreña, de pie frente a una bandera de El Salvador dentro de la tienda"
-               data-i18n-alt="hero.img.owners"
-               fetchpriority="high">
+               data-i18n-alt="hero.img.owners">
           <figcaption><span data-i18n="hero.img.owners.caption">Jorge y Delia Romero, fundadores</span> · <span data-i18n="hero.img.owners.credit">Foto: Nicolle Menéndez / Diario El Salvador</span></figcaption>
         </figure>
 
@@ -177,7 +196,7 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
         <div class="door-tag">
           <span class="door-tag__string" aria-hidden="true"></span>
           <div class="door-tag__face">
-            <span class="door-tag__hello" data-i18n="home2.tag.hello">¡Pase adelante!</span>
+            <span class="door-tag__hello" data-i18n="home2.tag.hello">¡Pase adelante, chero!</span>
             <p class="door-tag__status" data-store-status hidden></p>
           </div>
         </div>
@@ -185,12 +204,14 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
         <!-- Handwritten welcome note -->
         <aside class="founders-note" aria-labelledby="note-title">
           <span class="pin" aria-hidden="true"></span>
-          <h2 id="note-title" class="founders-note__hi" data-i18n="home2.note.hi">¡Bienvenidos, vecinos!</h2>
+          <h2 id="note-title" class="founders-note__hi" data-i18n="home2.note.hi">¡Qué tal, cheros y cipotes!</h2>
           <p data-i18n="home2.note.body">Si no lo ve en el estante, pregúntenos: a lo mejor está en la bodega. Y si es su primera vez, llévese el queso duro.</p>
           <p class="founders-note__sign" data-i18n="home2.note.sign">— Jorge y Delia</p>
         </aside>
       </div>
     </section>
+
+    <div class="folk-border" aria-hidden="true"></div>
 
     <!-- ============ STORY SPREAD (magazine layout) ============ -->
     <section class="spread" aria-labelledby="story-title">
@@ -230,6 +251,19 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
       </ul>
     </section>
 
+    <!-- ============ VOLCANO DIVIDER: Ilamatepec (Santa Ana) + Izalco outlines ============ -->
+    <div class="volcano-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 150" preserveAspectRatio="xMidYMax meet" focusable="false">
+        <path class="v-back" d="M520 146 C 580 128, 640 118, 700 124 C 730 127, 760 134, 790 140"/>
+        <path class="v-ridge" d="M0 142 C 120 138, 220 122, 300 94 C 360 72, 400 54, 432 48 L 452 50 L 470 46 L 492 50 L 506 52 C 534 58, 584 82, 640 106 C 668 114, 696 102, 718 100 C 740 98, 760 108, 782 114 L 862 68 L 872 62 L 882 68 L 962 122 C 1040 136, 1120 140, 1200 144"/>
+        <path class="v-smoke" d="M874 56 c -8 -8 6 -14 0 -22 c -5 -7 7 -11 4 -18"/>
+        <text class="v-label" x="430" y="28" text-anchor="middle">Ilamatepec · Santa Ana</text>
+        <text class="v-label" x="852" y="46" text-anchor="end">Izalco, el Faro del Pacífico →</text>
+      </svg>
+    </div>
+
+    <div class="folk-border" aria-hidden="true"></div>
+
     <!-- ============ SHELVES: asymmetric masonry of real store photos ============ -->
     <section id="estantes" class="shelves" aria-labelledby="shelves-title">
       <header class="shelves__header">
@@ -243,7 +277,8 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
           <a href="items.html?cat=drinks#product-gallery">
             <img src="images/web/kolashampan.webp" width="900" height="1200" loading="lazy"
                  alt="Botellas de Kolashampan, la gaseosa salvadoreña color naranja, alineadas en el estante" data-i18n-alt="hero.img.kola">
-            <span class="shelf-tag"><span class="shelf-tag__name">Kolashampan</span><span class="shelf-tag__cat" data-i18n="items.category.drinks">Bebidas</span></span>
+            <span class="lore" data-i18n="home2.lore.kola">Ni uva ni naranja: sabe a kola champán… y a recreo de escuela.</span>
+            <span class="shelf-tag"><span class="shelf-tag__name">Kolashampan</span><span class="shelf-tag__cat" data-i18n="home2.tag.kola">¡Bien helada!</span></span>
           </a>
         </li>
         <li class="tile tile--r2">
@@ -257,13 +292,15 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
           <a href="items.html?cat=food#product-gallery">
             <img src="images/web/queso-duro-viejo.webp" width="900" height="1200" loading="lazy"
                  alt="Paquete de queso duro viejo importado de El Salvador" data-i18n-alt="alt.queso-duro-viejo">
-            <span class="shelf-tag shelf-tag--hot"><span class="shelf-tag__name" data-i18n="items.queso-duro">Queso Duro Viejo</span><span class="shelf-tag__cat" data-i18n="home2.tag.fav">El favorito</span></span>
+            <span class="lore" data-i18n="home2.lore.queso">Rallado sobre los frijolitos, o con tortilla tostada y café.</span>
+            <span class="shelf-tag shelf-tag--hot"><span class="shelf-tag__name" data-i18n="items.queso-duro">Queso Duro Viejo</span><span class="shelf-tag__cat" data-i18n="home2.tag.fav">Bien chivo</span></span>
           </a>
         </li>
         <li class="tile tile--r4">
           <a href="items.html?cat=clothing#product-gallery">
             <img src="images/web/guayabera-traditional-shirts.webp" width="1200" height="900" loading="lazy"
                  alt="Guayaberas blancas tradicionales con bordados, colgadas en un perchero de la tienda" data-i18n-alt="cat.clothing.imgAlt">
+            <span class="lore" data-i18n="home2.lore.guaya">De gala en bodas y bautizos, fresquita para el calor del puerto.</span>
             <span class="shelf-tag"><span class="shelf-tag__name" data-i18n="items.guayaberas">Guayaberas</span><span class="shelf-tag__cat" data-i18n="items.category.clothing">Ropa y calzado</span></span>
           </a>
         </li>
@@ -271,12 +308,13 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
           <a href="items.html?cat=food#product-gallery">
             <img src="images/web/pandulce-quesadilla-bread.webp" width="900" height="1200" loading="lazy"
                  alt="Pan dulce, quesadillas y galletas empacadas" data-i18n-alt="alt.pan-dulce-y-quesadillas">
-            <span class="shelf-tag"><span class="shelf-tag__name" data-i18n="items.pan-dulce">Pan Dulce</span><span class="shelf-tag__cat" data-i18n="home2.tag.early">Llegue temprano</span></span>
+            <span class="lore" data-i18n="home2.lore.pan">La quesadilla salvadoreña lleva queso y harina de arroz: dulce y salada a la vez.</span>
+            <span class="shelf-tag"><span class="shelf-tag__name" data-i18n="items.pan-dulce">Pan Dulce</span><span class="shelf-tag__cat" data-i18n="home2.tag.early">Para el cafecito</span></span>
           </a>
         </li>
         <li class="tile tile--note">
           <a href="items.html" class="cardboard">
-            <span class="cardboard__line" data-i18n="home2.cardboard.a">También hay:</span>
+            <span class="cardboard__line" data-i18n="home2.cardboard.a">Y otros chunches:</span>
             <span class="cardboard__list" data-i18n="home2.cardboard.b">chanclas · banderas · carteras · dulces típicos · nances · tamales de elote · remedios · recuerdos</span>
             <span class="cardboard__cta" data-i18n="categories.viewall">Ver todos los artículos</span>
           </a>
@@ -292,6 +330,7 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
           <a href="items.html?cat=nostalgia#product-gallery">
             <img src="images/web/silabario-hispanoamericano-pronounciationbook.webp" width="900" height="1200" loading="lazy"
                  alt="Portada del Silabario Hispanoamericano" data-i18n-alt="alt.silabario-hispanoamericano">
+            <span class="lore" data-i18n="home2.lore.sila">Del maestro chileno Adrián Dufflocq: con él aprendieron a leer generaciones.</span>
             <span class="shelf-tag"><span class="shelf-tag__name" data-i18n="items.silabario">Silabario Hispanoamericano</span><span class="shelf-tag__cat" data-i18n="items.category.nostalgia">Nostalgia y hogar</span></span>
           </a>
         </li>
@@ -319,6 +358,168 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
       </ul>
     </section>
 
+    <div class="folk-border" aria-hidden="true"></div>
+
+    <!-- ============ ARTISAN TOWNS: origin stories ============ -->
+    <section id="artesanos" class="artesanos" aria-labelledby="art-title">
+      <header class="artesanos__header">
+        <p class="kicker" data-i18n="home2.art.kicker">Hecho a mano en el Pulgarcito</p>
+        <h2 id="art-title" class="artesanos__title" data-i18n="home2.art.title" data-i18n-html="true">Los pueblos detrás <em>de lo artesanal</em></h2>
+        <p class="artesanos__lead" data-i18n="home2.art.lead">El Salvador es chiquito, pero cada pueblo tiene su oficio. Estas son las tradiciones artesanales que nos recuerdan a casa. ¿Quiere saber de dónde viene una pieza en particular? Pregúntenos en la tienda.</p>
+      </header>
+
+      <div class="artesanos__layout">
+        <div class="artesanos__photos">
+          <figure class="snapshot snapshot--art1">
+            <span class="tape tape--top" aria-hidden="true"></span>
+            <img src="images/web/carteras-traditional-sparkley.webp" width="1200" height="900" loading="lazy"
+                 alt="Carteras tradicionales y modernas en una vitrina de vidrio" data-i18n-alt="alt.carteras">
+            <figcaption data-i18n="home2.art.photo1">Carteras y bolsos en la vitrina de la tienda.</figcaption>
+          </figure>
+          <figure class="snapshot snapshot--art2">
+            <span class="tape tape--tr" aria-hidden="true"></span>
+            <img src="images/web/dress-bags-blankets.webp" width="900" height="1200" loading="lazy"
+                 alt="Vestidos tradicionales, bolsos y mantas en exhibición" data-i18n-alt="alt.vestidos-y-bolsos">
+            <figcaption data-i18n="home2.art.photo2">Vestidos, bolsos y mantas de colores.</figcaption>
+          </figure>
+        </div>
+
+        <ol class="origins">
+          <li class="origin origin--achiote">
+            <svg class="origin__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M14 8h12M15 8c0 4-7 7-7 15 0 7 5 11 12 11s12-4 12-11c0-8-7-11-7-15"/><path d="M11 22h18M12 27h16"/></svg>
+            <h3 class="origin__town">Ilobasco</h3>
+            <p class="origin__dept">Cabañas</p>
+            <p class="origin__craft" data-i18n="home2.art.ilobasco">Barro pintado y las famosas «sorpresas»: cascaritas de barro que esconden escenas en miniatura.</p>
+          </li>
+          <li class="origin origin--cobalt">
+            <svg class="origin__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M6 8h28M6 32h28M10 8v24M16 8v24M22 8v24M28 8v24M6 14h28M6 20h28M6 26h28"/></svg>
+            <h3 class="origin__town">Concepción de Ataco</h3>
+            <p class="origin__dept">Ahuachapán</p>
+            <p class="origin__craft" data-i18n="home2.art.ataco">Telares de colores en plena Ruta de las Flores: cintas, manteles y bolsos tejidos a mano.</p>
+          </li>
+          <li class="origin origin--jade">
+            <svg class="origin__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M6 16h28l-4 18H10z"/><path d="M12 16c0-6 4-10 8-10s8 4 8 10"/><path d="M9 22h22M8 28h24M15 16l-2 18M20 16v18M25 16l2 18"/></svg>
+            <h3 class="origin__town">Nahuizalco</h3>
+            <p class="origin__dept">Sonsonate</p>
+            <p class="origin__craft" data-i18n="home2.art.nahuizalco">Mimbre y tule: canastos, petates y muebles tejidos a mano. Y su mercado nocturno a la luz de las velas.</p>
+          </li>
+          <li class="origin origin--maize">
+            <svg class="origin__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M6 24c6-2 10-8 18-8 4 0 7 2 10 1-2 3-5 4-8 4l-6 8c-5 1-10-1-14-5z"/><path d="M18 18c-2-5-1-9 3-12 1 4 2 8 0 11"/><circle cx="29" cy="18" r="1.2"/></svg>
+            <h3 class="origin__town">La Palma</h3>
+            <p class="origin__dept">Chalatenango</p>
+            <p class="origin__craft" data-i18n="home2.art.lapalma">El estilo de Fernando Llort: casitas, palomas y montañas pintadas en madera con colores vivos.</p>
+          </li>
+          <li class="origin origin--cobalt">
+            <svg class="origin__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M4 10l6 4M36 10l-6 4"/><path d="M10 14c4 14 16 14 20 0"/><path d="M13 18c3 7 11 7 14 0M16 14v8M20 14v10M24 14v8"/></svg>
+            <h3 class="origin__town">San Sebastián</h3>
+            <p class="origin__dept">San Vicente</p>
+            <p class="origin__craft" data-i18n="home2.art.sansebastian">Hamacas y colchas tejidas en telares de madera, hilo por hilo.</p>
+          </li>
+          <li class="origin origin--ink">
+            <svg class="origin__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M10 14h20M12 14c-4 4-5 9-3 14 2 4 6 6 11 6s9-2 11-6c2-5 1-10-3-14"/><path d="M15 14c0-3 2-6 5-6s5 3 5 6"/></svg>
+            <h3 class="origin__town">Guatajiagua</h3>
+            <p class="origin__dept">Morazán</p>
+            <p class="origin__craft" data-i18n="home2.art.guatajiagua">Barro negro de tradición lenca, pulido a mano y quemado a leña.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="folk-border" aria-hidden="true"></div>
+
+    <!-- ============ COOK-AT-HOME PUPUSA GUIDE (the store is a grocery, not a restaurant) ============ -->
+    <section id="pupusas" class="pupusas" aria-labelledby="pup-title">
+      <header class="pupusas__header">
+        <p class="kicker" data-i18n="home2.pup.kicker">Para cocinar en casa</p>
+        <h2 id="pup-title" class="pupusas__title" data-i18n="home2.pup.title" data-i18n-html="true">¿Y las pupusas, <em>pues?</em></h2>
+        <p class="pupusas__lead" data-i18n="home2.pup.lead">Aquí somos tienda, no cocina. Pero si se lleva harina, frijolitos y queso, ya sabemos qué va a hacer en casa. Esta es la anatomía de la pupusa ideal.</p>
+        <p class="pupusa-day" data-i18n="home2.pup.day" data-i18n-html="true"><span>Día Nacional de la Pupusa</span> segundo domingo de noviembre</p>
+      </header>
+
+      <div class="pupusas__grid">
+        <figure class="anatomy">
+          <svg viewBox="0 0 560 410" role="img" aria-labelledby="anatomy-title" data-i18n-aria-label="home2.pup.svgAlt">
+            <title id="anatomy-title">Diagrama de una pupusa cortada: masa, relleno, manchitas del comal, curtido y salsa de tomate</title>
+            <!-- painted clay plate -->
+            <ellipse class="a-plate" cx="280" cy="270" rx="250" ry="72"/>
+            <ellipse class="a-plate-rim" cx="280" cy="270" rx="214" ry="56"/>
+            <!-- pupusa, cut to show the layers -->
+            <path class="a-masa-top" d="M110 248 C 130 214, 330 214, 350 248 Z"/>
+            <ellipse class="a-spot" cx="180" cy="233" rx="7" ry="2.6"/>
+            <ellipse class="a-spot" cx="238" cy="227" rx="8" ry="2.8"/>
+            <ellipse class="a-spot" cx="298" cy="235" rx="6" ry="2.4"/>
+            <path class="a-fill" d="M110 248 H350 V262 H110 Z"/>
+            <path class="a-cheese" d="M348 251 q16 3 10 14 q-7 5 -12 -4 z"/>
+            <circle class="a-loroco" cx="150" cy="255" r="3.2"/><circle class="a-loroco" cx="206" cy="256" r="3.2"/><circle class="a-loroco" cx="272" cy="254" r="3.2"/><circle class="a-loroco" cx="322" cy="256" r="3.2"/>
+            <circle class="a-frijol" cx="176" cy="256" r="3.2"/><circle class="a-frijol" cx="240" cy="255" r="3.2"/><circle class="a-frijol" cx="298" cy="256" r="3.2"/>
+            <path class="a-masa-bottom" d="M110 262 H350 C 340 284, 120 284, 110 262 Z"/>
+            <!-- curtido -->
+            <g class="a-curtido">
+              <path d="M398 262 q16 -22 34 -6"/><path d="M406 250 q20 -18 40 0"/><path d="M420 266 q18 -26 44 -8"/>
+              <path d="M392 248 q22 -14 36 4"/><path d="M430 244 q18 -10 34 8"/><path d="M412 238 q14 -12 30 2"/>
+              <path class="a-carrot" d="M404 256 l18 -10"/><path class="a-carrot" d="M436 258 l16 -14"/><path class="a-carrot" d="M418 244 l20 4"/>
+            </g>
+            <!-- salsa bowl with Ilobasco dots -->
+            <path class="a-bowl" d="M430 112 h80 q-6 34 -40 34 q-34 0 -40 -34 z"/>
+            <ellipse class="a-salsa" cx="470" cy="112" rx="40" ry="8"/>
+            <circle class="a-bowl-dot" cx="452" cy="126" r="3"/><circle class="a-bowl-dot" cx="470" cy="130" r="3"/><circle class="a-bowl-dot" cx="488" cy="126" r="3"/>
+            <!-- labels -->
+            <path class="a-lead" d="M126 236 L 72 200"/>
+            <text class="a-label" x="12" y="168" data-i18n="home2.lbl.masa1">la masa</text>
+            <text class="a-sub" x="12" y="192" data-i18n="home2.lbl.masa2">maíz o arroz</text>
+            <path class="a-lead" d="M238 224 L 246 150"/>
+            <text class="a-label" x="170" y="118" data-i18n="home2.lbl.comal1">manchitas doradas</text>
+            <text class="a-sub" x="170" y="140" data-i18n="home2.lbl.comal2">= ¡en su punto!</text>
+            <path class="a-lead" d="M232 260 L 200 340"/>
+            <text class="a-label" x="100" y="362" data-i18n="home2.lbl.fill1">el relleno</text>
+            <text class="a-sub" x="100" y="388" data-i18n="home2.lbl.fill2">queso, loroco, frijol o revuelta</text>
+            <path class="a-lead" d="M444 238 L 500 206"/>
+            <text class="a-label" x="552" y="172" text-anchor="end" data-i18n="home2.lbl.curtido1">el curtido</text>
+            <text class="a-sub" x="552" y="196" text-anchor="end" data-i18n="home2.lbl.curtido2">que cruja, sin ahogar</text>
+            <path class="a-lead" d="M440 104 L 404 88"/>
+            <text class="a-label" x="300" y="56" data-i18n="home2.lbl.salsa1">salsa de tomate</text>
+            <text class="a-sub" x="300" y="78" data-i18n="home2.lbl.salsa2">aguadita, nunca espesa</text>
+          </svg>
+          <figcaption data-i18n="home2.pup.caption">Anatomía de la pupusa. Dibujo hecho en casa, como las pupusas.</figcaption>
+        </figure>
+
+        <div class="recipe-card">
+          <h3 class="recipe-card__title" data-i18n="home2.pup.cardTitle">Tips de la casa</h3>
+          <ol class="recipe-card__list">
+            <li data-i18n="home2.pup.t1" data-i18n-html="true"><strong>La masa:</strong> 2 tazas de harina de maíz, 1½ tazas de agua tibia y una pizca de sal. Amase hasta que quede suavecita, como plastilina. ¿Se raja en las orillas? Un chorrito más de agua.</li>
+            <li data-i18n="home2.pup.t2" data-i18n-html="true"><strong>Las manos:</strong> mójelas en agua con un poquito de aceite y la masa no se le pega.</li>
+            <li data-i18n="home2.pup.t3" data-i18n-html="true"><strong>El relleno:</strong> una bolita del tamaño de una nuez grande. Si la llena de más, se le revienta en el comal.</li>
+            <li data-i18n="home2.pup.t4" data-i18n-html="true"><strong>El comal:</strong> fuego medio, 3 a 4 minutos por lado, hasta que salgan las manchitas doradas.</li>
+            <li data-i18n="home2.pup.t5" data-i18n-html="true"><strong>El curtido:</strong> repollo, zanahoria, cebolla, orégano y vinagre, mejor si lo deja reposar desde la noche anterior. Una buena porción encima, que cruja, pero que la pupusa se siga sintiendo.</li>
+            <li data-i18n="home2.pup.t6" data-i18n-html="true"><strong>Regla de oro:</strong> se comen con la mano. Ley.</li>
+          </ol>
+          <p class="recipe-card__shop" data-i18n="home2.pup.shop">Busque en los estantes: harina de maíz, frijoles, quesos, crema y especias. ¿Loroco? Pregunte qué llegó esta semana.</p>
+          <a class="ink-link" href="items.html?cat=food#product-gallery" data-i18n="home2.pup.shopLink">Ver la despensa</a>
+        </div>
+
+        <!-- Radio Tienda: Web Audio marimba, only plays when toggled on (js/radio.js) -->
+        <aside class="radio" aria-labelledby="radio-title">
+          <div class="radio__cabinet">
+            <div class="radio__grille" aria-hidden="true"></div>
+            <div class="radio__face">
+              <h3 id="radio-title" class="radio__name">Radio Tienda <span>1991 AM</span></h3>
+              <div class="radio__dial" aria-hidden="true">
+                <span class="radio__scale">540 · 700 · 900 · 1100 · 1400 · 1600</span>
+                <span class="radio__needle"></span>
+              </div>
+              <span class="radio__light" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="radio__controls">
+            <p class="radio__pitch" data-i18n="home2.radio.pitch">Póngale marimba mientras echa las pupusas.</p>
+            <button type="button" class="btn btn--paper radio__btn" aria-pressed="false" data-radio-toggle><span data-radio-label>Encender la marimba</span></button>
+            <p class="radio__now" data-radio-status aria-live="polite">Apagado</p>
+            <p class="radio__fine" data-i18n="home2.radio.fine">Melodía original estilo marimba, tocada por su navegador. Solo suena si usted la enciende.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
     <!-- ============ COLFAX CONSTRUCTION HEADS-UP ============ -->
     <section id="obras" class="obras" aria-labelledby="obras-title">
       <div class="obras__inner">
@@ -326,7 +527,7 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
           <p class="obras__stamp" data-i18n="home2.obras.stamp">Aviso para los de siempre</p>
           <h2 id="obras-title" class="obras__title" data-i18n="home2.obras.title" data-i18n-html="true">¡Ojo, vecino! <span>Colfax anda en obra.</span></h2>
           <p class="obras__lead" data-i18n="home2.obras.lead">Esos conos anaranjados frente a la tienda no son decoración nueva. Estacione detrás de la tienda y dé la vuelta hasta la entrada, o busque lugar en la calle. Las obras van despacio; nosotros seguimos abiertos.</p>
-          <p class="scribble scribble--dark" data-i18n="home2.obras.joke">Y sí, la vuelta vale la pena por el queso duro.</p>
+          <p class="scribble scribble--dark" data-i18n="home2.obras.joke">Vaya pues: la vuelta vale la pena por el queso duro.</p>
           <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=5128+E+Colfax+Ave,+Denver,+CO+80220" target="_blank" rel="noopener noreferrer" data-i18n="map.directions">Cómo llegar</a>
         </div>
 
@@ -367,7 +568,7 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
     <section id="visitanos" class="visit" aria-labelledby="visit-title">
       <header class="visit__header">
         <p class="kicker" data-i18n="visit.eyebrow">Visítanos</p>
-        <h2 id="visit-title" class="visit__title" data-i18n="home2.visit.title">Venga a vernos.</h2>
+        <h2 id="visit-title" class="visit__title" data-i18n="home2.visit.title">Venga a vernos, pues.</h2>
       </header>
 
       <div class="visit__grid">
@@ -437,6 +638,19 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
   </main>
 
   <footer class="site-footer">
+    <!-- Pocket dictionary of Salvadoran slang -->
+    <div class="caliche" aria-labelledby="caliche-title">
+      <h2 id="caliche-title" class="caliche__title" data-i18n="home2.cal.title">Caliche de bolsillo</h2>
+      <dl class="caliche__list">
+        <div><dt>cipote</dt><dd data-i18n="home2.cal.cipote">niño, chamaco</dd></div>
+        <div><dt>chero</dt><dd data-i18n="home2.cal.chero">amigo, compa</dd></div>
+        <div><dt>chivo</dt><dd data-i18n="home2.cal.chivo">¡qué bueno!</dd></div>
+        <div><dt>chunche</dt><dd data-i18n="home2.cal.chunche">cosa, cachivache</dd></div>
+        <div><dt>puchica</dt><dd data-i18n="home2.cal.puchica">¡caramba!</dd></div>
+        <div><dt>pisto</dt><dd data-i18n="home2.cal.pisto">dinero</dd></div>
+        <div><dt>vaya pues</dt><dd data-i18n="home2.cal.vaya">está bien, de acuerdo</dd></div>
+      </dl>
+    </div>
     <div class="footer-grid">
       <div class="footer-brand">
         <img class="footer-logo" src="images/web/tienda-salvadorena-sign.webp" width="1200" height="706" loading="lazy"
@@ -473,11 +687,12 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
 
     <div class="footer-bottom">
       <p data-i18n="footer.copy">© 2026 Tienda Salvadoreña. Todos los derechos reservados.</p>
-      <p class="footer-bottom__wink" data-i18n="home2.footer.wink">Hecho en East Colfax, con conos y todo.</p>
+      <p class="footer-bottom__wink" data-i18n="home2.footer.wink">Hecho en East Colfax, con conos y todo. ¡Va pues!</p>
     </div>
   </footer>
 
-  <script src="js/lang-toggle.js?v=20261020a" defer></script>
-  <script src="js/site.js?v=20261020a" defer></script>
+  <script src="js/lang-toggle.js?v=20261020c" defer></script>
+  <script src="js/site.js?v=20261020b" defer></script>
+  <script src="js/radio.js?v=20261020b" defer></script>
 </body>
 </html>
