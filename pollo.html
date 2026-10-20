@@ -4,7 +4,7 @@
   Login name: dquint32@msudenver.edu 
   Date Created: 11/02/2025 
   Date Due: 12/01/2024 
-  Modified: 12/12/2025 
+  Modified: 10/20/2026 (sign-themed, mobile-first redesign)
   Filename: pollo.html 
   Purpose: To celebrate the cultural significance and heritage of Pollo Campero within the Central American community, provide practical instructions for reheating the chicken (Air Fryer and Oven methods, including safe temperature guidelines and connect the nostalgia of this authentic meal with the store's mission.
   Editor: Notepad 
@@ -22,7 +22,7 @@
   <meta name="description" data-i18n="desc.pollo" content="Historia del Pollo Campero y guía para recalentarlo (air fryer y horno) con el mejor sabor. Tradición centroamericana en Denver, Colorado.">
   <meta name="keywords" content="Pollo Campero Denver, recalentar Pollo Campero, air fryer, horno, tradición centroamericana, El Salvador, Guatemala">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#0F47AF">
+  <meta name="theme-color" content="#C01A24">
 
   <link rel="canonical" href="https://tiendasalvadorenadenver.com/pollo.html">
   <link rel="alternate" hreflang="es" href="https://tiendasalvadorenadenver.com/pollo.html">
@@ -54,8 +54,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=20261008e">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -68,15 +66,24 @@
   }
   </script>
   <script>document.documentElement.classList.add('js');</script>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=20261020d">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=20261020d">
 </head>
-<body>
+<body class="page-pollo">
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
+
+  <!-- ============ CAUTION TAPE (links to the construction heads-up) ============ -->
+  <a class="caution-tape" href="#obras">
+    <span class="caution-tape__text" data-i18n="home2.tape">Obras en Colfax · Seguimos abiertos · Estacione atrás de la tienda · Obras en Colfax · Seguimos abiertos · Estacione atrás de la tienda ·</span>
+  </a>
 
   <header class="site-header">
     <div class="header-toolbar">
       <a href="index.html" class="brand-link">
         <img src="images/web/tienda-salvadorena-sign.webp" alt="" width="1200" height="706" class="brand-logo">
-        <span class="brand-name">Tienda Salvadoreña</span>
+        <span class="brand-name">Tienda Salvadoreña <small data-i18n="home2.brand.since">Est. 1991 · East Colfax</small></span>
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menú" data-i18n-aria-label="nav.menu">
@@ -99,194 +106,84 @@
     </div>
   </header>
 
-  <section class="hero hero--text" aria-labelledby="pollo-hero-title">
-    <div class="hero__inner">
-      <div class="hero__content">
-        <h1 id="pollo-hero-title" class="hero__title" data-i18n="pollo.hero.title">Pollo Campero – Tradición Familiar</h1>
-        
-        <p class="hero__subtitle" data-i18n="pollo.hero.lead">
-          Nota: Pollo Campero es un alimento muy querido en Centroamérica. Nuestra familia lo disfruta como parte de nuestras tradiciones, y sabemos que muchos viajeros lo traen en cajas frías desde Guatemala o El Salvador para compartir en casa.
-        </p>
-        
-        <p class="hero__note" data-i18n="pollo.hero.note">
-          Aquí compartimos recomendaciones para recalentar y disfrutarlo con el mejor sabor, tal como lo hacemos en familia.
-        </p>
+  <!-- Banderitas: the five flags from the store sign, strung across the storefront -->
+  <div class="banderitas" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="pollo-hero-title">
+      <div class="page-hero__copy">
+        <p class="kicker" data-i18n="nav.pollo">Pollo Campero</p>
+        <h1 id="pollo-hero-title" class="page-hero__title" data-i18n="pollo.hero.title">Pollo Campero – Tradición Familiar</h1>
+        <p class="page-hero__lead" data-i18n="pollo.hero.lead">Nota: Pollo Campero es un alimento muy querido en Centroamérica. Nuestra familia lo disfruta como parte de nuestras tradiciones, y sabemos que muchos viajeros lo traen en cajas frías desde Guatemala o El Salvador para compartir en casa.</p>
+        <p class="page-hero__note scribble" data-i18n="pollo.hero.note">Aquí compartimos recomendaciones para recalentar y disfrutarlo con el mejor sabor, tal como lo hacemos en familia.</p>
       </div>
-    </div>
-  </section>
+      <div class="page-hero__media">
+        <figure class="snapshot">
+          <span class="tape tape--tl" aria-hidden="true"></span>
+          <img src="images/web/pollocampero_familia.webp" width="1200" height="692" fetchpriority="high"
+               alt="Jorge y Delia comiendo Pollo Campero en familia" data-i18n-alt="alt.jorge-y-delia-comiendo-pollo-campero-en-">
+          <figcaption><span data-i18n="pollo.image.caption">Pollo Campero – tradición familiar celebrada por generaciones.</span></figcaption>
+        </figure>
+      </div>
+    </section>
 
-  <main id="main" class="container">
-    <section class="real-story" aria-labelledby="story-title">
-      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--light-gray);">
-      <div class="story-with-feature">
-        <div class="story">
-          <h2 id="story-title" data-i18n="pollo.story.title">Historia cultural del alimento</h2>
+    <div class="folk-border" aria-hidden="true"></div>
 
-          <p data-i18n="pollo.story.p1">
-            Pollo Campero se originó en Guatemala y se convirtió en un pilar en El Salvador desde 1972. Está profundamente ligado a tradiciones familiares, celebraciones y recuerdos de la infancia. Muchos viajeros llevan cajas de Pollo Campero desde el aeropuerto para compartir con sus seres queridos – porque sabe a casa.
-          </p>
-
-          <p data-i18n="pollo.story.p2" data-i18n-html="true">
-            Para nuestra familia, disfrutar Pollo Campero significa revivir herencia, recuerdos preciados y el auténtico <em>Sabor Campero</em>.
-          </p>
+    <section class="page-section" aria-labelledby="story-title">
+      <div class="split">
+        <div class="prose">
+          <h2 class="section-title" data-i18n="pollo.story.title" id="story-title">Historia cultural del alimento</h2>
+          <p class="dropcap" data-i18n="pollo.story.p1">Pollo Campero se originó en Guatemala y se convirtió en un pilar en El Salvador desde 1972. Está profundamente ligado a tradiciones familiares, celebraciones y recuerdos de la infancia. Muchos viajeros llevan cajas de Pollo Campero desde el aeropuerto para compartir con sus seres queridos – porque sabe a casa.</p>
+          <p data-i18n="pollo.story.p2" data-i18n-html="true">Para nuestra familia, disfrutar Pollo Campero significa revivir herencia, recuerdos preciados y el auténtico <em>Sabor Campero</em>.</p>
         </div>
-
-        <div class="feature-image">
-          <figure>
-            <img src="images/web/pollocampero_familia.webp" 
-                 alt="Jorge y Delia comiendo Pollo Campero en familia" data-i18n-alt="alt.jorge-y-delia-comiendo-pollo-campero-en-" 
-                 loading="lazy">
-            <figcaption data-i18n="pollo.image.caption">
-              Pollo Campero – tradición familiar celebrada por generaciones.
-            </figcaption>
-          </figure>
+        <div>
+          <h3 class="kicker" data-i18n="pollo.why.title">¿Por qué Pollo Campero?</h3>
+          <ul class="check-list">
+            <li data-i18n="pollo.why.authentic" data-i18n-html="true"><strong>Auténtico:</strong> Receta original guatemalteca desde 1971</li>
+            <li data-i18n="pollo.why.nostalgic" data-i18n-html="true"><strong>Nostálgico:</strong> Sabor que conecta con el hogar y la infancia</li>
+            <li data-i18n="pollo.why.family" data-i18n-html="true"><strong>Familiar:</strong> Perfecto para reuniones y celebraciones</li>
+            <li data-i18n="pollo.why.exclusive" data-i18n-html="true"><strong>Exclusivo:</strong> Difícil de encontrar fuera de Centroamérica</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--light-gray);">
+    <div class="folk-border" aria-hidden="true"></div>
 
-    <section class="card fade-in" 
-             style="margin-top: 3rem; border-left: 5px solid var(--brick-red);" 
-             aria-labelledby="reheat-title">
-      <h2 id="reheat-title" data-i18n="pollo.reheat.title">Recomendaciones para recalentar</h2>
-      <p data-i18n="pollo.reheat.intro" style="margin-bottom: 1.5rem;">
-        El pollo suele entregarse frío en caja. Para recuperar textura crujiente y sabor, use uno de estos métodos:
-      </p>
-
-      <article style="margin-bottom: 2rem; padding: 1.5rem; background-color: var(--soft-cream); border-radius: 8px;">
-        <h3 style="margin-top: 0; color: var(--brick-red);" data-i18n="pollo.reheat.airfryer.title">
-          Método Air Fryer (Rápido y crujiente)
-        </h3>
-        <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8; list-style-type: disc;">
-          <li data-i18n="pollo.reheat.airfryer.step1" data-i18n-html="true">
-            Precaliente la freidora a <strong>190°C (375°F)</strong>.
-          </li>
-          <li data-i18n="pollo.reheat.airfryer.step2">
-            Coloque el pollo en una sola capa en la canasta (no sobrecargue).
-          </li>
-          <li data-i18n="pollo.reheat.airfryer.step3" data-i18n-html="true">
-            Recaliente <strong>4–6 minutos</strong>, volteando a la mitad si las piezas son grandes.
-          </li>
-          <li data-i18n="pollo.reheat.airfryer.step4" data-i18n-html="true">
-            Verifique la temperatura interna: debe alcanzar <strong>74°C (165°F)</strong>.
-          </li>
-          <li data-i18n="pollo.reheat.airfryer.step5">
-            Deje reposar 1–2 minutos antes de servir.
-          </li>
-        </ul>
-      </article>
-
-      <article style="padding: 1.5rem; background-color: var(--warm-beige); border-radius: 8px;">
-        <h3 style="margin-top: 0; color: var(--brick-red);" data-i18n="pollo.reheat.oven.title">
-          Método Horno (Más lento pero confiable)
-        </h3>
-        <ul style="margin: 1rem 0; padding-left: 1.5rem; line-height: 1.8; list-style-type: disc;">
-          <li data-i18n="pollo.reheat.oven.step1" data-i18n-html="true">
-            Precaliente el horno a <strong>200°C (400°F)</strong>.
-          </li>
-          <li data-i18n="pollo.reheat.oven.step2">
-            Coloque el pollo sobre una rejilla encima de una bandeja para hornear para mantener la corteza crujiente.
-          </li>
-          <li data-i18n="pollo.reheat.oven.step3">
-            Opcional: cubra flojamente con papel aluminio la primera mitad para evitar que se reseque; luego retire para dorar.
-          </li>
-          <li data-i18n="pollo.reheat.oven.step4" data-i18n-html="true">
-            Hornee <strong>12–15 minutos</strong>, volteando a la mitad si no usa rejilla.
-          </li>
-          <li data-i18n="pollo.reheat.oven.step5" data-i18n-html="true">
-            Verifique que la temperatura interna alcance <strong>74°C (165°F)</strong>.
-          </li>
-          <li data-i18n="pollo.reheat.oven.step6">
-            Deje reposar 2 minutos antes de servir.
-          </li>
-        </ul>
-      </article>
+    <section class="page-section page-section--tint" aria-labelledby="reheat-title">
+      <h2 class="section-title" data-i18n="pollo.reheat.title" id="reheat-title">Recomendaciones para recalentar</h2>
+      <p class="prose" data-i18n="pollo.reheat.intro">El pollo suele entregarse frío en caja. Para recuperar textura crujiente y sabor, use uno de estos métodos:</p>
+      <div class="methods">
+        <div class="recipe-card">
+          <h3 class="recipe-card__title" data-i18n="pollo.reheat.airfryer.title">Método Air Fryer (Rápido y crujiente)</h3>
+          <ol class="recipe-card__list">
+            <li data-i18n="pollo.reheat.airfryer.step1" data-i18n-html="true">Precaliente la freidora a <strong>190°C (375°F)</strong>.</li>
+            <li data-i18n="pollo.reheat.airfryer.step2">Coloque el pollo en una sola capa en la canasta (no sobrecargue).</li>
+            <li data-i18n="pollo.reheat.airfryer.step3" data-i18n-html="true">Recaliente <strong>4–6 minutos</strong>, volteando a la mitad si las piezas son grandes.</li>
+            <li data-i18n="pollo.reheat.airfryer.step4" data-i18n-html="true">Verifique la temperatura interna: debe alcanzar <strong>74°C (165°F)</strong>.</li>
+            <li data-i18n="pollo.reheat.airfryer.step5">Deje reposar 1–2 minutos antes de servir.</li>
+          </ol>
+        </div>
+        <div class="recipe-card">
+          <h3 class="recipe-card__title" data-i18n="pollo.reheat.oven.title">Método Horno (Más lento pero confiable)</h3>
+          <ol class="recipe-card__list">
+            <li data-i18n="pollo.reheat.oven.step1" data-i18n-html="true">Precaliente el horno a <strong>200°C (400°F)</strong>.</li>
+            <li data-i18n="pollo.reheat.oven.step2">Coloque el pollo sobre una rejilla encima de una bandeja para hornear para mantener la corteza crujiente.</li>
+            <li data-i18n="pollo.reheat.oven.step3">Opcional: cubra flojamente con papel aluminio la primera mitad para evitar que se reseque; luego retire para dorar.</li>
+            <li data-i18n="pollo.reheat.oven.step4" data-i18n-html="true">Hornee <strong>12–15 minutos</strong>, volteando a la mitad si no usa rejilla.</li>
+            <li data-i18n="pollo.reheat.oven.step5" data-i18n-html="true">Verifique que la temperatura interna alcance <strong>74°C (165°F)</strong>.</li>
+            <li data-i18n="pollo.reheat.oven.step6">Deje reposar 2 minutos antes de servir.</li>
+          </ol>
+        </div>
+      </div>
     </section>
 
-    <hr style="margin: 3rem 0 2rem 0; border: 0; border-top: 1px solid var(--light-gray);">
-
-    <section class="card fade-in" 
-             style="margin-top: 2rem; text-align: center; border-left: 5px solid var(--golden-accent); background-color: var(--soft-cream);" 
-             aria-labelledby="notes-title">
-      <h3 id="notes-title" data-i18n="pollo.notes.title">Información Importante</h3>
-      <p data-i18n="pollo.notes.text" style="margin-bottom: 0;">
-        Esta página está dedicada a compartir la tradición cultural de Pollo Campero y sus mejores métodos de recalentamiento.
-      </p>
-    </section>
-
-    <section class="card fade-in" style="margin-top: 2rem;">
-      <h3 data-i18n="pollo.why.title">¿Por qué Pollo Campero?</h3>
-      <ul style="list-style: none; padding: 0; margin-top: 1rem;">
-        <li style="padding: 0.75rem 0; border-bottom: 1px dashed var(--light-gray); display: flex; align-items: center; gap: 0.9rem;">
-          <span class="icon-chip" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/><path d="m9.5 8 1.75 1.75L14.5 6.5"/></svg></span>
-          <div data-i18n="pollo.why.authentic" data-i18n-html="true">
-            <strong>Auténtico:</strong> Receta original guatemalteca desde 1971
-          </div>
-        </li>
-        <li style="padding: 0.75rem 0; border-bottom: 1px dashed var(--light-gray); display: flex; align-items: center; gap: 0.9rem;">
-          <span class="icon-chip" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.5-9.3C1 8 3.4 4.5 7 4.5c2 0 3.6 1 5 2.8 1.4-1.8 3-2.8 5-2.8 3.6 0 6 3.5 4.5 7.2C19.5 16.4 12 21 12 21Z"/></svg></span>
-          <div data-i18n="pollo.why.nostalgic" data-i18n-html="true">
-            <strong>Nostálgico:</strong> Sabor que conecta con el hogar y la infancia
-          </div>
-        </li>
-        <li style="padding: 0.75rem 0; border-bottom: 1px dashed var(--light-gray); display: flex; align-items: center; gap: 0.9rem;">
-          <span class="icon-chip" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-          <div data-i18n="pollo.why.family" data-i18n-html="true">
-            <strong>Familiar:</strong> Perfecto para reuniones y celebraciones
-          </div>
-        </li>
-        <li style="padding: 0.75rem 0; display: flex; align-items: center; gap: 0.9rem;">
-          <span class="icon-chip" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg></span>
-          <div data-i18n="pollo.why.exclusive" data-i18n-html="true">
-            <strong>Exclusivo:</strong> Difícil de encontrar fuera de Centroamérica
-          </div>
-        </li>
-      </ul>
-    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-grid">
-      <div>
-        <img class="footer-logo" src="images/web/tienda-salvadorena-sign.webp" width="1200" height="706" loading="lazy"
-             alt="Letrero de la tienda" data-i18n-alt="alt.letrero-de-la-tienda">
-        <p class="footer-title">Tienda Salvadoreña</p>
-        <p data-i18n="footer.tagline">La tienda salvadoreña más antigua de Colorado. Productos de El Salvador y Centroamérica desde hace más de 30 años.</p>
-      </div>
 
-      <nav aria-label="Enlaces rápidos" data-i18n-aria-label="footer.links">
-        <h2 class="footer-heading" data-i18n="footer.links">Enlaces rápidos</h2>
-        <ul class="footer-links">
-          <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
-          <li><a href="items.html" data-i18n="nav.items">Artículos</a></li>
-          <li><a href="history.html" data-i18n="nav.history">Historia</a></li>
-          <li><a href="pollo.html" data-i18n="nav.pollo">Pollo Campero</a></li>
-          <li><a href="press.html" data-i18n="nav.press">Prensa</a></li>
-          <li><a href="contact.html" data-i18n="nav.contact">Contacto</a></li>
-        </ul>
-      </nav>
 
-      <div>
-        <h2 class="footer-heading" data-i18n="footer.visit">Visítanos</h2>
-        <address class="footer-contact">
-          <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220" target="_blank" rel="noopener noreferrer">5128 E Colfax Ave, Denver, CO 80220</a><br>
-          <a href="tel:+13033944185">(303) 394-4185</a><br>
-          <a href="mailto:info@tiendasalvadorenadenver.com">info@tiendasalvadorenadenver.com</a>
-        </address>
-        <p class="footer-hours">
-          <strong data-i18n="footer.hours_label">Horario:</strong>
-          <span data-i18n="footer.hours">Domingo 10 AM–6 PM · Lunes–Sábado 10 AM–7 PM</span>
-        </p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p data-i18n="footer.copy">© 2026 Tienda Salvadoreña. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <script src="js/lang-toggle.js?v=20261008e" defer></script>
-  <script src="js/site.js?v=20261008e" defer></script>
+  <script src="js/lang-toggle.js?v=20261020d" defer></script>
+  <script src="js/site.js?v=20261020d" defer></script>
 </body>
 </html>

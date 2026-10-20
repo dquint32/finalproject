@@ -11,9 +11,8 @@ Purpose: Home page for Tienda SalvadoreÃ±a (a grocery store, not a restaurant) â
 Editor: Notepad
 Generative AI Used: Yes
 Specific Tools Used: Copilot, Gemini, and Claude
-Notes: This page loads its own stylesheet (css/home.css) instead of css/style.css, so the
-       redesign does not change the other pages. Language toggle and live store hours still
-       come from js/lang-toggle.js and js/site.js.
+Notes: Every page shares css/main.css. Language toggle, live store hours and the radio
+       come from js/lang-toggle.js, js/site.js and js/radio.js.
 -->
 
 <!DOCTYPE html>
@@ -63,7 +62,7 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/home.css?v=20261020c">
+  <link rel="stylesheet" href="css/main.css?v=20261020d">
 
   <!-- Structured data: Local Business -->
   <script type="application/ld+json">
@@ -691,8 +690,8 @@ Notes: This page loads its own stylesheet (css/home.css) instead of css/style.cs
     </div>
   </footer>
 
-  <script src="js/lang-toggle.js?v=20261020c" defer></script>
-  <script src="js/site.js?v=20261020b" defer></script>
+  <script src="js/lang-toggle.js?v=20261020d" defer></script>
+  <script src="js/site.js?v=20261020d" defer></script>
   <script src="js/radio.js?v=20261020b" defer></script>
 </body>
 </html>
