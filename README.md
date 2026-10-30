@@ -37,6 +37,8 @@ The project is hosted on GitHub Pages:
 - `js/site.js` – Mobile menu, light/dark theme toggle, live open/closed status, back-to-top button  
 - `js/items.js` – Product filters and photo zoom (Artículos page)  
 - `js/radio.js` – Opt-in "Radio Tienda" marimba player (home page)  
+- `llms.txt` – Plain-text store summary (founders, address, hours, products) for AI answer engines  
+- `robots.txt` / `sitemap.xml` – Crawl rules (search and AI crawlers allowed) and sitemap with last-modified dates  
 - `images/web/` – Optimized WebP photos used on the site; `images/` – original photos  
 
 ---

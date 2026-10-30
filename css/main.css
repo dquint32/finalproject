@@ -660,6 +660,15 @@ main > section { padding: var(--section-y) var(--pad-x); }
   font-size: clamp(2.9rem, 12.5vw, 5.75rem);
   color: var(--brand-main);
 }
+.hero__brand-sub {               /* descriptive, location-rich part of the H1 */
+  margin-top: 0.7rem;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
 
 .hero__title {
   margin: 0 0 1rem;
@@ -1299,6 +1308,24 @@ html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
   .pupusas__grid .radio { grid-column: 1; grid-row: 2; }
 }
 @media (min-width: 900px) { .radio-chip { bottom: 1.25rem; } }
+
+/* FAQ — plain-language answers (also mirrored in FAQPage JSON-LD) */
+.faq__header { max-width: 62ch; }
+.faq__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  gap: 1rem;
+}
+.faq__item {
+  padding: 1.25rem 1.3rem 1.1rem;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--blue);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.faq__q { margin-bottom: 0.5rem; font-size: 1.2rem; line-height: 1.3; }
+.faq__a { margin: 0; color: var(--text-muted); line-height: 1.6; }
 
 /* ==========================================================================
    11. VISIT: painted hours sign, receipt, map

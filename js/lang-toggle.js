@@ -20,7 +20,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
 
       // Per-page SEO titles & descriptions
-      "title.home": "Tienda Salvadoreña Denver | #1 Salvadoran Store",
+      "title.home": "Tienda Salvadoreña Denver | Salvadoran Grocery Store on East Colfax",
       "desc.home": "Denver's oldest Salvadoran store (30+ years). Authentic Salvadoran & Central American groceries, drinks, clothing, souvenirs and more on E Colfax Ave.",
       "title.items": "Salvadoran Products in Denver | Items – Tienda Salvadoreña",
       "desc.items": "Browse Salvadoran & Central American food, drinks, cheeses, clothing and nostalgic goods in Denver. Kolashampan, queso duro, pan dulce and more.",
@@ -82,10 +82,10 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "items.filter.title": "Filter by category",
       "alt.letrero-de-la-tienda": "The Tienda Salvadoreña store sign with Central American flags",
       "alt.bandera-de-el-salvador": "Flag of El Salvador",
-      "alt.jorge-y-delia-comiendo-pollo-campero-en-": "A family sharing Pollo Campero around the table",
+      "alt.jorge-y-delia-comiendo-pollo-campero-en-": "Jorge and Delia Romero sharing Pollo Campero with family",
       "alt.delia-romero-sosteniendo-la-bandera-de-e": "Delia Romero holding the flag of El Salvador",
       "alt.jorge-romero-detras-del-mostrador": "Jorge Romero behind the counter",
-      "alt.jorge-y-delia-con-la-bandera-de-el-salva": "Jorge and Delia with the flag of El Salvador",
+      "alt.jorge-y-delia-con-la-bandera-de-el-salva": "Jorge and Delia Romero with the flag of El Salvador inside the store",
       "aria.imagenes-de-prensa": "Press images",
       "aria.articulos-destacados": "Featured articles",
       "press.credit1": "Photo © Kevin Beaty / Denverite",
@@ -102,7 +102,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "a11y.skip": "Skip to content",
       "nav.menu": "Menu",
       "nav.label": "Main navigation",
-      "footer.tagline": "Colorado's oldest Salvadoran store. Products from El Salvador and Central America for more than 30 years.",
+      "footer.tagline": "Tienda Salvadoreña, run by Jorge and Delia Romero: Colorado's oldest Salvadoran store. Products from El Salvador and Central America on East Colfax in Denver since 1991.",
       "footer.links": "Quick links",
       "footer.visit": "Visit us",
       "hero.img.owners": "Jorge and Delia Romero, founders of Tienda Salvadoreña, standing in front of an El Salvador flag inside the store",
@@ -145,7 +145,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // ITEMS PAGE (items.html)
       // ========================================
-      "items.hero.title": "Discover our products",
+      "items.hero.title": "Salvadoran & Central American groceries in Denver",
       
       "items.intro.note": "Over 30 years importing the best products of El Salvador and Central America. From traditional foods to clothing and nostalgic items.",
       
@@ -228,7 +228,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // HISTORY PAGE (history.html)
       // ========================================
-      "history.hero.title": "Family History",
+      "history.hero.title": "The story of Jorge and Delia Romero",
       "history.hero.lead": "From a classroom in El Salvador to a little store in Denver: this is how Jorge and Delia built a home for culture, food, and community.",
       
       "history.mission.title": "Our Mission",
@@ -324,7 +324,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // CONTACT PAGE (contact.html)
       // ========================================
-      "contact.hero.title": "Contact & Location",
+      "contact.hero.title": "Contact & location on East Colfax, Denver",
       "contact.hero.lead": "We're here to help. Call us, write to us or visit us at the address below. We'll respond as soon as possible.",
       
       "contact.info.title": "Contact information",
@@ -362,7 +362,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
 
       // Títulos y descripciones SEO por página
-      "title.home": "Tienda Salvadoreña Denver | Productos Salvadoreños #1",
+      "title.home": "Tienda Salvadoreña Denver | Productos de El Salvador en East Colfax",
       "desc.home": "La tienda salvadoreña más antigua de Denver (30+ años). Productos salvadoreños y centroamericanos auténticos: comestibles, bebidas, ropa, recuerdos y más en E Colfax Ave.",
       "title.items": "Artículos Salvadoreños en Denver | Tienda Salvadoreña",
       "desc.items": "Explora comida, bebidas, quesos, ropa y artículos nostálgicos salvadoreños y centroamericanos en Denver. Kolashampan, queso duro, pan dulce y más.",
@@ -389,45 +389,45 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "footer.copy": "© 2026 Tienda Salvadoreña. Todos los derechos reservados.",
 
       // Full bilingual coverage: alt text, ARIA labels, press and contact strings
-      "alt.medicinas-otc": "Medicinas OTC",
-      "alt.vitaminas-y-suplementos": "Vitaminas y suplementos",
-      "alt.jabones-y-hierbas-naturales": "Jabones y hierbas naturales",
-      "alt.suplementos-nopalina-y-linaza": "Suplementos nopalina y linaza",
-      "alt.articulos-de-cuidado-personal": "Artículos de cuidado personal",
-      "alt.frijoles-salsas-y-condimentos": "Frijoles, salsas y condimentos",
-      "alt.crema-y-quesos-centroamericanos": "Crema y quesos centroamericanos",
-      "alt.queso-duro-viejo": "Queso Duro Viejo",
-      "alt.hierbas-secas-y-especias": "Hierbas secas y especias",
-      "alt.pan-dulce-y-quesadillas": "Pan dulce y quesadillas",
-      "alt.dulces-tradicionales": "Dulces tradicionales",
-      "alt.chips-de-platano-y-bocadillos": "Chips de plátano y bocadillos",
-      "alt.nances-congelados": "Nances congelados",
-      "alt.tamales-de-elote": "Tamales de elote",
-      "alt.charrales-fritos": "Charrales fritos",
-      "alt.kolashampan": "Kolashampan",
-      "alt.gaseosas-en-botella-de-vidrio": "Gaseosas en botella de vidrio",
-      "alt.jugos-naturales": "Jugos naturales",
-      "alt.jugo-de-coco-foco": "Jugo de coco FOCO",
-      "alt.guayaberas-tradicionales": "Guayaberas tradicionales",
-      "alt.vestidos-y-bolsos": "Vestidos y bolsos",
-      "alt.jerseys-especiales": "Jerseys especiales",
-      "alt.carteras": "Carteras",
-      "alt.chanclas": "Chanclas",
-      "alt.gorras-de-pais": "Gorras de país",
-      "alt.gorros-de-invierno": "Gorros de invierno",
-      "alt.silabario-hispanoamericano": "Silabario Hispanoamericano",
-      "alt.chucherias-y-regalos": "Chucherías y regalos",
-      "alt.souvenirs": "Souvenirs",
+      "alt.medicinas-otc": "Estantes con medicinas de venta libre importadas",
+      "alt.vitaminas-y-suplementos": "Vitaminas y suplementos en un exhibidor",
+      "alt.jabones-y-hierbas-naturales": "Jabones naturales y productos herbales en los estantes de la tienda",
+      "alt.suplementos-nopalina-y-linaza": "Nopalina, linaza y otros suplementos alimenticios en un estante",
+      "alt.articulos-de-cuidado-personal": "Artículos de cuidado personal, jabones y aceites en un exhibidor",
+      "alt.frijoles-salsas-y-condimentos": "Frijoles, salsas y condimentos en los estantes de la tienda",
+      "alt.crema-y-quesos-centroamericanos": "Crema salvadoreña y quesos centroamericanos en el refrigerador",
+      "alt.queso-duro-viejo": "Paquete de queso duro viejo importado de El Salvador",
+      "alt.hierbas-secas-y-especias": "Bolsas de hierbas secas y especias colgadas en un exhibidor",
+      "alt.pan-dulce-y-quesadillas": "Pan dulce, quesadillas y galletas empacadas",
+      "alt.dulces-tradicionales": "Estantes con dulces típicos centroamericanos",
+      "alt.chips-de-platano-y-bocadillos": "Exhibidores con chips de plátano y bocadillos",
+      "alt.nances-congelados": "Bolsas de nances amarillos congelados",
+      "alt.tamales-de-elote": "Paquetes de tamales de elote Cuzcatlecos",
+      "alt.charrales-fritos": "Bolsas de charrales fritos con chile y limón",
+      "alt.kolashampan": "Botellas de Kolashampan, la gaseosa salvadoreña color naranja",
+      "alt.gaseosas-en-botella-de-vidrio": "Gaseosas en botella de vidrio: Mirinda, Coca-Cola y Tropical",
+      "alt.jugos-naturales": "Latas de jugo de tamarindo, maracuyá, coco y horchata",
+      "alt.jugo-de-coco-foco": "Latas de jugo de coco FOCO",
+      "alt.guayaberas-tradicionales": "Guayaberas tradicionales colgadas en un perchero",
+      "alt.vestidos-y-bolsos": "Vestidos tradicionales, bolsos y mantas en exhibición",
+      "alt.jerseys-especiales": "Camiseta conmemorativa de la selección de fútbol de El Salvador",
+      "alt.carteras": "Carteras tradicionales y modernas en una vitrina de vidrio",
+      "alt.chanclas": "Chanclas y pantuflas en un estante",
+      "alt.gorras-de-pais": "Gorras con los países de Centroamérica",
+      "alt.gorros-de-invierno": "Gorros de invierno azul y blanco de Guatemala y El Salvador",
+      "alt.silabario-hispanoamericano": "Portada del Silabario Hispanoamericano, el libro con que se aprende a leer",
+      "alt.chucherias-y-regalos": "Pulseras, llaveros y accesorios para el cabello en exhibición",
+      "alt.souvenirs": "Carteras tejidas con coloridos diseños tradicionales",
       "aria.filtros-de-categoria": "Filtros de categoría",
       "aria.galeria-de-productos": "Galería de productos",
       "a11y.close": "Cerrar",
       "items.filter.title": "Filtrar por categoría",
-      "alt.letrero-de-la-tienda": "Letrero de la tienda",
+      "alt.letrero-de-la-tienda": "Letrero de Tienda Salvadoreña con las banderas de Centroamérica",
       "alt.bandera-de-el-salvador": "Bandera de El Salvador",
-      "alt.jorge-y-delia-comiendo-pollo-campero-en-": "Jorge y Delia comiendo Pollo Campero en familia",
+      "alt.jorge-y-delia-comiendo-pollo-campero-en-": "Jorge y Delia Romero compartiendo Pollo Campero en familia",
       "alt.delia-romero-sosteniendo-la-bandera-de-e": "Delia Romero sosteniendo la bandera de El Salvador",
       "alt.jorge-romero-detras-del-mostrador": "Jorge Romero detrás del mostrador",
-      "alt.jorge-y-delia-con-la-bandera-de-el-salva": "Jorge y Delia con la bandera de El Salvador",
+      "alt.jorge-y-delia-con-la-bandera-de-el-salva": "Jorge y Delia Romero con la bandera de El Salvador dentro de la tienda",
       "aria.imagenes-de-prensa": "Imágenes de prensa",
       "aria.articulos-destacados": "Artículos destacados",
       "press.credit1": "Foto © Kevin Beaty / Denverite",
@@ -444,7 +444,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "a11y.skip": "Saltar al contenido",
       "nav.menu": "Menú",
       "nav.label": "Navegación principal",
-      "footer.tagline": "La tienda salvadoreña más antigua de Colorado. Productos de El Salvador y Centroamérica desde hace más de 30 años.",
+      "footer.tagline": "Tienda Salvadoreña de Jorge y Delia Romero: la tienda salvadoreña más antigua de Colorado. Productos de El Salvador y Centroamérica en East Colfax, Denver, desde 1991.",
       "footer.links": "Enlaces rápidos",
       "footer.visit": "Visítanos",
       "hero.img.owners": "Jorge y Delia Romero, fundadores de Tienda Salvadoreña, de pie frente a una bandera de El Salvador dentro de la tienda",
@@ -487,7 +487,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // ITEMS PAGE (items.html) - SPANISH
       // ========================================
-      "items.hero.title": "Descubre nuestros productos",
+      "items.hero.title": "Productos salvadoreños y centroamericanos en Denver",
       
       "items.intro.note": "Más de 30 años importando los mejores productos de El Salvador y Centroamérica. Desde alimentos tradicionales hasta ropa y artículos nostálgicos.",
       
@@ -570,7 +570,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // HISTORY PAGE (history.html) - SPANISH
       // ========================================
-      "history.hero.title": "Historia Familiar",
+      "history.hero.title": "La historia de Jorge y Delia Romero",
       "history.hero.lead": "De un aula en El Salvador a una tiendita en Denver: así construyeron Jorge y Delia un hogar para la cultura, la comida y la comunidad.",
       
       "history.mission.title": "Nuestra Misión",
@@ -666,7 +666,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // CONTACT PAGE (contact.html) - SPANISH
       // ========================================
-      "contact.hero.title": "Contacto y Ubicación",
+      "contact.hero.title": "Contacto y ubicación en East Colfax, Denver",
       "contact.hero.lead": "Estamos aquí para ayudar. Llámanos, escríbenos o visítanos en la dirección indicada. Responderemos lo antes posible.",
       
       "contact.info.title": "Información de contacto",
@@ -716,12 +716,12 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
     "home2.note.sign": "— Jorge y Delia",
     "home2.story.kicker": "Capítulo uno",
     "home2.story.title": "Empezó en un local del tamaño de un clóset en Colorado Boulevard.",
-    "home2.story.p1": "Delia era maestra en El Salvador; Jorge venía de la industria aérea en Ecuador. En Denver soñaron con un lugar donde los centroamericanos se sintieran en casa. La tiendita creció, se mudó a East Colfax y se convirtió en la tienda salvadoreña más antigua de Colorado.",
+    "home2.story.p1": "Delia Romero era maestra en El Salvador; Jorge Romero venía de la industria aérea en Ecuador. En Denver soñaron con un lugar donde los centroamericanos se sintieran en casa. En 1991 abrieron Tienda Salvadoreña, que creció, se mudó a East Colfax y se convirtió en la tienda salvadoreña más antigua de Colorado.",
     "home2.story.p2": "Más de tres décadas después, siguen detrás del mostrador: recomendando quesos, guardando el pan dulce de los clientes de siempre y apoyando a la comunidad cuando más lo necesita.",
     "home2.ledger.label": "Datos de la tienda",
     "home2.ledger.years": "años en la comunidad hispana de Denver",
     "home2.ledger.owners": "dueños que todavía le atienden en persona",
-    "home2.shelves.title": "Lo que hay en <em>los estantes</em>",
+    "home2.shelves.title": "Productos salvadoreños <em>en los estantes</em>",
     "home2.shelves.scribble": "(…y lo que no cabe, está en la bodega. ¡Pregunte!)",
     "home2.tag.aisle": "Pasillo 1",
     "home2.tag.fav": "Bien chivo",
@@ -740,7 +740,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
     "home2.map.walk": "← dé la vuelta",
     "home2.map.door": "entrada",
     "home2.map.neighbor": "vecino",
-    "home2.visit.title": "Venga a vernos, pues.",
+    "home2.visit.title": "Venga a vernos en East Colfax, pues.",
     "home2.sign.foot": "Abrimos 10 AM · todos los días",
     "home2.receipt.pay": "Pago",
     "home2.receipt.payval": "Efectivo · Crédito · Débito",
@@ -817,12 +817,12 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
     "home2.note.sign": "— Jorge & Delia",
     "home2.story.kicker": "Chapter one",
     "home2.story.title": "It started in a closet-sized shop on Colorado Boulevard.",
-    "home2.story.p1": "Delia was a teacher in El Salvador; Jorge came from the airline industry in Ecuador. In Denver they dreamed of a place where Central Americans could feel at home. The little shop grew, moved to East Colfax and became the oldest Salvadoran store in Colorado.",
+    "home2.story.p1": "Delia Romero was a teacher in El Salvador; Jorge Romero came from the airline industry in Ecuador. In Denver they dreamed of a place where Central Americans could feel at home. In 1991 they opened Tienda Salvadoreña, which grew, moved to East Colfax and became the oldest Salvadoran store in Colorado.",
     "home2.story.p2": "More than three decades later they're still behind the counter: recommending cheeses, setting aside pan dulce for the regulars and showing up for the community when it needs them most.",
     "home2.ledger.label": "Store facts",
     "home2.ledger.years": "years in Denver's Hispanic community",
     "home2.ledger.owners": "owners who still help you in person",
-    "home2.shelves.title": "What's on <em>the shelves</em>",
+    "home2.shelves.title": "Salvadoran groceries <em>on our shelves</em>",
     "home2.shelves.scribble": "(…and what doesn't fit is in the back. Just ask!)",
     "home2.tag.aisle": "Aisle 1",
     "home2.tag.fav": "Bien chivo (so good)",
@@ -841,7 +841,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
     "home2.map.walk": "← walk around",
     "home2.map.door": "entrance",
     "home2.map.neighbor": "neighbor",
-    "home2.visit.title": "Come see us, pues.",
+    "home2.visit.title": "Come see us on East Colfax, pues.",
     "home2.sign.foot": "Open 10 AM · every day",
     "home2.receipt.pay": "Payment",
     "home2.receipt.payval": "Cash · Credit · Debit",
@@ -909,6 +909,21 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
   // hero phone and the mobile action bar (all pages)
   // ========================================
   Object.assign(translations.es, {
+    "rd.hero.h1sub": "Productos de El Salvador en Denver, Colorado",
+    "rd.faq.kicker": "Lo que más nos preguntan",
+    "rd.faq.title": "Preguntas frecuentes",
+    "rd.faq.q1": "¿Dónde compro queso duro salvadoreño en Denver?",
+    "rd.faq.a1": "En Tienda Salvadoreña, 5128 E Colfax Ave, Denver, CO 80220, en East Colfax. Tenemos queso duro viejo, crema salvadoreña, Kolashampan, pan dulce, tamales de elote y cientos de productos de El Salvador y Centroamérica.",
+    "rd.faq.q2": "¿Tienda Salvadoreña es un restaurante?",
+    "rd.faq.a2": "No. Somos una tienda de abarrotes y artículos salvadoreños, no un restaurante, así que no vendemos pupusas preparadas. Sí tenemos la harina, los frijoles y los quesos para hacerlas en casa.",
+    "rd.faq.q3": "¿Quiénes son los dueños de Tienda Salvadoreña?",
+    "rd.faq.a3": "Jorge y Delia Romero, que fundaron la tienda en 1991. Fue el primer negocio salvadoreño de Denver, y los dos todavía atienden en persona.",
+    "rd.faq.q4": "¿Cuál es el horario de la tienda?",
+    "rd.faq.a4": "Lunes a sábado de 10 AM a 7 PM y domingo de 10 AM a 6 PM, hora de Denver.",
+    "rd.faq.q5": "¿Dónde me estaciono con las obras de Colfax?",
+    "rd.faq.a5": "En el lote compartido detrás de la tienda (unos 4 espacios), en la calle o en Forrest Street. Las obras de Colfax siguen, pero la tienda sigue abierta.",
+    "rd.faq.q6": "¿Qué formas de pago aceptan?",
+    "rd.faq.a6": "Efectivo, tarjetas de crédito y de débito.",
     "rd.alert.title": "¡Ojo, vecino!",
     "rd.alert.text": "Obras en Colfax: seguimos abiertos. Estacione atrás de la tienda.",
     "rd.alert.cta": "Cómo llegar",
@@ -921,6 +936,21 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
   });
 
   Object.assign(translations.en, {
+    "rd.hero.h1sub": "Salvadoran groceries in Denver, Colorado",
+    "rd.faq.kicker": "What people ask us most",
+    "rd.faq.title": "Frequently asked questions",
+    "rd.faq.q1": "Where can I buy Salvadoran queso duro in Denver?",
+    "rd.faq.a1": "At Tienda Salvadoreña, 5128 E Colfax Ave, Denver, CO 80220, on East Colfax. We carry queso duro viejo, Salvadoran crema, Kolashampan, pan dulce, sweet corn tamales and hundreds of other products from El Salvador and Central America.",
+    "rd.faq.q2": "Is Tienda Salvadoreña a restaurant?",
+    "rd.faq.a2": "No. We are a Salvadoran grocery and goods store, not a restaurant, so we don't sell ready-made pupusas. We do stock the masa flour, beans and cheeses to make them at home.",
+    "rd.faq.q3": "Who owns Tienda Salvadoreña?",
+    "rd.faq.a3": "Jorge and Delia Romero, who founded the store in 1991. It was Denver's first Salvadoran business, and they both still work the counter in person.",
+    "rd.faq.q4": "What are the store hours?",
+    "rd.faq.a4": "Monday to Saturday 10 AM to 7 PM, and Sunday 10 AM to 6 PM, Denver time.",
+    "rd.faq.q5": "Where do I park during the Colfax construction?",
+    "rd.faq.a5": "In the shared lot behind the store (about 4 spaces), on the street, or on Forrest Street. Construction on Colfax continues, but the store stays open.",
+    "rd.faq.q6": "What payment methods do you accept?",
+    "rd.faq.a6": "Cash, credit cards and debit cards.",
     "rd.alert.title": "Heads up, neighbor!",
     "rd.alert.text": "Construction on Colfax: we're still open. Park behind the store.",
     "rd.alert.cta": "How to get here",

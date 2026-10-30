@@ -20,7 +20,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="title.home">Tienda Salvadoreña Denver | Productos Salvadoreños #1</title>
+  <title data-i18n="title.home">Tienda Salvadoreña Denver | Productos de El Salvador en East Colfax</title>
   <meta name="description" data-i18n="desc.home" content="La tienda salvadoreña más antigua de Denver (30+ años). Productos salvadoreños y centroamericanos auténticos: comestibles, bebidas, ropa, recuerdos y más en E Colfax Ave.">
   <meta name="keywords" content="tienda salvadoreña Denver, productos salvadoreños Denver, Salvadoran store Denver, Central American grocery Denver, productos centroamericanos, queso duro, Kolashampan, guayaberas, recuerdos de El Salvador, E Colfax">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -44,19 +44,29 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
   <meta property="og:site_name" content="Tienda Salvadoreña">
   <meta property="og:locale" content="es_US">
   <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:title" content="Tienda Salvadoreña Denver | Productos Salvadoreños #1">
+  <meta property="og:title" content="Tienda Salvadoreña Denver | Productos de El Salvador en East Colfax">
   <meta property="og:description" content="La tienda salvadoreña más antigua de Denver (30+ años). Productos salvadoreños y centroamericanos auténticos en 5128 E Colfax Ave.">
   <meta property="og:url" content="https://tiendasalvadorenadenver.com/">
   <meta property="og:image" content="https://tiendasalvadorenadenver.com/images/grandparents-el-salvador-flag.jpg">
   <meta property="og:image:alt" content="Jorge y Delia Romero frente a una bandera de El Salvador dentro de la tienda">
+  <meta property="business:contact_data:street_address" content="5128 E Colfax Ave">
+  <meta property="business:contact_data:locality" content="Denver">
+  <meta property="business:contact_data:region" content="CO">
+  <meta property="business:contact_data:postal_code" content="80220">
+  <meta property="business:contact_data:country_name" content="United States">
+  <meta property="business:contact_data:phone_number" content="+1-303-394-4185">
+  <meta property="business:contact_data:website" content="https://tiendasalvadorenadenver.com/">
+  <meta property="place:location:latitude" content="39.7402">
+  <meta property="place:location:longitude" content="-104.9364">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tienda Salvadoreña Denver | Productos Salvadoreños #1">
+  <meta name="twitter:title" content="Tienda Salvadoreña Denver | Productos de El Salvador en East Colfax">
   <meta name="twitter:description" content="La tienda salvadoreña más antigua de Denver. Productos auténticos de El Salvador y Centroamérica.">
   <meta name="twitter:image" content="https://tiendasalvadorenadenver.com/images/grandparents-el-salvador-flag.jpg">
+  <meta name="twitter:image:alt" content="Jorge y Delia Romero frente a una bandera de El Salvador dentro de la tienda">
 
-  <link rel="preload" as="image" href="images/web/tienda-salvadorena-sign.webp" imagesrcset="images/web/tienda-salvadorena-sign.webp 1200w, images/web/tienda-salvadorena-sign-1600.webp 1600w" imagesizes="(min-width: 1240px) 1100px, 92vw" fetchpriority="high">
+  <link rel="preload" as="image" href="images/web/grandparents-el-salvador-flag.webp" fetchpriority="high">
   <link rel="icon" href="images/web/favicon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="images/web/favicon-192.png">
 
@@ -65,50 +75,448 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css?v=20261030a">
 
-  <!-- Structured data: Local Business -->
+  <!-- Structured data: GroceryStore + founders + catalog + FAQ (one linked graph) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "@id": "https://tiendasalvadorenadenver.com/#store",
-    "name": "Tienda Salvadoreña",
-    "alternateName": "Tienda Salvadoreña Denver",
-    "description": "Denver's oldest Salvadoran store (30+ years). A retail store (not a restaurant) selling authentic Salvadoran and Central American groceries, drinks, clothing, souvenirs and nostalgic goods.",
-    "url": "https://tiendasalvadorenadenver.com/",
-    "logo": "https://tiendasalvadorenadenver.com/images/tienda-salvadorena-sign.png",
-    "image": "https://tiendasalvadorenadenver.com/images/tienda-salvadorena-sign.png",
-    "telephone": "+1-303-394-4185",
-    "email": "info@tiendasalvadorenadenver.com",
-    "priceRange": "$$",
-    "currenciesAccepted": "USD",
-    "paymentAccepted": "Cash, Credit Card, Debit Card",
-    "foundingDate": "1991",
-    "slogan": "Tradición, sabor y comunidad",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "5128 E Colfax Ave",
-      "addressLocality": "Denver",
-      "addressRegion": "CO",
-      "postalCode": "80220",
-      "addressCountry": "US"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://tiendasalvadorenadenver.com/#website",
+      "url": "https://tiendasalvadorenadenver.com/",
+      "name": "Tienda Salvadoreña",
+      "inLanguage": [
+        "es",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://tiendasalvadorenadenver.com/#store"
+      },
+      "about": {
+        "@id": "https://tiendasalvadorenadenver.com/#store"
+      }
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 39.7402,
-      "longitude": -104.9364
+    {
+      "@type": "GroceryStore",
+      "@id": "https://tiendasalvadorenadenver.com/#store",
+      "name": "Tienda Salvadoreña",
+      "alternateName": [
+        "Tienda Salvadoreña Denver",
+        "Salvadoran Store Denver"
+      ],
+      "description": "Tienda Salvadoreña is Denver's oldest Salvadoran store, founded in 1991 by Jorge and Delia Romero and located on East Colfax Avenue. It is a grocery and goods store (not a restaurant) selling authentic products from El Salvador and Central America: queso duro, Kolashampan, pan dulce, crema, tamales de elote, guayaberas, souvenirs and nostalgic goods. / La tienda salvadoreña más antigua de Denver, fundada en 1991 por Jorge y Delia Romero en East Colfax.",
+      "url": "https://tiendasalvadorenadenver.com/",
+      "logo": "https://tiendasalvadorenadenver.com/images/tienda-salvadorena-sign.png",
+      "image": [
+        "https://tiendasalvadorenadenver.com/images/tienda-salvadorena-sign.png",
+        "https://tiendasalvadorenadenver.com/images/grandparents-el-salvador-flag.jpg",
+        "https://tiendasalvadorenadenver.com/images/web/display-case-hats.webp"
+      ],
+      "telephone": "+1-303-394-4185",
+      "email": "info@tiendasalvadorenadenver.com",
+      "priceRange": "$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, Debit Card",
+      "foundingDate": "1991",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Denver, Colorado"
+      },
+      "founder": [
+        {
+          "@id": "https://tiendasalvadorenadenver.com/#jorge-romero"
+        },
+        {
+          "@id": "https://tiendasalvadorenadenver.com/#delia-romero"
+        }
+      ],
+      "knowsLanguage": [
+        "es",
+        "en"
+      ],
+      "slogan": "Un pedacito de El Salvador en East Colfax",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5128 E Colfax Ave",
+        "addressLocality": "Denver",
+        "addressRegion": "CO",
+        "postalCode": "80220",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.7402,
+        "longitude": -104.9364
+      },
+      "hasMap": "https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220",
+      "containedInPlace": {
+        "@type": "Place",
+        "name": "East Colfax, Denver, Colorado"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Denver"
+        },
+        {
+          "@type": "City",
+          "name": "Aurora"
+        },
+        {
+          "@type": "City",
+          "name": "Lakewood"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Colorado"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wyoming"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Nebraska"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Sunday",
+          "opens": "10:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday",
+            "https://schema.org/Saturday"
+          ],
+          "opens": "10:00",
+          "closes": "19:00"
+        }
+      ],
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Shared parking lot behind the store (about 4 spaces) / Parqueo compartido atrás de la tienda",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Street parking on E Colfax Ave and Forrest Street",
+          "value": true
+        }
+      ],
+      "keywords": "tienda salvadoreña Denver, productos salvadoreños, Salvadoran grocery store Denver, Central American store Denver, queso duro Denver, Kolashampan Denver, pan dulce, East Colfax",
+      "knowsAbout": [
+        "El Salvador",
+        "Salvadoran food",
+        "Central American groceries",
+        "pupusas",
+        "queso duro",
+        "Kolashampan",
+        "caliche (Salvadoran slang)"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/TiendaSalvadorena.Denver/"
+      ],
+      "subjectOf": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Una tienda en Denver cumple 32 años de compartir la cultura salvadoreña",
+          "url": "https://diarioelsalvador.com/una-tienda-en-denver-cumple-32-anos-de-compartir-la-cultura-salvadorena/406487/",
+          "inLanguage": "es",
+          "datePublished": "2023",
+          "publisher": {
+            "@type": "NewsMediaOrganization",
+            "name": "Diario El Salvador"
+          },
+          "about": {
+            "@id": "https://tiendasalvadorenadenver.com/#store"
+          }
+        },
+        {
+          "@type": "NewsArticle",
+          "headline": "DACA fight overshadows status battle for Denver's Salvadorans",
+          "url": "https://denverite.com/2018/02/15/daca-tps-overshadowed/",
+          "inLanguage": "en",
+          "datePublished": "2018-02-15",
+          "publisher": {
+            "@type": "NewsMediaOrganization",
+            "name": "Denverite"
+          },
+          "mentions": {
+            "@id": "https://tiendasalvadorenadenver.com/#store"
+          }
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Productos salvadoreños y centroamericanos / Salvadoran & Central American groceries",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStoreOnly",
+            "seller": {
+              "@id": "https://tiendasalvadorenadenver.com/#store"
+            },
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Queso Duro Viejo",
+              "alternateName": "Salvadoran aged hard cheese",
+              "description": "Queso duro viejo importado de El Salvador, para rallar sobre frijoles o comer con tortilla. Aged Salvadoran hard cheese.",
+              "image": "https://tiendasalvadorenadenver.com/images/web/queso-duro-viejo.webp",
+              "category": "Quesos / Cheese",
+              "countryOfOrigin": {
+                "@type": "Country",
+                "name": "El Salvador"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStoreOnly",
+            "seller": {
+              "@id": "https://tiendasalvadorenadenver.com/#store"
+            },
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Kolashampan",
+              "alternateName": "Salvadoran champagne-cola soda",
+              "description": "La gaseosa salvadoreña color naranja con sabor a kola champán. The classic orange Salvadoran soda.",
+              "image": "https://tiendasalvadorenadenver.com/images/web/kolashampan.webp",
+              "category": "Bebidas / Drinks",
+              "countryOfOrigin": {
+                "@type": "Country",
+                "name": "El Salvador"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStoreOnly",
+            "seller": {
+              "@id": "https://tiendasalvadorenadenver.com/#store"
+            },
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Pan Dulce y Quesadilla Salvadoreña",
+              "alternateName": "Salvadoran sweet bread and quesadilla cake",
+              "description": "Pan dulce, quesadilla salvadoreña de queso y harina de arroz, y galletas. Sweet bread and Salvadoran cheese-and-rice-flour cake.",
+              "image": "https://tiendasalvadorenadenver.com/images/web/pandulce-quesadilla-bread.webp",
+              "category": "Panadería / Bakery"
+            }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStoreOnly",
+            "seller": {
+              "@id": "https://tiendasalvadorenadenver.com/#store"
+            },
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Crema Salvadoreña",
+              "alternateName": "Salvadoran cream",
+              "description": "Crema salvadoreña y quesos centroamericanos refrigerados. Salvadoran-style cream and Central American cheeses.",
+              "image": "https://tiendasalvadorenadenver.com/images/web/crema-queso.webp",
+              "category": "Lácteos / Dairy",
+              "countryOfOrigin": {
+                "@type": "Country",
+                "name": "El Salvador"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStoreOnly",
+            "seller": {
+              "@id": "https://tiendasalvadorenadenver.com/#store"
+            },
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Tamales de Elote",
+              "alternateName": "Sweet corn tamales",
+              "description": "Tamales de elote listos para calentar. Ready-to-heat sweet corn tamales.",
+              "image": "https://tiendasalvadorenadenver.com/images/web/cuzatlecos-tamales-de-elote.webp",
+              "category": "Alimentos / Food",
+              "countryOfOrigin": {
+                "@type": "Country",
+                "name": "El Salvador"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStoreOnly",
+            "seller": {
+              "@id": "https://tiendasalvadorenadenver.com/#store"
+            },
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Nances Congelados",
+              "alternateName": "Frozen nance fruit",
+              "description": "Nances amarillos congelados. Frozen yellow nance fruit.",
+              "image": "https://tiendasalvadorenadenver.com/images/web/frozen-nances.webp",
+              "category": "Alimentos / Food"
+            }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStoreOnly",
+            "seller": {
+              "@id": "https://tiendasalvadorenadenver.com/#store"
+            },
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Charrales Fritos",
+              "alternateName": "Fried anchovies",
+              "description": "Charrales crujientes con chile y limón. Crispy fried anchovies with chile and lime.",
+              "image": "https://tiendasalvadorenadenver.com/images/web/fried-anchovvies.webp",
+              "category": "Bocadillos / Snacks"
+            }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStoreOnly",
+            "seller": {
+              "@id": "https://tiendasalvadorenadenver.com/#store"
+            },
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Gaseosas en Botella de Vidrio",
+              "alternateName": "Glass-bottle sodas",
+              "description": "Mirinda, Coca-Cola y Tropical en botella de vidrio. Glass-bottle sodas.",
+              "image": "https://tiendasalvadorenadenver.com/images/web/glass-bottles-mirinda-cocacola-tropical.webp",
+              "category": "Bebidas / Drinks"
+            }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStoreOnly",
+            "seller": {
+              "@id": "https://tiendasalvadorenadenver.com/#store"
+            },
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Guayaberas",
+              "alternateName": "Guayabera shirts",
+              "description": "Guayaberas tradicionales bordadas para hombres y niños. Traditional embroidered guayabera shirts.",
+              "image": "https://tiendasalvadorenadenver.com/images/web/guayabera-traditional-shirts.webp",
+              "category": "Ropa / Clothing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStoreOnly",
+            "seller": {
+              "@id": "https://tiendasalvadorenadenver.com/#store"
+            },
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Silabario Hispanoamericano",
+              "alternateName": "Spanish reading primer",
+              "description": "El libro clásico con que generaciones aprendieron a leer. The classic Spanish reading primer.",
+              "image": "https://tiendasalvadorenadenver.com/images/web/silabario-hispanoamericano-pronounciationbook.webp",
+              "category": "Nostalgia y hogar / Nostalgia"
+            }
+          }
+        ]
+      }
     },
-    "hasMap": "https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220",
-    "areaServed": [
-      { "@type": "City", "name": "Denver" },
-      { "@type": "City", "name": "Aurora" },
-      { "@type": "AdministrativeArea", "name": "Colorado" }
-    ],
-    "sameAs": [ "https://www.facebook.com/TiendaSalvadorena.Denver/" ],
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "18:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "19:00" }
-    ]
-  }
+    {
+      "@type": "Person",
+      "@id": "https://tiendasalvadorenadenver.com/#jorge-romero",
+      "name": "Jorge Romero",
+      "jobTitle": "Co-founder and owner / Cofundador y dueño",
+      "worksFor": {
+        "@id": "https://tiendasalvadorenadenver.com/#store"
+      },
+      "spouse": {
+        "@id": "https://tiendasalvadorenadenver.com/#delia-romero"
+      },
+      "description": "Co-founder of Tienda Salvadoreña in Denver (1991). Came to Denver from the airline industry in Ecuador.",
+      "image": "https://tiendasalvadorenadenver.com/images/web/jorge-counter.webp"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tiendasalvadorenadenver.com/#delia-romero",
+      "name": "Delia Romero",
+      "jobTitle": "Co-founder and owner / Cofundadora y dueña",
+      "worksFor": {
+        "@id": "https://tiendasalvadorenadenver.com/#store"
+      },
+      "spouse": {
+        "@id": "https://tiendasalvadorenadenver.com/#jorge-romero"
+      },
+      "nationality": {
+        "@type": "Country",
+        "name": "El Salvador"
+      },
+      "description": "Co-founder of Tienda Salvadoreña in Denver (1991). Former schoolteacher in El Salvador.",
+      "image": "https://tiendasalvadorenadenver.com/images/web/delia-flag.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tiendasalvadorenadenver.com/#preguntas",
+      "inLanguage": "es",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Dónde compro queso duro salvadoreño en Denver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En Tienda Salvadoreña, 5128 E Colfax Ave, Denver, CO 80220, en East Colfax. Tenemos queso duro viejo, crema salvadoreña, Kolashampan, pan dulce, tamales de elote y cientos de productos de El Salvador y Centroamérica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tienda Salvadoreña es un restaurante?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Somos una tienda de abarrotes y artículos salvadoreños, no un restaurante, así que no vendemos pupusas preparadas. Sí tenemos la harina, los frijoles y los quesos para hacerlas en casa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Quiénes son los dueños de Tienda Salvadoreña?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jorge y Delia Romero, que fundaron la tienda en 1991. Fue el primer negocio salvadoreño de Denver, y los dos todavía atienden en persona."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el horario de la tienda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lunes a sábado de 10 AM a 7 PM y domingo de 10 AM a 6 PM, hora de Denver."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde me estaciono con las obras de Colfax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En el lote compartido detrás de la tienda (unos 4 espacios), en la calle o en Forrest Street. Las obras de Colfax siguen, pero la tienda sigue abierta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué formas de pago aceptan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Efectivo, tarjetas de crédito y de débito."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t);}catch(e){}})(document.documentElement);</script>
 </head>
@@ -163,7 +571,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__copy">
         <p class="kicker" data-i18n="home2.hero.kicker">5128 E Colfax Ave · Denver · desde 1991</p>
-        <h1 id="hero-title" class="hero__brand"><span class="hero__brand-top">Tienda</span> <span class="hero__brand-main">Salvadoreña</span></h1>
+        <h1 id="hero-title" class="hero__brand"><span class="hero__brand-top">Tienda</span> <span class="hero__brand-main">Salvadoreña</span> <span class="hero__brand-sub" data-i18n="rd.hero.h1sub">Productos de El Salvador en Denver, Colorado</span></h1>
         <p class="hero__title" data-i18n="home2.hero.title" data-i18n-html="true"><span class="t-small">Un pedacito de</span> <span class="t-huge">El Salvador</span> <span class="t-mid">en <em>East Colfax.</em></span></p>
         <p class="hero__lead" data-i18n="home2.hero.lead">Queso duro, Kolashampan, pan dulce, guayaberas, el Silabario de la escuela y todo lo que extraña de casa. Hace más de 30 años que lo traemos de El Salvador y Centroamérica, y lo acomodamos a mano en cada estante.</p>
 
@@ -258,7 +666,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
       <div class="spread__text">
         <p class="kicker" data-i18n="home2.story.kicker">Capítulo uno</p>
         <h2 id="story-title" class="spread__title" data-i18n="home2.story.title">Empezó en un local del tamaño de un clóset en Colorado Boulevard.</h2>
-        <p class="dropcap" data-i18n="home2.story.p1">Delia era maestra en El Salvador; Jorge venía de la industria aérea en Ecuador. En Denver soñaron con un lugar donde los centroamericanos se sintieran en casa. La tiendita creció, se mudó a East Colfax y se convirtió en la tienda salvadoreña más antigua de Colorado.</p>
+        <p class="dropcap" data-i18n="home2.story.p1">Delia Romero era maestra en El Salvador; Jorge Romero venía de la industria aérea en Ecuador. En Denver soñaron con un lugar donde los centroamericanos se sintieran en casa. En 1991 abrieron Tienda Salvadoreña, que creció, se mudó a East Colfax y se convirtió en la tienda salvadoreña más antigua de Colorado.</p>
         <p data-i18n="home2.story.p2">Más de tres décadas después, siguen detrás del mostrador: recomendando quesos, guardando el pan dulce de los clientes de siempre y apoyando a la comunidad cuando más lo necesita.</p>
         <a class="ink-link" href="history.html" data-i18n="mission.link">Conoce nuestra historia</a>
       </div>
@@ -304,7 +712,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
     <section id="estantes" class="shelves" aria-labelledby="shelves-title">
       <header class="shelves__header">
         <p class="kicker" data-i18n="categories.eyebrow">Lo que encontrarás</p>
-        <h2 id="shelves-title" class="shelves__title" data-i18n="home2.shelves.title" data-i18n-html="true">Lo que hay en <em>los estantes</em></h2>
+        <h2 id="shelves-title" class="shelves__title" data-i18n="home2.shelves.title" data-i18n-html="true">Productos salvadoreños <em>en los estantes</em></h2>
         <p class="scribble" data-i18n="home2.shelves.scribble">(…y lo que no cabe, está en la bodega. ¡Pregunte!)</p>
       </header>
 
@@ -365,7 +773,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
         <li class="tile">
           <a href="items.html?cat=nostalgia#product-gallery">
             <img src="images/web/silabario-hispanoamericano-pronounciationbook.webp" width="900" height="1200" loading="lazy"
-                 alt="Portada del Silabario Hispanoamericano" data-i18n-alt="alt.silabario-hispanoamericano">
+                 alt="Portada del Silabario Hispanoamericano, el libro con que se aprende a leer" data-i18n-alt="alt.silabario-hispanoamericano">
             <span class="lore" data-i18n="home2.lore.sila">Del maestro chileno Adrián Dufflocq: con él aprendieron a leer generaciones.</span>
             <span class="shelf-tag"><span class="shelf-tag__name" data-i18n="items.silabario">Silabario Hispanoamericano</span><span class="shelf-tag__cat" data-i18n="items.category.nostalgia">Nostalgia y hogar</span></span>
           </a>
@@ -552,11 +960,45 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
       </div>
     </section>
 
+    <!-- ============ FAQ: plain answers for visitors, search and AI answer engines ============ -->
+    <section id="preguntas" class="faq" aria-labelledby="faq-title">
+      <header class="faq__header">
+        <p class="kicker" data-i18n="rd.faq.kicker">Lo que más nos preguntan</p>
+        <h2 id="faq-title" class="section-title" data-i18n="rd.faq.title">Preguntas frecuentes</h2>
+      </header>
+      <div class="faq__list">
+        <div class="faq__item">
+          <h3 class="faq__q" data-i18n="rd.faq.q1">¿Dónde compro queso duro salvadoreño en Denver?</h3>
+          <p class="faq__a" data-i18n="rd.faq.a1">En Tienda Salvadoreña, 5128 E Colfax Ave, Denver, CO 80220, en East Colfax. Tenemos queso duro viejo, crema salvadoreña, Kolashampan, pan dulce, tamales de elote y cientos de productos de El Salvador y Centroamérica.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q" data-i18n="rd.faq.q2">¿Tienda Salvadoreña es un restaurante?</h3>
+          <p class="faq__a" data-i18n="rd.faq.a2">No. Somos una tienda de abarrotes y artículos salvadoreños, no un restaurante, así que no vendemos pupusas preparadas. Sí tenemos la harina, los frijoles y los quesos para hacerlas en casa.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q" data-i18n="rd.faq.q3">¿Quiénes son los dueños de Tienda Salvadoreña?</h3>
+          <p class="faq__a" data-i18n="rd.faq.a3">Jorge y Delia Romero, que fundaron la tienda en 1991. Fue el primer negocio salvadoreño de Denver, y los dos todavía atienden en persona.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q" data-i18n="rd.faq.q4">¿Cuál es el horario de la tienda?</h3>
+          <p class="faq__a" data-i18n="rd.faq.a4">Lunes a sábado de 10 AM a 7 PM y domingo de 10 AM a 6 PM, hora de Denver.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q" data-i18n="rd.faq.q5">¿Dónde me estaciono con las obras de Colfax?</h3>
+          <p class="faq__a" data-i18n="rd.faq.a5">En el lote compartido detrás de la tienda (unos 4 espacios), en la calle o en Forrest Street. Las obras de Colfax siguen, pero la tienda sigue abierta.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q" data-i18n="rd.faq.q6">¿Qué formas de pago aceptan?</h3>
+          <p class="faq__a" data-i18n="rd.faq.a6">Efectivo, tarjetas de crédito y de débito.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ VISIT: painted hours sign + receipt + map ============ -->
     <section id="visitanos" class="visit" aria-labelledby="visit-title">
       <header class="visit__header">
         <p class="kicker" data-i18n="visit.eyebrow">Visítanos</p>
-        <h2 id="visit-title" class="visit__title" data-i18n="home2.visit.title">Venga a vernos, pues.</h2>
+        <h2 id="visit-title" class="visit__title" data-i18n="home2.visit.title">Venga a vernos en East Colfax, pues.</h2>
       </header>
 
       <div class="visit__grid">
@@ -658,8 +1100,8 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
     <div class="footer-grid">
       <div class="footer-brand">
         <img class="footer-logo" src="images/web/tienda-salvadorena-sign.webp" width="1200" height="706" loading="lazy"
-             alt="Letrero de la tienda" data-i18n-alt="alt.letrero-de-la-tienda">
-        <p data-i18n="footer.tagline">La tienda salvadoreña más antigua de Colorado. Productos de El Salvador y Centroamérica desde hace más de 30 años.</p>
+             alt="Letrero de Tienda Salvadoreña con las banderas de Centroamérica" data-i18n-alt="alt.letrero-de-la-tienda">
+        <p data-i18n="footer.tagline">Tienda Salvadoreña de Jorge y Delia Romero: la tienda salvadoreña más antigua de Colorado. Productos de El Salvador y Centroamérica en East Colfax, Denver, desde 1991.</p>
       </div>
 
       <nav aria-label="Enlaces rápidos" data-i18n-aria-label="footer.links">

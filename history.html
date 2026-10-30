@@ -48,6 +48,7 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
   <meta name="twitter:title" content="Nuestra Historia | Tienda Salvadoreña Denver">
   <meta name="twitter:description" content="La historia de Jorge y Delia Romero y 30+ años sirviendo a Denver.">
   <meta name="twitter:image" content="https://tiendasalvadorenadenver.com/images/grandparents-el-salvador-flag.jpg">
+  <meta name="twitter:image:alt" content="Jorge y Delia Romero con la bandera de El Salvador dentro de la tienda">
 
   <link rel="icon" href="images/web/favicon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="images/web/favicon-192.png">
@@ -64,6 +65,93 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
       { "@type": "ListItem", "position": 2, "name": "Historia", "item": "https://tiendasalvadorenadenver.com/history.html" }
     ]
   }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://tiendasalvadorenadenver.com/history.html#page",
+      "url": "https://tiendasalvadorenadenver.com/history.html",
+      "name": "La historia de Jorge y Delia Romero | Tienda Salvadoreña",
+      "inLanguage": [
+        "es",
+        "en"
+      ],
+      "about": {
+        "@id": "https://tiendasalvadorenadenver.com/#store"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://tiendasalvadorenadenver.com/#jorge-romero"
+        },
+        {
+          "@id": "https://tiendasalvadorenadenver.com/#delia-romero"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://tiendasalvadorenadenver.com/#website"
+      }
+    },
+    {
+      "@type": "GroceryStore",
+      "@id": "https://tiendasalvadorenadenver.com/#store",
+      "name": "Tienda Salvadoreña",
+      "url": "https://tiendasalvadorenadenver.com/",
+      "foundingDate": "1991",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5128 E Colfax Ave",
+        "addressLocality": "Denver",
+        "addressRegion": "CO",
+        "postalCode": "80220",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-303-394-4185",
+      "founder": [
+        {
+          "@id": "https://tiendasalvadorenadenver.com/#jorge-romero"
+        },
+        {
+          "@id": "https://tiendasalvadorenadenver.com/#delia-romero"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tiendasalvadorenadenver.com/#jorge-romero",
+      "name": "Jorge Romero",
+      "jobTitle": "Co-founder and owner / Cofundador y dueño",
+      "worksFor": {
+        "@id": "https://tiendasalvadorenadenver.com/#store"
+      },
+      "spouse": {
+        "@id": "https://tiendasalvadorenadenver.com/#delia-romero"
+      },
+      "description": "Co-founder of Tienda Salvadoreña in Denver (1991). Came to Denver from the airline industry in Ecuador.",
+      "image": "https://tiendasalvadorenadenver.com/images/web/jorge-counter.webp"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tiendasalvadorenadenver.com/#delia-romero",
+      "name": "Delia Romero",
+      "jobTitle": "Co-founder and owner / Cofundadora y dueña",
+      "worksFor": {
+        "@id": "https://tiendasalvadorenadenver.com/#store"
+      },
+      "spouse": {
+        "@id": "https://tiendasalvadorenadenver.com/#jorge-romero"
+      },
+      "nationality": {
+        "@type": "Country",
+        "name": "El Salvador"
+      },
+      "description": "Co-founder of Tienda Salvadoreña in Denver (1991). Former schoolteacher in El Salvador.",
+      "image": "https://tiendasalvadorenadenver.com/images/web/delia-flag.webp"
+    }
+  ]
+}
   </script>
   <script>(function(d){d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t);}catch(e){}})(document.documentElement);</script>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -119,7 +207,7 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
     <section class="page-hero" aria-labelledby="history-hero-title">
       <div class="page-hero__copy">
         <p class="kicker" data-i18n="nav.history">Historia</p>
-        <h1 id="history-hero-title" class="page-hero__title" data-i18n="history.hero.title">Historia Familiar</h1>
+        <h1 id="history-hero-title" class="page-hero__title" data-i18n="history.hero.title">La historia de Jorge y Delia Romero</h1>
         <p class="page-hero__lead" data-i18n="history.hero.lead">De un aula en El Salvador a una tiendita en Denver: así construyeron Jorge y Delia un hogar para la cultura, la comida y la comunidad.</p>
       </div>
       <div class="page-hero__media">
@@ -156,13 +244,13 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
         <li><figure class="snapshot">
           <span class="tape tape--top" aria-hidden="true"></span>
           <img src="images/web/tienda-salvadorena-sign.webp" width="1200" height="706" loading="lazy"
-               alt="Letrero de la tienda" data-i18n-alt="alt.letrero-de-la-tienda">
+               alt="Letrero de Tienda Salvadoreña con las banderas de Centroamérica" data-i18n-alt="alt.letrero-de-la-tienda">
           <figcaption><span data-i18n="history.heritage.caption1">Nuestro letrero – un punto de referencia y una bienvenida.</span></figcaption>
         </figure></li>
         <li><figure class="snapshot">
           <span class="tape tape--tr" aria-hidden="true"></span>
           <img src="images/web/silabario-hispanoamericano-pronounciationbook.webp" width="900" height="1200" loading="lazy"
-               alt="Silabario Hispanoamericano" data-i18n-alt="alt.silabario-hispanoamericano">
+               alt="Portada del Silabario Hispanoamericano, el libro con que se aprende a leer" data-i18n-alt="alt.silabario-hispanoamericano">
           <figcaption><span data-i18n="history.heritage.caption2">Un pilar del aula – alfabetización, dignidad y raíces compartidas.</span></figcaption>
         </figure></li>
         <li><figure class="snapshot">
@@ -236,8 +324,8 @@ Gemini Use Case: Image Generation (creating the custom cartoon images of Jorge a
     <div class="footer-grid">
       <div class="footer-brand">
         <img class="footer-logo" src="images/web/tienda-salvadorena-sign.webp" width="1200" height="706" loading="lazy"
-             alt="Letrero de la tienda" data-i18n-alt="alt.letrero-de-la-tienda">
-        <p data-i18n="footer.tagline">La tienda salvadoreña más antigua de Colorado. Productos de El Salvador y Centroamérica desde hace más de 30 años.</p>
+             alt="Letrero de Tienda Salvadoreña con las banderas de Centroamérica" data-i18n-alt="alt.letrero-de-la-tienda">
+        <p data-i18n="footer.tagline">Tienda Salvadoreña de Jorge y Delia Romero: la tienda salvadoreña más antigua de Colorado. Productos de El Salvador y Centroamérica en East Colfax, Denver, desde 1991.</p>
       </div>
 
       <nav aria-label="Enlaces rápidos" data-i18n-aria-label="footer.links">
