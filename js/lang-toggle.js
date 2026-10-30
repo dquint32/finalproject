@@ -905,6 +905,34 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
   });
 
   // ========================================
+  // SITE REDESIGN (Oct 2026) — "rd.*" keys: alert bar, theme toggle,
+  // hero phone and the mobile action bar (all pages)
+  // ========================================
+  Object.assign(translations.es, {
+    "rd.alert.title": "¡Ojo, vecino!",
+    "rd.alert.text": "Obras en Colfax: seguimos abiertos. Estacione atrás de la tienda.",
+    "rd.alert.cta": "Cómo llegar",
+    "rd.theme": "Modo oscuro",
+    "rd.hero.call": "Llámenos",
+    "rd.bar.label": "Acciones rápidas",
+    "rd.bar.call": "Llamar",
+    "rd.bar.directions": "Cómo llegar",
+    "rd.bar.parking": "Parqueo"
+  });
+
+  Object.assign(translations.en, {
+    "rd.alert.title": "Heads up, neighbor!",
+    "rd.alert.text": "Construction on Colfax: we're still open. Park behind the store.",
+    "rd.alert.cta": "How to get here",
+    "rd.theme": "Dark mode",
+    "rd.hero.call": "Call us",
+    "rd.bar.label": "Quick actions",
+    "rd.bar.call": "Call",
+    "rd.bar.directions": "Directions",
+    "rd.bar.parking": "Parking"
+  });
+
+  // ========================================
   // LANGUAGE APPLICATION LOGIC
   // ========================================
   

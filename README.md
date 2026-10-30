@@ -32,9 +32,9 @@ The project is hosted on GitHub Pages:
 - `pollo.html` – Pollo Campero page  
 - `press.html` – Press & recognition  
 - `contact.html` – Contact & location info  
-- `css/main.css` – One shared, mobile-first stylesheet (store-sign theme, stucco textures, Ilobasco borders)  
+- `css/main.css` – One shared, mobile-first stylesheet: WCAG AAA light (cream/paper) and dark (navy/gold) themes, uniform product cards, mobile action bar, Ilobasco and banderitas accents  
 - `js/lang-toggle.js` – Spanish/English toggle and all page translations  
-- `js/site.js` – Mobile menu, live open/closed status, back-to-top button  
+- `js/site.js` – Mobile menu, light/dark theme toggle, live open/closed status, back-to-top button  
 - `js/items.js` – Product filters and photo zoom (Artículos page)  
 - `js/radio.js` – Opt-in "Radio Tienda" marimba player (home page)  
 - `images/web/` – Optimized WebP photos used on the site; `images/` – original photos  

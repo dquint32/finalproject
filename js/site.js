@@ -5,6 +5,8 @@
   1. Mobile navigation toggle
   2. Live store status (door tag + painted hours sign)
   3. Back-to-top button
+  4. Light / dark theme toggle (the saved choice is applied before first
+     paint by a one-line script in each page's <head>)
 
   Language switching stays in js/lang-toggle.js. This file only watches the
   <html lang> attribute so the badge re-renders when the language changes.
@@ -192,7 +194,53 @@
     update();
   }
 
+  /* ------------------------------------------------------------------
+     4. LIGHT / DARK THEME
+     No saved choice = follow the device setting. Clicking the toggle
+     saves 'light' or 'dark' and sets <html data-theme>, which the
+     tokens in css/main.css key off.
+     ------------------------------------------------------------------ */
+  var THEME_COLORS = { light: '#FBF5EA', dark: '#0E1726' };
+
+  function systemTheme() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function currentTheme() {
+    var set = document.documentElement.getAttribute('data-theme');
+    return set === 'dark' || set === 'light' ? set : systemTheme();
+  }
+
+  function syncTheme() {
+    var theme = currentTheme();
+    document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', String(theme === 'dark'));
+    });
+    document.querySelectorAll('meta[name="theme-color"]').forEach(function (meta) {
+      // Once a choice is made, both media variants should report it
+      if (document.documentElement.hasAttribute('data-theme')) meta.setAttribute('content', THEME_COLORS[theme]);
+    });
+  }
+
+  function initTheme() {
+    var buttons = document.querySelectorAll('[data-theme-toggle]');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var next = currentTheme() === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (error) { /* won't persist */ }
+        syncTheme();
+      });
+    });
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      if (mq.addEventListener) mq.addEventListener('change', syncTheme);
+    }
+    syncTheme();
+  }
+
   function init() {
+    initTheme();
     initNav();
     initBackToTop();
     renderStatus();
