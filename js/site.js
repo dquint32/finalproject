@@ -7,6 +7,8 @@
   3. Back-to-top button
   4. Light / dark theme toggle (the saved choice is applied before first
      paint by a one-line script in each page's <head>)
+  5. 3D depth: pointer tilt + glare on cards, hero parallax, scroll-in
+     tip-up for cards (all off with prefers-reduced-motion)
 
   Language switching stays in js/lang-toggle.js. This file only watches the
   <html lang> attribute so the badge re-renders when the language changes.
@@ -239,7 +241,63 @@
     syncTheme();
   }
 
+  /* ------------------------------------------------------------------
+     5. 3D DEPTH
+     - Cards and the hero photo tilt toward the pointer (mouse/trackpad
+       only) and catch a soft glare; CSS reads --rx/--ry/--gx/--gy.
+     - Cards tip up into place as they scroll into view (phones too).
+     Nothing runs when the visitor prefers reduced motion, and content
+     is never hidden unless this script is running.
+     ------------------------------------------------------------------ */
+  function initDepth() {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+
+    if ('IntersectionObserver' in window) {
+      var reveal = document.querySelectorAll('.tile, .origin, .faq__item, .clip, .ledger li, .footer-logo--badge');
+      document.documentElement.classList.add('depth-reveal');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
+        });
+      }, { rootMargin: '0px 0px -6% 0px' });
+      Array.prototype.forEach.call(reveal, function (el) {
+        var i = Array.prototype.indexOf.call(el.parentNode.children, el);
+        el.style.setProperty('--d', ((i % 4) * 70) + 'ms');     // gentle stagger across a row
+        io.observe(el);
+      });
+    }
+
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    var targets = document.querySelectorAll('.tile > a, .tile__btn, [data-tilt]');
+    Array.prototype.forEach.call(targets, function (el) {
+      var max = parseFloat(el.getAttribute('data-tilt-max') || '9');
+      var rect = null, frame = 0;
+      el.classList.add('tilt');
+      el.addEventListener('pointerenter', function () { rect = el.getBoundingClientRect(); });
+      el.addEventListener('pointermove', function (event) {
+        if (!rect) rect = el.getBoundingClientRect();
+        var x = (event.clientX - rect.left) / rect.width - 0.5;
+        var y = (event.clientY - rect.top) / rect.height - 0.5;
+        cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(function () {
+          el.style.setProperty('--rx', (-y * max).toFixed(2) + 'deg');
+          el.style.setProperty('--ry', (x * max).toFixed(2) + 'deg');
+          el.style.setProperty('--gx', ((x + 0.5) * 100).toFixed(1) + '%');
+          el.style.setProperty('--gy', ((y + 0.5) * 100).toFixed(1) + '%');
+        });
+      });
+      el.addEventListener('pointerleave', function () {
+        cancelAnimationFrame(frame);
+        rect = null;
+        el.style.setProperty('--rx', '0deg');
+        el.style.setProperty('--ry', '0deg');
+      });
+    });
+  }
+
   function init() {
+    initDepth();
     initTheme();
     initNav();
     initBackToTop();

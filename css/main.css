@@ -478,6 +478,8 @@ main > section { padding: var(--section-y) var(--pad-x); }
   text-decoration: none;
 }
 .brand-link:hover { color: var(--text); }
+.brand-logo { transition: transform 0.3s cubic-bezier(0.3, 1.6, 0.5, 1); }
+.brand-link:hover .brand-logo { transform: rotate(-3deg) scale(1.05); }
 .brand-logo {
   width: 64px; height: auto;
   padding: 3px;
@@ -735,6 +737,22 @@ main > section { padding: var(--section-y) var(--pad-x); }
 }
 
 .hero__media { display: grid; gap: 1.5rem; min-width: 0; align-content: start; }
+
+/* Store badge as a sticker on the hero photo: tilted, tilts back on hover */
+.hero-sticker {
+  position: absolute;
+  z-index: 2;
+  top: -22px; right: -8px;
+  width: clamp(84px, 24vw, 128px);
+  height: auto;
+  border-radius: 50%;
+  transform: rotate(10deg);
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.28));
+  transition: transform 0.45s cubic-bezier(0.3, 1.6, 0.5, 1);
+  pointer-events: none;
+}
+.snapshot--hero:hover .hero-sticker { transform: rotate(-6deg) scale(1.07); }
+@media (min-width: 900px) { .hero-sticker { top: -30px; right: -26px; } }
 
 .founders-note {
   position: relative;
@@ -1477,6 +1495,8 @@ html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
 .footer-grid { display: grid; gap: 2rem; margin-bottom: 2.5rem; }
 @media (min-width: 760px) { .footer-grid { grid-template-columns: 1.3fr 1fr 1.3fr; gap: 3rem; } }
 .footer-logo { width: 150px; margin-bottom: 1rem; padding: 6px; border-radius: 8px; background: #FFFFFF; }
+.footer-logo--badge { width: 132px; padding: 0; border-radius: 50%; background: none; box-shadow: 0 0 0 3px rgba(246, 239, 226, 0.18);; transition: transform 1.1s cubic-bezier(0.45, 0, 0.2, 1); }
+.footer-logo--badge:hover { transform: rotate(360deg); }
 .footer-brand p { color: var(--band-muted); max-width: 40ch; }
 .footer-heading { font-family: var(--font-body); font-size: 0.875rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--band-text); }
 .footer-links { margin: 0; padding: 0; list-style: none; }
@@ -1721,6 +1741,81 @@ html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
 .biz-card__list p { color: var(--text-muted); font-size: 1rem; }
 .biz-card__list a { display: inline-flex; align-items: center; min-height: var(--tap); font-weight: 700; }
 
+
+/* ==========================================================================
+   3D DEPTH (js/site.js §5 adds .tilt / .depth-reveal; all off with
+   prefers-reduced-motion, and nothing is hidden without the script)
+   ========================================================================== */
+
+/* Storefront lettering: extruded like a painted 3D sign */
+:root { --extrude: #5E0A10; --extrude-blue: #0F2347; --extrude-shadow: rgba(31, 26, 21, 0.28); }
+:root[data-theme="dark"] { --extrude: #7A1A1F; --extrude-blue: #1D3566; --extrude-shadow: rgba(0, 0, 0, 0.6); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --extrude: #7A1A1F; --extrude-blue: #1D3566; --extrude-shadow: rgba(0, 0, 0, 0.6); }
+}
+.hero__brand-main {
+  text-shadow:
+    1px 1px 0 var(--extrude), 2px 2px 0 var(--extrude), 3px 3px 0 var(--extrude),
+    4px 4px 0 var(--extrude), 5px 5px 0 var(--extrude),
+    6px 9px 14px var(--extrude-shadow);
+}
+.hero__brand-top { text-shadow: 1px 1px 0 var(--extrude-blue), 2px 2px 0 var(--extrude-blue), 3px 4px 6px var(--extrude-shadow); }
+:root[data-theme="dark"] .hero__brand-top { text-shadow: 1px 1px 0 #3A4A66, 2px 2px 0 #3A4A66, 3px 4px 6px var(--extrude-shadow); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero__brand-top { text-shadow: 1px 1px 0 #3A4A66, 2px 2px 0 #3A4A66, 3px 4px 6px var(--extrude-shadow); } }
+.obras__title { text-shadow: 1px 1px 0 var(--extrude), 2px 2px 0 var(--extrude), 3px 3px 0 var(--extrude), 4px 6px 8px var(--extrude-shadow); }
+.obras__title span { text-shadow: none; }
+
+/* Pointer tilt (cards, hero photo, history sign) */
+.tilt {
+  --rx: 0deg; --ry: 0deg; --lift: 0px;
+  transform: perspective(900px) translateY(var(--lift)) rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.tilt:hover { --lift: -4px; transition: transform 0.12s ease-out, box-shadow 0.3s ease, border-color 0.3s ease; }
+.tile > a.tilt:hover, .tile__btn.tilt:hover, .tile > a.tilt:focus-visible, .tile__btn.tilt:focus-visible {
+  --lift: -6px;
+  transform: perspective(900px) translateY(var(--lift)) rotateX(var(--rx)) rotateY(var(--ry));
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10), 0 22px 40px -12px rgba(0, 0, 0, 0.35);
+}
+/* soft light glare that follows the pointer */
+.tile > a.tilt::after, .tile__btn.tilt::after, .snapshot.tilt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 0%), rgba(255, 255, 255, 0.38), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+.tilt:hover::after { opacity: 1; }
+
+/* Hero: the photo turns, the handwritten note floats in front of it */
+.hero__media.tilt { transform-style: preserve-3d; }
+.hero__media.tilt .snapshot--hero { transform: translateZ(0); }
+.hero__media.tilt .founders-note { transform: translateZ(36px); box-shadow: var(--shadow-md); }
+
+/* Cards tip up into place as they scroll in */
+.depth-reveal :is(.tile, .origin, .faq__item, .clip, .ledger li) {
+  opacity: 0;
+  transform: perspective(800px) translateY(28px) rotateX(14deg);
+  transform-origin: 50% 100%;
+  transition: opacity 0.6s ease var(--d, 0ms), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) var(--d, 0ms);
+}
+.depth-reveal :is(.tile, .origin, .faq__item, .clip, .ledger li).is-in { opacity: 1; transform: none; }
+
+/* Footer badge: a coin that spins */
+.footer-logo--badge {
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.45));
+  transform: perspective(600px) rotateY(0deg);
+  transition: transform 1s cubic-bezier(0.3, 1.25, 0.5, 1);
+}
+.footer-brand:hover .footer-logo--badge { transform: perspective(600px) rotateY(360deg); }
+.depth-reveal .footer-logo--badge:not(.is-in) { opacity: 0; transform: perspective(600px) rotateY(-180deg); }
+.depth-reveal .footer-logo--badge { transition: transform 1.1s cubic-bezier(0.3, 1.25, 0.5, 1), opacity 0.5s ease; }
+
 /* ==========================================================================
    14. REDUCED MOTION, FORCED COLORS, PRINT
    ========================================================================== */
@@ -1738,6 +1833,8 @@ html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
 }
 
 @media print {
+  .depth-reveal :is(.tile, .origin, .faq__item, .clip, .ledger li), .footer-logo--badge { opacity: 1 !important; transform: none !important; }
+  .hero__brand-main, .hero__brand-top, .obras__title { text-shadow: none; }
   .alert-bar, .site-header, .banderitas, .skip-link, .back-to-top, .radio-chip, .radio, .map-frame,
   .hero__actions, .visit__actions, .volcano-divider, .action-bar, .filters, .theme-toggle { display: none !important; }
   :root { --bg: #fff; --bg-alt: #fff; --surface: #fff; --text: #000; --text-muted: #222; }

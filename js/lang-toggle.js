@@ -909,6 +909,8 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
   // hero phone and the mobile action bar (all pages)
   // ========================================
   Object.assign(translations.es, {
+    "rd.badge.alt": "Insignia redonda de Tienda Salvadoreña con el escudo de El Salvador, banderas de Centroamérica, el teléfono (303) 394-4185, un código QR del sitio web y la dirección 5128 E Colfax Ave, Denver, CO 80220",
+    "rd.sign.alt": "Letrero de Tienda Salvadoreña: escudo y bandera de El Salvador, banderas de Centroamérica, el teléfono (303) 394-4185 y un código QR a tiendasalvadorenadenver.com",
     "rd.receipt.email": "Correo",
     "rd.parking.title": "Estacionamiento y obras en Colfax",
     "rd.hero.h1sub": "Productos de El Salvador en Denver, Colorado",
@@ -938,6 +940,8 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
   });
 
   Object.assign(translations.en, {
+    "rd.badge.alt": "Round Tienda Salvadoreña badge with the coat of arms of El Salvador, Central American flags, the phone number (303) 394-4185, a QR code to the website and the address 5128 E Colfax Ave, Denver, CO 80220",
+    "rd.sign.alt": "Tienda Salvadoreña sign: El Salvador coat of arms and flag, Central American flags, the phone number (303) 394-4185 and a QR code to tiendasalvadorenadenver.com",
     "rd.receipt.email": "Email",
     "rd.parking.title": "Parking & Colfax roadwork",
     "rd.hero.h1sub": "Salvadoran groceries in Denver, Colorado",

@@ -73,7 +73,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css?v=20261106a">
+  <link rel="stylesheet" href="css/main.css?v=20261106b">
 
   <!-- Structured data: GroceryStore + founders + catalog + FAQ (one linked graph) -->
   <script type="application/ld+json">
@@ -106,9 +106,9 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
       ],
       "description": "Tienda Salvadoreña is Denver's oldest Salvadoran store, founded in 1991 by Jorge and Delia Romero and located on East Colfax Avenue. It is a grocery and goods store (not a restaurant) selling authentic products from El Salvador and Central America: queso duro, Kolashampan, pan dulce, crema, tamales de elote, guayaberas, souvenirs and nostalgic goods. / La tienda salvadoreña más antigua de Denver, fundada en 1991 por Jorge y Delia Romero en East Colfax.",
       "url": "https://tiendasalvadorenadenver.com/",
-      "logo": "https://tiendasalvadorenadenver.com/images/tienda-salvadorena-sign.png",
+      "logo": "https://tiendasalvadorenadenver.com/images/tienda-badge.png",
       "image": [
-        "https://tiendasalvadorenadenver.com/images/tienda-salvadorena-sign.png",
+        "https://tiendasalvadorenadenver.com/images/tienda-sign.png",
         "https://tiendasalvadorenadenver.com/images/grandparents-el-salvador-flag.jpg",
         "https://tiendasalvadorenadenver.com/images/web/display-case-hats.webp"
       ],
@@ -533,7 +533,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
   <header class="site-header">
     <div class="header-toolbar">
       <a href="index.html" class="brand-link">
-        <img src="images/web/tienda-salvadorena-sign.webp" alt="" width="1200" height="706" class="brand-logo">
+        <img src="images/web/tienda-sign-240.webp" alt="" width="240" height="160" class="brand-logo">
         <span class="brand-name">Tienda Salvadoreña <small data-i18n="home2.brand.since">Est. 1991 · East Colfax</small></span>
       </a>
 
@@ -590,9 +590,11 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
         <p class="status-pill" data-store-status hidden></p>
       </div>
 
-      <div class="hero__media">
+      <div class="hero__media" data-tilt data-tilt-max="6">
         <figure class="snapshot snapshot--hero">
           <span class="tape tape--tl" aria-hidden="true"></span>
+          <!-- The store badge, stuck on the photo like a sticker (decorative; the footer badge carries the alt text) -->
+          <img class="hero-sticker" src="images/web/tienda-badge.webp" width="336" height="336" alt="" aria-hidden="true">
           <img src="images/web/grandparents-el-salvador-flag.webp"
                width="1200" height="903" fetchpriority="high"
                alt="Jorge y Delia Romero, fundadores de Tienda Salvadoreña, de pie frente a una bandera de El Salvador dentro de la tienda"
@@ -1099,8 +1101,8 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
     </div>
     <div class="footer-grid">
       <div class="footer-brand">
-        <img class="footer-logo" src="images/web/tienda-salvadorena-sign.webp" width="1200" height="706" loading="lazy"
-             alt="Letrero de Tienda Salvadoreña con las banderas de Centroamérica" data-i18n-alt="alt.letrero-de-la-tienda">
+        <img class="footer-logo footer-logo--badge" src="images/web/tienda-badge.webp" width="336" height="336" loading="lazy"
+             alt="Insignia redonda de Tienda Salvadoreña con el escudo de El Salvador, banderas de Centroamérica, el teléfono (303) 394-4185, un código QR del sitio web y la dirección 5128 E Colfax Ave, Denver, CO 80220" data-i18n-alt="rd.badge.alt">
         <p data-i18n="footer.tagline">Tienda Salvadoreña de Jorge y Delia Romero: la tienda salvadoreña más antigua de Colorado. Productos de El Salvador y Centroamérica en East Colfax, Denver, desde 1991.</p>
       </div>
 
@@ -1137,8 +1139,8 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
     </div>
   </footer>
 
-  <script src="js/lang-toggle.js?v=20261106a" defer></script>
-  <script src="js/site.js?v=20261030a" defer></script>
+  <script src="js/lang-toggle.js?v=20261106b" defer></script>
+  <script src="js/site.js?v=20261106b" defer></script>
   <script src="js/radio.js?v=20261020b" defer></script>
 </body>
 </html>
