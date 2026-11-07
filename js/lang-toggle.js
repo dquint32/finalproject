@@ -909,6 +909,8 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
   // hero phone and the mobile action bar (all pages)
   // ========================================
   Object.assign(translations.es, {
+    "rd.receipt.email": "Correo",
+    "rd.parking.title": "Estacionamiento y obras en Colfax",
     "rd.hero.h1sub": "Productos de El Salvador en Denver, Colorado",
     "rd.faq.kicker": "Lo que más nos preguntan",
     "rd.faq.title": "Preguntas frecuentes",
@@ -936,6 +938,8 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
   });
 
   Object.assign(translations.en, {
+    "rd.receipt.email": "Email",
+    "rd.parking.title": "Parking & Colfax roadwork",
     "rd.hero.h1sub": "Salvadoran groceries in Denver, Colorado",
     "rd.faq.kicker": "What people ask us most",
     "rd.faq.title": "Frequently asked questions",

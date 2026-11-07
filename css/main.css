@@ -818,6 +818,7 @@ main > section { padding: var(--section-y) var(--pad-x); }
   text-transform: none;
   color: var(--hazard-text);
 }
+.parking__title { font-size: clamp(1.75rem, 4.5vw, 2.4rem); }
 .obras__lead, .parking p { max-width: 60ch; color: var(--hazard-text); }
 .obras .scribble { color: var(--hazard-text); font-size: 1.5rem; }
 .obras__map {
@@ -868,7 +869,8 @@ main > section { padding: var(--section-y) var(--pad-x); }
   gap: 2rem;
   background: var(--bg-alt);
 }
-.spread__year {
+.spread__year {          /* decorative; hidden — it collided with the title and photos, and 1991 is already in the ledger */
+  display: none;
   position: absolute;
   top: 1rem; right: var(--pad-x);
   margin: 0;
@@ -957,13 +959,17 @@ main > section { padding: var(--section-y) var(--pad-x); }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 10.25rem), 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-@media (min-width: 640px) { .card-grid { grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr)); gap: 1.5rem; } }
+@media (min-width: 640px) {
+  .card-grid { grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr)); gap: 1.5rem; }
+  .shelf-tag { padding: 0.85rem 1rem 0.25rem; }
+  .lore { padding: 0 1rem 1rem; }
+}
 
 .tile { display: flex; min-width: 0; }
 .tile > a, .tile__btn {
@@ -1001,18 +1007,18 @@ main > section { padding: var(--section-y) var(--pad-x); }
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  padding: 0.85rem 1rem 0.25rem;
+  padding: 0.75rem 0.8rem 0.25rem;
 }
 .shelf-tag__name {
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 3.6vw, 1.125rem);
   font-weight: 800;
   line-height: 1.2;
 }
 .shelf-tag__cat {
   font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--red);
 }
@@ -1030,7 +1036,7 @@ main > section { padding: var(--section-y) var(--pad-x); }
 html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
 .lore {
   order: 2;
-  padding: 0 1rem 1rem;
+  padding: 0 0.8rem 0.9rem;
   font-size: 0.9375rem;
   line-height: 1.5;
   color: var(--text-muted);
@@ -1041,12 +1047,12 @@ html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
   justify-content: center;
   gap: 0.6rem;
   min-height: 100%;
-  padding: 1.4rem 1.25rem;
+  padding: 1.1rem 0.9rem;
   border: 2px dashed var(--border-strong);
   background: var(--surface-2);
   box-shadow: none;
 }
-.cardboard__line { font-family: var(--font-hand); font-size: 2rem; font-weight: 700; line-height: 1; color: var(--red); }
+.cardboard__line { font-family: var(--font-hand); font-size: clamp(1.5rem, 6vw, 2rem); font-weight: 700; line-height: 1; color: var(--red); }
 .cardboard__list { font-size: 1rem; line-height: 1.5; color: var(--text-muted); }
 .cardboard__cta { font-weight: 700; color: var(--link); text-decoration: underline; text-underline-offset: 0.2em; }
 .cardboard__cta::after { content: " →"; }
@@ -1113,7 +1119,8 @@ html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
 .artesanos { background: var(--bg-alt); }
 .artesanos__lead { color: var(--text-muted); }
 .artesanos__layout { display: grid; gap: 2rem; }
-.artesanos__photos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
+.artesanos__photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+.artesanos__photos img { aspect-ratio: 3 / 4; object-fit: cover; }
 
 .origins {
   display: grid;
@@ -1147,8 +1154,6 @@ html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
 
 @media (min-width: 1000px) {
   .artesanos__layout { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 3rem; align-items: start; }
-  .artesanos__photos { grid-template-columns: 1fr; position: sticky; top: 6rem; }
-  .snapshot--art2 { width: 70%; justify-self: end; margin-top: -3rem; }
 }
 
 /* ==========================================================================
@@ -1162,7 +1167,7 @@ html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
   gap: 0.4rem;
   margin: 0.5rem 0 0;
   padding: 0.55rem 1rem;
-  border-radius: 999px;
+  border-radius: 12px;
   background: var(--gold);
   color: var(--on-gold);
   font-weight: 600;
@@ -1613,13 +1618,14 @@ html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
 
 .heritage, .press-photos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
   gap: 1.75rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .heritage img, .press-photos img { aspect-ratio: 4 / 3; object-fit: cover; }
+.heritage img[src*="tienda-salvadorena-sign"] { object-fit: contain; background: #FFFFFF; }
 
 .cta-band {
   display: grid;
@@ -1641,12 +1647,13 @@ html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
 /* Press clippings */
 .clips {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
   gap: 1.5rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
+@media (min-width: 900px) { .clips { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .clip {
   display: flex;
   flex-direction: column;
