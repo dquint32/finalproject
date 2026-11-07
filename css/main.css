@@ -738,21 +738,6 @@ main > section { padding: var(--section-y) var(--pad-x); }
 
 .hero__media { display: grid; gap: 1.5rem; min-width: 0; align-content: start; }
 
-/* Store badge as a sticker on the hero photo: tilted, tilts back on hover */
-.hero-sticker {
-  position: absolute;
-  z-index: 2;
-  top: -22px; right: -8px;
-  width: clamp(84px, 24vw, 128px);
-  height: auto;
-  border-radius: 50%;
-  transform: rotate(10deg);
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.28));
-  transition: transform 0.45s cubic-bezier(0.3, 1.6, 0.5, 1);
-  pointer-events: none;
-}
-.snapshot--hero:hover .hero-sticker { transform: rotate(-6deg) scale(1.07); }
-@media (min-width: 900px) { .hero-sticker { top: -30px; right: -26px; } }
 
 .founders-note {
   position: relative;
