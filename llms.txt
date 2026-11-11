@@ -15,6 +15,7 @@
 - Parking: shared lot behind the store (about 4 spaces), street parking on E Colfax Ave, or Forrest Street. Colfax roadwork is ongoing; the store remains open.
 - Languages: Spanish and English
 - Customers travel from across Colorado, Wyoming and Nebraska (Denverite, 2018)
+- National Pupusa Day (Día Nacional de la Pupusa) is El Salvador's national holiday for the pupusa, every second Sunday of November, official since 2005
 
 ## Products
 - Food: queso duro viejo, crema salvadoreña, Central American cheeses, pan dulce, Salvadoran quesadilla, tamales de elote, frozen nances, fried charrales, plantain chips, traditional candy, beans, sauces, spices and dried herbs, masa flour for pupusas
@@ -24,12 +25,13 @@
 - Nostalgia and gifts: Silabario Hispanoamericano reading primer, flags, woven wallets, handbags, souvenirs
 
 ## Pages
-- [Home / Inicio](https://tiendasalvadorenadenver.com/): overview, shelves, artisan towns, pupusa guide, FAQ, hours and map
-- [Products / Artículos](https://tiendasalvadorenadenver.com/items.html): full product gallery by category
-- [History / Historia](https://tiendasalvadorenadenver.com/history.html): the story of Jorge and Delia Romero
-- [Pollo Campero](https://tiendasalvadorenadenver.com/pollo.html): history and reheating guide
-- [Press / Prensa](https://tiendasalvadorenadenver.com/press.html): coverage by Diario El Salvador (2023) and Denverite (2018)
-- [Contact / Contacto](https://tiendasalvadorenadenver.com/contact.html): phone, hours, map and parking
+Every page exists in Spanish (site root) and English (/en/).
+- Home / Inicio: [Español](https://tiendasalvadorenadenver.com/) · [English](https://tiendasalvadorenadenver.com/en/): overview, shelves, artisan towns, pupusa guide, FAQ, hours and map
+- Products / Artículos: [Español](https://tiendasalvadorenadenver.com/items.html) · [English](https://tiendasalvadorenadenver.com/en/items.html): full product gallery by category
+- History / Historia: [Español](https://tiendasalvadorenadenver.com/history.html) · [English](https://tiendasalvadorenadenver.com/en/history.html): the story of Jorge and Delia Romero
+- Pollo Campero: [Español](https://tiendasalvadorenadenver.com/pollo.html) · [English](https://tiendasalvadorenadenver.com/en/pollo.html): history and reheating guide
+- Press / Prensa: [Español](https://tiendasalvadorenadenver.com/press.html) · [English](https://tiendasalvadorenadenver.com/en/press.html): coverage by Diario El Salvador (2023) and Denverite (2018)
+- Contact / Contacto: [Español](https://tiendasalvadorenadenver.com/contact.html) · [English](https://tiendasalvadorenadenver.com/en/contact.html): phone, hours, map and parking
 
 ## Press
 - Diario El Salvador (2023): "Una tienda en Denver cumple 32 años de compartir la cultura salvadoreña"

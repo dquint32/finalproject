@@ -20,8 +20,8 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="title.home">Tienda Salvadoreña Denver | Productos de El Salvador en East Colfax</title>
-  <meta name="description" data-i18n="desc.home" content="La tienda salvadoreña más antigua de Denver (30+ años). Productos salvadoreños y centroamericanos auténticos: comestibles, bebidas, ropa, recuerdos y más en E Colfax Ave.">
+  <title data-i18n="title.home">Tienda Salvadoreña Denver | Productos de El Salvador</title>
+  <meta name="description" data-i18n="desc.home" content="La tienda salvadoreña más antigua de Denver, desde 1991. Queso duro, Kolashampan, pan dulce, ropa y recuerdos de El Salvador en 5128 E Colfax Ave.">
   <meta name="keywords" content="tienda salvadoreña Denver, productos salvadoreños Denver, Salvadoran store Denver, Central American grocery Denver, productos centroamericanos, queso duro, Kolashampan, guayaberas, recuerdos de El Salvador, E Colfax">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Tienda Salvadoreña">
@@ -30,7 +30,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
 
   <link rel="canonical" href="https://tiendasalvadorenadenver.com/">
   <link rel="alternate" hreflang="es" href="https://tiendasalvadorenadenver.com/">
-  <link rel="alternate" hreflang="en" href="https://tiendasalvadorenadenver.com/">
+  <link rel="alternate" hreflang="en" href="https://tiendasalvadorenadenver.com/en/">
   <link rel="alternate" hreflang="x-default" href="https://tiendasalvadorenadenver.com/">
 
   <!-- Local SEO / Geo -->
@@ -44,7 +44,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
   <meta property="og:site_name" content="Tienda Salvadoreña">
   <meta property="og:locale" content="es_US">
   <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:title" content="Tienda Salvadoreña Denver | Productos de El Salvador en East Colfax">
+  <meta property="og:title" content="Tienda Salvadoreña Denver | Productos de El Salvador">
   <meta property="og:description" content="La tienda salvadoreña más antigua de Denver (30+ años). Productos salvadoreños y centroamericanos auténticos en 5128 E Colfax Ave.">
   <meta property="og:url" content="https://tiendasalvadorenadenver.com/">
   <meta property="og:image" content="https://tiendasalvadorenadenver.com/images/grandparents-el-salvador-flag.jpg">
@@ -61,7 +61,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tienda Salvadoreña Denver | Productos de El Salvador en East Colfax">
+  <meta name="twitter:title" content="Tienda Salvadoreña Denver | Productos de El Salvador">
   <meta name="twitter:description" content="La tienda salvadoreña más antigua de Denver. Productos auténticos de El Salvador y Centroamérica.">
   <meta name="twitter:image" content="https://tiendasalvadorenadenver.com/images/grandparents-el-salvador-flag.jpg">
   <meta name="twitter:image:alt" content="Jorge y Delia Romero frente a una bandera de El Salvador dentro de la tienda">
@@ -73,7 +73,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Roboto+Condensed:wght@700;800;900&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500..900,0..100,0..1;1,9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css?v=20261106b">
+  <link rel="stylesheet" href="css/main.css?v=20261111a">
 
   <!-- Structured data: GroceryStore + founders + catalog + FAQ (one linked graph) -->
   <script type="application/ld+json">
@@ -161,10 +161,6 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
         {
           "@type": "City",
           "name": "Aurora"
-        },
-        {
-          "@type": "City",
-          "name": "Lakewood"
         },
         {
           "@type": "AdministrativeArea",
@@ -512,6 +508,14 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
             "@type": "Answer",
             "text": "Efectivo, tarjetas de crédito y de débito."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuándo es el Día Nacional de la Pupusa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En El Salvador se celebra cada segundo domingo de noviembre desde 2005, cuando la Asamblea Legislativa lo declaró fecha oficial. En Tienda Salvadoreña tenemos la harina, los frijoles y el queso para hacerlas en casa."
+          }
         }
       ]
     }
@@ -556,8 +560,8 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
       </button>
 
       <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-aria-label="a11y.language">
-        <button id="btnSpanish" class="lang-button active" aria-pressed="true" type="button" lang="es">ES<span class="sr-only"> – Español</span></button>
-        <button id="btnEnglish" class="lang-button" aria-pressed="false" type="button" lang="en">EN<span class="sr-only"> – English</span></button>
+        <a class="lang-button" href="./" hreflang="es" lang="es" aria-current="true">ES<span class="sr-only"> – Español</span></a>
+        <a class="lang-button" href="en/" hreflang="en" lang="en">EN<span class="sr-only"> – English</span></a>
       </div>
     </div>
   </header>
@@ -668,7 +672,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
         <h2 id="story-title" class="spread__title" data-i18n="home2.story.title">Empezó en un local del tamaño de un clóset en Colorado Boulevard.</h2>
         <p class="dropcap" data-i18n="home2.story.p1">Delia Romero era maestra en El Salvador; Jorge Romero venía de la industria aérea en Ecuador. En Denver soñaron con un lugar donde los centroamericanos se sintieran en casa. En 1991 abrieron Tienda Salvadoreña, que creció, se mudó a East Colfax y se convirtió en la tienda salvadoreña más antigua de Colorado.</p>
         <p data-i18n="home2.story.p2">Más de tres décadas después, siguen detrás del mostrador: recomendando quesos, guardando el pan dulce de los clientes de siempre y apoyando a la comunidad cuando más lo necesita.</p>
-        <a class="ink-link" href="history.html" data-i18n="mission.link">Conoce nuestra historia</a>
+        <a class="ink-link" href="history.html" data-i18n="mission.link">Conozca nuestra historia</a>
       </div>
 
       <figure class="snapshot snapshot--counter">
@@ -991,13 +995,17 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
           <h3 class="faq__q" data-i18n="rd.faq.q6">¿Qué formas de pago aceptan?</h3>
           <p class="faq__a" data-i18n="rd.faq.a6">Efectivo, tarjetas de crédito y de débito.</p>
         </div>
+        <div class="faq__item">
+          <h3 class="faq__q" data-i18n="rd.faq.q7">¿Cuándo es el Día Nacional de la Pupusa?</h3>
+          <p class="faq__a" data-i18n="rd.faq.a7">En El Salvador se celebra cada segundo domingo de noviembre desde 2005, cuando la Asamblea Legislativa lo declaró fecha oficial. En Tienda Salvadoreña tenemos la harina, los frijoles y el queso para hacerlas en casa.</p>
+        </div>
       </div>
     </section>
 
     <!-- ============ VISIT: painted hours sign + receipt + map ============ -->
     <section id="visitanos" class="visit" aria-labelledby="visit-title">
       <header class="visit__header">
-        <p class="kicker" data-i18n="visit.eyebrow">Visítanos</p>
+        <p class="kicker" data-i18n="visit.eyebrow">Visítenos</p>
         <h2 id="visit-title" class="visit__title" data-i18n="home2.visit.title">Venga a vernos en East Colfax, pues.</h2>
       </header>
 
@@ -1117,7 +1125,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
       </nav>
 
       <div>
-        <h2 class="footer-heading" data-i18n="footer.visit">Visítanos</h2>
+        <h2 class="footer-heading" data-i18n="footer.visit">Visítenos</h2>
         <address class="footer-contact">
           <a href="https://www.google.com/maps?q=5128+E+Colfax+Ave,+Denver,+CO+80220" target="_blank" rel="noopener noreferrer">5128 E Colfax Ave, Denver, CO 80220</a><br>
           <a href="tel:+13033944185">(303) 394-4185</a><br>
@@ -1137,7 +1145,7 @@ Notes: Every page shares css/main.css. Language toggle, live store hours and the
     </div>
   </footer>
 
-  <script src="js/lang-toggle.js?v=20261106b" defer></script>
+  <script src="js/lang-toggle.js?v=20261111a" defer></script>
   <script src="js/site.js?v=20261106b" defer></script>
   <script src="js/radio.js?v=20261020b" defer></script>
 </body>

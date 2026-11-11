@@ -26,14 +26,16 @@ The project is hosted on GitHub Pages:
 ---
 
 ## Repository Contents
-- `index.html` – Home page  
+- `index.html` – Home page (Spanish; English twin at `en/index.html`)  
 - `items.html` – Products we sell  
 - `history.html` – Family and cultural background  
 - `pollo.html` – Pollo Campero page  
 - `press.html` – Press & recognition  
 - `contact.html` – Contact & location info  
 - `css/main.css` – One shared, mobile-first stylesheet: WCAG AAA light (cream/paper) and dark (navy/gold) themes, uniform product cards, mobile action bar, Ilobasco and banderitas accents  
-- `js/lang-toggle.js` – Spanish/English toggle and all page translations  
+- `js/lang-toggle.js` – All English translations (keyed by `data-i18n`) and the small script that remembers the visitor's language  
+- `en/` – English pages, **generated** by `build_en.py`; never edit them by hand  
+- `build_en.py` – Writes `en/*.html` and `sitemap.xml` from the Spanish pages + the English translations. After editing any page or translation, run `python build_en.py`  
 - `js/site.js` – Mobile menu, light/dark theme toggle, live open/closed status, back-to-top button  
 - `js/items.js` – Product filters and photo zoom (Artículos page)  
 - `js/radio.js` – Opt-in "Radio Tienda" marimba player (home page)  

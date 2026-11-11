@@ -20,13 +20,13 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
 
       // Per-page SEO titles & descriptions
-      "title.home": "Tienda Salvadoreña Denver | Salvadoran Grocery Store on East Colfax",
-      "desc.home": "Denver's oldest Salvadoran store (30+ years). Authentic Salvadoran & Central American groceries, drinks, clothing, souvenirs and more on E Colfax Ave.",
-      "title.items": "Salvadoran Products in Denver | Items – Tienda Salvadoreña",
+      "title.home": "Tienda Salvadoreña | Salvadoran Grocery Store in Denver",
+      "desc.home": "Denver's oldest Salvadoran store, since 1991. Queso duro, Kolashampan, pan dulce, clothing and souvenirs from El Salvador at 5128 E Colfax Ave.",
+      "title.items": "Salvadoran Groceries in Denver | Tienda Salvadoreña",
       "desc.items": "Browse Salvadoran & Central American food, drinks, cheeses, clothing and nostalgic goods in Denver. Kolashampan, queso duro, pan dulce and more.",
       "title.history": "Our Story | Tienda Salvadoreña Denver",
       "desc.history": "The story of Jorge and Delia Romero: 30+ years serving Denver's Salvadoran and Central American community with authentic products.",
-      "title.pollo": "Pollo Campero: Tradition & Reheating Tips | Tienda Salvadoreña Denver",
+      "title.pollo": "How to Reheat Pollo Campero | Tienda Salvadoreña",
       "desc.pollo": "Pollo Campero history and a step-by-step reheating guide (air fryer & oven) for the best flavor. Central American tradition in Denver, Colorado.",
       "title.press": "Press & Recognition | Tienda Salvadoreña Denver",
       "desc.press": "Media coverage of Tienda Salvadoreña, Denver's first Salvadoran store. Featured in Diario El Salvador and Denverite.",
@@ -254,14 +254,14 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "history.values.community": "Community – serving with warmth and respect.",
       "history.values.pride": "Cultural Pride – sharing our roots with Colorado.",
       
-      "history.cta.title": "Visit Us",
+      "history.cta.title": "Visit us on East Colfax",
       "history.cta.text": "We invite you to visit Tienda Salvadoreña in Denver and be part of our story. Every purchase supports a family legacy and keeps the traditions of El Salvador alive.",
       "history.cta.button": "Go to Contact",
 
       // ========================================
       // POLLO CAMPERO PAGE (pollo.html)
       // ========================================
-      "pollo.hero.title": "Pollo Campero – Family Tradition",
+      "pollo.hero.title": "Pollo Campero in Denver: tradition and how to reheat it",
       "pollo.hero.lead": "Note: Pollo Campero is a beloved food in Central America. Our family enjoys it as part of our traditions, and we know many travelers bring cold boxes from Guatemala or El Salvador to share at home.",
       "pollo.hero.note": "Here we share recommendations for reheating and enjoying it with the best flavor, just like we do as a family.",
       
@@ -298,7 +298,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // PRESS PAGE (press.html)
       // ========================================
-      "press.hero.title": "Press and Recognition",
+      "press.hero.title": "Tienda Salvadoreña in the press",
       "press.hero.lead": "We document the impact of Tienda Salvadoreña on the community: articles, mentions and recognitions that tell our story.",
       
       "press.coverage.title": "Featured Coverage",
@@ -362,18 +362,18 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
 
       // Títulos y descripciones SEO por página
-      "title.home": "Tienda Salvadoreña Denver | Productos de El Salvador en East Colfax",
-      "desc.home": "La tienda salvadoreña más antigua de Denver (30+ años). Productos salvadoreños y centroamericanos auténticos: comestibles, bebidas, ropa, recuerdos y más en E Colfax Ave.",
+      "title.home": "Tienda Salvadoreña Denver | Productos de El Salvador",
+      "desc.home": "La tienda salvadoreña más antigua de Denver, desde 1991. Queso duro, Kolashampan, pan dulce, ropa y recuerdos de El Salvador en 5128 E Colfax Ave.",
       "title.items": "Artículos Salvadoreños en Denver | Tienda Salvadoreña",
-      "desc.items": "Explora comida, bebidas, quesos, ropa y artículos nostálgicos salvadoreños y centroamericanos en Denver. Kolashampan, queso duro, pan dulce y más.",
+      "desc.items": "Explore comida, bebidas, quesos, ropa y artículos nostálgicos salvadoreños y centroamericanos en Denver. Kolashampan, queso duro, pan dulce y más.",
       "title.history": "Nuestra Historia | Tienda Salvadoreña Denver",
       "desc.history": "La historia de Jorge y Delia Romero: 30+ años sirviendo a la comunidad salvadoreña y centroamericana de Denver con productos auténticos.",
-      "title.pollo": "Pollo Campero: Tradición y Cómo Recalentar | Tienda Salvadoreña Denver",
+      "title.pollo": "Pollo Campero: cómo recalentarlo | Tienda Salvadoreña",
       "desc.pollo": "Historia del Pollo Campero y guía para recalentarlo (air fryer y horno) con el mejor sabor. Tradición centroamericana en Denver, Colorado.",
       "title.press": "Prensa y Reconocimientos | Tienda Salvadoreña Denver",
       "desc.press": "Cobertura de medios sobre Tienda Salvadoreña, la primera tienda salvadoreña de Denver. Artículos de Diario El Salvador y Denverite.",
       "title.contact": "Contacto y Ubicación en E Colfax | Tienda Salvadoreña Denver",
-      "desc.contact": "Visítanos en 5128 E Colfax Ave, Denver, CO 80220. Horario, teléfono (303) 394-4185, mapa y estacionamiento. Tienda salvadoreña en Denver.",
+      "desc.contact": "Visítenos en 5128 E Colfax Ave, Denver, CO 80220. Horario, teléfono (303) 394-4185, mapa y estacionamiento. Tienda salvadoreña en Denver.",
       
       // Navigation
       "nav.home": "Inicio",
@@ -446,15 +446,15 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "nav.label": "Navegación principal",
       "footer.tagline": "Tienda Salvadoreña de Jorge y Delia Romero: la tienda salvadoreña más antigua de Colorado. Productos de El Salvador y Centroamérica en East Colfax, Denver, desde 1991.",
       "footer.links": "Enlaces rápidos",
-      "footer.visit": "Visítanos",
+      "footer.visit": "Visítenos",
       "hero.img.owners": "Jorge y Delia Romero, fundadores de Tienda Salvadoreña, de pie frente a una bandera de El Salvador dentro de la tienda",
       "hero.img.owners.caption": "Jorge y Delia Romero, fundadores",
       "hero.img.owners.credit": "Foto: Nicolle Menéndez / Diario El Salvador",
       "hero.img.kola": "Botellas de Kolashampan, la gaseosa salvadoreña color naranja, alineadas en el estante",
-      "mission.link": "Conoce nuestra historia",
+      "mission.link": "Conozca nuestra historia",
       "categories.eyebrow": "Lo que encontrarás",
       "cat.wellness.badge": "Remedios naturales",
-      "visit.eyebrow": "Visítanos",
+      "visit.eyebrow": "Visítenos",
       "visit.hours": "Horario",
       "visit.phone": "Teléfono",
       "visit.call": "Llamar ahora",
@@ -596,14 +596,14 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       "history.values.community": "Comunidad – servir con calidez y respeto.",
       "history.values.pride": "Orgullo cultural – compartir nuestras raíces con Colorado.",
       
-      "history.cta.title": "Visítanos",
-      "history.cta.text": "Te invitamos a visitar Tienda Salvadoreña en Denver y ser parte de nuestra historia. Cada compra apoya un legado familiar y mantiene vivas las tradiciones de El Salvador.",
+      "history.cta.title": "Visítenos en East Colfax",
+      "history.cta.text": "Lo invitamos a visitar Tienda Salvadoreña en Denver y a ser parte de nuestra historia. Cada compra apoya un legado familiar y mantiene vivas las tradiciones de El Salvador.",
       "history.cta.button": "Ir a Contacto",
 
       // ========================================
       // POLLO CAMPERO PAGE (pollo.html) - SPANISH
       // ========================================
-      "pollo.hero.title": "Pollo Campero – Tradición Familiar",
+      "pollo.hero.title": "Pollo Campero en Denver: tradición y cómo recalentarlo",
       "pollo.hero.lead": "Nota: Pollo Campero es un alimento muy querido en Centroamérica. Nuestra familia lo disfruta como parte de nuestras tradiciones, y sabemos que muchos viajeros lo traen en cajas frías desde Guatemala o El Salvador para compartir en casa.",
       "pollo.hero.note": "Aquí compartimos recomendaciones para recalentar y disfrutarlo con el mejor sabor, tal como lo hacemos en familia.",
       
@@ -640,7 +640,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // ========================================
       // PRESS PAGE (press.html) - SPANISH
       // ========================================
-      "press.hero.title": "Prensa y Reconocimientos",
+      "press.hero.title": "Tienda Salvadoreña en la prensa",
       "press.hero.lead": "Documentamos el impacto de Tienda Salvadoreña en la comunidad: artículos, menciones y reconocimientos que cuentan nuestra historia.",
       
       "press.coverage.title": "Cobertura destacada",
@@ -667,7 +667,7 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
       // CONTACT PAGE (contact.html) - SPANISH
       // ========================================
       "contact.hero.title": "Contacto y ubicación en East Colfax, Denver",
-      "contact.hero.lead": "Estamos aquí para ayudar. Llámanos, escríbenos o visítanos en la dirección indicada. Responderemos lo antes posible.",
+      "contact.hero.lead": "Estamos aquí para ayudarle. Llámenos, escríbanos o visítenos en la dirección indicada. Le responderemos lo antes posible.",
       
       "contact.info.title": "Información de contacto",
       "contact.label.email": "Correo electrónico:",
@@ -928,6 +928,8 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
     "rd.faq.a5": "En el lote compartido detrás de la tienda (unos 4 espacios), en la calle o en Forrest Street. Las obras de Colfax siguen, pero la tienda sigue abierta.",
     "rd.faq.q6": "¿Qué formas de pago aceptan?",
     "rd.faq.a6": "Efectivo, tarjetas de crédito y de débito.",
+    "rd.faq.q7": "¿Cuándo es el Día Nacional de la Pupusa?",
+    "rd.faq.a7": "En El Salvador se celebra cada segundo domingo de noviembre desde 2005, cuando la Asamblea Legislativa lo declaró fecha oficial. En Tienda Salvadoreña tenemos la harina, los frijoles y el queso para hacerlas en casa.",
     "rd.alert.title": "¡Ojo, vecino!",
     "rd.alert.text": "Obras en Colfax: seguimos abiertos. Estacione atrás de la tienda.",
     "rd.alert.cta": "Cómo llegar",
@@ -959,6 +961,8 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
     "rd.faq.a5": "In the shared lot behind the store (about 4 spaces), on the street, or on Forrest Street. Construction on Colfax continues, but the store stays open.",
     "rd.faq.q6": "What payment methods do you accept?",
     "rd.faq.a6": "Cash, credit cards and debit cards.",
+    "rd.faq.q7": "When is National Pupusa Day?",
+    "rd.faq.a7": "El Salvador celebrates it every second Sunday of November, an official date since 2005. Tienda Salvadoreña carries the masa flour, beans and cheese to make them at home.",
     "rd.alert.title": "Heads up, neighbor!",
     "rd.alert.text": "Construction on Colfax: we're still open. Park behind the store.",
     "rd.alert.cta": "How to get here",
@@ -971,29 +975,20 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
   });
 
   // ========================================
-  // LANGUAGE APPLICATION LOGIC
+  // LANGUAGE SWITCHING (Nov 2026)
+  // Every page now exists twice: Spanish in the site folder and English in
+  // en/, both written out as plain HTML (build_en.py reads the dictionary
+  // above to make the English pages). So nothing is translated in place any
+  // more; the ES / EN links in the header simply go to the other page.
+  //
+  // This script only remembers the visitor's choice. A returning visitor who
+  // picked the other language is sent to that page's twin. The device
+  // language is never used to switch, so search engines (and anyone without
+  // a saved choice) always see each address in its own language.
   // ========================================
-  
-  // Get current language from localStorage or default to Spanish
   const SUPPORTED_LANGS = ['es', 'en'];
+  const pageLang = document.documentElement.lang === 'en' ? 'en' : 'es';
 
-  /**
-   * Language for a first-time visitor, taken from the device/browser language
-   * list in order of preference. Spanish devices get Spanish, English devices
-   * get English, and any other language falls back to English.
-   */
-  function detectDeviceLanguage() {
-    const preferred = (navigator.languages && navigator.languages.length)
-      ? navigator.languages
-      : [navigator.language || ''];
-    for (const tag of preferred) {
-      const base = String(tag).toLowerCase().split('-')[0];
-      if (SUPPORTED_LANGS.includes(base)) return base;
-    }
-    return 'en';
-  }
-
-  /** A language the visitor picked with the ES/EN buttons, if any. */
   function getSavedLanguage() {
     try {
       const saved = localStorage.getItem('language');
@@ -1003,115 +998,24 @@ Generative AI Used: Yes, Gemini, Copilot, Claude
     }
   }
 
-  // A saved choice wins; otherwise follow the device language
-  let currentLang = getSavedLanguage() || detectDeviceLanguage();
-
-  /**
-   * Apply translations to all elements with data-i18n attribute
-   * @param {string} lang - Language code ('en' or 'es')
-   * @param {boolean} [remember] - Save the choice (only when the visitor clicks ES/EN)
-   */
-  function applyTranslations(lang, remember) {
-    const elements = document.querySelectorAll('[data-i18n]');
-    
-    elements.forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const translation = translations[lang][key];
-      
-      if (translation) {
-        // Handle Meta tags (e.g., description in <head>)
-        if (el.tagName === 'META' && el.hasAttribute('content')) {
-          el.setAttribute('content', translation);
-        }
-        // Handle Images (Alt Text)
-        else if (el.tagName === 'IMG') {
-          el.alt = translation;
-        }
-        // Handle Inputs (Placeholders)
-        else if ((el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') && el.hasAttribute('placeholder')) {
-          el.placeholder = translation;
-        }
-        // Handle Standard Text Content (innerHTML) and check for data-i18n-html
-        else {
-          if (el.hasAttribute('data-i18n-html') && el.getAttribute('data-i18n-html') === 'true') {
-            el.innerHTML = translation;
-          } else {
-            el.textContent = translation;
-          }
-        }
-      } else {
-        console.warn(`Translation missing for key: ${key} in language: ${lang}`);
-      }
-    });
-    
-    // Translate attributes: data-i18n-alt (image alt text), data-i18n-aria-label, data-i18n-title
-    [['data-i18n-alt', 'alt'], ['data-i18n-aria-label', 'aria-label'], ['data-i18n-title', 'title']].forEach(([dataAttr, targetAttr]) => {
-      document.querySelectorAll('[' + dataAttr + ']').forEach(el => {
-        const translation = translations[lang][el.getAttribute(dataAttr)];
-        if (translation) el.setAttribute(targetAttr, translation);
-      });
-    });
-
-    // Update page title if exists
-    const titleKey = document.querySelector('title[data-i18n]')?.getAttribute('data-i18n');
-    if (titleKey && translations[lang][titleKey]) {
-      document.title = translations[lang][titleKey];
-    }
-    
-    // Update HTML lang attribute
-    document.documentElement.lang = lang === 'es' ? 'es' : 'en';
-    
-    // Save preference
-    if (remember) {
-      try {
-        localStorage.setItem('language', lang);
-      } catch (error) {
-        // Preference just won't persist
-      }
-    }
-    currentLang = lang;
-    
-    // Update button states
-    updateButtonStates(lang);
+  function twinLink(lang) {
+    return document.querySelector('.lang-switch a[hreflang="' + lang + '"]');
   }
 
-  /**
-   * Update button active states
-   * @param {string} lang - Language code ('en' or 'es')
-   */
-  function updateButtonStates(lang) {
-    const btnSpanish = document.getElementById('btnSpanish');
-    const btnEnglish = document.getElementById('btnEnglish');
-    
-    if (btnSpanish && btnEnglish) {
-      if (lang === 'es') {
-        btnSpanish.classList.add('active');
-        btnSpanish.setAttribute('aria-pressed', 'true');
-        btnEnglish.classList.remove('active');
-        btnEnglish.setAttribute('aria-pressed', 'false');
-      } else {
-        btnEnglish.classList.add('active');
-        btnEnglish.setAttribute('aria-pressed', 'true');
-        btnSpanish.classList.remove('active');
-        btnSpanish.setAttribute('aria-pressed', 'false');
-      }
-    }
+  const saved = getSavedLanguage();
+  if (saved && saved !== pageLang) {
+    const link = twinLink(saved);
+    if (link) window.location.replace(link.href + window.location.search + window.location.hash);
   }
 
-  // ========================================
-  // INITIALIZATION
-  // ========================================
-  
-  // Initialize on page load
-  document.addEventListener('DOMContentLoaded', () => {
-    
-    // Apply initial translations
-    applyTranslations(currentLang);
-    
-    const btnSpanish = document.getElementById('btnSpanish');
-    const btnEnglish = document.getElementById('btnEnglish');
-    
-    if (btnSpanish) btnSpanish.addEventListener('click', () => applyTranslations('es', true));
-    if (btnEnglish) btnEnglish.addEventListener('click', () => applyTranslations('en', true));
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('.lang-switch a[hreflang]');
+    if (!link) return;
+    try { localStorage.setItem('language', link.getAttribute('hreflang')); } catch (error) { /* won't persist */ }
+    // Keep the visitor's place (filters, section) when switching
+    if (window.location.search || window.location.hash) {
+      event.preventDefault();
+      window.location.href = link.href + window.location.search + window.location.hash;
+    }
   });
 })();

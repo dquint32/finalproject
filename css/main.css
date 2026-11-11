@@ -603,7 +603,10 @@ main > section { padding: var(--section-y) var(--pad-x); }
   font-weight: 700;
   cursor: pointer;
 }
-.lang-button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.lang-button[aria-pressed="true"], .lang-button[aria-current="true"] { background: var(--text); color: var(--bg); }
+a.lang-button { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+a.lang-button:hover { color: inherit; background: var(--surface-2); }
+a.lang-button[aria-current="true"]:hover { color: var(--bg); background: var(--text); }
 
 @media (min-width: 1040px) {
   .header-toolbar { flex-wrap: nowrap; gap: 0.75rem; }
@@ -659,7 +662,7 @@ main > section { padding: var(--section-y) var(--pad-x); }
   color: var(--brand-top);
 }
 .hero__brand-main {
-  font-size: clamp(2.9rem, 12.5vw, 5.75rem);
+  font-size: clamp(2.2rem, 11.4vw, 5.75rem);
   color: var(--brand-main);
 }
 .hero__brand-sub {               /* descriptive, location-rich part of the H1 */
@@ -1813,7 +1816,7 @@ html[lang="en"] .shelf-tag--hot::before { content: "★ Favorite"; }
 @media (forced-colors: active) {
   .btn, .lang-button, .filter-btn, .tile > a, .tile__btn, .theme-toggle, .nav-toggle,
   .action-bar__item, .obras__inner, .parking, .origin, .clip { border: 2px solid CanvasText; }
-  .lang-button[aria-pressed="true"], .filter-btn[aria-pressed="true"] { forced-color-adjust: none; background: Highlight; color: HighlightText; }
+  .lang-button[aria-pressed="true"], .lang-button[aria-current="true"], .filter-btn[aria-pressed="true"] { forced-color-adjust: none; background: Highlight; color: HighlightText; }
   .alert-bar::after, .obras__inner::before, .parking::before { background: CanvasText; }
 }
 
